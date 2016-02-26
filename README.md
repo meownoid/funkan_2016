@@ -52,3 +52,8 @@
 ```latex
     \overbar{..}
 ```
+
+Сканы лекций:
+-------------
+
+https://yadi.sk/d/-E5rnaBGpaHiN
