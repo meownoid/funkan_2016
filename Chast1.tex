@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\title{Функциональный анализ}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Лемма}
+
+\begin{document}
+\chapter{Нормированные пространства}
+\par \textbf{Изучение свойств отображений, как и в математическом анализе, начнём с введения определений, связанных с областями задания отображения.}
+\section{Метрические пространства}
+\begin{definition}В метрическом пространстве $\chi$ для любых элементов $x,y\in \chi$ определено расстояние $\rho(x, y)$, которое удовлетворяет требованиям(аксиомам метрического пространства):
+ \begin{enumerate}
+ \item $\rho(x, y)\geqslant 0$, а $\rho(x, y)=0$ означает, что элементы $x$ и $y$ совпадают,
+ \item $\rho(x, y)=\rho(y, x)$,
+ \item $ \rho(x, y)\leqslant \rho(x, z) +\rho(z, y)$ - неравенство треугольника
+ \end{enumerate} 
+\end{definition}
+\par Расстояние(метрика)$\rho$ определяет сходимость последовательности $\lbrace x_n \rbrace_{n=1}^{\infty}  \in \chi$ к элементу $x^{*}\in \chi$:
+\begin{center}
+	$x_n\rightarrow x^{*}$, если $\rho(x_n, x^{*})\rightarrow 0$ при $n\rightarrow\infty$
+\end{center}
+\par Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, т.е. если $x_n\rightarrow x^{*}$, $y_n\rightarrow y^{*}$ при $n\rightarrow\infty$, то $\rho(x_n, y_n)\rightarrow \rho(x^*, y^*)$.
+\\
+\\
+\par Естественным образом вводятся понятия:
+\begin{itemize}
+\item  открытый шар, замкнутый шар, окрестность элемента $x_0\in \chi$,
+\item внутренняя точка множества $M \in \chi$, открытое множество, замкнутое множество,
+\item подпространство $\chi_0$ метрического пространства: метрика в $\chi_0$ определяется метрикой пространства $\chi$, множество $\chi_0$ - замкнуто,
+\item фундаментальная последовательность $\lbrace x_n \rbrace_{n=1}^{\infty}$ - последовательность, такая что $\forall \varepsilon>0$ существует номер $n=n(\varepsilon)$ такой что $\rho(x_n, x_{n+m})<\varepsilon$ при $n>n(\varepsilon)$, $m\geq1$ (последовательность, сходящаяся в себе)
+\end{itemize}
+\begin{large}
+\textbf{Основные типы метрических пространств и множеств}
+\end{large}
+\begin{itemize}
+\item \textbf{Полное метрическое пространство} --- любая фундаментальная последовательность имеет предел, принадлежащий $\chi$ (в математическом анализе - признак Коши сходимости числовой последовательности).
+\item Множество $D\in\chi$ \textbf{плотно в множестве} $ M_0 \in \chi$, если для каждого элемента $x_0 \in M_0$ и любого $\varepsilon>0$ найдётся элемент $z \in D$, такой что $\rho(x_0, z)<\varepsilon$($z=z(\varepsilon)$). Если множество $D$ плотно в $M_0$, то для любого элемента $x_0\in M_0$ существует последовательность элементов $\lbrace z_n \rbrace \in D$ таких, что $\rho(z_n, x_0)\rightarrow0$ при $n\rightarrow\infty$. Ясно, что $\overline{D}=M_0$.
+\item \textbf{Сепарабельное пространство $\chi$} --- в таком пространстве существует счётное всюду плотное множество $D$: $D=\lbrace x_1,x_2,\ldots,x_n,\ldots \rbrace$. Для любого элемента $x_0 \in \chi$ можно найти такой номер $n=n(x_0,\varepsilon)$, что $\rho(x_0, z_n)<\varepsilon$.
+
+\textbf{Пример}: пространство $C[a,b]$ непрерывных на $[a,b]$ функций сепарабельно. В математическом анализе это теорема Вейерштрасса: для каждой непрерывной функции $x_0(t)$ существует полином $P_n$ с рациональными коэффициентами такой что
+\begin{center}
+ $\rho(x_0, P_n)=\smash{\displaystyle\max_{t \in [a,b]}} |x_0(t)-P_n(t)| <\varepsilon$.
+\end{center}
+Множество таких полиномов счётно.
+\item \textbf{Компактное множество метрического пространства $\chi$}.
+
+Множество $K$ компактно в $\chi$, если в любой подпоследовательности элементов $\lbrace x_n \rbrace_{n=1}^{\infty} \in K$ существует фундаментальная подпоследовательность $\lbrace x_{n_k} \rbrace$, $n_{k+1}>n_k$(т.е. последовательность $n_k$ возрастает).
+\end{itemize}
+
+	Компактность множеств играет важную роль при исследовании приближённых методов решения задач.
+\par Если $\chi$ полное пространство, то существует предельный элемент этой фундаментальной подпоследовательности, но он может не принадлежать множеству $K$.
+\par Определение компактного множества неконструктивно. Следующая теорема Хаусдорфа даёт эффективный критерий компактности множеств.
+\begin{definition}
+Говорят, что в множестве $M \in \chi$ существует \textbf{конечная $\varepsilon$-сеть$\lbrace x_1,x_2,\ldots,x_{N(\varepsilon)} \rbrace$}, если для любого элемента $x \in M$ можно указать элемент $x_n$ $\varepsilon$-сети, такой что
+\begin{center}
+ $\rho(x_n, x) <\varepsilon$, $n=n(x_0,\varepsilon)$.
+\end{center}
+\end{definition}
+\end{document}
