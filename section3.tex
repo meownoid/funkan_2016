@@ -1,0 +1,89 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\section{Линейные пространства, нормированные пространства, пространства Банаха}
+
+\par Множество элементов $Х$ называется \textbf{линейным множеством}, если для его элементов определены действия сложения и умножения на число (вещественное или комплексное), не выводящие из множества $X$:
+\begin{itemize}
+    \item если $x,y\in X$, то $x+y\in X$
+    \item если $x\in X$, то $\lambda x\in X$
+\end{itemize}
+\par Эти действия должны удовлетворять обычным условиям (аксиомам). Если $\lambda$ вещественные числа, то $X$ --- вещественное линейное множество, если $\lambda$ комплексные, то $X$ --- комплексное линейное множество. Для вещественного линейного множества $Х$ можно построить комплексное линейное множество $Z$: достаточно ввести элементы $z=x+iy,\quad x,y \in X$ и определить сумму элементов:
+\begin{center}
+$z_1+z_2=(x_1+x_2)+i(y_1+y_2)$,
+\end{center}
+и ввести умножение на комплексное число $\lambda$:
+\begin{center}
+$\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x)$
+\end{center}
+(комплексификация линейного множества $X$).
+\par Для комплексного линейного множества $Z$ каждый элемент $z=x+iy$, где $x$ и $y$ --- элементы вещественного множества. Рассмотрим вещественное пространство $X$ пар $(x,y)$, в котором определим сумму: $(x_1,y_1)+(x_2,y_2) = (x_1+x_2,y_1+y_2)$ и умножение на вещественное число $\lambda$: $\lambda(x,y) = (\lambda x, \lambda y)$. Множество пар $(x,y)$ образует вещественное линейное множество  $X$ (декомплексификация комплексного линейного множества $Z$).
+Из аксиом линейного множества отметим некоторые следствия:
+\begin{enumerate}
+\item Существования нулевого элемента: $\ominus=x-x=(1-1)x=0x$.
+\item Из равенства $\lambda x=0$ при $\lambda\ne0$ следует $x=\ominus$.
+\item Определение линейной независимости элементов $\{x_1,x_2,\dotsc,x_n\}$.
+\item Определение размерности линейного множества $X$ как наибольшего числа линейно независимых элементов множества $X$.
+\item Линейное множество бесконечномерно, если для любого натурального $n$ существует $n$ линейно независимых элементов.
+\end{enumerate}
+\textbf{Примеры линейных множеств:}
+\begin{enumerate}
+\item Вещественное пространство $V_n$ $n$-мерных векторов.
+\item Множество прямоугольных матриц размерности $(n\times m)$.
+\item Множество $C[t_0,t_1]$ непрерывных на $[t_0,t_1]$ функций $x$. Функции $x_k(t)=t^k,\; k=1,2,3,\dotsc$ линейно независимы, а пространство $C[t_0,t_k]$ бесконечномерно.
+\item Множество решений $x\in C^n[t_0,t_1]$ уравнения
+\begin{center}
+$\frac{d^nx(t)}{dt^n}+a_1\frac{d^{n-1}x(t)}{dt^{n-1}}+\dotsb+a_{n-1}\frac{dx(t)}{dt}+a_n=0$, где $a_k\in C[t_0,t_1]$
+\end{center}
+\end{enumerate}
+\par Снабжая линейное пространство метрикой, мы получаем более богатую теорию. Связь метрики с алгебраическими действиями реализуется введением норм элементов $x$: норма $\lVert x\rVert$ элемента $x\in X$, согласно определению есть число, которое должно удовлетворять трем условиям:
+\begin{enumerate}
+\item $\lVert x\rVert \geq 0$; если $\lVert x\rVert = 0$, то $x=\ominus$.
+\item $\lVert \lambda x \rVert = \lvert \lambda \rvert \lVert x \rVert$.
+\item $\lVert x+y \rVert\leq\lVert x \rVert + \lVert y \rVert$.
+\end{enumerate}
+\par Норма $\lVert x\rVert$ является непрерывной функцией: $\lvert\lVert x+\triangle x\rVert-\lVert x\rVert\rvert\to0$ при $\lVert\triangle x\rVert\to0$.
+\par Верно неравенство $\lVert x-y\rVert\geq\lvert\lVert x\rVert-\lVert y\rVert\rvert$.
+\par Определим метрику в линейном пространстве $X$: $\rho(x,y)=\lVert x-y\rVert$. Ясно, что введенная таким образом метрика удовлетворяет всем аксиомам метрического пространства. Линейное множество с метрикой, определяемой нормой элементов, называется \textbf{нормированным пространством}. Если нормированное пространство полное, то оно называется \textbf{пространством Банаха} (Стефан Банах, 1892-1945, польский математик), банаховым пространством, В-пространством.
+\par \textbf{Подпространством нормированного пространства $X$} называется любое линейное \underline{замкнутое} множество $X_0 \in X$.
+\par\textbf{Примеры.}
+\begin{enumerate}
+\item Банаховы пространства $n$-мерных векторов получаем введением различных норм векторов $\bar{x}(x_1,x_2,\dots,x_n)$:
+\begin{itemize}
+\item $\lVert \bar{x}\rVert_\infty=\displaystyle\max_{i}\lvert x_i\rvert$,
+\item $\lVert \bar{x}\rVert_1 = \displaystyle\sum_{i}\lvert x_i\rvert$,
+\item $\lVert \bar{x}\rVert_2 = (\displaystyle\sum_{i}\lvert x_i\rvert^2)^{\frac{1}{2}}$
+\end{itemize}
+\item Бесконечномерное банахово пространство $C[t_0,t_1]$ функций $x(t)$ непрерывных на $[t_0,t_1]$. Норма:
+\begin{center}
+$\lVert x\rVert = \displaystyle\max_{i}\lvert x\rvert$,
+\end{center}
+функции $x_k(t)=t^k, k=1,2,3,\dots$ линейно независимы.
+\item Бесконечномерное пространство банахово пространство $C_n[t_0,t_1]$. Норма:
+\begin{center}
+$\lVert x\rVert = \displaystyle\sum_{k=0}^n\max_{i}\lvert\frac{d^kx(t)}{dt^k}\rvert$
+\end{center}
+\item Пространство Банаха $L_p(a,b)$ измеримых и суммируемых со степенью $p,\;p\geq1,$ функций. Норма:
+\begin{center}
+$\lVert x\rVert^p = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}}$
+\end{center}
+Множество полиномов с комплексными коэффициентами плотно в этих пространствах.
+\item Пример неполного нормированного пространства.
+\par В линейном множестве $C[0,1]$ непрерывных функций введем норму (и метрику):
+\begin{center}
+$\lVert x\rVert = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}},\quad\rho(x,y) = (\int\limits_0^1\lvert x(t)-y(t)\rvert^pdt)^{\frac{1}{p}}$
+\end{center}
+Получаемое пространство не является полным. Действительно, последовательность функций $x_k(t)=t^k$ является фундаментальной последовательностью:
+\begin{center}
+$\lVert x_{n+m}-x_n\rVert^p=\int\limits_0^1(t^n-t^{n+m})^pdt=\int\limits_0^1t^{np}(1-t^m)^pdt<\int\limits_0^1t^{np}dt=\frac{1}{np+1}\to0$, при $n\to\infty$
+\end{center}
+Предел же $\lim x_n(t)$ при $n\to\infty$ в пространстве $C[0,1]$ не существует.
+\end{enumerate}
+\end{document} 
