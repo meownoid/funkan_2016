@@ -1,0 +1,116 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\title{Функциональный анализ}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Лемма}
+
+\begin{document}
+
+\section{Теорема Банаха-Штейнгауза}
+Рассмотрим последовательность линейных операторов $A_n \in \mathcal{L}(X,Y)$. Пусть для каждого $x \in X\ \exists \lim\limits_{n\to \infty}A_n x = y(x) \in Y$. Тем самым определен аддитивный и непрерывный оператор $A$, $Ax = y(x)$. Пример предыдущего параграфа показывает, что этот оператор может и не являться сильным пределом последовательности операторов $A_n$: хотя $A_n x \to E x$, но $\lim A_n \ne E$.
+
+Вопрос: при каких условия существует \textbf{линейный} оператор $A$ и можно ли оценить его норму?
+
+Мы начнем с простой леммы.
+
+\begin{lemma}[Лемма I]
+Пусть оператор $A_n \in \mathcal{L}(X,Y)$ и известно, что для всех элементов некоторого шара $S_r(x_0)$ нормы $\lVert A_n x\rVert_Y$ ограничены: $\lVert A_n x\rVert \le c$. Тогда существует постоянная $M$, такая что норма оператора $A_n$ ограничена числом $M$: $\lVert A_n \rVert \le M$.
+\end{lemma}
+
+\begin{proof}
+Возьмем любой элемент $x \in X$ и образуем элемент $x_0+\frac{x}{\lVert x\rVert}r \in S_r(x_0)$. Тогда:
+
+\begin{center}
+$\lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert \le c$, т.е.
+
+$c \ge \lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert$,
+
+$c \ge \lVert \frac{r}{\lVert x\rVert}A_n x + A_n x_0 \rVert \ge \lVert A_n x\rVert \frac{r}{\lVert x\rVert} - \lVert A_n x_0\rVert \ge \frac{r}{\lVert x\rVert}\lVert A_n x_0\rVert - c$,
+
+$2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert \ge \lVert A_n x\rVert$, $\lVert A_n x\rVert \le \frac{2c}{r}\lVert x\rVert$
+\end{center}
+
+Достаточно положить $M=\frac{2c}{r}$ : $\lVert A_n x\rVert \le M\lVert x\rVert$ для всех $x \in X$, следовательно норма оператора $\lVert A\rVert \le M$.
+\end{proof}
+
+Следующая лемма верна для полных нормированных пространств $X$, т.е. для банаховых пространств.
+
+\begin{lemma}[Лемма II]
+Пусть $X$ - пространство Банаха. Пусть $\lbrace A_n\rbrace$ последовательность операторов множества $\mathcal{L}(X,Y)$. Тогда если нормы $\lVert A_n x\rVert$ элементов $A_n x$ ограничены для каждого $x \in X$, то нормы операторов $A_n \quad \lVert A_n\rVert$ ограничены в совокупности.
+\end{lemma}
+
+\begin{proof}
+(от противного)
+
+Предположим, что в $X$ существует замкнутый шар $\bar{S_0}$, для \textbf{всех} элементов которого $\lVert A_n x\rVert < c$ при всех $n$, но последовательность норм $\lVert A_n\rVert$ неограниченна. Это предположение неверно, так как согласно Лемме I норма каждого оператора $\lVert A_n\rVert \le M$.
+
+Остаётся предположить, что существует шар $\bar{S_0}$, в котором значения $\lVert A_n x\rVert$ неограниченны, т.е. найдется номер $n_1$ и найдется элемент $x_1 \in \bar{S_0}$, такие что $\lVert A_{n1} (x_1)\rVert > 1$. Так как оператор $A_{n1}$ (как и все операторы $A_n$) непрерывен, то существует шар $\bar{S_1} \subset \bar{S_0}$, в котором $\lVert A_{n1} (x)\rVert > 1$.
+
+Далее: значения $\lVert A_n x\rVert$ в шаре $\bar{S_1}$ не могут быть ограничены при всех $n$. Тогда должен существовать номер $n_2$ и элемент $x_2 \in \bar{S_2}$, такие что $\lVert A_{n2} (x_2)\rVert > 2$, (a по непрерывности $A_{n2}$) и шар $S_2$, в котором $\lVert A_{n2} (x)\rVert > 2$ для всех $x \in \bar{S_2}$.
+
+Продолжая этот процесс мы получим последовательность вложенных шаров $\bar{S_0} \supset \bar{S_1} \supset \bar{S_2} \ldots \supset \bar{S_n} \supset \ldots$ и последовательность элементов $x_0, x_1, x_2, \ldots, x_n$, таких что $\lVert A_{nk} x_k\rVert > k$. Ясно, что радиусы $r_k$ шаров $\bar{S_k}$ можно выбирать так, что $r_k \to 0$.
+
+Так как пространство $X$ полное, то по теореме о вложенных шарах существует элемент $x^k \in X$ принадлежащий всем шарам $S_k$. Тогда $\lVert A_n x_n\rVert \to \infty$ при $k \to \infty$, что противоречит условиям леммы.
+\end{proof}
+
+\begin{remark}
+Если $\lbrace \lVert A_n x\rVert \rbrace$ не ограничена, то существует элемент $x^n \subset X$, на котором $\sup\limits_{n}\lVert A_n x^n\rVert = \infty$ --- принцип фиксации особенности в полном банаховом пространстве $X$.
+\end{remark}
+
+Теперь можно указать условия, при которых из сходимости последовательности элементов $\lbrace A_n x\rbrace$ при любом $x \in X$ следует поточечная сходимость последовательности операторов $A_n$ к \textbf{линейному} оператору $A$: $\lim\limits_{n \to \infty}A_n x = y(x) \in Y$, $Ax=y(x)$.
+
+\begin{theorem}[Банаха-Штейнгауза].
+Пусть $\lbrace A_n\rbrace \in \mathcal{L}(X,Y)$, где $X$ и $Y$ - пространства Банаха. Для того, чтобы последовательность операторов $\lbrace A_n\rbrace$ сходилась поточечно к линейному оператору на всем пространстве $X$, необходимо и достаточно, чтобы были выполнены два условия:
+
+\begin{enumerate}
+\item Нормы $\lVert A_n\rVert$ ограничены в совокупности: $\lVert A_n\rVert \le M$.
+\item Последовательность элементов $A_n x$ сходится в себе на множестве $D$ плотном в $X$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\textbf{Необходимость.} Пусть $A_n x \to A x$. Тогда $\lVert A_n x\rVert \to \lVert A x\rVert \le \lVert A\rVert \lVert x\rVert$, и последовательность норм элементов $\lVert A_n x\rVert$ ограничена при каждом $x \in X$. По Лемме II нормы $\lVert A_n\rVert$ ограничены в совокупности --- условие 1 выполнено.
+
+Так как последовательность $A_n x$ сходится на всем пространстве $X$ (и сходится в себе на всем $X$), то она сходится в себе на любом множестве пространства $X$ --- условие 2 выполнено.
+
+\textbf{Достаточность.} Покажем, что последовательность элементов $A_n x$ сходится в себе на всем пространстве $X$.
+
+По любому заданному $\varepsilon > 0$ для любого элемента $x \in X$ найдется элемент $x' \in D$ такой, что $\lVert x - x'\rVert < \varepsilon$. Оценим $\lVert A_n x - A_m x\rVert$ при достаточно больших значениях $m$ и $n$:
+
+\begin{center}
+$\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' - A_m x\rVert$
+\end{center}
+
+Значения $\lVert A_n x' - A_m x'\rVert < \varepsilon$ при достаточно больших $m$ и $n$.
+
+Значения $\lVert A_n x - A_n x'\rVert < M\varepsilon$, $\lVert A_m x' - A_m x\rVert < M\varepsilon$.
+
+Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \inf} A_n x = y(x) \in Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \ge \bar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\bar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
+
+Напомним, что последовательность операторов $A_n$ может и не иметь сильного предела.
+\end{proof}
+
+\begin{remark}
+Формулировка теоремы не предполагает знания оператора $A$. Если же оператор $А$ предъявлен, то вместо условия 2 можно проверить сходимость $A_n x\to A x$ на линейном множестве $D$ плотном в $X$. В этом случае предположение, что $Y$ банахово --- излишне.
+\end{remark}
+
+\end{document} 
