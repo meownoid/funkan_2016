@@ -24,6 +24,9 @@
 \theoremstyle{remark}
 \newtheorem*{example}{Пример}
 
+\theoremstyle{remark}
+\newtheorem*{cexample}{Контр-пример}
+
 \theoremstyle{plain}
 \newtheorem*{lemma}{Лемма}
 
@@ -329,5 +332,224 @@ $$(x,x) + 2 Re(\lambda y, x) + |\lambda|^2 (y, y) \ge 0$$
 для любых чисел $\lambda$.
 
 
+
+
+%стр.18 п.4 - стр.23
+\begin{enumerate}
+\item Свойство элементов $y_j$.
+
+$\lVert By_j\rVert = \lVert B(u_j - u_0)\rVert$ (аддитивность $B$) $ = \lVert Bu_j - Bu_0\rVert \le \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \le n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1$.
+Оценим $\lVert B_j\rVert$ через норму элементов $\lVert y_j\rVert$. Так как $y_j \to y$, то $\lVert y_j\rVert \to \lVert y\rVert=r_0$, и при достаточно больших значениях $j$:
+
+\begin{center}
+$\lVert y_j\rVert\frac{1}{r_0}>\frac12$ и $1<\frac{2}{r_0}\lVert y_j\rVert$.
+\end{center}
+
+Для таких значений $j$: $\lVert By_j\rVert\le\frac{2}{r_0}n(\lVert u_j\rVert + \lVert u_0\rVert)$ и так как $\lVert u_j\rVert = \lVert u_0 + u_j - u_0\rVert \le \lVert u_0\rVert + \lVert u_j - u_0\rVert \le \lVert u_0\rVert + r_0$, то для достаточно больших значений $j$:
+
+\begin{center}
+$\lVert By_j\rVert_X \le \frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n\cdot \lVert y_j\rVert_Y$.
+\end{center}
+
+Величину $\frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n$ оценим натуральным числом $N$:
+
+\begin{center}
+$\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
+\end{center}
+
+Так как $y_j \to y$, то множество $Y_N$ плотно в множестве элементов $y$ с нормой $r_0$. Значение $N$, согласно п.п. 1.2, зависит только от фиксированных значений $r$, $n_0$ и $u_0 \in Y$. Так как множество $Y_N$ ``однородно'', то и для любого $y \in Y$ существует последовательность элементов $y_j \in Y_N$, такая что $y_j \to y$ при $j \to \infty$ и $\lVert By_j\rVert \le N\lvert y_j\rVert$. Обозначив $M = Y_N$ и $C_0 = N$, завершим доказательство леммы.
+
+\end{enumerate}
+
+
+\begin{theorem}[Банаха]
+Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y$,линеен.
+\end{theorem}
+
+\begin{proof}
+Согласно лемме в пространстве $Y$ существует всюду плотное множество $M$, для элементов которого
+\begin{center}
+	$\parallel By \parallel \leq C_0 \parallel y \parallel $
+\end{center}
+\begin{enumerate}
+
+	\item Пусть $y_0$ любой элемент пространства $Y$.\\
+	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
+	$y_1 \in M$:
+	\begin{center}
+	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $  ,
+	\end{center}
+	\begin{center}
+	$\parallel y_1 \parallel =
+	\parallel y_1 - \frac{3}{4}y_0 +
+	\frac{3}{4}y_0 \parallel \leq \frac{1}{4} 			\parallel y_0 \parallel +
+	 \frac{3}{4}\parallel y_0\parallel = 				\parallel y_0 \parallel$
+	\end{center}
+	
+	\item Рассмотрим элемент $y_1 - y_0$. Для него
+	\begin{center}
+	$\parallel y_1-y_0 \parallel =\parallel y - \frac{3}{4}y_0 +
+	\frac{1}{4}y_0 \parallel \leq
+	\frac{1}{4} \parallel y_0 \parallel +
+	\frac{1}{4} \parallel y_0 \parallel =
+	\frac{1}{2} \parallel y_0 \parallel$
+	\end{center}
+	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4}			(y_1 - y_0)$. В этом шаре найдём элемент 			$y_2 \in M$:
+	\begin{center}
+	$\parallel y_2 + y_1 - y_0 \parallel =
+	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
+	\frac{1}{4}(y_1 - y_0) \parallel \leq
+	\frac{1}{4} \parallel y_1 - y_0 \parallel +
+	\frac{1}{4} \parallel y_1 - y_0 \parallel = $
+	\end{center}
+	\begin{center}
+	$ = \frac{1}{2} \parallel y_1 - y_0 \parallel 			\leq
+	\frac{1}{2^2} \parallel y_0 \parallel$ ,
+	\end{center}
+	\begin{center}
+	$\parallel y_2 \parallel =
+	\parallel y_2 - \frac{3}{4}(y_1 - y_0) +
+	\frac{3}{4}(y_1 - y_0) \parallel \leq
+	\frac{1}{4} \parallel y_1 - y_0 \parallel +
+	\frac{3}{4} \parallel y_1 - y_0 \parallel =
+	 \parallel y_1 - y_0 \parallel \leq$
+	 \end{center}
+	\begin{center}
+	 $ \leq \frac{1}{2} \parallel y_0 \parallel$
+	\end{center}
+	
+	\item Рассмотрим элемент $y_2+y_1- y_0$ . Для него 	\begin{center}	
+	$\parallel y_2+y_1- y_0 \parallel \leq
+	\frac{1}{2^2} \parallel y_0 \parallel$ .
+	\end{center}
+	Построим шар радиуса
+	$\frac{1}{4} \parallel y_2 + y_1 - y_0 \parallel$      	с центром $\frac{3}{4}(y_2 + y_1 - y_0)$.
+	В этом шаре найдём элемент 	$y_3 \in M$:
+	\begin{center}
+	$\parallel y_3 + y_2 + y_1 - y_0 \parallel =
+	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) -
+	\frac{1}{4}(y_0 - y_1 - y_2) \parallel \leq $
+	\end{center}
+	\begin{center}
+	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel +
+	\frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel 			\leq $
+	\end{center}
+	\begin{center}
+	$ \leq\frac{1}{2} \cdot
+	\frac{1}{2^2} \parallel y_0 \parallel =
+	\frac{1}{2^3} \parallel y_0 \parallel$ ,
+	\end{center}
+	\begin{center}
+	$\parallel y_3 \parallel =
+	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) +
+	\frac{3}{4}(y_0 - y_1 - y_2) \parallel \leq $
+	\end{center}
+	\begin{center}
+	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 				\parallel +
+	\frac{3}{4} \parallel y_0 - y_1 - y_2 \parallel =
+	 \parallel y_0 - y_1 - y_2 \parallel \leq
+	 \frac{1}{2^2} \parallel y_0 \parallel$
+	\end{center}
+
+Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
+\begin{center}
+$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$\\
+и\\
+$\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
+\end{center}
+
+Обозначим $s_n= \sum\limits_{k=1}^n y_k$. Тогда $s_n \rightarrow y_0$ при $n \rightarrow \infty$. Последовательность элементов $B s_n$ сходится в себе:
+\begin{center}
+$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leq $
+\end{center}
+\begin{center}
+$\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \rightarrow 0$ при $n \rightarrow \infty$.
+\end{center}
+
+Так как пространство $X$ полное, то существует $\lim \limits_{n \rightarrow \infty} s_n=x^* \in X$. \\
+Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \rightarrow \infty$, получаем
+\begin{center}
+$ \lVert x^*-B s_n \rVert \leq C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...)$.
+\end{center}
+
+Так как $s_n \rightarrow y_0, B s_n \rightarrow x^*$, то в силу замкнутости оператора $B$: 
+\begin{center}
+$B y_0=x^* $.
+\end{center}
+
+Оценим $\lVert B y_0 \rVert _X$:
+\begin{center}
+$\lVert B y_0 \rVert \leq \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \leq$ 
+\end{center}
+\begin{center}
+$\leq C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+...] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ ...+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
+\end{center}
+$\lVert B y_0 \rVert \leq 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \rightarrow X} \leq 2 C_0$.
+\end{enumerate}
+\end{proof}
+
+
+
+\section{Вполне непрерывные операторы}
+\begin{definition}Линейный оператор $A \in Z(X, Y)$ называется \textbf{вполне непрерывным}, если любое ограниченное в $X$ множество он отображает в множество, компактное в $Y$.
+\end{definition}
+Напомню, что в компактном множестве в любой последовательности $\lbrace y_n \rbrace_{n=1}^{\infty}$ содержится фундаментальная последовательность. Если же пространство $Y$ полно, то согласно определению эта фундаментальная последовательность имеет предел в $Y$.
+
+Множество всех вполне непрерывных операторов обозначим $\sigma(X,Y)$.
+\begin{theorem}Множество $\sigma(X,Y)$ является подпространством пространства $Z(X, Y)$.
+\end{theorem}
+\begin{proof}Состроит в доказательстве двух пунктов (согласно определению подпространства).
+
+I. Если $A_1, A_2 \in \sigma(X,Y)$, то их линейная комбинация $A=\lambda_1 A_1+\lambda_2 A_2\in \sigma(X,Y)$.\\
+Рассмотрим множество $AS_1$, где $S_1$ --- единичная сфера в пространстве $X$. Покажем, что множество $AS_1$ компактно в $Y$. Возьмем любую последовательность элементов $x_n \in S_1$, $\lVert x_n \rVert=1$. Обозначим элементы $Ax_n=y_n$, $y_n=\lambda_1 A_1 x_n+\lambda_2 A_2 x_n$.
+
+Так как множество $A_1S_1$ компактно в $Y$, то из последовательности $\lbrace A_2x_{n_k} \rbrace$ можно выделить фундаментальную последовательность $\lbrace A_2x'_i \rbrace$. Ясно, что последовательность $\lbrace (\lambda_1 A_1+\lambda_2 A_2)x'_i \rbrace$ является фундаментальной последовательностью в $Y$.
+
+II. Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \rightarrow 0$ при $n\rightarrow \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \in S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \in S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+\end{proof}
+
+\begin{cexample}Тождественный оператор $E$ в сепарабельном гильбертовом пространстве не является вполне непрерывным оператором.
+
+Действительно, пусть $\psi_1,\psi_2,...,\psi_n,..., \lVert\psi_n\rVert =1$ --- ортонормальный базис пространства. Множество $S_1$ ограничено, но множество $ES_1 (=S_1)$ не является компактным: из последовательности $\lbrace \psi_n \rbrace_{n=1}^{\infty}$ нельзя выбрать фундаментальную последовательность, так как $\lVert\psi_n - \psi_m \rVert ^2=(\psi_n - \psi_m, \psi_n - \psi_m)= (\psi_n,\psi_n)+ (\psi_m,\psi_m)=2$ при $n \neq m$
+\end{cexample}
+\begin{example}Интегральный оператор $\widetilde{K}$ из $L_2(a,b)$ в $L_2(a,b)$.
+\begin{center}
+$y=\widetilde{K}x$, $y(t)=\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau ,$\\
+\end{center}
+где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leq M$.\\
+
+В этом случае функции $y(t)$ непрерывны:
+
+\begin{center}
+$|y(t_2)-y(t_1)|^2\leq \int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$,\\
+\end{center}
+Величина $|y(t_2)-y(t_1)|\rightarrow 0$ при $|t_2-t_1|\rightarrow 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
+
+Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leq M^2 (b-a)$.
+
+По теореме Арцела-Асколи множество $\widetilde{K} S_1$ компактно в $C[a,b]$: из любой последовательности элементов $y_n=\widetilde{K} x_n$ можно выделить фундаментальную последовательность в $C[a,b]$, которая является фундаментальной последовательностью и в пространстве $L_2 (a,b))$.
+\end{example}
+\begin{example}Интегральный оператор $K$ из $L_2(a,b)$ в $L_2(a,b)$.
+\begin{center}
+$y=Kx$, $y(t)=\int\limits_a^b K(t, \tau)x(\tau)d\tau $,
+\end{center}
+где $K(t, \tau)\in L_2(D)$ (интегральный оператор Гильберта-Шмидта).
+
+По теореме Лебега для функции $K(t, \tau)$ существует последовательность непрерывных в $D$ функций $\widetilde{K}_n (t, \tau)$, таких что
+\begin{center}
+$\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \rightarrow 0$ при $n\rightarrow \infty$,
+\end{center}
+\begin{center}
+т.е. $\lVert K-\widetilde{K}_n \rVert \rightarrow 0$ при $n\rightarrow \infty$.
+\end{center}
+
+Так как интегральные операторы $\widetilde{K}_n$ вполне непрерывны, то и интегральный оператор Гильберта-Шмидта вполне непрерывен.
+\end{example}
+\begin{theorem}Пусть оператор $A \in \sigma (H,H)$, где $H$ бесконечномерное сепарабельное пространство Гильберта. Задача решения уравнения $Ax=y$ поставлена некорректно по Адамару.
+\end{theorem}
+\begin{proof}В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \in H$: $y_0=\underset{k \rightarrow \infty}{lim} A \psi_{n_k}$.\\
+Рассмотрим вариацию правой части $\Delta y_k=A \psi_{n_k}-y_0 \rightarrow \infty$ при $k\rightarrow \infty$. Соответствующая вариация решения $\Delta x_k=\psi_{n_k}$ и $\lVert\Delta x_k \rVert=1$, т.е. вариация решения $\Delta x_k$ не стремится к нулю при $\lVert\Delta y_k \rVert \rightarrow \infty$.
+
+\end{proof}
 
 \end{document}
