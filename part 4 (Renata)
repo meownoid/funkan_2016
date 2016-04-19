@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Теорема}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+
+\theoremstyle{remark}
+\newtheorem*{example}{Пример}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{Лемма}
+
+\begin{document}
+\section{Теорема Банаха}
+Основной целью нашего курса является изучение условий разрешимости уравнения $Ax=y$, т. е. условие существования $\underbar {линейного}$ оператора $B\in L(Y, X)$: $By=A^{-1}x$. Если такой оператор существует, то задача решения уравнения $Ax=y$ поставлена корректно по Адамару:
+\begin{enumerate}
+
+	\item решение существует для любого $y \in Y$,
+	\item решение единственно,
+	\item вариации $\Delta x$ решения непрерывно зависят от вариаций $\Delta y$ элемента $y$: $\lVert \Delta x\rVert_X \leq \lVert B\rVert_{Y\rightarrow X}\lVert \Delta y\rVert_X$.
+\end{enumerate}
+Оператор $A$ предполагается линейным, а оператор $B$ определен на всем банаховом пространстве $Y$. В этом случаем операторы $A$ и $B$ замкнуты. Действительно:
+ \begin{enumerate}
+
+	\item Из условий $\{x_n \rightarrow x^{*};Ax_n \rightarrow y^{*}\}$ следует, что $Ax_n \rightarrow Ax^{*}$ и $y^{*}=Ax^{*}$, т.е. оператор $A$ замкнут.
+	\item Пусть выполнены условия: $\{y_n \rightarrow y^{*}; By_n \rightarrow x^{*}\}$. Обозначим $x_n=A^{-1}y_n$ (оператор $A^{-1}$ определен на всём пространстве $Y$). Тогда $x_n \rightarrow x^{*}$ и $y_n=Ax_n \rightarrow Ax^{*}$. Так как оператор $A$ замкнут, то из условий $\{x_n \rightarrow x^{*};Ax_n \rightarrow y^{*}\}$ следует, что $y^{*}=Ax^{*}$, т.е. $x^{*}=By^{*}$. Тогда оператор $B$ замкнут.
+	
+	\end{enumerate}
+	
+	\begin{lemma}
+	Пусть оператор $B$ задан на всем $\underbar {банаховом}$ пространстве $Y$. Тогда в $Y$ существует плотное множество элементов $M$, таких, что $\lVert By\rVert_X \leq C_0\lVert y\rVert_Y $, где значение постоянной $C_0$ не зависит от выбора элементов $y \in M$.
+	\end{lemma}
+	\begin{proof}
+	
+	Построим множество $M$.
+	\begin{enumerate}
+	\item Для любого выбранного элемента $y \in Y$ можно найти такое натуральное число $k$, что $\lVert By\rVert \leq k\lVert y\rVert$.
+	
+	Множество таких элементов $y$ обозначим $Y_k$. Множество $Y_k$ "однородно": если $y \in Y_k$, то элементы $\lambda y \in Y_k$ для всех чисел $\lambda$. Ясно, что при $m \leq k$ $Y_m \subset Y_k$ и что
+\begin{center}	
+
+	$Y=\bigcup\limits_{n=1}^\infty Y_n$
+	
+\end{center}
+	
+	Так как $Y$ полное пространство, то среди множеств $Y_k$ найдется хотя бы одно множество, которое не является нигде не плотным в пространстве $Y$ (см. теорему Бэра, глава \uppercase\expandafter{\romannumeral 1}). Обозначим его $Y_n$.
+	
+	\item В пространстве $Y$ существует хотя бы один шар (например $S$), в котором любой шар (например $\overline{S_{r_0}}(u_0)$) содержит элементы множества $Y_n$.
+	
+	Таким образом, множество $Y_n$ плотно в $\overline{S_{r_0}}(u_0)\subset S$. Можно считать, что элемент $u_0 \in Y_n$. Зафиксируем элемент $u_0$ и число $r_0$.
+	
+	\item Пусть $y$ любой элемент $Y$, норма которого равна $r_0:\lVert y\rVert=r_0$. Построим элемент $z_0=u_0+y$, принадлежащий границе шара $S_{r_0}(u_0)$. Далее построим последовательность элементов $u_j \in S_{r_0}(u_0)$ таких, что
+
+\begin{center}	
+
+	$u_j \rightarrow z_0$ и $u_j \in Y_n$.
+	
+\end{center}
+
+Обозначим $y_j=u_j-u_0$. Ясно, что $y_j \rightarrow y$, $y_j \in S_{r_0}(u_j)$ (последовательность элементов $y_j$ не обязательно принадлежит множеству $Y_n$!)
+	
+	\end{enumerate}
+	
+	\end{proof}
+	
+
+\end{document}
