@@ -4,6 +4,7 @@
 \usepackage[OT1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{mathrsfs}
 \usepackage{indentfirst}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -866,6 +867,86 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \end{enumerate}
 	
 \end{proof}
+
+\begin{enumerate}
+
+\item Прямая задача теплопроводности.
+\begin{example}
+Рассматривается бесконечная пластина толщиной $\pi$: $0 \leq \xi \leq\pi$, $-\infty < y < +\infty$. Распределение температуры $x(\xi, y, t)$ в точках этой пластины зависит только от координаты $\xi$ и времени $t$: $x(\xi, y, t) = x(\xi, t)$.На граничных плоскостях при $\xi = 0$ и при $\xi = \pi$ температура равна нулю при всех $t > 0$:
+\end{example}
+
+\begin{equation}
+\label{border_conditions}
+x(0, t) = 0,\;  x(\pi, t) = 0
+\end{equation}
+
+Внутри пластины источников тепла нет. Функция $x(\xi, t)$ удовлетворяет уравнению теплопроводности:
+
+\begin{equation}
+\label{heat_equation}
+\frac{\partial x}{\partial t} = \frac{\partial^2 x}{\partial \xi^2} \;  \mbox{при} \;   \xi \in (0, \pi),\;  t > 0
+\end{equation}
+
+В момент времени $t = 0$ распределение температуры известно: 
+
+\begin{equation}
+\label{initial_conditions}
+x(\xi,0)=x(\xi)
+\end{equation}
+
+Прямая задача теплопроводности состоит в нахождении функции $x(\xi,t)$ при всех $t >0$, т.е. в решении уравнения (\ref{heat_equation}) при граничных условиях (\ref{border_conditions}) и при начальном условии (\ref{initial_conditions}).
+
+\guillemotleft Обобщенное\guillemotright \;решение этой простейшей задачи при условии $x(\xi) \in L_2(0, \pi)$ получаем методом Фурье:
+\begin{center}
+$$x(\xi,t) = \sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
+\end{center}
+
+Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leq \sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
+\begin{center}
+$$x(\xi, t) = \sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
+\end{center}
+
+В частности $x(\xi,T) = \displaystyle\int\limits_0^\pi K(\xi, \eta, T) x(\eta)d\eta = Ax$. Оператор $A$ линейный интегральный оператор из пространства $L_2(0, \pi)$ в пространство $L_2(0, \pi)$. Норма этого оператора не превосходит $1$, оператор $A$ замкнут.
+
+	\item Обратная задача теплопроводности.
+
+В момент времени $t = T$ измеряется  распределение температуры:
+\begin{center}
+$x(\xi, T) = y(\xi)$
+\end{center}
+
+Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A\in\mathscr{L}(X,Y), \; X = L_{2}(0, \pi), \; Y = L_{2}(0, \pi)$ $\-- $ банаховы пространства.
+
+Будет ли эта задача корректно поставлена по Адамару?
+
+Довольно просто доказать, что если решение задачи существует, то это решение единственно. Для того, чтобы задача была поставлена корректно по Адамару, остается доказать (согласно теореме Банаха), что задача разрешима при любой функции $y \in Y$, т.е. доказать, что обратный оператор $B = A^{-1}$ заданы на всем пространстве $Y = L_{2}(0, \pi)$.
+
+Это утверждение неверно.
+
+Действительно, рассмотрим функцию
+\begin{center}
+$y(\xi)=\displaystyle\sum\limits_{k=1}^{\infty} \frac{1}{k} X_k(\xi) ,  \; y\in L_{2}(0, \pi), \; \|y\|^2 = \sum\limits_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} ,  \; \|y\| = \frac{1}{\sqrt{6}}\pi \mbox{.}$
+\end{center}
+
+Предположим, что решение $x(\xi)$ такой обратной задачи существует. Тогда коэффициенты Фурье $x_k$ этого решения должны быть равными
+\begin{center}
+$x_k=e^{k^2 T} \frac{1}{k} \; \mbox{ и } \; x(\xi) = \displaystyle\sum\limits_{k=1}^{\infty} x_k X_k(\xi)$
+\end{center}
+
+Но ряд $\displaystyle\sum\limits_{k=1}^{\infty} x_k^2 = \sum\limits_{k=1}^{\infty} e^{2k^2 T} \frac{1}{k^2}$ при $T > 0$ расходится, следовательно функция $x$ не принадлежит пространству $L_2(0,\pi)$. Наше предположение неверно.
+
+Ясно, что отсутствует и непрерывная зависимость решения от вариации правых частей. Действительно, пусть $x^{*}$ есть точное решение уравнения $Ax^*=y^*$. Рассмотрим вариацию правой части  $\Delta y$:
+\begin{center}
+$$\Delta y = \varepsilon \int\limits_{k=1}^{n} \frac{1}{k} X_k(\xi) , \; \; \| \Delta y\|^2 = \varepsilon ^2 \sum\limits_{k=1}^{n} \frac{1}{k^2} < \varepsilon^2 \frac{\pi ^2}{6} \; \; \mbox{и} \; \; \| \Delta y \| < \frac{\varepsilon}{\sqrt{6}}\pi.$$
+\end{center}
+
+Для соответствующей вариации решения $\Delta x$ получаем
+\begin{center}
+$$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k^2} e^{2 k^2 T},$$
+\end{center}
+и величина $\| \Delta x \|$ сколь угодно велика при $n \longrightarrow \infty.$
+
+\end{enumerate}
 
 \section{Вполне непрерывные операторы}
 \begin{definition}Линейный оператор $A \subset Z(X, Y)$ называется \textbf{вполне непрерывным}, если любое ограниченное в $X$ множество он отображает в множество, компактное в $Y$.
