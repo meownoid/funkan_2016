@@ -56,11 +56,11 @@
 
 \begin{center}
 
-$x_n\rightarrow x^*$, если $\rho(x_n, x^{*})\rightarrow 0$ при $n\rightarrow\infty$
+$x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 \end{center}
 
-Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, то есть если $x_n\rightarrow x^{*}$, $y_n\rightarrow y^{*}$ при $n \rightarrow \infty$, то $\rho(x_n, y_n) \rightarrow \rho(x^*, y^*)$.\\
+Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, то есть если $x_n\to x^{*}$, $y_n\to y^{*}$ при $n \to \infty$, то $\rho(x_n, y_n) \to \rho(x^*, y^*)$.\\
 
 Естественным образом вводятся понятия:
 
@@ -82,7 +82,7 @@ $x_n\rightarrow x^*$, если $\rho(x_n, x^{*})\rightarrow 0$ при $n\rightar
 
 	\item \textbf{Полное метрическое пространство} --- любая фундаментальная последовательность имеет предел, принадлежащий $X$ (в математическом анализе --- признак Коши сходимости числовой последовательности).
 
-	\item Множество $D \in X$ \textbf{плотно в множестве} $ M_0 \in X$, если для каждого элемента $x_0 \in M_0$ и любого $\varepsilon > 0$ найдётся элемент $z \in D$, такой что $\rho(x_0, z) < \varepsilon$($z = z(\varepsilon)$). Если множество $D$ плотно в $M_0$, то для любого элемента $x_0 \in  M_0$ существует последовательность элементов $\lbrace z_n \rbrace \in D$ таких, что $\rho(z_n, x_0) \rightarrow 0$ при $n \rightarrow \infty$. Ясно, что $\overbar{D} = M_0$.
+	\item Множество $D \in X$ \textbf{плотно в множестве} $ M_0 \in X$, если для каждого элемента $x_0 \in M_0$ и любого $\varepsilon > 0$ найдётся элемент $z \in D$, такой что $\rho(x_0, z) < \varepsilon$($z = z(\varepsilon)$). Если множество $D$ плотно в $M_0$, то для любого элемента $x_0 \in  M_0$ существует последовательность элементов $\lbrace z_n \rbrace \in D$ таких, что $\rho(z_n, x_0) \to 0$ при $n \to \infty$. Ясно, что $\overbar{D} = M_0$.
 
 	\item \textbf{Сепарабельное пространство $X$} --- в таком пространстве существует счётное всюду плотное множество $D$: $D=\lbrace x_1,x_2,\ldots,x_n,\ldots \rbrace$. Для любого элемента $x_0 \in X$ можно найти такой номер $n = n(x_0,\varepsilon)$, что $\rho(x_0, z_n) < \varepsilon$.
 
@@ -161,7 +161,7 @@ $x_n\rightarrow x^*$, если $\rho(x_n, x^{*})\rightarrow 0$ при $n\rightar
 
 	\item $\int_{a}^{b} |x(t)|^p dt \leq const, x \in E$,
 
-	\item при $\tau \rightarrow 0$ интегралы $\int_{a}^{b} |x(t+\tau)-x(t)|^p dt \rightarrow 0$ равномерно относительно $x \in E$.
+	\item при $\tau \to 0$ интегралы $\int_{a}^{b} |x(t+\tau)-x(t)|^p dt \to 0$ равномерно относительно $x \in E$.
 
 \end{itemize}
 
@@ -174,7 +174,7 @@ $x_n\rightarrow x^*$, если $\rho(x_n, x^{*})\rightarrow 0$ при $n\rightar
 \begin{theorem} Пусть в полном метрическом пространстве $X$ дана последовательность замкнутых шаров $V_{r_n}(x_n)$:
 
 \begin{equation*}
-\overbar{V_{r_{n+1}}}(x_{n+1})\subset \overbar{V_{r_{n}}}(x_n) \mbox{, где } r_n \rightarrow 0 \mbox{ при } n \rightarrow \infty
+\overbar{V_{r_{n+1}}}(x_{n+1})\subset \overbar{V_{r_{n}}}(x_n) \mbox{, где } r_n \to 0 \mbox{ при } n \to \infty
 \end{equation*}
 
 Тогда в $X$ существует и единственен элемент $x^{*}$, принадлежащий всем шарам $\overbar{V_{r_{n}}}(x_n)$
@@ -184,10 +184,10 @@ $x_n\rightarrow x^*$, если $\rho(x_n, x^{*})\rightarrow 0$ при $n\rightar
 \begin{proof} Для расстояний $\rho(x_n, x_{n+m})$ между центрами этих шаров верно 
 
 \begin{equation*}
-\rho(x_n, x_{n+m})<r_n \rightarrow 0 \mbox{ при } n \rightarrow \infty
+\rho(x_n, x_{n+m})<r_n \to 0 \mbox{ при } n \to \infty
 \end{equation*}
 
-и последовательность $\{x_n\}$ --- фундаментальная последовательность. Так как пространство $X$ полное, то существует $\displaystyle\lim_{n\rightarrow \infty} x_n=x^{*} \subset X$ и этот предел единственен.
+и последовательность $\{x_n\}$ --- фундаментальная последовательность. Так как пространство $X$ полное, то существует $\displaystyle\lim_{n\to \infty} x_n=x^{*} \subset X$ и этот предел единственен.
 
 Ясно, что $x^{*}$ принадлежит всем шарам $\overbar{V_{r_{n}}}(x_n)$.
 	
@@ -232,10 +232,10 @@ $$E=\bigcup\limits_{k=1}^\infty E_k$$,
 
 Множество $E_2$ нигде не плотно: в шаре $\overbar{V_{r_1}}(x_1)$ существует шар $\overbar{V_{r_2}}(x_2)$, в котором нет элементов множества $E_2$ (и элементов множества $E_1$). Можно считать, что $r_2 < \frac{1}{2}r_1 < \frac{1}{2^2}r_0$.
 
-Продолжая этот процесс, получим последовательность вложенных шаров $\overbar{V_{r_1}}(x_1) \supset \overbar{V_{r_2}}(x_2) \supset$ ... $\supset \overbar{V_{r_n}}(x_n) \supset ...; r_n < \frac{1}{2^n}r_0, r_n \rightarrow 0$ при $n \rightarrow \infty$, и в каждом шаре $\overbar{V_{r_n}}(x_n)$ нет элементов множеств $E_1, E_2, ..., E_n$.
+Продолжая этот процесс, получим последовательность вложенных шаров $\overbar{V_{r_1}}(x_1) \supset \overbar{V_{r_2}}(x_2) \supset$ ... $\supset \overbar{V_{r_n}}(x_n) \supset ...; r_n < \frac{1}{2^n}r_0, r_n \to 0$ при $n \to \infty$, и в каждом шаре $\overbar{V_{r_n}}(x_n)$ нет элементов множеств $E_1, E_2, ..., E_n$.
 
 По теореме о вложенных шарах существует элемент $x^*\subset X$:
-$x_n \rightarrow x^*$ при $n \rightarrow \infty$.
+$x_n \to x^*$ при $n \to \infty$.
 
 Ясно, что $x^*\in \bigcup\limits_{n=1}^\infty \overbar{V_{r_n}}(x_n)$ и следовательно $x^*\notin \bigcup\limits_{n=1}^\infty E_n$, что противоречит предположению $X=\bigcup\limits_{n=1}^\infty E_n$. Остается принять, что множество $X$ пространство второй категории.
 
@@ -256,13 +256,13 @@ $x_n \rightarrow x^*$ при $n \rightarrow \infty$.
 
 Эти действия должны удовлетворять обычным условиям (аксиомам). Если $\lambda$ вещественные числа, то $X$ --- вещественное линейное множество, если $\lambda$ комплексные, то $X$ --- комплексное линейное множество. Для вещественного линейного множества $Х$ можно построить комплексное линейное множество $Z$: достаточно ввести элементы $z=x+iy,\quad x,y \in X$ и определить сумму элементов:
 
-\begin{center}
-$z_1+z_2=(x_1+x_2)+i(y_1+y_2)$,
-\end{center}
+\begin{equation*}
+z_1+z_2=(x_1+x_2)+i(y_1+y_2)
+\end{equation*}
 и ввести умножение на комплексное число $\lambda$:
-\begin{center}
-$\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x)$
-\end{center}
+\begin{equation*}
+\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x)
+\end{equation*}
 (комплексификация линейного множества $X$).
 
 Для комплексного линейного множества $Z$ каждый элемент $z=x+iy$, где $x$ и $y$ --- элементы вещественного множества.
@@ -297,9 +297,9 @@ $\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x
 
 	\item Множество решений $x\in C^n[t_0,t_1]$ уравнения
 
-	\begin{center}
-	$\frac{d^nx(t)}{dt^n}+a_1\frac{d^{n-1}x(t)}{dt^{n-1}}+\dotsb+a_{n-1}\frac{dx(t)}{dt}+a_n=0$, где $a_k\in C[t_0,t_1]$
-	\end{center}
+	\begin{equation*}
+	\frac{d^nx(t)}{dt^n}+a_1\frac{d^{n-1}x(t)}{dt^{n-1}}+\dotsb+a_{n-1}\frac{dx(t)}{dt}+a_n=0 \mbox{, где } a_k\in C[t_0,t_1]
+	\end{equation*}
 
 \end{enumerate}
 
@@ -316,12 +316,9 @@ $\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x
 
 \end{enumerate}
 
-
 Норма $\lVert x\rVert$ является непрерывной функцией: $\lvert\lVert x+\triangle x\rVert-\lVert x\rVert\rvert\to0$ при $\lVert\triangle x\rVert\to0$.
 
-
 Верно неравенство $\lVert x-y\rVert\geq\lvert\lVert x\rVert-\lVert y\rVert\rvert$.
-
 
 Определим метрику в линейном пространстве $X$: $\rho(x,y)=\lVert x-y\rVert$. Ясно, что введенная таким образом метрика удовлетворяет всем аксиомам метрического пространства. Линейное множество с метрикой, определяемой нормой элементов, называется \textbf{нормированным пространством}. Если нормированное пространство полное, то оно называется \textbf{пространством Банаха} (Стефан Банах, 1892-1945, польский математик), банаховым пространством, В-пространством.
 
@@ -347,23 +344,23 @@ $\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x
 
 	\item Бесконечномерное банахово пространство $C[t_0,t_1]$ функций $x(t)$ непрерывных на $[t_0,t_1]$. Норма:
 
-	\begin{center}
-	$\lVert x\rVert = \displaystyle\max_{i}\lvert x\rvert$,
-	\end{center}
+	\begin{equation*}
+	\lVert x\rVert = \displaystyle\max_{i}\lvert x\rvert
+	\end{equation*}
 
 	функции $x_k(t)=t^k, k=1,2,3,\dots$ линейно независимы.
 
 	\item Бесконечномерное пространство банахово пространство $C_n[t_0,t_1]$. Норма:
 
-	\begin{center}
-	$\lVert x\rVert = \displaystyle\sum_{k=0}^n\max_{i}\lvert\frac{d^kx(t)}{dt^k}\rvert$
-	\end{center}
+	\begin{equation*}
+	\lVert x\rVert = \displaystyle\sum_{k=0}^n\max_{i}\lvert\frac{d^kx(t)}{dt^k}\rvert
+	\end{equation*}
 
 	\item Пространство Банаха $L_p(a,b)$ измеримых и суммируемых со степенью $p,\;p\geq1,$ функций. Норма:
 
-	\begin{center}
-	$\lVert x\rVert^p = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}}$
-	\end{center}
+	\begin{equation*}
+	\lVert x\rVert^p = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}}
+	\end{equation*}
 
 	Множество полиномов с комплексными коэффициентами плотно в этих пространствах.
 
@@ -371,15 +368,15 @@ $\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x
 
 	В линейном множестве $C[0,1]$ непрерывных функций введем норму (и метрику):
 
-	\begin{center}
-	$\lVert x\rVert = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}},\quad\rho(x,y) = (\int\limits_0^1\lvert x(t)-y(t)\rvert^pdt)^{\frac{1}{p}}$
-	\end{center}
+	\begin{equation*}
+	\lVert x\rVert = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}},\quad\rho(x,y) = (\int\limits_0^1\lvert x(t)-y(t)\rvert^pdt)^{\frac{1}{p}}
+	\end{equation*}
 
 	Получаемое пространство не является полным. Действительно, последовательность функций $x_k(t)=t^k$ является фундаментальной последовательностью:
 
-	\begin{center}
-	$\lVert x_{n+m}-x_n\rVert^p=\int\limits_0^1(t^n-t^{n+m})^pdt=\int\limits_0^1t^{np}(1-t^m)^pdt<\int\limits_0^1t^{np}dt=\frac{1}{np+1}\to0$, при $n\to\infty$
-	\end{center}
+	\begin{equation*}
+	\lVert x_{n+m}-x_n\rVert^p=\int\limits_0^1(t^n-t^{n+m})^pdt=\int\limits_0^1t^{np}(1-t^m)^pdt<\int\limits_0^1t^{np}dt=\frac{1}{np+1}\to0 \mbox{, при } n \to\infty
+	\end{equation*}
 
 	Предел же $\lim x_n(t)$ при $n\to\infty$ в пространстве $C[0,1]$ не существует.
 
@@ -401,169 +398,17 @@ $\lambda z = (\alpha + i\beta)(x+iy) = (\alpha x - \beta y)+i(\alpha y + \beta x
 
 Верно неравенство Коши-Буняковского:
 
-$$|(x, y)|^2 \le (x, x) \cdot (y, y)$$
-Действительно, 
-$$(x + \lambda y, x + \lambda y) \ge 0$$
-$$(x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) > 0$$
-$$(x,x) + 2 Re(\lambda y, x) + |\lambda|^2 (y, y) \ge 0$$
-для любых чисел $\lambda$.
+\begin{equation*}
+|(x, y)|^2 \le (x, x) \cdot (y, y)
+\end{equation*}
 
+Действительно:
 
-
-
-%стр.18 п.4 - стр.23
-\begin{enumerate}
-\item Свойство элементов $y_j$.
-
-$\lVert By_j\rVert = \lVert B(u_j - u_0)\rVert$ (аддитивность $B$) $ = \lVert Bu_j - Bu_0\rVert \le \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \le n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1$.
-Оценим $\lVert B_j\rVert$ через норму элементов $\lVert y_j\rVert$. Так как $y_j \to y$, то $\lVert y_j\rVert \to \lVert y\rVert=r_0$, и при достаточно больших значениях $j$:
-
-\begin{center}
-$\lVert y_j\rVert\frac{1}{r_0}>\frac12$ и $1<\frac{2}{r_0}\lVert y_j\rVert$.
-\end{center}
-
-Для таких значений $j$: $\lVert By_j\rVert\le\frac{2}{r_0}n(\lVert u_j\rVert + \lVert u_0\rVert)$ и так как $\lVert u_j\rVert = \lVert u_0 + u_j - u_0\rVert \le \lVert u_0\rVert + \lVert u_j - u_0\rVert \le \lVert u_0\rVert + r_0$, то для достаточно больших значений $j$:
-
-\begin{center}
-$\lVert By_j\rVert_X \le \frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n\cdot \lVert y_j\rVert_Y$.
-\end{center}
-
-Величину $\frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n$ оценим натуральным числом $N$:
-
-\begin{center}
-$\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
-\end{center}
-
-Так как $y_j \to y$, то множество $Y_N$ плотно в множестве элементов $y$ с нормой $r_0$. Значение $N$, согласно п.п. 1.2, зависит только от фиксированных значений $r$, $n_0$ и $u_0 \in Y$. Так как множество $Y_N$ ``однородно'', то и для любого $y \in Y$ существует последовательность элементов $y_j \in Y_N$, такая что $y_j \to y$ при $j \to \infty$ и $\lVert By_j\rVert \le N\lvert y_j\rVert$. Обозначив $M = Y_N$ и $C_0 = N$, завершим доказательство леммы.
-
-\end{enumerate}
-
-
-\begin{theorem}[Банаха]
-Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y$,линеен.
-\end{theorem}
-
-\begin{proof}
-Согласно лемме в пространстве $Y$ существует всюду плотное множество $M$, для элементов которого
-\begin{center}
-	$\parallel By \parallel \leq C_0 \parallel y \parallel $
-\end{center}
-\begin{enumerate}
-
-	\item Пусть $y_0$ любой элемент пространства $Y$.\\
-	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
-	$y_1 \in M$:
-	\begin{center}
-	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $  ,
-	\end{center}
-	\begin{center}
-	$\parallel y_1 \parallel =
-	\parallel y_1 - \frac{3}{4}y_0 +
-	\frac{3}{4}y_0 \parallel \leq \frac{1}{4} 			\parallel y_0 \parallel +
-	 \frac{3}{4}\parallel y_0\parallel = 				\parallel y_0 \parallel$
-	\end{center}
-	
-	\item Рассмотрим элемент $y_1 - y_0$. Для него
-	\begin{center}
-	$\parallel y_1-y_0 \parallel =\parallel y - \frac{3}{4}y_0 +
-	\frac{1}{4}y_0 \parallel \leq
-	\frac{1}{4} \parallel y_0 \parallel +
-	\frac{1}{4} \parallel y_0 \parallel =
-	\frac{1}{2} \parallel y_0 \parallel$
-	\end{center}
-	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4}			(y_1 - y_0)$. В этом шаре найдём элемент 			$y_2 \in M$:
-	\begin{center}
-	$\parallel y_2 + y_1 - y_0 \parallel =
-	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
-	\frac{1}{4}(y_1 - y_0) \parallel \leq
-	\frac{1}{4} \parallel y_1 - y_0 \parallel +
-	\frac{1}{4} \parallel y_1 - y_0 \parallel = $
-	\end{center}
-	\begin{center}
-	$ = \frac{1}{2} \parallel y_1 - y_0 \parallel 			\leq
-	\frac{1}{2^2} \parallel y_0 \parallel$ ,
-	\end{center}
-	\begin{center}
-	$\parallel y_2 \parallel =
-	\parallel y_2 - \frac{3}{4}(y_1 - y_0) +
-	\frac{3}{4}(y_1 - y_0) \parallel \leq
-	\frac{1}{4} \parallel y_1 - y_0 \parallel +
-	\frac{3}{4} \parallel y_1 - y_0 \parallel =
-	 \parallel y_1 - y_0 \parallel \leq$
-	 \end{center}
-	\begin{center}
-	 $ \leq \frac{1}{2} \parallel y_0 \parallel$
-	\end{center}
-	
-	\item Рассмотрим элемент $y_2+y_1- y_0$ . Для него 	\begin{center}	
-	$\parallel y_2+y_1- y_0 \parallel \leq
-	\frac{1}{2^2} \parallel y_0 \parallel$ .
-	\end{center}
-	Построим шар радиуса
-	$\frac{1}{4} \parallel y_2 + y_1 - y_0 \parallel$      	с центром $\frac{3}{4}(y_2 + y_1 - y_0)$.
-	В этом шаре найдём элемент 	$y_3 \in M$:
-	\begin{center}
-	$\parallel y_3 + y_2 + y_1 - y_0 \parallel =
-	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) -
-	\frac{1}{4}(y_0 - y_1 - y_2) \parallel \leq $
-	\end{center}
-	\begin{center}
-	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel +
-	\frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel 			\leq $
-	\end{center}
-	\begin{center}
-	$ \leq\frac{1}{2} \cdot
-	\frac{1}{2^2} \parallel y_0 \parallel =
-	\frac{1}{2^3} \parallel y_0 \parallel$ ,
-	\end{center}
-	\begin{center}
-	$\parallel y_3 \parallel =
-	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) +
-	\frac{3}{4}(y_0 - y_1 - y_2) \parallel \leq $
-	\end{center}
-	\begin{center}
-	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 				\parallel +
-	\frac{3}{4} \parallel y_0 - y_1 - y_2 \parallel =
-	 \parallel y_0 - y_1 - y_2 \parallel \leq
-	 \frac{1}{2^2} \parallel y_0 \parallel$
-	\end{center}
-
-Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
-\begin{center}
-$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$\\
-и\\
-$\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
-\end{center}
-
-Обозначим $s_n= \sum\limits_{k=1}^n y_k$. Тогда $s_n \rightarrow y_0$ при $n \rightarrow \infty$. Последовательность элементов $B s_n$ сходится в себе:
-\begin{center}
-$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leq $
-\end{center}
-\begin{center}
-$\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \rightarrow 0$ при $n \rightarrow \infty$.
-\end{center}
-
-Так как пространство $X$ полное, то существует $\lim \limits_{n \rightarrow \infty} s_n=x^* \in X$. \\
-Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \rightarrow \infty$, получаем
-\begin{center}
-$ \lVert x^*-B s_n \rVert \leq C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...)$.
-\end{center}
-
-Так как $s_n \rightarrow y_0, B s_n \rightarrow x^*$, то в силу замкнутости оператора $B$: 
-\begin{center}
-$B y_0=x^* $.
-\end{center}
-
-Оценим $\lVert B y_0 \rVert _X$:
-\begin{center}
-$\lVert B y_0 \rVert \leq \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \leq$ 
-\end{center}
-\begin{center}
-$\leq C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+...] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ ...+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
-\end{center}
-$\lVert B y_0 \rVert \leq 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \rightarrow X} \leq 2 C_0$.
-\end{enumerate}
-\end{proof}
+\begin{gather*}
+(x + \lambda y, x + \lambda y) \ge 0\\
+(x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) > 0\\
+(x,x) + 2 Re(\lambda y, x) + |\lambda|^2 (y, y) \ge 0 \mbox{ для любых чисел } \lambda\\
+\end{gather*}
 
 \chapter{Линейные операторы в нормированных пространствах}
 
@@ -576,7 +421,7 @@ $\lVert B y_0 \rVert \leq 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ �
 
 \begin{enumerate}
 
- \item имеющей предел $\lim x_n= x^* \in D$ при $n\rightarrow\infty$,
+ \item имеющей предел $\lim x_n= x^* \in D$ при $n\to\infty$,
  
  \item и такой, что существует $\lim F(x_n)= y^* \in Y$
  
@@ -599,7 +444,7 @@ F(x) =
 
 \begin{enumerate}
 
- \item при $x_n \rightarrow 0$ существует $\lim x_n= x^*=0 \in D$,
+ \item при $x_n \to 0$ существует $\lim x_n= x^*=0 \in D$,
  
  \item предел $F(x_n)$ существует и равен $y^*=1 \in Y$
  
@@ -624,13 +469,13 @@ F(x) =
 \end{center}
 \end{definition}
 
-В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\emptyset \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \rightarrow x_0$ и 
+В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\emptyset \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \to x_0$ и 
 \begin{center}
-$z=(x-x_0)\rightarrow \emptyset$.
+$z=(x-x_0)\to \emptyset$.
 \end{center}
 Тогда 
 \begin{center}
-$A(x-x_0)\rightarrow \emptyset$ и $Ax \rightarrow Ax_0$.
+$A(x-x_0)\to \emptyset$ и $Ax \to Ax_0$.
 \end{center}
  
 Важнейшим классом операторов являются ограниченные операторы.
@@ -649,8 +494,8 @@ $\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel =\underset{S_1}{\
 \begin{center}
 $\underset{S_R}{\sup}\parallel Ax \parallel=R\cdot C_0$ 
 и величина 
-$\underset{S_R}{\sup}\parallel Ax \parallel\rightarrow\infty $ 
-при $R\rightarrow\infty$.
+$\underset{S_R}{\sup}\parallel Ax \parallel\to\infty $ 
+при $R\to\infty$.
 \end{center}
 Линейная зависимость
 \begin{center}
@@ -667,7 +512,7 @@ $ C_0=\underset{S_1}{\sup}\parallel Ax \parallel<+\infty $.
 Эта величина называется \textbf{нормой} линейного оператора, она обозначается
 \begin{center}
 $\parallel A \parallel$ 
-( $\parallel A \parallel _{X \rightarrow Y}$).
+( $\parallel A \parallel _{X \to Y}$).
 \end{center}
 
 Величина $\underset{\parallel x\parallel \leq1}{\sup}\parallel Ax \parallel =
@@ -820,14 +665,14 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \begin{enumerate}
 	\item решение существует для любого $y \subset Y$,
 	\item решение единственно,
-	\item вариации $\Delta x$ решения непрерывно зависят от вариаций $\Delta y$ элемента $y$: $\lVert \Delta x\rVert_X \leq \lVert B\rVert_{Y\rightarrow X}\lVert \Delta y\rVert_X$.
+	\item вариации $\Delta x$ решения непрерывно зависят от вариаций $\Delta y$ элемента $y$: $\lVert \Delta x\rVert_X \leq \lVert B\rVert_{Y\to X}\lVert \Delta y\rVert_X$.
 \end{enumerate}
 Оператор $A$ предполагается линейным, а оператор $B$ определен на всем банаховом пространстве $Y$. В этом случаем операторы $A$ и $B$ замкнуты. Действительно:
 \begin{enumerate}
 
-	\item Из условий $\{x_n \rightarrow x^{*};Ax_n \rightarrow y^{*}\}$ следует, что $Ax_n \rightarrow Ax^{*}$ и $y^{*}=Ax^{*}$, т.е. оператор $A$ замкнут.
+	\item Из условий $\{x_n \to x^{*};Ax_n \to y^{*}\}$ следует, что $Ax_n \to Ax^{*}$ и $y^{*}=Ax^{*}$, т.е. оператор $A$ замкнут.
 
-	\item Пусть выполнены условия: $\{y_n \rightarrow y^{*}; By_n \rightarrow x^{*}\}$. Обозначим $x_n=A^{-1}y_n$ (оператор $A^{-1}$ определен на всём пространстве $Y$). Тогда $x_n \rightarrow x^{*}$ и $y_n=Ax_n \rightarrow Ax^{*}$. Так как оператор $A$ замкнут, то из условий $\{x_n \rightarrow x^{*};Ax_n \rightarrow y^{*}\}$ следует, что $y^{*}=Ax^{*}$, т.е. $x^{*}=By^{*}$. Тогда оператор $B$ замкнут.
+	\item Пусть выполнены условия: $\{y_n \to y^{*}; By_n \to x^{*}\}$. Обозначим $x_n=A^{-1}y_n$ (оператор $A^{-1}$ определен на всём пространстве $Y$). Тогда $x_n \to x^{*}$ и $y_n=Ax_n \to Ax^{*}$. Так как оператор $A$ замкнут, то из условий $\{x_n \to x^{*};Ax_n \to y^{*}\}$ следует, что $y^{*}=Ax^{*}$, т.е. $x^{*}=By^{*}$. Тогда оператор $B$ замкнут.
 	
 \end{enumerate}
 	
@@ -860,14 +705,177 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 
 \begin{center}	
 
-	$u_j \rightarrow z_0$ и $u_j \subset Y_n$.
+	$u_j \to z_0$ и $u_j \subset Y_n$.
 	
 \end{center}
 
-Обозначим $y_j=u_j-u_0$. Ясно, что $y_j \rightarrow y$, $y_j \subset S_{r_0}(u_j)$ (последовательность элементов $y_j$ не обязательно принадлежит множеству $Y_n$!)
+Обозначим $y_j=u_j-u_0$. Ясно, что $y_j \to y$, $y_j \subset S_{r_0}(u_j)$ (последовательность элементов $y_j$ не обязательно принадлежит множеству $Y_n$!)
 	
 \end{enumerate}
+
+
+\begin{enumerate}
+\item Свойство элементов $y_j$.
+
+$\lVert By_j\rVert = \lVert B(u_j - u_0)\rVert$ (аддитивность $B$) $ = \lVert Bu_j - Bu_0\rVert \le \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \le n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1$.
+Оценим $\lVert B_j\rVert$ через норму элементов $\lVert y_j\rVert$. Так как $y_j \to y$, то $\lVert y_j\rVert \to \lVert y\rVert=r_0$, и при достаточно больших значениях $j$:
+
+\begin{center}
+$\lVert y_j\rVert\frac{1}{r_0}>\frac12$ и $1<\frac{2}{r_0}\lVert y_j\rVert$.
+\end{center}
+
+Для таких значений $j$: $\lVert By_j\rVert\le\frac{2}{r_0}n(\lVert u_j\rVert + \lVert u_0\rVert)$ и так как $\lVert u_j\rVert = \lVert u_0 + u_j - u_0\rVert \le \lVert u_0\rVert + \lVert u_j - u_0\rVert \le \lVert u_0\rVert + r_0$, то для достаточно больших значений $j$:
+
+\begin{center}
+$\lVert By_j\rVert_X \le \frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n\cdot \lVert y_j\rVert_Y$.
+\end{center}
+
+Величину $\frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n$ оценим натуральным числом $N$:
+
+\begin{center}
+$\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
+\end{center}
+
+Так как $y_j \to y$, то множество $Y_N$ плотно в множестве элементов $y$ с нормой $r_0$. Значение $N$, согласно п.п. 1.2, зависит только от фиксированных значений $r$, $n_0$ и $u_0 \in Y$. Так как множество $Y_N$ ``однородно'', то и для любого $y \in Y$ существует последовательность элементов $y_j \in Y_N$, такая что $y_j \to y$ при $j \to \infty$ и $\lVert By_j\rVert \le N\lvert y_j\rVert$. Обозначив $M = Y_N$ и $C_0 = N$, завершим доказательство леммы.
+
+\end{enumerate}
+
+\end{proof}
+
+\begin{theorem}[Банаха]
+Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y$,линеен.
+\end{theorem}
+
+\begin{proof}
+Согласно лемме в пространстве $Y$ существует всюду плотное множество $M$, для элементов которого
+\begin{center}
+	$\parallel By \parallel \leq C_0 \parallel y \parallel $
+\end{center}
+\begin{enumerate}
+
+	\item Пусть $y_0$ любой элемент пространства $Y$.\\
+	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
+	$y_1 \in M$:
+	\begin{center}
+	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $  ,
+	\end{center}
+	\begin{center}
+	$\parallel y_1 \parallel =
+	\parallel y_1 - \frac{3}{4}y_0 +
+	\frac{3}{4}y_0 \parallel \leq \frac{1}{4} 			\parallel y_0 \parallel +
+	 \frac{3}{4}\parallel y_0\parallel = 				\parallel y_0 \parallel$
+	\end{center}
 	
+	\item Рассмотрим элемент $y_1 - y_0$. Для него
+	\begin{center}
+	$\parallel y_1-y_0 \parallel =\parallel y - \frac{3}{4}y_0 +
+	\frac{1}{4}y_0 \parallel \leq
+	\frac{1}{4} \parallel y_0 \parallel +
+	\frac{1}{4} \parallel y_0 \parallel =
+	\frac{1}{2} \parallel y_0 \parallel$
+	\end{center}
+	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4}			(y_1 - y_0)$. В этом шаре найдём элемент 			$y_2 \in M$:
+	\begin{center}
+	$\parallel y_2 + y_1 - y_0 \parallel =
+	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
+	\frac{1}{4}(y_1 - y_0) \parallel \leq
+	\frac{1}{4} \parallel y_1 - y_0 \parallel +
+	\frac{1}{4} \parallel y_1 - y_0 \parallel = $
+	\end{center}
+	\begin{center}
+	$ = \frac{1}{2} \parallel y_1 - y_0 \parallel 			\leq
+	\frac{1}{2^2} \parallel y_0 \parallel$ ,
+	\end{center}
+	\begin{center}
+	$\parallel y_2 \parallel =
+	\parallel y_2 - \frac{3}{4}(y_1 - y_0) +
+	\frac{3}{4}(y_1 - y_0) \parallel \leq
+	\frac{1}{4} \parallel y_1 - y_0 \parallel +
+	\frac{3}{4} \parallel y_1 - y_0 \parallel =
+	 \parallel y_1 - y_0 \parallel \leq$
+	 \end{center}
+	\begin{center}
+	 $ \leq \frac{1}{2} \parallel y_0 \parallel$
+	\end{center}
+	
+	\item Рассмотрим элемент $y_2+y_1- y_0$ . Для него 	\begin{center}	
+	$\parallel y_2+y_1- y_0 \parallel \leq
+	\frac{1}{2^2} \parallel y_0 \parallel$ .
+	\end{center}
+	Построим шар радиуса
+	$\frac{1}{4} \parallel y_2 + y_1 - y_0 \parallel$      	с центром $\frac{3}{4}(y_2 + y_1 - y_0)$.
+	В этом шаре найдём элемент 	$y_3 \in M$:
+	\begin{center}
+	$\parallel y_3 + y_2 + y_1 - y_0 \parallel =
+	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) -
+	\frac{1}{4}(y_0 - y_1 - y_2) \parallel \leq $
+	\end{center}
+	\begin{center}
+	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel +
+	\frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel 			\leq $
+	\end{center}
+	\begin{center}
+	$ \leq\frac{1}{2} \cdot
+	\frac{1}{2^2} \parallel y_0 \parallel =
+	\frac{1}{2^3} \parallel y_0 \parallel$ ,
+	\end{center}
+	\begin{center}
+	$\parallel y_3 \parallel =
+	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) +
+	\frac{3}{4}(y_0 - y_1 - y_2) \parallel \leq $
+	\end{center}
+	\begin{center}
+	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 				\parallel +
+	\frac{3}{4} \parallel y_0 - y_1 - y_2 \parallel =
+	 \parallel y_0 - y_1 - y_2 \parallel \leq
+	 \frac{1}{2^2} \parallel y_0 \parallel$
+	\end{center}
+
+Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
+
+\begin{center}
+$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$\\
+и\\
+$\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
+\end{center}
+
+Обозначим $s_n= \sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
+
+\begin{center}
+$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leq $
+\end{center}
+
+\begin{center}
+$\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
+\end{center}
+
+Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$. \\
+Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \to \infty$, получаем
+
+\begin{center}
+$ \lVert x^*-B s_n \rVert \leq C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...)$.
+\end{center}
+
+Так как $s_n \to y_0, B s_n \to x^*$, то в силу замкнутости оператора $B$: 
+
+\begin{center}
+$B y_0=x^* $.
+\end{center}
+
+Оценим $\lVert B y_0 \rVert _X$:
+
+\begin{center}
+$\lVert B y_0 \rVert \leq \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \leq$ 
+\end{center}
+
+\begin{center}
+$\leq C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+...] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ ...+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
+\end{center}
+
+$\lVert B y_0 \rVert \leq 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \to X} \leq 2 C_0$.
+
+\end{enumerate}
+
 \end{proof}
 
 \begin{enumerate}
@@ -965,7 +973,7 @@ I. Если $A_1, A_2 \subset \sigma(X,Y)$, то их линейная комб�
 
 Так как множество $A_1S_1$ компактно в $Y$, то из последовательности $\lbrace A_2x_{n_k} \rbrace$ можно выделить фундаментальную последовательность $\lbrace A_2x'_i \rbrace$. Ясно, что последовательность $\lbrace (\lambda_1 A_1+\lambda_2 A_2)x'_i \rbrace$ является фундаментальной последовательностью в $Y$.
 
-II. Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \rightarrow 0$ при $n\rightarrow \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+II. Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
 \end{proof}
 
 \begin{cexample}Тождественный оператор $E$ в сепарабельном гильбертовом пространстве не является вполне непрерывным оператором.
@@ -983,7 +991,7 @@ $y=\widetilde{K}x$, $y(t)=\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau ,$\
 \begin{center}
 $|y(t_2)-y(t_1)|^2\leq \int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$,\\
 \end{center}
-Величина $|y(t_2)-y(t_1)|\rightarrow 0$ при $|t_2-t_1|\rightarrow 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
+Величина $|y(t_2)-y(t_1)|\to 0$ при $|t_2-t_1|\to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
 
 Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leq M^2 (b-a)$.
 
@@ -997,19 +1005,23 @@ $y=Kx$, $y(t)=\int\limits_a^b K(t, \tau)x(\tau)d\tau $,
 
 По теореме Лебега для функции $K(t, \tau)$ существует последовательность непрерывных в $D$ функций $\widetilde{K}_n (t, \tau)$, таких что
 \begin{center}
-$\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \rightarrow 0$ при $n\rightarrow \infty$,
+$\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$,
 \end{center}
 \begin{center}
-т.е. $\lVert K-\widetilde{K}_n \rVert \rightarrow 0$ при $n\rightarrow \infty$.
+т.е. $\lVert K-\widetilde{K}_n \rVert \to 0$ при $n\to \infty$.
 \end{center}
 
 Так как интегральные операторы $\widetilde{K}_n$ вполне непрерывны, то и интегральный оператор Гильберта-Шмидта вполне непрерывен.
 \end{example}
-\begin{theorem}Пусть оператор $A \subset \sigma (H,H)$, где $H$ бесконечномерное сепарабельное пространство Гильберта. Задача решения уравнения $Ax=y$ поставлена некорректно по Адамару.
-\end{theorem}
-\begin{proof}В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \rightarrow \infty}{lim} A \psi_{n_k}$.\\
-Рассмотрим вариацию правой части $\Delta y_k=A \psi_{n_k}-y_0 \rightarrow \infty$ при $k\rightarrow \infty$. Соответствующая вариация решения $\Delta x_k=\psi_{n_k}$ и $\lVert\Delta x_k \rVert=1$, т.е. вариация решения $\Delta x_k$ не стремится к нулю при $\lVert\Delta y_k \rVert \rightarrow \infty$.
 
+\begin{theorem}
+Пусть оператор $A \subset \sigma (H,H)$, где $H$ бесконечномерное сепарабельное пространство Гильберта. Задача решения уравнения $Ax=y$ поставлена некорректно по Адамару.
+\end{theorem}
+
+\begin{proof}
+В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{lim} A \psi_{n_k}$.\\
+
+Рассмотрим вариацию правой части $\Delta y_k=A \psi_{n_k}-y_0 \to \infty$ при $k\to \infty$. Соответствующая вариация решения $\Delta x_k=\psi_{n_k}$ и $\lVert\Delta x_k \rVert=1$, т.е. вариация решения $\Delta x_k$ не стремится к нулю при $\lVert\Delta y_k \rVert \to \infty$.
 \end{proof}
 
 \end{document}
