@@ -103,7 +103,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 \end{center}
 
-Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, то есть если $x_n\to x^{*}$, $y_n\to y^{*}$ при $n \to \infty$, то $\rho(x_n, y_n) \to \rho(x^*, y^*)$.\\
+Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, то есть если $x_n\to x^{*}$, $y_n\to y^{*}$ при $n \to \infty$, то $\rho(x_n, y_n) \to \rho(x^*, y^*)$.
 
 Естественным образом вводятся понятия:
 
@@ -927,11 +927,12 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \end{center}
 \begin{enumerate}
 
-	\item Пусть $y_0$ любой элемент пространства $Y$.\\
+	\item Пусть $y_0$ любой элемент пространства $Y$.
+	
 	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
 	$y_1 \in M$:
 	\begin{center}
-	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $  ,
+	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $,
 	\end{center}
 	\begin{center}
 	$\parallel y_1 \parallel =
@@ -1008,8 +1009,10 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
 
 \begin{center}
-$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$\\
-и\\
+$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$
+
+и
+
 $\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
 \end{center}
 
@@ -1023,7 +1026,8 @@ $ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n
 $\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
 \end{center}
 
-Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$. \\
+Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$.
+
 Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \to \infty$, получаем
 
 \begin{center}
@@ -1146,29 +1150,38 @@ $$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k
 \end{theorem}
 \begin{proof}Состроит в доказательстве двух пунктов (согласно определению подпространства).
 
-I. Если $A_1, A_2 \subset \sigma(X,Y)$, то их линейная комбинация $A=\lambda_1 A_1+\lambda_2 A_2\in \sigma(X,Y)$.\\
+\begin{enumerate}
+
+	\item Если $A_1, A_2 \subset \sigma(X,Y)$, то их линейная комбинация $A=\lambda_1 A_1+\lambda_2 A_2\in \sigma(X,Y)$.
+
 Рассмотрим множество $AS_1$, где $S_1$ --- единичная сфера в пространстве $X$. Покажем, что множество $AS_1$ компактно в $Y$. Возьмем любую последовательность элементов $x_n \subset S_1$, $\lVert x_n \rVert=1$. Обозначим элементы $Ax_n=y_n$, $y_n=\lambda_1 A_1 x_n+\lambda_2 A_2 x_n$.
 
 Так как множество $A_1S_1$ компактно в $Y$, то из последовательности $\lbrace A_2x_{n_k} \rbrace$ можно выделить фундаментальную последовательность $\lbrace A_2x'_i \rbrace$. Ясно, что последовательность $\lbrace (\lambda_1 A_1+\lambda_2 A_2)x'_i \rbrace$ является фундаментальной последовательностью в $Y$.
 
-II. Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+	\item Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+
+\end{enumerate}
 \end{proof}
 
 \begin{cexample}Тождественный оператор $E$ в сепарабельном гильбертовом пространстве не является вполне непрерывным оператором.
 
 Действительно, пусть $\psi_1,\psi_2,...,\psi_n,..., \lVert\psi_n\rVert =1$ --- ортонормальный базис пространства. Множество $S_1$ ограничено, но множество $ES_1 (=S_1)$ не является компактным: из последовательности $\lbrace \psi_n \rbrace_{n=1}^{\infty}$ нельзя выбрать фундаментальную последовательность, так как $\lVert\psi_n - \psi_m \rVert ^2=(\psi_n - \psi_m, \psi_n - \psi_m)= (\psi_n,\psi_n)+ (\psi_m,\psi_m)=2$ при $n \neq m$
 \end{cexample}
+
 \begin{example}Интегральный оператор $\widetilde{K}$ из $L_2(a,b)$ в $L_2(a,b)$.
+
 \begin{center}
-$y=\widetilde{K}x$, $y(t)=\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau ,$\\
+$y=\widetilde{K}x$, $y(t)=\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau$,
 \end{center}
-где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leq M$.\\
+
+где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leq M$.
 
 В этом случае функции $y(t)$ непрерывны:
 
 \begin{center}
-$|y(t_2)-y(t_1)|^2\leq \int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$,\\
+$|y(t_2)-y(t_1)|^2\leq \int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$,
 \end{center}
+
 Величина $|y(t_2)-y(t_1)|\to 0$ при $|t_2-t_1|\to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
 
 Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leq M^2 (b-a)$.
