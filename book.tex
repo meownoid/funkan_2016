@@ -26,6 +26,9 @@
 \newtheorem*{example}{Пример}
 
 \theoremstyle{remark}
+\newtheorem*{examples}{Примеры}
+
+\theoremstyle{remark}
 \newtheorem*{cexample}{Контр-пример}
 
 \theoremstyle{plain}
@@ -159,7 +162,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 \end{definition}
 
 \begin{theorem}[Хаусдорф, около 1914 г.]
-Для того, чтобы множество $K \subset X$ было компактно в $X$, необходимо и достаточно чтобы для любого $\varepsilon > 0$ в множестве $K$ существовала конечная $\varepsilon$ \-- сеть. 
+Для того, чтобы множество $K \subset X$ было компактно в $X$, необходимо и достаточно чтобы для любого $\varepsilon > 0$ в множестве $K$ существовала конечная $\varepsilon$-сеть. 
 \end{theorem}
 \begin{proof}
 
@@ -167,13 +170,13 @@ $\underbar{Необходимость}$
 
 (От противного)
 
-Пусть $K$  \-- компактное в $X$ множество. Предположим, что для заданного $\varepsilon >0 $ не существует конечной $\varepsilon$ \-- сети. Возьмем любой элемент $x_1 \in K.$ Согласно предположению он не образует конечной $\varepsilon$ \-- сети и существует элемент $x_2 \in K$ такой что $\rho(x_1, x_2) > \varepsilon.$ Два элемента $x_1$ и $x_2$ не образуют $\varepsilon$ \-- сети, и существует третий элемент $x_3 \in K$ такой что значения $\rho(x_3, x_1), \; \rho(x_3, x_2), \; \rho(x_2, x_1) > \varepsilon.$
+Пусть $K$  --- компактное в $X$ множество. Предположим, что для заданного $\varepsilon >0 $ не существует конечной $\varepsilon$-сети. Возьмем любой элемент $x_1 \in K.$ Согласно предположению он не образует конечной $\varepsilon$-сети и существует элемент $x_2 \in K$ такой что $\rho(x_1, x_2) > \varepsilon.$ Два элемента $x_1$ и $x_2$ не образуют $\varepsilon$-сети, и существует третий элемент $x_3 \in K$ такой что значения $\rho(x_3, x_1), \; \rho(x_3, x_2), \; \rho(x_2, x_1) > \varepsilon.$
 
 Продолжая этот процесс, получим последовательность элементов $x_1,x_2,x_3, \ldots, x_n, \ldots \in K$ таких что $\rho(x_i, x_j) > \varepsilon$ при   $i \neq j.$ Из этой последовательности нельзя составить ни одной фундаментальной подпоследовательности, что противоречит компактности множества $K.$
 
 $\underbar{Достаточность}$ Пусть $\{x_n\}_{n=1}^{\infty}$ любая последовательность элементов множества $K.$ Образуем последовательность чисел $\varepsilon _k > 0,$ монотонно стремящуюся к $0.$
 
-Для значения $\varepsilon _1$  в множестве $K$ существует конечная $\varepsilon _1$ \-- сеть, т.е. все множество $K$ может быть покрыто конечным числом шаров радиуса $\varepsilon _1 .$ Так как последовательность $\{ x_n \}$ содержит бесконечное число элементов, то среди упомянутых шаров найдется хотя бы один шар $V_{\varepsilon _1} (z_1),$ в котором содержится бесконечное число элементов последовательности $\{x_n\}.$ Обозначим $x_{n_1}$ первый из таких элементов: $x_{n_1} \in V_{\varepsilon _1} (z_1).$
+Для значения $\varepsilon _1$  в множестве $K$ существует конечная $\varepsilon _1$-сеть, т.е. все множество $K$ может быть покрыто конечным числом шаров радиуса $\varepsilon _1 .$ Так как последовательность $\{ x_n \}$ содержит бесконечное число элементов, то среди упомянутых шаров найдется хотя бы один шар $V_{\varepsilon _1} (z_1),$ в котором содержится бесконечное число элементов последовательности $\{x_n\}.$ Обозначим $x_{n_1}$ первый из таких элементов: $x_{n_1} \in V_{\varepsilon _1} (z_1).$
 
 Далее, шар $ V_{\varepsilon _1} (z_1) $ может быть покрыт конечным числом шаров радиуса $\varepsilon _2 < \varepsilon _1.$ Тогда в одном из таких шаров $V_{\varepsilon _2} (z_2)$ содержится бесконечное число элементов последовательности $\{x_n\},$ и первый после $x_{n_1}$ такой элемент обозначим $x_{n_2}:$
 \begin{equation*}
@@ -192,12 +195,12 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 \end{proof}
 
 \begin{corollary}
-Если в множестве $K \subset X$ существует компактная в $X$ $\varepsilon$ \-- сеть $H_{\varepsilon},$ то множество $K$ компактно в $X.$ 
+Если в множестве $K \subset X$ существует компактная в $X$ $\varepsilon$-сеть $H_{\varepsilon},$ то множество $K$ компактно в $X.$ 
 \end{corollary}
 
-Действительно, так как $H_{\varepsilon} $ является $\varepsilon$ \-- сетью для множества $K,$ то для любого элемента $x \in K$ существует элемент $x_{\varepsilon} \in H_{\varepsilon}$ такой что $\rho(x, x_{\varepsilon}) < \varepsilon.$ Из условия компактности множества $H_{\varepsilon}$ в пространстве $X$ следует, что в  $H_{\varepsilon}$ существует конечная $\varepsilon$ \-- сеть элементов $\bar{x}_1, \bar{x}_2,\ldots \bar{x}_n,$ и для элемента $x_{\varepsilon}$ существует элемент $\bar{x}_k \in H_{\varepsilon}$ такой что $\rho(x_{\varepsilon}, \bar{x}_k) < \varepsilon.$ Тогда $\rho(x, \bar{x}_k) \leqslant \rho(x, x_{\varepsilon}) + \rho(x_{\varepsilon}, \bar{x}_k) \leqslant \varepsilon + \varepsilon = 2 \varepsilon.$
+Действительно, так как $H_{\varepsilon} $ является $\varepsilon$-сетью для множества $K,$ то для любого элемента $x \in K$ существует элемент $x_{\varepsilon} \in H_{\varepsilon}$ такой что $\rho(x, x_{\varepsilon}) < \varepsilon.$ Из условия компактности множества $H_{\varepsilon}$ в пространстве $X$ следует, что в  $H_{\varepsilon}$ существует конечная $\varepsilon$-сеть элементов $\bar{x}_1, \bar{x}_2,\ldots \bar{x}_n,$ и для элемента $x_{\varepsilon}$ существует элемент $\bar{x}_k \in H_{\varepsilon}$ такой что $\rho(x_{\varepsilon}, \bar{x}_k) < \varepsilon.$ Тогда $\rho(x, \bar{x}_k) \leqslant \rho(x, x_{\varepsilon}) + \rho(x_{\varepsilon}, \bar{x}_k) \leqslant \varepsilon + \varepsilon = 2 \varepsilon.$
 
-Следовательно элементы $\bar{x}_1, \bar{x}_2,\ldots \bar{x}_n,$ множества $H_{\varepsilon}$ образуют в множестве $K$ конечную $2 \varepsilon$ \-- сеть. По теореме Хаусдорфа множество $K$ компактно в $X.$
+Следовательно элементы $\bar{x}_1, \bar{x}_2,\ldots \bar{x}_n,$ множества $H_{\varepsilon}$ образуют в множестве $K$ конечную $2 \varepsilon$-сеть. По теореме Хаусдорфа множество $K$ компактно в $X.$
 
 Ясно, что компактное множество ограничено: существует шар конечного радиуса, которому принадлежит компактное множество.
 
@@ -250,7 +253,7 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 
 Условия теоремы М. Рисса аналогичны условиям теоремы Арцела-Асколи для пространства непрерывных функций. Доказательство теоремы основано на плотности множества непрерывных на $[a, b]$ функций в пространстве $L_p [a, b]$.
 
-	\item Принцип вложенных шаров (В математическом анализе - лемма о вложенных отрезках).
+	\item Принцип вложенных шаров (В математическом анализе --- лемма о вложенных отрезках).
 
 \begin{theorem} Пусть в полном метрическом пространстве $X$ дана последовательность замкнутых шаров $V_{r_n}(x_n)$:
 
@@ -288,7 +291,7 @@ $\rho(x,z) < \varepsilon$.
 \end{definition}
 
 \begin{example}
-На плоскости (в пространстве $R_2$) множество точек любой прямой - нигде не плотное в $R_2$ множество.
+На плоскости (в пространстве $R_2$) множество точек любой прямой --- нигде не плотное в $R_2$ множество.
 Рассмотрим множество прямых $l$, параллельных оси $x$ и пересекающих ось $y$ в точках с рациональными значениями координат $y_n$. Ясно, что множество таких прямых счётно, и каждая прямая $l_n$ этого множества есть множество нигде не плотное в пространстве $R_2$.
 \end{example}
 
@@ -411,8 +414,8 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \textbf{Подпространством нормированного пространства $X$} называется любое линейное \underline{замкнутое} множество $X_0 \in X$.
 \end{definition}
 
-\textbf{Примеры}
-
+\begin{examples}
+\leavevmode
 \begin{enumerate}
 
 	\item Банаховы пространства $n$-мерных векторов получаем введением различных норм векторов $\bar{x}(x_1,x_2,\ldots,x_n)$:
@@ -466,6 +469,8 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	Предел же $\lim x_n(t)$ при $n\to\infty$ в пространстве $C[0,1]$ не существует.
 
 \end{enumerate}
+
+\end{examples}
 
 \section{Пространства Гильберта}
 
@@ -553,7 +558,26 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	\item ортогональных множеств
 \end{itemize}
 
+\begin{theorem}
+	Если $H_1$ подпространство пространства $H$, а $H_2$ --- ортогональное дополнение $H_1$, то любой элемент $x \in H$ можно представить единственным образом в виде $x = x_1 + x_2$, где $x_1 \in H_1$, а $x_2 \in H_2$ и $\rho(x, H_1) = \parallel x - x_1 \parallel$
+\end{theorem}
 
+\begin{theorem}
+	Если $H$ --- сепарабельное гильбертово пространство, то в нём существует не более чем счётная ортогональная система элементов $\lbrace \phi_1, \phi_2, \ldots, \phi_n, \ldots \rbrace$ (базис пространства $H$), и любой элемент $x \in H$ представим в виде 
+	$$x = \displaystyle\sum_{k} c_k \phi_k$$
+	где $c_k = (x, \phi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \parallel x \parallel^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\phi_k$).
+\end{theorem}
+
+\begin{examples}
+\leavevmode
+\begin{enumerate}
+	\item Функции $1, cos \frac{2 \pi (t - a)}{b - a}, sin \frac{2 \pi (t - a)}{b - a}, \ldots, cos \frac{2 \pi k (t - a)}{b - a}, sin \frac{2 \pi k (t - a)}{b - a}$ образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
+	
+	\item Полиномы Лежандра $P_k(t)$ степени $k$ ($k = 0, 1, 2, \ldots$) образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
+	
+	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\phi}^2 (a, b)$, где $\phi(t) = \frac{1}{\sqrt(1 - t^2)}$
+\end{enumerate}
+\end{examples}
 
 \chapter{Линейные операторы в нормированных пространствах}
 
@@ -576,7 +600,8 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \end{definition}
 
-\textbf{Пример}: $D=[-1;1]$, $Y=[0;\infty]$
+\begin{example}
+$D=[-1;1]$, $Y=[0;\infty]$
 \begin{equation*}
 F(x) = 
 \begin{cases}
@@ -594,24 +619,26 @@ F(x) =
  \item предел $F(x_n)$ существует и равен $y^*=1 \in Y$
  
 \end{enumerate}
-верно равенство $F(x^*)=y^*$.\\
+верно равенство $F(x^*)=y^*$.
 
-В определении замкнутости отображения исключаются сходящиеся последовательности $\lbrace x_n \rbrace$, для которых предел $F(x_n)$ не существует.\\
+\end{example}
+
+В определении замкнутости отображения исключаются сходящиеся последовательности $\lbrace x_n \rbrace$, для которых предел $F(x_n)$ не существует.
 
 В этой главе мы будем рассматривать отображения, областями задания и областями значений которых являются линейные множества.
 
-\begin{definition} Отображение $F$ называется аддитивным, если $F(x_1+x_2)=F(x_1)+F(x_2)$.
+\begin{definition} Отображение $F$ называется \textbf{аддитивным}, если $F(x_1+x_2)=F(x_1)+F(x_2)$.
 \end{definition}
 
-\begin{definition} Отображение $F$ называется однородным, если $F(\lambda x)=\lambda F(x)$. Для комплексных линейных множеств $X$ и $Y$ выполнено: $F(ix)=iF(x)$.
+\begin{definition} Отображение $F$ называется \textbf{однородным}, если $F(\lambda x)=\lambda F(x)$. Для комплексных линейных множеств $X$ и $Y$ выполнено: $F(ix)=iF(x)$.
 \end{definition}
 
-\begin{definition} Отображения аддитивные и однородные будем называть операторами. Для оператора $A$ верно:
+\begin{definition} Отображения аддитивные и однородные будем называть \textbf{операторами}. Для оператора $A$ верно:
+
 \begin{center}
-
 	$A(\lambda_1x_1+\lambda_2x_2)=\lambda_1Ax_1+\lambda_2Ax_2$
-	
 \end{center}
+
 \end{definition}
 
 В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\emptyset \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \to x_0$ и 
@@ -628,7 +655,7 @@ $A(x-x_0)\to \emptyset$ и $Ax \to Ax_0$.
 \begin{definition} Оператор $A$ называется ограниченным, если любое ограниченное множество он отображает в множество, ограниченное в $Y$.
 \end{definition}
 
-В дальнейшем мы будем рассматривать нормированные пространства $X$ и $Y$.\\
+В дальнейшем мы будем рассматривать нормированные пространства $X$ и $Y$.
 
 Для ограниченного оператора $A$  обозначим величину 
 \begin{center}
@@ -662,7 +689,7 @@ $\parallel A \parallel$
 
 Величина $\underset{\parallel x\parallel \leq1}{\sup}\parallel Ax \parallel =
 \parallel A \parallel =
-\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel$.\\
+\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel$.
 
 Действительно,
 \begin{center}
@@ -676,7 +703,7 @@ $\parallel Ax \parallel=
 \parallel x \parallel \cdot \parallel A(\frac{x}{\parallel x \parallel}) \parallel \leq C_0$
 \end{center} 
 при $\parallel x \parallel \leq 1$; 
-$\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel \leq C_0$.\\
+$\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel \leq C_0$.
 
 Тогда 
 \begin{center}
@@ -684,11 +711,12 @@ $ C_0 \geq\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel $, 
 $\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel =\parallel A \parallel$.
 \end{center}
 
-Для линейных операторов верна оценка: $\parallel Ax \parallel _{Y} =\parallel A \parallel \cdot \parallel x \parallel_{X} $.\\
+Для линейных операторов верна оценка: $\parallel Ax \parallel _{Y} =\parallel A \parallel \cdot \parallel x \parallel_{X} $.
 
-\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leq {C}  \parallel x \parallel$, то $\parallel A \parallel \leq {C} $.\\
+\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leq {C}  \parallel x \parallel$, то $\parallel A \parallel \leq {C} $.
 
-\textbf{Пример.} Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
+\begin{example}
+Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
 \frac{1}{p}+\frac{1}{q}=1$,
 \begin{center}
 $y=K\cdot x$ ,  $ y(t)=\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau$.
@@ -702,18 +730,19 @@ ${(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q dtd\tau)^\frac{1}{q
 Согласно неравенству Гёльдера интеграл 
 \begin{center}
 $\vert \int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leq (\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)}^\frac{1}{p}=$
-\\ 
+
 $= \parallel x \parallel _{L_p(a,b)}\cdot (\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
-\\ 
+
 ${\parallel y \parallel}^q _{L_q(a,b)}=\int\limits_a^b {\vert \int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert}^{q} dt\leq {\parallel x \parallel}^q _{L_p(a,b)} \cdot \int\limits_a^b dt \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
-\\
+
 ${\parallel y \parallel}_{L_q(a,b)}=
 {\parallel Kx\parallel}_{L_q(a,b)} \leq {(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{L_p(a,b)} $ 
 \end{center}
 и $\parallel K \parallel \leq {(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
-\\
+
 Можно показать, что $\parallel K \parallel = 
 {(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$
+\end{example}
 
 \emph{Пространство линейных операторов}
 
@@ -747,7 +776,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 Следующая лемма верна для полных нормированных пространств $X$, т.е. для банаховых пространств.
 
 \begin{lemma}[Лемма II]
-Пусть $X$ - пространство Банаха. Пусть $\lbrace A_n\rbrace$ последовательность операторов множества $\mathcal{L}(X,Y)$. Тогда если нормы $\lVert A_n x\rVert$ элементов $A_n x$ ограничены для каждого $x \subset X$, то нормы операторов $A_n \quad \lVert A_n\rVert$ ограничены в совокупности.
+Пусть $X$ --- пространство Банаха. Пусть $\lbrace A_n\rbrace$ последовательность операторов множества $\mathcal{L}(X,Y)$. Тогда если нормы $\lVert A_n x\rVert$ элементов $A_n x$ ограничены для каждого $x \subset X$, то нормы операторов $A_n \quad \lVert A_n\rVert$ ограничены в совокупности.
 \end{lemma}
 
 \begin{proof}
@@ -771,7 +800,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 Теперь можно указать условия, при которых из сходимости последовательности элементов $\lbrace A_n x\rbrace$ при любом $x \subset X$ следует поточечная сходимость последовательности операторов $A_n$ к \textbf{линейному} оператору $A$: $\lim\limits_{n \to \infty}A_n x = y(x) \subset Y$, $Ax=y(x)$.
 
 \begin{theorem}[Банаха-Штейнгауза]
-Пусть $\lbrace A_n\rbrace \subset \mathcal{L}(X,Y)$, где $X$ и $Y$ - пространства Банаха. Для того, чтобы последовательность операторов $\lbrace A_n\rbrace$ сходилась поточечно к линейному оператору на всем пространстве $X$, необходимо и достаточно, чтобы были выполнены два условия:
+Пусть $\lbrace A_n\rbrace \subset \mathcal{L}(X,Y)$, где $X$ и $Y$ --- пространства Банаха. Для того, чтобы последовательность операторов $\lbrace A_n\rbrace$ сходилась поточечно к линейному оператору на всем пространстве $X$, необходимо и достаточно, чтобы были выполнены два условия:
 
 \begin{enumerate}
 \item Нормы $\lVert A_n\rVert$ ограничены в совокупности: $\lVert A_n\rVert \le M$.
@@ -919,7 +948,7 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 	\frac{1}{4} \parallel y_0 \parallel =
 	\frac{1}{2} \parallel y_0 \parallel$
 	\end{center}
-	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4}			(y_1 - y_0)$. В этом шаре найдём элемент 			$y_2 \in M$:
+	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4} (y_1 - y_0)$. В этом шаре найдём элемент $y_2 \in M$:
 	\begin{center}
 	$\parallel y_2 + y_1 - y_0 \parallel =
 	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
@@ -1072,7 +1101,7 @@ $$x(\xi, t) = \sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\p
 $x(\xi, T) = y(\xi)$
 \end{center}
 
-Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A\in\mathscr{L}(X,Y), \; X = L_{2}(0, \pi), \; Y = L_{2}(0, \pi)$ $\-- $ банаховы пространства.
+Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A\in\mathscr{L}(X,Y), \; X = L_{2}(0, \pi), \; Y = L_{2}(0, \pi)$ --- банаховы пространства.
 
 Будет ли эта задача корректно поставлена по Адамару?
 
