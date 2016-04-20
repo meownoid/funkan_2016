@@ -36,13 +36,14 @@
 
 \setcounter{tocdepth}{1}
 
+\def\labelitemi{--}
+
 \begin{document}
 
 \begin{titlepage}
 
 \begin{center}
 \vfill
-\framepage
 
 Санкт-Петербургский государственный университет\\
 \ \\
@@ -323,6 +324,8 @@ $x_n \to x^*$ при $n \to \infty$.
 
 \section{Линейные пространства, нормированные пространства, пространства Банаха}
 
+\begin{definition}
+
 Множество элементов $Х$ называется \textbf{линейным множеством}, если для его элементов определены действия сложения и умножения на число (вещественное или комплексное), не выводящие из множества $X$:
 
 \begin{itemize}
@@ -332,6 +335,8 @@ $x_n \to x^*$ при $n \to \infty$.
 	\item если $x\in X$, то $\lambda x\in X$
 
 \end{itemize}
+
+\end{definition}
 
 
 Эти действия должны удовлетворять обычным условиям (аксиомам). Если $\lambda$ вещественные числа, то $X$ --- вещественное линейное множество, если $\lambda$ комплексные, то $X$ --- комплексное линейное множество. Для вещественного линейного множества $Х$ можно построить комплексное линейное множество $Z$: достаточно ввести элементы $z=x+iy,\quad x,y \in X$ и определить сумму элементов:
@@ -472,14 +477,14 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
     \item $(\lambda x_1 + \mu x_2, y) = \lambda (x_1, y) + \mu (x_2, y)$
 
-    \item $(x, x)$ - вещественное число, $(x, x) \geqslant 0$ и если $(x, x) = 0$, то $x = \ominus$
+    \item $(x, x)$ --- вещественное число, $(x, x) \geqslant 0$ и если $(x, x) = 0$, то $x = \ominus$
 
 \end{enumerate}
 
 Верно неравенство Коши-Буняковского:
 
 \begin{equation*}
-|(x, y)|^2 \le (x, x) \cdot (y, y)
+\lvert (x, y) \rvert ^2 \le (x, x) \cdot (y, y)
 \end{equation*}
 
 Действительно:
@@ -487,9 +492,67 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \begin{gather*}
 (x + \lambda y, x + \lambda y) \ge 0\\
 (x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) > 0\\
-(x,x) + 2 Re(\lambda y, x) + |\lambda|^2 (y, y) \ge 0\\
+(x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) \ge 0\\
 \mbox{ для любых чисел } \lambda\\
 \end{gather*}
+
+Если $(y, y) = 0$, $y = \ominus$, то доказываемое утверждение верно. Если $(y, y) \neq 0$, то положим 
+
+\begin{gather*}
+\lambda = - \frac{(x, y)}{(y, y)}\\
+(\lambda y, x) = - \frac{ \lvert (x, y)\rvert^2}{(y, y)}
+\end{gather*}
+
+Тогда
+
+\begin{gather*}
+(x, x) - 2 \frac{ \lvert (x, y) \rvert^2}{(y, y)} + \frac{\lvert (x, y) \rvert^2}{(y, y)} \ge 0\\
+(x, x) - \frac{\lvert (x, y) \rvert^2}{(y, y)} \ge 0
+\end{gather*}
+
+и
+
+\begin{gather*}
+(x, x) (y, y) \ge \lvert (x, y) \rvert^2\\
+\lvert (x, y) \rvert^2 \le (x, x) (y, y)
+\end{gather*}
+
+Введём норму элементов $\parallel x \parallel = \sqrt{(x, x)}$ и получим нормированное пространство. Действительно
+
+\begin{itemize}
+
+	\item $\parallel \lambda x \parallel^2 = (\lambda x, \lambda x) = \lvert \lambda \rvert^2 (x, x) = \lvert \lambda \rvert^2 \parallel x \parallel^2$ и $\parallel \lambda x \parallel = \lvert \lambda \rvert \parallel x \parallel$
+	
+	\item $\parallel x + y \parallel^2 = (x + y, x + y) = (x, x) + 2 \lvert (x, y) \rvert + (y, y) \le$ (по неравенству Коши-Буняковского) $\le \parallel x \parallel^2 + 2 \parallel x \parallel \parallel y \parallel + \parallel y \parallel^2 = (\parallel x \parallel + \parallel y \parallel)^2$ т.е. и третье условие в определении нормы тоже выполнено: $\parallel x + y \parallel \le \parallel x \parallel + \parallel y \parallel$.
+
+\end{itemize}
+
+Если полученное нормированное пространство \underline{полно}, то оно называется \textbf{пространством Гильберта} (Давид Гильберт, 1862-1943, немецкий математик).
+
+\subsection*{Примеры гильбертовых пространств}
+
+\begin{enumerate}
+	\item Пространство $l^2$ числовых последовательностей $x = \lbrace \xi_k \rbrace_{k=1}^{\infty}$ таких, что ряд $\displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$ сходится. Скалярное произведение $(x, y) = \displaystyle\sum_{k=1}^{\infty} \xi_k \overbar{\eta}_k$ и норма $\parallel x \parallel^2 = \displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$.
+	
+	\item Пространство $L_{\phi}^2 (a, b)$.
+	
+	$$ (x, y) = \displaystyle\int\limits_a^b \phi(t) x(t) \overbar{y}(t) dt$$
+	
+	$$ \parallel x \parallel^2 = \displaystyle\int\limits_a^b \phi(t) \lvert x(t) \rvert^2 dt$$
+	
+	Функция $\phi(t)$ --- функция, суммируемая на $(a, b)$ такая, что $\phi(t) > 0$ почти везде.
+	
+	Пространство $L_{\phi}^2 (a, b)$ сепарабельно: проведя декомплексификацию этого пространства, получим вещественные пространства, в которых множества полиномов с рациональными коэффициентами являются всюду плотными.
+\end{enumerate}
+
+Введение скалярного произведения определяет понятия:
+
+\begin{itemize}
+	\item ортогональных элементов: если $(x, y) = 0$, то пишут $x \perp y$
+	
+	\item ортогональных множеств
+\end{itemize}
+
 
 
 \chapter{Линейные операторы в нормированных пространствах}
