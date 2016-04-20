@@ -744,7 +744,60 @@ ${\parallel y \parallel}_{L_q(a,b)}=
 {(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$
 \end{example}
 
-\emph{Пространство линейных операторов}
+\section{Пространство линейных операторов}
+Рассмотрим множество всех линейных операторов их нормированного пространства $X$ в нормированное пространство $Y$. Множество таких операторов обозначим $L(X,Y)$. Введем в этом множестве операции сложения и умножения на число:
+
+$$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
+
+Ясно, что выполнены все аксиомы линейного множества, множество $L(X,Y)$ - линейное множество. Введем метрику в этом множестве $\rho(A, B) = \parallel A-B\parallel$ и получим нормированное пространство $L(X,Y)$. Проверим, например выполнение неравенства треугольника. Согласно определению $(A+B)x = Ax+Bx$ и $\parallel(A+B)x\parallel\le(\parallel A\parallel+\parallel B\parallel)\parallel x\parallel$. Следовательно $\parallel A+B\parallel\le\parallel A\parallel+\parallel B\parallel$.
+
+Определим теперь понятие сильной сходимости последовательности линейных операторов.
+
+\begin{definition}
+Последовательность $\{A_n\}\in L(X,Y)$ \textbf{сильно сходится} к линейному оператору $A\in L(X,Y)$, если $||A_n-A||\to 0$ при $n\to {\infty}$.
+\end{definition}
+
+\begin{theorem}
+Если $Y$ --- банахово пространство, то пространство $L(X,Y)$ также банахово.
+\end{theorem}
+
+\begin{proof}
+Пусть $\{A_n\}$ - фундаментальная последовательность линейных операторов: $\parallel A_{n+m}-A\parallel\le \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x\in X$, построим последовательность $y_n\in Y$, $y_n=A_nx$. Эта последовательность сходится в себе $\parallel y_{n+m}-y_n\parallel\le \parallel A_{n+m}-A_n\parallel \parallel x\parallel\le \varepsilon \parallel x\parallel$, и в силу полноты пространства $Y$ существует предельный элемент $y\le Y$, такой что $y=\lim_{} A_nx$ при $n \to \infty$. Следовательно определен оператор $A: y=Ax$.
+
+Покажем, что этот оператор ограничен. Так как $\lvert \parallel A_{n+m} \parallel-\parallel A_n\parallel \rvert \le \parallel A_{n+m}-A_n\parallel \le \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\parallel A_n\parallel$ имеет предел $\lim_{n\to \infty} \parallel A_n\parallel=C$. Тогда $\parallel y_n\parallel\le\parallel A_n\parallel \parallel x\parallel$ и переходя к пределу, получим $\parallel y\parallel\le C\parallel x\parallel$, и норма оператора $A$ ограничена, оператор $A$ - линейный оператор, $\parallel A\parallel\le C$, $A\in L(X,Y)$.
+\end{proof}
+
+Определим теперь понятие поточечной сходимости последовательности линейных операторов.
+
+\begin{definition}
+Последовательность линейных операторов $\{A_n\}\in L(X,Y)$ сходится к оператору $A\in L(X,Y)$ поточечно, если для любого $x\in X$ последовательность элементов $y_n=A_nx\to Ax$ при $n\to \infty$
+\end{definition}
+
+Из сильной сходимости $A_n\to A$ следует и поточечная сходимость последовательности $\{A_n\}$.
+
+\begin{center}
+$\parallel A_nx-Ax\parallel_Y = \parallel(A_n-A)x\parallel\le \parallel A_n-A\parallel \parallel x\parallel\to 0$ при $n\to \infty$
+\end{center}
+
+Обратное утверждение неверно.
+
+\begin{example}
+Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,...,x_n,...)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\parallel x\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $
+
+Зададим последовательность аддитивных операторов $A_n$ из $l_1$ в $l_1$:
+$A_nx=(x_1,x_2,x_3,...,x_n)$
+
+Операторы $A_n$ линейные:
+$\parallel A_n\parallel=\sup_{S_1} \parallel A_nx\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\parallel A_n\parallel=1$, $A_n\in L(l_1,l_1)$.
+
+Рассмотрим последовательность линейных операторов $E-A_n\in L(l_1,l_1)$. Ясно, что $\parallel(E-A_n)x\parallel=\parallel(0,0,...,0,x_{n+1},x_{n+2},...)\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
+
+Таким образом $A_nx\to x$ для любых $x\in l_1$ при $n\to \infty$. Последовательность операторов $A_n$ сходится поточечно к тождественному оператору.
+
+На сфере $S_1$ в $l_1$ рассмотрим множество элементов $S_1^0$, таких что $x=(0,0,...,0,x_{n+1},x_{n+2},...)$, $\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$.
+$\parallel E-A_n\parallel=\sup_{S_1} \parallel(E-A_n)x\parallel\ge \sup_{S_1^0} \parallel(E-A_n)x\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$ и $\parallel E-A_n\parallel\ge 1$ при всех $n$. Последовательность линейных операторов $A_n$ не сходится сильно к тождественному оператору.
+
+\end{example}
 
 \section{Теорема Банаха-Штейнгауза}
 Рассмотрим последовательность линейных операторов $A_n \subset \mathcal{L}(X,Y)$. Пусть для каждого $x \subset X\ \exists \lim\limits_{n\to \infty}A_n x = y(x) \subset Y$. Тем самым определен аддитивный и непрерывный оператор $A$, $Ax = y(x)$. Пример предыдущего параграфа показывает, что этот оператор может и не являться сильным пределом последовательности операторов $A_n$: хотя $A_n x \to E x$, но $\lim A_n \ne E$.
@@ -1016,7 +1069,7 @@ $\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$
 $\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
 \end{center}
 
-Обозначим $s_n= \sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
+Обозначим $s_n= \displaystyle\sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
 
 \begin{center}
 $ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leq $
@@ -1088,12 +1141,12 @@ x(\xi,0)=x(\xi)
 
 \guillemotleft Обобщенное\guillemotright \;решение этой простейшей задачи при условии $x(\xi) \in L_2(0, \pi)$ получаем методом Фурье:
 \begin{center}
-$$x(\xi,t) = \sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
+$$x(\xi,t) = \displaystyle\sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
 \end{center}
 
-Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leq \sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
+Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leq \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
 \begin{center}
-$$x(\xi, t) = \sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
+$$x(\xi, t) = \displaystyle\sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
 \end{center}
 
 В частности $x(\xi,T) = \displaystyle\int\limits_0^\pi K(\xi, \eta, T) x(\eta)d\eta = Ax$. Оператор $A$ линейный интегральный оператор из пространства $L_2(0, \pi)$ в пространство $L_2(0, \pi)$. Норма этого оператора не превосходит $1$, оператор $A$ замкнут.
