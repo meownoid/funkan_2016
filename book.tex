@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,titlepage]{book}
+\documentclass[12pt,a4paper,titlepage, oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[OT1]{fontenc}
@@ -31,7 +31,43 @@
 \theoremstyle{plain}
 \newtheorem*{lemma}{Лемма}
 
+\setcounter{tocdepth}{1}
+
 \begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\vfill
+%\framepage
+
+Санкт-Петербургский государственный университет\\
+\ \\
+
+\vfill
+
+{\large\bf ФУНКЦИОНАЛЬНЫЙ АНАЛИЗ\\}
+\ \\
+Лекции для студентов факультета ПМ-ПУ\\
+(III курс, 6-ой семестр)
+
+\vfill
+
+\hfill\vbox
+{
+\hbox{Доцент кафедры моделирования электромеханических}
+\hbox{и компьютерных систем, кандидат физ.-мат. наук}
+\hbox{Владимир Олегович Сергеев}
+}
+
+\vfill
+
+Санкт-Петербург, 2006
+\end{center}
+
+\end{titlepage}
+
+\tableofcontents
 
 \chapter{Нормированные пространства}
 
@@ -409,6 +445,8 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 (x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) > 0\\
 (x,x) + 2 Re(\lambda y, x) + |\lambda|^2 (y, y) \ge 0 \mbox{ для любых чисел } \lambda\\
 \end{gather*}
+
+
 
 \chapter{Линейные операторы в нормированных пространствах}
 
