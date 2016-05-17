@@ -1,0 +1,135 @@
+\documentclass[12pt,a4paper,titlepage, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\title{Функциональный анализ}
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Теорема}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+
+\theoremstyle{remark}
+\newtheorem*{example}{Пример}
+
+\theoremstyle{remark}
+\newtheorem*{examples}{Примеры}
+
+\theoremstyle{remark}
+\newtheorem*{cexample}{Контр-пример}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{Лемма}
+
+\theoremstyle{plain}
+\newtheorem*{corollary}{Следствие}
+
+\setcounter{tocdepth}{1}
+
+\def\labelitemi{--}
+
+\renewcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\vfill
+
+Санкт-Петербургский государственный университет\\
+\ \\
+
+\vfill
+
+{\large\bf ФУНКЦИОНАЛЬНЫЙ АНАЛИЗ\\}
+\ \\
+Лекции для студентов факультета ПМ-ПУ\\
+(III курс, 6-ой семестр)
+
+\vfill
+
+\hfill\vbox
+{
+\hbox{Доцент кафедры моделирования электромеханических}
+\hbox{и компьютерных систем, кандидат физ.-мат. наук}
+\hbox{Владимир Олегович Сергеев}
+}
+
+\vfill
+
+Санкт-Петербург, 2016
+\end{center}
+
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Теория Рисса линейных уравнений второго рода}
+
+В этой главе мы будем рассматривать вполне непрерывные операторы.
+
+\section{Теорема Шаудера}
+
+\begin{definition}
+Последовательность $\{y_n\}$ элементов пространства $Y$ называется \textbf{компактной}, если в ней существует фундаментальная подпоследовательность.
+\end{definition}
+
+\begin{lemma}[Лемма I]
+Пусть $Y$ --- банахово пространство. Если последовательность элементов $\{y_n\}$ слабо сходится к элементу $y_0 \in Y$ и компактна, то $y_n\to y_0$ сильно, т.е. $\lVert y_n - y_0\rVert_Y\to 0$ при $n\to\infty$.
+\end{lemma}
+
+\begin{proof}
+(от противного) Предположим, что $\{y_n\}$ не стремится к $y_0$, т.е. существует подпоследовательность $\{{y_n}_k\}$ такая, что $\lVert {y_n}_k-y_0\rVert > \varepsilon$ при достаточно больших значениях $k$. Тогда (по теореме Хана-Банаха глава 3, \S 2, следствие 4) существует функционал $\phi\in Y^*$, $\lVert\phi\rVert=1$ такой, что $\phi({y_n}_k-y_0)=\lVert {y_n}_k-y_0\rVert > \varepsilon$ при всех $k\to k_0$. Следовательно последовательность $\{y_n\}$ не имеет слабого предела.
+\end{proof}
+
+\begin{lemma}[Лемма II]
+Пусть $A\subset\sigma(X,Y)$. Если $\{x_n\}\to x_0$, то $Ax_n\to Ax_0$ сильно.
+\end{lemma}
+
+\begin{proof}
+Так как $\{x_n\}\to x_0$, то $\{\lVert x_n\rVert\}$ ограничена (глава 4, \S 1). Из полной непрерывности оператора $A$ следует, что последовательность элементов $y_n = Ax_n$ \underbar{компактна}.
+
+Покажем, что $Ax_n\to Ax_0$.
+
+Для любого линейного функционала $\phi\in Y^*$ значения $<A(x_n-x_0), \phi> = <x_n-x_0, A^*\phi>$. Обозначим $A^*\phi = f\in X^*$:
+\begin{equation*}
+<A(x_n-x_0), \phi> = <x_n-x_0, f>
+\end{equation*}
+и так как $x_n\to x_0$, то $<A(x_n-x_0), \phi>\to 0$ при $n\to\infty$. Тогда \underbar{$Ax_n\to Ax_0$}. По лемме I $\lVert Ax_n-Ax_0\rVert_Y\to 0$ при при $n\to\infty$.
+\end{proof}
+
+\begin{theorem}[Шаудер]
+Пусть $A\subset\mathcal{L}(X, Y)$, где $Y$ --- банахово пространство. Тогда операторы $A$ и $A^*$ вполне непрерывны одновременно.
+\end{theorem}
+
+\begin{proof}
+Пусть $A\subset\sigma(X, Y)$. Рассмотрим последовательность линейных функционалов $\phi_n\in Y^*$ с нормами $\lVert \phi_n\rVert = 1$. Покажем, что в последовательности функционалов $\{A^*\phi_n\}\in X^*$ существует фундаментальная подпоследовательность, что и будет означать полную непрерывность оператора $A^*$.
+
+Обозначим $\{\phi_n\} = \{y_n\}\in Y^*$ и последовательность функционалов $A^*\phi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\phi_n\rVert \le \lVert A^*\rVert\lVert \phi_n\rVert = \lVert A\rVert$.
+
+Таким образом $\{f_n\}$ ограничена в совокупности. Функционалы $f$ зависят от выбранного $y$: $f_n = f_n(y) = f(y)$.
+
+Ясно, что если $y''$ и $y'\in Y^*$, то
+\begin{equation*}
+\lVert f(y'')-f(y')\rVert = \lVert A^ky''-A^ky'\rVert\le\lVert A\rVert\lVert y''-y'\rVert\le\varepsilon\mbox{, если} \lVert y''-y'\rVert < \delta\mbox{ и }\lVert A\rVert\delta < \varepsilon
+\end{equation*}
+Таким образом функции $f(y)$ равностепенно непрерывны. Следуя доказательству теоремы Арцела-Асколи (глава I, \S 1) получаем существование фундаментальной подпоследовательности ${f_n}_k = A^k{\phi_n}_k$ последовательности $A^*\phi_n$, $\phi_n\in S_1\subset Y^*$: $A^*$ --- вполне непрерывный оператор.
+
+Если же $A^*\in\sigma(X^*,Y^*)$, то так как $(A^*)^* = A$, то получаем, что и оператор $A$ вполне непрерывен.
+\end{proof}
+
+\end{document}
