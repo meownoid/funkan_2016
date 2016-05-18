@@ -88,7 +88,7 @@
 В метрическом пространстве $X$ для любых элементов $x, y \in X$ определено расстояние $\rho(x, y)$, которое удовлетворяет требованиям (аксиомам метрического пространства):
 \begin{enumerate}
 
-	\item $\rho(x, y)\geqslant 0$, а $\rho(x, y)=0$ означает, что элементы $x$ и $y$ совпадают,
+	\item $\rho(x, y)\geqslant 0$, и $\rho(x, y)=0$ означает, что элементы $x$ и $y$ совпадают,
 
 	\item $\rho(x, y)=\rho(y, x)$,
 
@@ -158,7 +158,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 Говорят, что в множестве $M \in X$ существует \textbf{конечная $\varepsilon$-сеть $\lbrace x_1,x_2,\ldots,x_{N(\varepsilon)} \rbrace$}, если для любого элемента $x \in M$ можно указать элемент $x_n$ $\varepsilon$-сети, такой что
 
 \begin{equation*}
-\rho(x_n, x) < \varepsilon \mbox{, } n=n(x_0,\varepsilon)
+\rho(x_n, x) < \varepsilon \mbox{, } n=n(x,\varepsilon)
 \end{equation*}
 
 \end{definition}
@@ -253,7 +253,7 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 
 	\item Принцип вложенных шаров (В математическом анализе --- лемма о вложенных отрезках).
 
-\begin{theorem} Пусть в полном метрическом пространстве $X$ дана последовательность замкнутых шаров $V_{r_n}(x_n)$:
+\begin{theorem} Пусть в полном метрическом пространстве $X$ дана последовательность замкнутых шаров $\overbar{V}_{r_n}(x_n)$:
 
 \begin{equation*}
 \overbar{V}_{r_{n+1}}(x_{n+1})\subset \overbar{V}_{r_{n}}(x_n) \mbox{, где } r_n \to 0 \mbox{ при } n \to \infty
@@ -297,7 +297,7 @@ $\rho(x,z) < \varepsilon$.
 
 \begin{definition}
 Множество $E$ называется множеством первой категории, если оно представимо в виде 
-$$E=\bigcup\limits_{k=1}^\infty E_k$$, 
+$$E=\bigcup\limits_{k=1}^\infty E_k,$$ 
 где все множества $E_k$ нигде не плотные в $X$. Если множество $E$ нельзя представить в виде счетного объединения нигде не плотных множеств, то $E$ называется множеством второй категории.
 \end{definition}
 
@@ -431,12 +431,12 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	\item Бесконечномерное банахово пространство $C[t_0,t_1]$ функций $x(t)$ непрерывных на $[t_0,t_1]$. Норма:
 
 	\begin{equation*}
-	\lVert x\rVert = \displaystyle\max_{i}\lvert x\rvert
+	\lVert x\rVert = \displaystyle\max_{t}\lvert x(t)\rvert
 	\end{equation*}
 
 	функции $x_k(t)=t^k, k=1,2,3,\ldots$ линейно независимы.
 
-	\item Бесконечномерное пространство банахово пространство $C_n[t_0,t_1]$. Норма:
+	\item Бесконечномерное банахово пространство $C_n[t_0,t_1]$. Норма:
 
 	\begin{equation*}
 	\lVert x\rVert = \displaystyle\sum_{k=0}^n\max_{i}\lvert\frac{d^kx(t)}{dt^k}\rvert
@@ -448,7 +448,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	\lVert x\rVert^p = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}}
 	\end{equation*}
 
-	Множество полиномов с комплексными коэффициентами плотно в этих пространствах.
+	Множество полиномов с рациональными коэффициентами плотно в этих пространствах.
 
 	\item Пример неполного нормированного пространства.
 
@@ -476,7 +476,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{enumerate}
 
-    \item $(x, y) = \overbar{(x, y)}$
+    \item $(x, y) = \overbar{(y, x)}$
 
     \item $(\lambda x_1 + \mu x_2, y) = \lambda (x_1, y) + \mu (x_2, y)$
 
@@ -562,7 +562,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{theorem}
 	Если $H$ --- сепарабельное гильбертово пространство, то в нём существует не более чем счётная ортогональная система элементов $\lbrace \phi_1, \phi_2, \ldots, \phi_n, \ldots \rbrace$ (базис пространства $H$), и любой элемент $x \in H$ представим в виде 
-	$$x = \displaystyle\sum_{k} c_k \phi_k$$
+	$$x = \displaystyle\sum_{k=1}^{\infty} c_k \phi_k$$
 	где $c_k = (x, \phi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \parallel x \parallel^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\phi_k$).
 \end{theorem}
 
@@ -573,7 +573,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	
 	\item Полиномы Лежандра $P_k(t)$ степени $k$ ($k = 0, 1, 2, \ldots$) образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
 	
-	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\phi}^2 (a, b)$, где $\phi(t) = \frac{1}{\sqrt(1 - t^2)}$
+	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\phi}^2 (a, b)$, где $\phi(t) = \frac{1}{\sqrt{(1 - t^2)}}$
 \end{enumerate}
 \end{examples}
 
@@ -599,7 +599,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \end{definition}
 
 \begin{example}
-$D=[-1;1]$, $Y=[0;\infty]$
+$D=[-1;1]$, $Y=[0;\infty)$
 \begin{equation*}
 F(x) = 
 \begin{cases}
@@ -612,7 +612,7 @@ F(x) =
 
 \begin{enumerate}
 
- \item при $x_n \to 0$ существует $\lim x_n= x^*=0 \in D$,
+ \item при $x_n \to 0$ --- существует $\lim x_n= x^*=0 \in D$,
  
  \item предел $F(x_n)$ существует и равен $y^*=1 \in Y$
  
@@ -681,7 +681,7 @@ $ C_0=\underset{S_1}{\sup}\parallel Ax \parallel<+\infty $.
 
 Эта величина называется \textbf{нормой} линейного оператора, она обозначается
 \begin{center}
-$\parallel A \parallel$ 
+$\parallel A \parallel,$ \quad
 ( $\parallel A \parallel _{X \to Y}$).
 \end{center}
 
@@ -727,11 +727,11 @@ ${(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\ve
 
 Согласно неравенству Гёльдера интеграл 
 \begin{center}
-$\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leq (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)}^\frac{1}{p}=$
+$\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leq (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)^\frac{1}{p}=}$
 
 $= \parallel x \parallel _{L_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
 
-${\parallel y \parallel}^q _{L_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert}^{q} dt\leq {\parallel x \parallel}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
+${\parallel y \parallel}^q _{L_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert^{q}} dt\leq {\parallel x \parallel}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
 
 ${\parallel y \parallel}_{L_q(a,b)}=
 {\parallel Kx\parallel}_{L_q(a,b)} \leq {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{L_p(a,b)} $ 
@@ -739,7 +739,7 @@ ${\parallel y \parallel}_{L_q(a,b)}=
 и $\parallel K \parallel \leq {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
 
 Можно показать, что $\parallel K \parallel = 
-{(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$
+{(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}.$
 \end{example}
 
 \section{Пространство линейных операторов}
@@ -747,7 +747,7 @@ ${\parallel y \parallel}_{L_q(a,b)}=
 
 $$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
 
-Ясно, что выполнены все аксиомы линейного множества, множество $L(X,Y)$ - линейное множество. Введем метрику в этом множестве $\rho(A, B) = \parallel A-B\parallel$ и получим нормированное пространство $L(X,Y)$. Проверим, например выполнение неравенства треугольника. Согласно определению $(A+B)x = Ax+Bx$ и $\parallel(A+B)x\parallel\le(\parallel A\parallel+\parallel B\parallel)\parallel x\parallel$. Следовательно $\parallel A+B\parallel\le\parallel A\parallel+\parallel B\parallel$.
+Ясно, что выполнены все аксиомы линейного множества, множество $L(X,Y)$ - линейное множество. Введем метрику в этом множестве $\rho(A, B) = \parallel A-B\parallel$ и получим нормированное пространство $L(X,Y)$. Проверим, например, выполнение неравенства треугольника. Согласно определению $(A+B)x = Ax+Bx$ и $\parallel(A+B)x\parallel\le(\parallel A\parallel+\parallel B\parallel)\parallel x\parallel$. Следовательно $\parallel A+B\parallel\le\parallel A\parallel+\parallel B\parallel$.
 
 Определим теперь понятие сильной сходимости последовательности линейных операторов.
 
@@ -845,7 +845,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 \end{proof}
 
 \begin{remark}
-Если $\lbrace \lVert A_n x\rVert \rbrace$ не ограничена, то существует элемент $x^n \subset X$, на котором $\sup\limits_{n}\lVert A_n x^n\rVert = \infty$ --- принцип фиксации особенности в полном банаховом пространстве $X$.
+Если $\lbrace \lVert A_n x\rVert \rbrace$ не ограничена, то существует элемент $x^n \subset X$, на котором $\sup\limits_{n}\lVert A_n x^*\rVert = \infty$ --- принцип фиксации особенности в полном банаховом пространстве $X$.
 \end{remark}
 
 Теперь можно указать условия, при которых из сходимости последовательности элементов $\lbrace A_n x\rbrace$ при любом $x \subset X$ следует поточечная сходимость последовательности операторов $A_n$ к \textbf{линейному} оператору $A$: $\lim\limits_{n \to \infty}A_n x = y(x) \subset Y$, $Ax=y(x)$.
@@ -876,7 +876,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 
 Значения $\lVert A_n x - A_n x'\rVert < M\varepsilon$, $\lVert A_m x' - A_m x\rVert < M\varepsilon$.
 
-Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \inf} A_n x = y(x) \subset Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \ge \bar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\bar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
+Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \inf} A_n x = y(x) \subset Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \ge \overbar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\overbar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
 
 Напомним, что последовательность операторов $A_n$ может и не иметь сильного предела.
 \end{proof}
@@ -968,7 +968,7 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \end{proof}
 
 \begin{theorem}[Банаха]
-Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y$,линеен.
+Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y$, линеен.
 \end{theorem}
 
 \begin{proof}
@@ -1263,7 +1263,7 @@ $\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$
 \begin{proof}
 В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{lim} A \psi_{n_k}$.
 
-Уравнение $Ax = y_0$ не имеет решения: рассмотрим уравнения $Ax = A \psi_{n_k}$. Решения существуют и единственны: $x_* = \psi_{n_k}$. Предел в правой части $\displaystyle\lim_{k \to \infty} A \phi_k = y_0 \in H$ существует. Но предел решения $\displaystyle\lim_{k \to \infty} x_*$ не существует.
+Уравнение $Ax = y_0$ не имеет решения: рассмотрим уравнения $Ax = A \psi_{n_k}$. Решения существуют и единственны: $x_k = \psi_{n_k}$. Предел в правой части $\displaystyle\lim_{k \to \infty} A \phi_k = y_0 \in H$ существует. Но предел решения $\displaystyle\lim_{k \to \infty} x_k$ не существует.
 \end{proof}
 
 \end{document}
