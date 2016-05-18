@@ -9,57 +9,57 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage[normalem]{ulem}
 \ULdepth = 0.16em
-\title{Функциональный анализ}
+\title{Р¤СѓРЅРєС†РёРѕРЅР°Р»СЊРЅС‹Р№ Р°РЅР°Р»РёР·}
 
 \newcommand{\overbar}[1]{\mkern1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern1.5mu} \theoremstyle{definition}
-\newtheorem*{definition}{Определение}
+\newtheorem*{definition}{РћРїСЂРµРґРµР»РµРЅРёРµ}
 
 \theoremstyle{plain}
-\newtheorem*{theorem}{Теорема}
+\newtheorem*{theorem}{РўРµРѕСЂРµРјР°}
 
 \theoremstyle{remark}
-\newtheorem*{remark}{Замечание}
+\newtheorem*{remark}{Р—Р°РјРµС‡Р°РЅРёРµ}
 
 \theoremstyle{remark}
-\newtheorem*{example}{Пример}
+\newtheorem*{example}{РџСЂРёРјРµСЂ}
 
 \theoremstyle{plain}
-\newtheorem*{lemma}{Лемма}
+\newtheorem*{lemma}{Р›РµРјРјР°}
 
 \begin{document}
 
-\textbf{Пример}.
-$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$
+\textbf{РџСЂРёРјРµСЂ}.
+$X=L_p(a,b)$, $Y=L_q(a,b)$. РћРїРµСЂР°С‚РѕСЂ $K$ РёРЅС‚РµРіСЂР°Р»СЊРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$
 
-Значение функционала $\langle Kx,f \rangle =$ (общий вид го функционала в $L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$ (где $f \in L_p(a,b)$) $= \int\limits_a^b(\int\limits_a^b K(t,\tau)x(\tau)d\tau)f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$ (общий вид функционала в $L_p(a,b)$) $= \langle x,K^{*}f \rangle$ и $K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau$.
+Р—РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРѕРЅР°Р»Р° $\langle Kx,f \rangle =$ (РѕР±С‰РёР№ РІРёРґ РіРѕ С„СѓРЅРєС†РёРѕРЅР°Р»Р° РІ $L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$ (РіРґРµ $f \in L_p(a,b)$) $= \int\limits_a^b(\int\limits_a^b K(t,\tau)x(\tau)d\tau)f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$ (РѕР±С‰РёР№ РІРёРґ С„СѓРЅРєС†РёРѕРЅР°Р»Р° РІ $L_p(a,b)$) $= \langle x,K^{*}f \rangle$ Рё $K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau$.
 
-Таким образом оператор $K^{*}$ есть интегральный оператор(но из $L_p$ в $L_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
+РўР°РєРёРј РѕР±СЂР°Р·РѕРј РѕРїРµСЂР°С‚РѕСЂ $K^{*}$ РµСЃС‚СЊ РёРЅС‚РµРіСЂР°Р»СЊРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ(РЅРѕ РёР· $L_p$ РІ $L_q$), СЏРґСЂРѕ РєРѕС‚РѕСЂРѕРіРѕ $K^{*}(t,\tau)=K(\tau,t)$.
 
 $$\parallel K \parallel = (\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$ $$\parallel K^{*} \parallel = (\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau)^{1/q} = (\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$
 
 
-\textbf{Пример}.
-Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей ${a_{ij}}_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,...,x_n)$ и $y(y_1,y_2,...,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overline{(y,x)}$
+\textbf{РџСЂРёРјРµСЂ}.
+Р Р°СЃСЃРјРѕС‚СЂРёРј РєРѕРјРїР»РµРєСЃРЅРѕ-Р·РЅР°С‡РЅС‹Рµ РІРµРєС‚РѕСЂРЅС‹Рµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° $X=V_n$, $Y=V_n$. Р›РёРЅРµР№РЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ $A$ Р·Р°РґР°С‘С‚СЃСЏ РјР°С‚СЂРёС†РµР№ ${a_{ij}}_{i,j=1}^n$ СЃ РєРѕРјРїР»РµРєСЃРЅС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё $a_{ij}$. РЎРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РІРµРєС‚РѕСЂРѕРІ $x(x_1,x_2,...,x_n)$ Рё $y(y_1,y_2,...,y_n)$ СЂР°РІРЅРѕ $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overline{(y,x)}$
 
-Координаты вектора $y=Ax$ равны $y_i = \sum\limits_{j=1}^n a_{ij} x_j$. Общий вид функционала в $f$ в $V_n$ определяется указанием элемента $y$:
+РљРѕРѕСЂРґРёРЅР°С‚С‹ РІРµРєС‚РѕСЂР° $y=Ax$ СЂР°РІРЅС‹ $y_i = \sum\limits_{j=1}^n a_{ij} x_j$. РћР±С‰РёР№ РІРёРґ С„СѓРЅРєС†РёРѕРЅР°Р»Р° РІ $f$ РІ $V_n$ РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ СѓРєР°Р·Р°РЅРёРµРј СЌР»РµРјРµРЅС‚Р° $y$:
 $f(x) \langle x,f \rangle = (x,y)$
-Тогда
+РўРѕРіРґР°
 
 \begin{eqnarray*}
 \langle Ax,y \rangle = (Ax,y) = \sum\limits_{i=1}^n (Ax)_i \bar{y}_i = \sum\limits_{i=1}^n (\sum\limits_{j=1}^n a_{ij}x_j)\bar{y}_i = \sum\limits_{j=1}^n x_j \sum\limits_{i=1}^n a_{ij}\bar{y}_i = \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n a_{ji}\bar{y}_j =\\= \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n \overline{(\bar{a}_{ij},y_j)} = \sum\limits_{i=1}^n x_i \overline{\sum\limits_{j=1}^n(\bar{a}_{ij} ,y_j)} = (x,A^{*}y)=\langle x, A^{*}y \rangle
 \end{eqnarray*} 
-Сравнивая полученное равенство $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (согласно определению сопряженного оператора) получаем, что
+РЎСЂР°РІРЅРёРІР°СЏ РїРѕР»СѓС‡РµРЅРЅРѕРµ СЂР°РІРµРЅСЃС‚РІРѕ $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (СЃРѕРіР»Р°СЃРЅРѕ РѕРїСЂРµРґРµР»РµРЅРёСЋ СЃРѕРїСЂСЏР¶РµРЅРЅРѕРіРѕ РѕРїРµСЂР°С‚РѕСЂР°) РїРѕР»СѓС‡Р°РµРј, С‡С‚Рѕ
 $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
-Элементы матрицы $A^{*}$ получены из комплексно-сопряженной матрицы $\bar{A}$ с последующим транспонированием: $A^{*}=\{\bar{a}_{ji}\}_{j,i=1}^n$
+Р­Р»РµРјРµРЅС‚С‹ РјР°С‚СЂРёС†С‹ $A^{*}$ РїРѕР»СѓС‡РµРЅС‹ РёР· РєРѕРјРїР»РµРєСЃРЅРѕ-СЃРѕРїСЂСЏР¶РµРЅРЅРѕР№ РјР°С‚СЂРёС†С‹ $\bar{A}$ СЃ РїРѕСЃР»РµРґСѓСЋС‰РёРј С‚СЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРёРµРј: $A^{*}=\{\bar{a}_{ji}\}_{j,i=1}^n$
 
-\textbf{Пример}.
-Рассмотри комплексно-значные пространства $X=L_p(a,b)$ и $Y=L_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $L_p(a,b) \to C$, где $C$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in L_q(a,b)$:
+\textbf{РџСЂРёРјРµСЂ}.
+Р Р°СЃСЃРјРѕС‚СЂРё РєРѕРјРїР»РµРєСЃРЅРѕ-Р·РЅР°С‡РЅС‹Рµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІР° $X=L_p(a,b)$ Рё $Y=L_q(a,b)$. РџСѓСЃС‚СЊ $f$ С„СѓРЅРєС†РёРѕРЅР°Р»(РєРѕРјРїР»РµРєСЃРЅРѕ-Р·РЅР°С‡РЅС‹Р№) $f$: $L_p(a,b) \to C$, РіРґРµ $C$ - РјРЅРѕР¶РµСЃС‚РІРѕ РєРѕРјРїР»РµРєСЃРЅС‹С… С‡РёСЃРµР». РћР±С‰РёР№ РІРёРґ Р»РёРЅРµР№РЅРѕРіРѕ С„СѓРЅРєС†РёРѕРЅР°Р»Р° РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ Р·Р°РґР°РЅРёРµРј СЌР»РµРјРµРЅС‚Р° $y \in L_q(a,b)$:
 $f(x) = \langle x, f \rangle = (x,y) = \int\limits_a^b x(t)\overline{y(t)}dt$, $(\frac{1}{p} + \frac{1}{q} =1)$,
 $\langle x, f \rangle  = \bar{(y,x)}  = \int\limits_a^b \overline{(\bar{x}(t)y(t))} dt = \overline{\int\limits_a^{-b} (y(t)\bar{x}(t))dt}$
 
-Величины $\int\limits_a^b y(t)\overline{x(t)} dt$ будем рассматривать как значение функционала из $L_q \to C$. Это значение полностью определено заданием элемента $x \in L_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
-$\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar{f^{*}}$ и $f^{*}=\bar{f}$,
+Р’РµР»РёС‡РёРЅС‹ $\int\limits_a^b y(t)\overline{x(t)} dt$ Р±СѓРґРµРј СЂР°СЃСЃРјР°С‚СЂРёРІР°С‚СЊ РєР°Рє Р·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРѕРЅР°Р»Р° РёР· $L_q \to C$. Р­С‚Рѕ Р·РЅР°С‡РµРЅРёРµ РїРѕР»РЅРѕСЃС‚СЊСЋ РѕРїСЂРµРґРµР»РµРЅРѕ Р·Р°РґР°РЅРёРµРј СЌР»РµРјРµРЅС‚Р° $x \in L_p(a,b)$. Р­С‚РѕС‚ С„СѓРЅРєС†РёРѕРЅР°Р» РѕР±РѕР·РЅР°С‡РёРј $f^{*}(y)$:
+$\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar{f^{*}}$ Рё $f^{*}=\bar{f}$,
 
-Таким образом в пространстве $L_q(a,b)$ определен функционал $f^{*}$ и $f^{*}=f$.
+РўР°РєРёРј РѕР±СЂР°Р·РѕРј РІ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРµ $L_q(a,b)$ РѕРїСЂРµРґРµР»РµРЅ С„СѓРЅРєС†РёРѕРЅР°Р» $f^{*}$ Рё $f^{*}=f$.
 
-\end{document}
+\end{document} 
