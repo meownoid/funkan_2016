@@ -1,0 +1,65 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[normalem]{ulem}
+\ULdepth = 0.16em
+\title{Функциональный анализ}
+
+\newcommand{\overbar}[1]{\mkern1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern1.5mu} \theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Теорема}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+
+\theoremstyle{remark}
+\newtheorem*{example}{Пример}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{Лемма}
+
+\begin{document}
+
+\textbf{Пример}.
+$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$
+
+Значение функционала $\langle Kx,f \rangle =$ (общий вид го функционала в $L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$ (где $f \in L_p(a,b)$) $= \int\limits_a^b(\int\limits_a^b K(t,\tau)x(\tau)d\tau)f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$ (общий вид функционала в $L_p(a,b)$) $= \langle x,K^{*}f \rangle$ и $K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau$.
+
+Таким образом оператор $K^{*}$ есть интегральный оператор(но из $L_p$ в $L_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
+
+$$\parallel K \parallel = (\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$ $$\parallel K^{*} \parallel = (\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau)^{1/q} = (\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$
+
+
+\textbf{Пример}.
+Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей ${a_{ij}}_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,...,x_n)$ и $y(y_1,y_2,...,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overline{(y,x)}$
+
+Координаты вектора $y=Ax$ равны $y_i = \sum\limits_{j=1}^n a_{ij} x_j$. Общий вид функционала в $f$ в $V_n$ определяется указанием элемента $y$:
+$f(x) \langle x,f \rangle = (x,y)$
+Тогда
+
+\begin{eqnarray*}
+\langle Ax,y \rangle = (Ax,y) = \sum\limits_{i=1}^n (Ax)_i \bar{y}_i = \sum\limits_{i=1}^n (\sum\limits_{j=1}^n a_{ij}x_j)\bar{y}_i = \sum\limits_{j=1}^n x_j \sum\limits_{i=1}^n a_{ij}\bar{y}_i = \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n a_{ji}\bar{y}_j =\\= \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n \overline{(\bar{a}_{ij},y_j)} = \sum\limits_{i=1}^n x_i \overline{\sum\limits_{j=1}^n(\bar{a}_{ij} ,y_j)} = (x,A^{*}y)=\langle x, A^{*}y \rangle
+\end{eqnarray*} 
+Сравнивая полученное равенство $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (согласно определению сопряженного оператора) получаем, что
+$(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
+Элементы матрицы $A^{*}$ получены из комплексно-сопряженной матрицы $\bar{A}$ с последующим транспонированием: $A^{*}=\{\bar{a}_{ji}\}_{j,i=1}^n$
+
+\textbf{Пример}.
+Рассмотри комплексно-значные пространства $X=L_p(a,b)$ и $Y=L_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $L_p(a,b) \to C$, где $C$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in L_q(a,b)$:
+$f(x) = \langle x, f \rangle = (x,y) = \int\limits_a^b x(t)\overline{y(t)}dt$, $(\frac{1}{p} + \frac{1}{q} =1)$,
+$\langle x, f \rangle  = \bar{(y,x)}  = \int\limits_a^b \overline{(\bar{x}(t)y(t))} dt = \overline{\int\limits_a^{-b} (y(t)\bar{x}(t))dt}$
+
+Величины $\int\limits_a^b y(t)\overline{x(t)} dt$ будем рассматривать как значение функционала из $L_q \to C$. Это значение полностью определено заданием элемента $x \in L_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
+$\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar{f^{*}}$ и $f^{*}=\bar{f}$,
+
+Таким образом в пространстве $L_q(a,b)$ определен функционал $f^{*}$ и $f^{*}=f$.
+
+\end{document}
