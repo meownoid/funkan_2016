@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,titlepage]{book}
+\documentclass[12pt,a4paper,titlepage, oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage[OT1]{fontenc}
@@ -26,12 +26,57 @@
 \newtheorem*{example}{Пример}
 
 \theoremstyle{remark}
+\newtheorem*{examples}{Примеры}
+
+\theoremstyle{remark}
 \newtheorem*{cexample}{Контр-пример}
 
 \theoremstyle{plain}
 \newtheorem*{lemma}{Лемма}
 
+\theoremstyle{plain}
+\newtheorem*{corollary}{Следствие}
+
+\setcounter{tocdepth}{1}
+
+\def\labelitemi{--}
+
+\renewcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
+
 \begin{document}
+
+\begin{titlepage}
+
+\begin{center}
+\vfill
+
+Санкт-Петербургский государственный университет\\
+\ \\
+
+\vfill
+
+{\large\bf ФУНКЦИОНАЛЬНЫЙ АНАЛИЗ\\}
+\ \\
+Лекции для студентов факультета ПМ-ПУ\\
+(III курс, 6-ой семестр)
+
+\vfill
+
+\hfill\vbox
+{
+\hbox{Доцент кафедры моделирования электромеханических}
+\hbox{и компьютерных систем, кандидат физ.-мат. наук}
+\hbox{Владимир Олегович Сергеев}
+}
+
+\vfill
+
+Санкт-Петербург, 2016
+\end{center}
+
+\end{titlepage}
+
+\tableofcontents
 
 \chapter{Нормированные пространства}
 
@@ -60,7 +105,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 \end{center}
 
-Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, то есть если $x_n\to x^{*}$, $y_n\to y^{*}$ при $n \to \infty$, то $\rho(x_n, y_n) \to \rho(x^*, y^*)$.\\
+Из аксиом метрического пространства следует непрерывность функции $\rho(x, y)$, то есть если $x_n\to x^{*}$, $y_n\to y^{*}$ при $n \to \infty$, то $\rho(x_n, y_n) \to \rho(x^*, y^*)$.
 
 Естественным образом вводятся понятия:
 
@@ -110,7 +155,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 Определение компактного множества не конструктивно. Следующая теорема Хаусдорфа даёт эффективный критерий компактности множеств.
 
 \begin{definition}
-Говорят, что в множестве $M \in X$ существует \textbf{конечная $\varepsilon$-сеть$\lbrace x_1,x_2,\ldots,x_{N(\varepsilon)} \rbrace$}, если для любого элемента $x \in M$ можно указать элемент $x_n$ $\varepsilon$-сети, такой что
+Говорят, что в множестве $M \in X$ существует \textbf{конечная $\varepsilon$-сеть $\lbrace x_1,x_2,\ldots,x_{N(\varepsilon)} \rbrace$}, если для любого элемента $x \in M$ можно указать элемент $x_n$ $\varepsilon$-сети, такой что
 
 \begin{equation*}
 \rho(x_n, x) < \varepsilon \mbox{, } n=n(x_0,\varepsilon)
@@ -118,7 +163,44 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 \end{definition}
 
-\emph{Здесь не хватает части}
+\begin{theorem}[Хаусдорф, около 1914 г.]
+Для того, чтобы множество $K \subset X$ было компактно в $X$, необходимо и достаточно чтобы для любого $\varepsilon > 0$ в множестве $K$ существовала конечная $\varepsilon$-сеть. 
+\end{theorem}
+\begin{proof}
+
+$\underbar{Необходимость}$ (От противного) Пусть $K$  --- компактное в $X$ множество. Предположим, что для заданного $\varepsilon >0 $ не существует конечной $\varepsilon$-сети. Возьмем любой элемент $x_1 \in K.$ Согласно предположению он не образует конечной $\varepsilon$-сети и существует элемент $x_2 \in K$ такой что $\rho(x_1, x_2) > \varepsilon.$ Два элемента $x_1$ и $x_2$ не образуют $\varepsilon$-сети, и существует третий элемент $x_3 \in K$ такой что значения $\rho(x_3, x_1), \; \rho(x_3, x_2), \; \rho(x_2, x_1) > \varepsilon.$
+
+Продолжая этот процесс, получим последовательность элементов $x_1,x_2,x_3, \ldots, x_n, \ldots \in K$ таких что $\rho(x_i, x_j) > \varepsilon$ при   $i \neq j.$ Из этой последовательности нельзя составить ни одной фундаментальной подпоследовательности, что противоречит компактности множества $K.$
+
+$\underbar{Достаточность}$ Пусть $\{x_n\}_{n=1}^{\infty}$ любая последовательность элементов множества $K.$ Образуем последовательность чисел $\varepsilon _k > 0,$ монотонно стремящуюся к $0.$
+
+Для значения $\varepsilon _1$  в множестве $K$ существует конечная $\varepsilon _1$-сеть, т.е. все множество $K$ может быть покрыто конечным числом шаров радиуса $\varepsilon _1 .$ Так как последовательность $\{ x_n \}$ содержит бесконечное число элементов, то среди упомянутых шаров найдется хотя бы один шар $V_{\varepsilon _1} (z_1),$ в котором содержится бесконечное число элементов последовательности $\{x_n\}.$ Обозначим $x_{n_1}$ первый из таких элементов: $x_{n_1} \in V_{\varepsilon _1} (z_1).$
+
+Далее, шар $ V_{\varepsilon _1} (z_1) $ может быть покрыт конечным числом шаров радиуса $\varepsilon _2 < \varepsilon _1.$ Тогда в одном из таких шаров $V_{\varepsilon _2} (z_2)$ содержится бесконечное число элементов последовательности $\{x_n\},$ и первый после $x_{n_1}$ такой элемент обозначим $x_{n_2}:$
+\begin{equation*}
+x_{n_1} \in V_{\varepsilon _1} (z_1) \cap V_{\varepsilon _2} (z_2),
+\end{equation*}
+Продолжая этот процесс, получим последовательность элементов $\{x_{n_k}\} \subset \{x_n\}$ таких что $x_{n_k} \in V_{\varepsilon _k} (z_k),$
+\begin{equation*}
+x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
+\end{equation*}
+где $n_k$  возрастающая последовательность чисел. При $m > k$ оба элемента $x_{n_k}$ и $x_{n_m}$ принадлежат шару $V_{\varepsilon _k} (z_k).$ По неравенству треугольника 
+\begin{equation*}
+\rho(x_{n_k}, x_{n_m}) \leqslant \rho(x_{n_k}, z_k) + \rho(z_k, x_{n_m}) \leqslant \varepsilon_k + \varepsilon_k = 2 \varepsilon _k.
+\end{equation*}
+ 
+Следовательно подпоследовательность $\{x_{n_k}\}$ последовательности $\{x_n\}$ является фундаментальной.
+\end{proof}
+
+\begin{corollary}
+Если в множестве $K \subset X$ существует компактная в $X$ $\varepsilon$-сеть $H_{\varepsilon},$ то множество $K$ компактно в $X.$ 
+\end{corollary}
+
+Действительно, так как $H_{\varepsilon} $ является $\varepsilon$-сетью для множества $K,$ то для любого элемента $x \in K$ существует элемент $x_{\varepsilon} \in H_{\varepsilon}$ такой что $\rho(x, x_{\varepsilon}) < \varepsilon.$ Из условия компактности множества $H_{\varepsilon}$ в пространстве $X$ следует, что в  $H_{\varepsilon}$ существует конечная $\varepsilon$-сеть элементов $\bar{x}_1, \bar{x}_2,\ldots \bar{x}_n,$ и для элемента $x_{\varepsilon}$ существует элемент $\bar{x}_k \in H_{\varepsilon}$ такой что $\rho(x_{\varepsilon}, \bar{x}_k) < \varepsilon.$ Тогда $\rho(x, \bar{x}_k) \leqslant \rho(x, x_{\varepsilon}) + \rho(x_{\varepsilon}, \bar{x}_k) \leqslant \varepsilon + \varepsilon = 2 \varepsilon.$
+
+Следовательно элементы $\bar{x}_1, \bar{x}_2,\ldots \bar{x}_n,$ множества $H_{\varepsilon}$ образуют в множестве $K$ конечную $2 \varepsilon$-сеть. По теореме Хаусдорфа множество $K$ компактно в $X.$
+
+Ясно, что компактное множество ограничено: существует шар конечного радиуса, которому принадлежит компактное множество.
 
 \subsection*{Примеры}
 \begin{enumerate}
@@ -159,9 +241,9 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 \begin{itemize}
 
-	\item $\int_{a}^{b} |x(t)|^p dt \leq const, x \in E$,
+	\item $\int\limits_a^b |x(t)|^p dt \leq const, x \in E$,
 
-	\item при $\tau \to 0$ интегралы $\int_{a}^{b} |x(t+\tau)-x(t)|^p dt \to 0$ равномерно относительно $x \in E$.
+	\item при $\tau \to 0$ интегралы $\int\limits_a^b |x(t+\tau)-x(t)|^p dt \to 0$ равномерно относительно $x \in E$.
 
 \end{itemize}
 
@@ -169,15 +251,15 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 Условия теоремы М. Рисса аналогичны условиям теоремы Арцела-Асколи для пространства непрерывных функций. Доказательство теоремы основано на плотности множества непрерывных на $[a, b]$ функций в пространстве $L_p [a, b]$.
 
-	\item Принцип вложенных шаров (В математическом анализе - лемма о вложенных отрезках).
+	\item Принцип вложенных шаров (В математическом анализе --- лемма о вложенных отрезках).
 
 \begin{theorem} Пусть в полном метрическом пространстве $X$ дана последовательность замкнутых шаров $V_{r_n}(x_n)$:
 
 \begin{equation*}
-\overbar{V_{r_{n+1}}}(x_{n+1})\subset \overbar{V_{r_{n}}}(x_n) \mbox{, где } r_n \to 0 \mbox{ при } n \to \infty
+\overbar{V}_{r_{n+1}}(x_{n+1})\subset \overbar{V}_{r_{n}}(x_n) \mbox{, где } r_n \to 0 \mbox{ при } n \to \infty
 \end{equation*}
 
-Тогда в $X$ существует и единственен элемент $x^{*}$, принадлежащий всем шарам $\overbar{V_{r_{n}}}(x_n)$
+Тогда в $X$ существует и единственен элемент $x^{*}$, принадлежащий всем шарам $\overbar{V}_{r_{n}}(x_n)$
 
 \end{theorem}
 
@@ -189,7 +271,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 и последовательность $\{x_n\}$ --- фундаментальная последовательность. Так как пространство $X$ полное, то существует $\displaystyle\lim_{n\to \infty} x_n=x^{*} \subset X$ и этот предел единственен.
 
-Ясно, что $x^{*}$ принадлежит всем шарам $\overbar{V_{r_{n}}}(x_n)$.
+Ясно, что $x^{*}$ принадлежит всем шарам $\overbar{V}_{r_{n}}(x_n)$.
 	
 \end{proof}
 
@@ -203,11 +285,11 @@ $\rho(x,z) < \varepsilon$.
 Сформулируем утверждение: множество $E$ не является множеством всюду плотным в пространстве $X$.
 
 \begin{definition}
-Множество $E$ \textbf{не является всюду плотным} в $X$ (\textbf{нигде не плотным} в $X$), если в любом замкнутом шаре $\overbar{V_r}(x)$ существует замкнутый шар, в котором нет элементов множества $E$.
+Множество $E$ \textbf{не является всюду плотным} в $X$ (\textbf{нигде не плотным} в $X$), если в любом замкнутом шаре $\overbar{V}_r(x)$ существует замкнутый шар, в котором нет элементов множества $E$.
 \end{definition}
 
 \begin{example}
-На плоскости (в пространстве $R_2$) множество точек любой прямой - нигде не плотное в $R_2$ множество.
+На плоскости (в пространстве $R_2$) множество точек любой прямой --- нигде не плотное в $R_2$ множество.
 Рассмотрим множество прямых $l$, параллельных оси $x$ и пересекающих ось $y$ в точках с рациональными значениями координат $y_n$. Ясно, что множество таких прямых счётно, и каждая прямая $l_n$ этого множества есть множество нигде не плотное в пространстве $R_2$.
 \end{example}
 
@@ -228,20 +310,22 @@ $$E=\bigcup\limits_{k=1}^\infty E_k$$,
 \begin{proof}
 (От противного)
 
-Предположим, что $X=\bigcup\limits_{k=1}^\infty E_k$, где все множества нигде не плотные. Пусть $\overbar{V_{r_0}}(x_0)$ произвольный шар. Так как $E_1$ нигде не плотно в $X$, то в этом шаре существует шар $\overbar{V_{r_1}}(x_1)$, в котором нет элементов множества $E_1$. Можно считать, что радиус этого шара $r_1 < \frac{1}{2}r_0$.
+Предположим, что $X=\bigcup\limits_{k=1}^\infty E_k$, где все множества нигде не плотные. Пусть $\overbar{V}_{r_0}(x_0)$ произвольный шар. Так как $E_1$ нигде не плотно в $X$, то в этом шаре существует шар $\overbar{V}_{r_1}(x_1)$, в котором нет элементов множества $E_1$. Можно считать, что радиус этого шара $r_1 < \frac{1}{2}r_0$.
 
-Множество $E_2$ нигде не плотно: в шаре $\overbar{V_{r_1}}(x_1)$ существует шар $\overbar{V_{r_2}}(x_2)$, в котором нет элементов множества $E_2$ (и элементов множества $E_1$). Можно считать, что $r_2 < \frac{1}{2}r_1 < \frac{1}{2^2}r_0$.
+Множество $E_2$ нигде не плотно: в шаре $\overbar{V}_{r_1}(x_1)$ существует шар $\overbar{V}_{r_2}(x_2)$, в котором нет элементов множества $E_2$ (и элементов множества $E_1$). Можно считать, что $r_2 < \frac{1}{2}r_1 < \frac{1}{2^2}r_0$.
 
-Продолжая этот процесс, получим последовательность вложенных шаров $\overbar{V_{r_1}}(x_1) \supset \overbar{V_{r_2}}(x_2) \supset$ ... $\supset \overbar{V_{r_n}}(x_n) \supset ...; r_n < \frac{1}{2^n}r_0, r_n \to 0$ при $n \to \infty$, и в каждом шаре $\overbar{V_{r_n}}(x_n)$ нет элементов множеств $E_1, E_2, ..., E_n$.
+Продолжая этот процесс, получим последовательность вложенных шаров $\overbar{V}_{r_1}(x_1) \supset \overbar{V}_{r_2}(x_2) \supset$ ... $\supset \overbar{V}_{r_n}(x_n) \supset ...; r_n < \frac{1}{2^n}r_0, r_n \to 0$ при $n \to \infty$, и в каждом шаре $\overbar{V}_{r_n}(x_n)$ нет элементов множеств $E_1, E_2, ..., E_n$.
 
 По теореме о вложенных шарах существует элемент $x^*\subset X$:
 $x_n \to x^*$ при $n \to \infty$.
 
-Ясно, что $x^*\in \bigcup\limits_{n=1}^\infty \overbar{V_{r_n}}(x_n)$ и следовательно $x^*\notin \bigcup\limits_{n=1}^\infty E_n$, что противоречит предположению $X=\bigcup\limits_{n=1}^\infty E_n$. Остается принять, что множество $X$ пространство второй категории.
+Ясно, что $x^*\in \bigcup\limits_{n=1}^\infty \overbar{V}_{r_n}(x_n)$ и следовательно $x^*\notin \bigcup\limits_{n=1}^\infty E_n$, что противоречит предположению $X=\bigcup\limits_{n=1}^\infty E_n$. Остается принять, что множество $X$ пространство второй категории.
 
 \end{proof}
 
 \section{Линейные пространства, нормированные пространства, пространства Банаха}
+
+\begin{definition}
 
 Множество элементов $Х$ называется \textbf{линейным множеством}, если для его элементов определены действия сложения и умножения на число (вещественное или комплексное), не выводящие из множества $X$:
 
@@ -252,6 +336,8 @@ $x_n \to x^*$ при $n \to \infty$.
 	\item если $x\in X$, то $\lambda x\in X$
 
 \end{itemize}
+
+\end{definition}
 
 
 Эти действия должны удовлетворять обычным условиям (аксиомам). Если $\lambda$ вещественные числа, то $X$ --- вещественное линейное множество, если $\lambda$ комплексные, то $X$ --- комплексное линейное множество. Для вещественного линейного множества $Х$ можно построить комплексное линейное множество $Z$: достаточно ввести элементы $z=x+iy,\quad x,y \in X$ и определить сумму элементов:
@@ -273,11 +359,11 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{enumerate}
 
-	\item Существования нулевого элемента: $\ominus=x-x=(1-1)x=0x$.
+	\item Существования нулевого элемента: $\circleddash=x-x=(1-1)x=0x$.
 
-	\item Из равенства $\lambda x=0$ при $\lambda\ne0$ следует $x=\ominus$.
+	\item Из равенства $\lambda x=0$ при $\lambda\ne0$ следует $x=\circleddash$.
 
-	\item Определение линейной независимости элементов $\{x_1,x_2,\dotsc,x_n\}$.
+	\item Определение линейной независимости элементов $\{x_1,x_2, \ldots, x_n\}$.
 
 	\item Определение размерности линейного множества $X$ как наибольшего числа линейно независимых элементов множества $X$.
 
@@ -293,12 +379,12 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 	\item Множество прямоугольных матриц размерности $(n\times m)$.
 
-	\item Множество $C[t_0,t_1]$ непрерывных на $[t_0,t_1]$ функций $x$. Функции $x_k(t)=t^k,\; k=1,2,3,\dotsc$ линейно независимы, а пространство $C[t_0,t_k]$ бесконечномерно.
+	\item Множество $C[t_0,t_1]$ непрерывных на $[t_0,t_1]$ функций $x$. Функции $x_k(t)=t^k,\; k=1,2,3,\ldots$ линейно независимы, а пространство $C[t_0,t_k]$ бесконечномерно.
 
 	\item Множество решений $x\in C^n[t_0,t_1]$ уравнения
 
 	\begin{equation*}
-	\frac{d^nx(t)}{dt^n}+a_1\frac{d^{n-1}x(t)}{dt^{n-1}}+\dotsb+a_{n-1}\frac{dx(t)}{dt}+a_n=0 \mbox{, где } a_k\in C[t_0,t_1]
+	\frac{d^nx(t)}{dt^n}+a_1\frac{d^{n-1}x(t)}{dt^{n-1}}+\ldots+a_{n-1}\frac{dx(t)}{dt}+a_n=0 \mbox{, где } a_k\in C[t_0,t_1]
 	\end{equation*}
 
 \end{enumerate}
@@ -308,7 +394,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{enumerate}
 
-	\item $\lVert x\rVert \geq 0$; если $\lVert x\rVert = 0$, то $x=\ominus$.
+	\item $\lVert x\rVert \geq 0$; если $\lVert x\rVert = 0$, то $x=\circleddash$.
 
 	\item $\lVert \lambda x \rVert = \lvert \lambda \rvert \lVert x \rVert$.
 
@@ -326,11 +412,11 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \textbf{Подпространством нормированного пространства $X$} называется любое линейное \underline{замкнутое} множество $X_0 \in X$.
 \end{definition}
 
-\textbf{Примеры}
-
+\begin{examples}
+\leavevmode
 \begin{enumerate}
 
-	\item Банаховы пространства $n$-мерных векторов получаем введением различных норм векторов $\bar{x}(x_1,x_2,\dots,x_n)$:
+	\item Банаховы пространства $n$-мерных векторов получаем введением различных норм векторов $\bar{x}(x_1,x_2,\ldots,x_n)$:
 
 	\begin{itemize}
 
@@ -348,7 +434,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	\lVert x\rVert = \displaystyle\max_{i}\lvert x\rvert
 	\end{equation*}
 
-	функции $x_k(t)=t^k, k=1,2,3,\dots$ линейно независимы.
+	функции $x_k(t)=t^k, k=1,2,3,\ldots$ линейно независимы.
 
 	\item Бесконечномерное пространство банахово пространство $C_n[t_0,t_1]$. Норма:
 
@@ -382,6 +468,8 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \end{enumerate}
 
+\end{examples}
+
 \section{Пространства Гильберта}
 
 Рассматривается линейное комплексное пространство, в котором введено скалярное произведение $(x, y)$ элементов $x$ и $y$, удовлетворяющее обычным свойствам скалярного произведения:
@@ -392,14 +480,14 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
     \item $(\lambda x_1 + \mu x_2, y) = \lambda (x_1, y) + \mu (x_2, y)$
 
-    \item $(x, x)$ - вещественное число, $(x, x) \geqslant 0$ и если $(x, x) = 0$, то $x = \ominus$
+    \item $(x, x)$ --- вещественное число, $(x, x) \geqslant 0$ и если $(x, x) = 0$, то $x = \circleddash$
 
 \end{enumerate}
 
 Верно неравенство Коши-Буняковского:
 
 \begin{equation*}
-|(x, y)|^2 \le (x, x) \cdot (y, y)
+\lvert (x, y) \rvert ^2 \le (x, x) \cdot (y, y)
 \end{equation*}
 
 Действительно:
@@ -407,8 +495,87 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \begin{gather*}
 (x + \lambda y, x + \lambda y) \ge 0\\
 (x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) > 0\\
-(x,x) + 2 Re(\lambda y, x) + |\lambda|^2 (y, y) \ge 0 \mbox{ для любых чисел } \lambda\\
+(x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) \ge 0\\
+\mbox{ для любых чисел } \lambda\\
 \end{gather*}
+
+Если $(y, y) = 0$, $y = \circleddash$, то доказываемое утверждение верно. Если $(y, y) \neq 0$, то положим 
+
+\begin{gather*}
+\lambda = - \frac{(x, y)}{(y, y)}\\
+(\lambda y, x) = - \frac{ \lvert (x, y)\rvert^2}{(y, y)}
+\end{gather*}
+
+Тогда
+
+\begin{gather*}
+(x, x) - 2 \frac{ \lvert (x, y) \rvert^2}{(y, y)} + \frac{\lvert (x, y) \rvert^2}{(y, y)} \ge 0\\
+(x, x) - \frac{\lvert (x, y) \rvert^2}{(y, y)} \ge 0
+\end{gather*}
+
+и
+
+\begin{gather*}
+(x, x) (y, y) \ge \lvert (x, y) \rvert^2\\
+\lvert (x, y) \rvert^2 \le (x, x) (y, y)
+\end{gather*}
+
+Введём норму элементов $\parallel x \parallel = \sqrt{(x, x)}$ и получим нормированное пространство. Действительно
+
+\begin{itemize}
+
+	\item $\parallel \lambda x \parallel^2 = (\lambda x, \lambda x) = \lvert \lambda \rvert^2 (x, x) = \lvert \lambda \rvert^2 \parallel x \parallel^2$ и $\parallel \lambda x \parallel = \lvert \lambda \rvert \parallel x \parallel$
+	
+	\item $\parallel x + y \parallel^2 = (x + y, x + y) = (x, x) + 2 \lvert (x, y) \rvert + (y, y) \le$ (по неравенству Коши-Буняковского) $\le \parallel x \parallel^2 + 2 \parallel x \parallel \parallel y \parallel + \parallel y \parallel^2 = (\parallel x \parallel + \parallel y \parallel)^2$ т.е. и третье условие в определении нормы тоже выполнено: $\parallel x + y \parallel \le \parallel x \parallel + \parallel y \parallel$.
+
+\end{itemize}
+
+Если полученное нормированное пространство \underline{полно}, то оно называется \textbf{пространством Гильберта} (Давид Гильберт, 1862-1943, немецкий математик).
+
+\subsection*{Примеры гильбертовых пространств}
+
+\begin{enumerate}
+	\item Пространство $l^2$ числовых последовательностей $x = \lbrace \xi_k \rbrace_{k=1}^{\infty}$ таких, что ряд $\displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$ сходится. Скалярное произведение $(x, y) = \displaystyle\sum_{k=1}^{\infty} \xi_k \overbar{\eta}_k$ и норма $\parallel x \parallel^2 = \displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$.
+	
+	\item Пространство $L_{\phi}^2 (a, b)$.
+	
+	$$ (x, y) = \displaystyle\int\limits_a^b \phi(t) x(t) \overbar{y}(t) dt$$
+	
+	$$ \parallel x \parallel^2 = \displaystyle\int\limits_a^b \phi(t) \lvert x(t) \rvert^2 dt$$
+	
+	Функция $\phi(t)$ --- функция, суммируемая на $(a, b)$ такая, что $\phi(t) > 0$ почти везде.
+	
+	Пространство $L_{\phi}^2 (a, b)$ сепарабельно: проведя декомплексификацию этого пространства, получим вещественные пространства, в которых множества полиномов с рациональными коэффициентами являются всюду плотными.
+\end{enumerate}
+
+Введение скалярного произведения определяет понятия:
+
+\begin{itemize}
+	\item ортогональных элементов: если $(x, y) = 0$, то пишут $x \perp y$
+	
+	\item ортогональных множеств
+\end{itemize}
+
+\begin{theorem}
+	Если $H_1$ подпространство пространства $H$, а $H_2$ --- ортогональное дополнение $H_1$, то любой элемент $x \in H$ можно представить единственным образом в виде $x = x_1 + x_2$, где $x_1 \in H_1$, а $x_2 \in H_2$ и $\rho(x, H_1) = \parallel x - x_1 \parallel$
+\end{theorem}
+
+\begin{theorem}
+	Если $H$ --- сепарабельное гильбертово пространство, то в нём существует не более чем счётная ортогональная система элементов $\lbrace \phi_1, \phi_2, \ldots, \phi_n, \ldots \rbrace$ (базис пространства $H$), и любой элемент $x \in H$ представим в виде 
+	$$x = \displaystyle\sum_{k} c_k \phi_k$$
+	где $c_k = (x, \phi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \parallel x \parallel^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\phi_k$).
+\end{theorem}
+
+\begin{examples}
+\leavevmode
+\begin{enumerate}
+	\item Функции $1, \cos \frac{2 \pi (t - a)}{b - a}, \sin \frac{2 \pi (t - a)}{b - a}, \ldots, \cos \frac{2 \pi k (t - a)}{b - a}, \sin \frac{2 \pi k (t - a)}{b - a}$ образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
+	
+	\item Полиномы Лежандра $P_k(t)$ степени $k$ ($k = 0, 1, 2, \ldots$) образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
+	
+	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\phi}^2 (a, b)$, где $\phi(t) = \frac{1}{\sqrt(1 - t^2)}$
+\end{enumerate}
+\end{examples}
 
 \chapter{Линейные операторы в нормированных пространствах}
 
@@ -431,7 +598,8 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \end{definition}
 
-\textbf{Пример}: $D=[-1;1]$, $Y=[0;\infty]$
+\begin{example}
+$D=[-1;1]$, $Y=[0;\infty]$
 \begin{equation*}
 F(x) = 
 \begin{cases}
@@ -449,33 +617,35 @@ F(x) =
  \item предел $F(x_n)$ существует и равен $y^*=1 \in Y$
  
 \end{enumerate}
-верно равенство $F(x^*)=y^*$.\\
+верно равенство $F(x^*)=y^*$.
 
-В определении замкнутости отображения исключаются сходящиеся последовательности $\lbrace x_n \rbrace$, для которых предел $F(x_n)$ не существует.\\
+\end{example}
+
+В определении замкнутости отображения исключаются сходящиеся последовательности $\lbrace x_n \rbrace$, для которых предел $F(x_n)$ не существует.
 
 В этой главе мы будем рассматривать отображения, областями задания и областями значений которых являются линейные множества.
 
-\begin{definition} Отображение $F$ называется аддитивным, если $F(x_1+x_2)=F(x_1)+F(x_2)$.
+\begin{definition} Отображение $F$ называется \textbf{аддитивным}, если $F(x_1+x_2)=F(x_1)+F(x_2)$.
 \end{definition}
 
-\begin{definition} Отображение $F$ называется однородным, если $F(\lambda x)=\lambda F(x)$. Для комплексных линейных множеств $X$ и $Y$ выполнено: $F(ix)=iF(x)$.
+\begin{definition} Отображение $F$ называется \textbf{однородным}, если $F(\lambda x)=\lambda F(x)$. Для комплексных линейных множеств $X$ и $Y$ выполнено: $F(ix)=iF(x)$.
 \end{definition}
 
-\begin{definition} Отображения аддитивные и однородные будем называть операторами. Для оператора $A$ верно:
+\begin{definition} Отображения аддитивные и однородные будем называть \textbf{операторами}. Для оператора $A$ верно:
+
 \begin{center}
-
 	$A(\lambda_1x_1+\lambda_2x_2)=\lambda_1Ax_1+\lambda_2Ax_2$
-	
 \end{center}
+
 \end{definition}
 
-В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\emptyset \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \to x_0$ и 
+В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\circleddash \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \to x_0$ и 
 \begin{center}
-$z=(x-x_0)\to \emptyset$.
+$z=(x-x_0)\to \circleddash$.
 \end{center}
 Тогда 
 \begin{center}
-$A(x-x_0)\to \emptyset$ и $Ax \to Ax_0$.
+$A(x-x_0)\to \circleddash$ и $Ax \to Ax_0$.
 \end{center}
  
 Важнейшим классом операторов являются ограниченные операторы.
@@ -483,7 +653,7 @@ $A(x-x_0)\to \emptyset$ и $Ax \to Ax_0$.
 \begin{definition} Оператор $A$ называется ограниченным, если любое ограниченное множество он отображает в множество, ограниченное в $Y$.
 \end{definition}
 
-В дальнейшем мы будем рассматривать нормированные пространства $X$ и $Y$.\\
+В дальнейшем мы будем рассматривать нормированные пространства $X$ и $Y$.
 
 Для ограниченного оператора $A$  обозначим величину 
 \begin{center}
@@ -517,7 +687,7 @@ $\parallel A \parallel$
 
 Величина $\underset{\parallel x\parallel \leq1}{\sup}\parallel Ax \parallel =
 \parallel A \parallel =
-\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel$.\\
+\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel$.
 
 Действительно,
 \begin{center}
@@ -531,7 +701,7 @@ $\parallel Ax \parallel=
 \parallel x \parallel \cdot \parallel A(\frac{x}{\parallel x \parallel}) \parallel \leq C_0$
 \end{center} 
 при $\parallel x \parallel \leq 1$; 
-$\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel \leq C_0$.\\
+$\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel \leq C_0$.
 
 Тогда 
 \begin{center}
@@ -539,38 +709,93 @@ $ C_0 \geq\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel $, 
 $\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel =\parallel A \parallel$.
 \end{center}
 
-Для линейных операторов верна оценка: $\parallel Ax \parallel _{Y} =\parallel A \parallel \cdot \parallel x \parallel_{X} $.\\
+Для линейных операторов верна оценка: $\parallel Ax \parallel _{Y} =\parallel A \parallel \cdot \parallel x \parallel_{X} $.
 
-\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leq {C}  \parallel x \parallel$, то $\parallel A \parallel \leq {C} $.\\
+\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leq {C}  \parallel x \parallel$, то $\parallel A \parallel \leq {C} $.
 
-\textbf{Пример.} Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
+\begin{example}
+Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
 \frac{1}{p}+\frac{1}{q}=1$,
 \begin{center}
-$y=K\cdot x$ ,  $ y(t)=\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau$.
+$y=K\cdot x$ , $ y(t)=\displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau$.
 \end{center}
 
 Относительно ядра $K(t,\tau)$ будем предполагать, что 
 \begin{center}
-${(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q dtd\tau)^\frac{1}{q}} <+\infty$.
+${(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q dtd\tau)^\frac{1}{q}} <+\infty$.
 \end{center}
 
 Согласно неравенству Гёльдера интеграл 
 \begin{center}
-$\vert \int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leq (\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)}^\frac{1}{p}=$
-\\ 
-$= \parallel x \parallel _{L_p(a,b)}\cdot (\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
-\\ 
-${\parallel y \parallel}^q _{L_q(a,b)}=\int\limits_a^b {\vert \int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert}^{q} dt\leq {\parallel x \parallel}^q _{L_p(a,b)} \cdot \int\limits_a^b dt \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
-\\
-${\parallel y \parallel}_{L_q(a,b)}=
-{\parallel Kx\parallel}_{L_q(a,b)} \leq {(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{L_p(a,b)} $ 
-\end{center}
-и $\parallel K \parallel \leq {(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
-\\
-Можно показать, что $\parallel K \parallel = 
-{(\int\limits_a^b \int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$
+$\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leq (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)}^\frac{1}{p}=$
 
-\emph{Пространство линейных операторов}
+$= \parallel x \parallel _{L_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
+
+${\parallel y \parallel}^q _{L_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert}^{q} dt\leq {\parallel x \parallel}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
+
+${\parallel y \parallel}_{L_q(a,b)}=
+{\parallel Kx\parallel}_{L_q(a,b)} \leq {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{L_p(a,b)} $ 
+\end{center}
+и $\parallel K \parallel \leq {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
+
+Можно показать, что $\parallel K \parallel = 
+{(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$
+\end{example}
+
+\section{Пространство линейных операторов}
+Рассмотрим множество всех линейных операторов их нормированного пространства $X$ в нормированное пространство $Y$. Множество таких операторов обозначим $L(X,Y)$. Введем в этом множестве операции сложения и умножения на число:
+
+$$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
+
+Ясно, что выполнены все аксиомы линейного множества, множество $L(X,Y)$ - линейное множество. Введем метрику в этом множестве $\rho(A, B) = \parallel A-B\parallel$ и получим нормированное пространство $L(X,Y)$. Проверим, например выполнение неравенства треугольника. Согласно определению $(A+B)x = Ax+Bx$ и $\parallel(A+B)x\parallel\le(\parallel A\parallel+\parallel B\parallel)\parallel x\parallel$. Следовательно $\parallel A+B\parallel\le\parallel A\parallel+\parallel B\parallel$.
+
+Определим теперь понятие сильной сходимости последовательности линейных операторов.
+
+\begin{definition}
+Последовательность $\{A_n\}\in L(X,Y)$ \textbf{сильно сходится} к линейному оператору $A\in L(X,Y)$, если $||A_n-A||\to 0$ при $n\to {\infty}$.
+\end{definition}
+
+\begin{theorem}
+Если $Y$ --- банахово пространство, то пространство $L(X,Y)$ также банахово.
+\end{theorem}
+
+\begin{proof}
+Пусть $\{A_n\}$ - фундаментальная последовательность линейных операторов: $\parallel A_{n+m}-A\parallel\le \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x\in X$, построим последовательность $y_n\in Y$, $y_n=A_nx$. Эта последовательность сходится в себе $\parallel y_{n+m}-y_n\parallel\le \parallel A_{n+m}-A_n\parallel \parallel x\parallel\le \varepsilon \parallel x\parallel$, и в силу полноты пространства $Y$ существует предельный элемент $y\le Y$, такой что $y=\lim_{} A_nx$ при $n \to \infty$. Следовательно определен оператор $A: y=Ax$.
+
+Покажем, что этот оператор ограничен. Так как $\lvert \parallel A_{n+m} \parallel-\parallel A_n\parallel \rvert \le \parallel A_{n+m}-A_n\parallel \le \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\parallel A_n\parallel$ имеет предел $\lim_{n\to \infty} \parallel A_n\parallel=C$. Тогда $\parallel y_n\parallel\le\parallel A_n\parallel \parallel x\parallel$ и переходя к пределу, получим $\parallel y\parallel\le C\parallel x\parallel$, и норма оператора $A$ ограничена, оператор $A$ - линейный оператор, $\parallel A\parallel\le C$, $A\in L(X,Y)$.
+\end{proof}
+
+Определим теперь понятие поточечной сходимости последовательности линейных операторов.
+
+\begin{definition}
+Последовательность линейных операторов $\{A_n\}\in L(X,Y)$ сходится к оператору $A\in L(X,Y)$ поточечно, если для любого $x\in X$ последовательность элементов $y_n=A_nx\to Ax$ при $n\to \infty$
+\end{definition}
+
+Из сильной сходимости $A_n\to A$ следует и поточечная сходимость последовательности $\{A_n\}$.
+
+\begin{center}
+$\parallel A_nx-Ax\parallel_Y = \parallel(A_n-A)x\parallel\le \parallel A_n-A\parallel \parallel x\parallel\to 0$ при $n\to \infty$
+\end{center}
+
+Обратное утверждение неверно.
+
+\begin{example}
+Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,...,x_n,...)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\parallel x\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $
+
+Зададим последовательность аддитивных операторов $A_n$ из $l_1$ в $l_1$:
+$A_nx=(x_1,x_2,x_3,...,x_n)$
+
+Операторы $A_n$ линейные:
+$\parallel A_n\parallel=\sup_{S_1} \parallel A_nx\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\parallel A_n\parallel=1$, $A_n\in L(l_1,l_1)$.
+
+Рассмотрим последовательность линейных операторов $E-A_n\in L(l_1,l_1)$. Ясно, что $\parallel(E-A_n)x\parallel=\parallel(0,0,...,0,x_{n+1},x_{n+2},...)\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
+
+Таким образом $A_nx\to x$ для любых $x\in l_1$ при $n\to \infty$. Последовательность операторов $A_n$ сходится поточечно к тождественному оператору.
+
+На сфере $S_1$ в $l_1$ рассмотрим множество элементов $S_1^0$, таких что $x=(0,0,...,0,x_{n+1},x_{n+2},...)$, $\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$.
+$\parallel E-A_n\parallel=\sup_{S_1} \parallel(E-A_n)x\parallel\ge \sup_{S_1^0} \parallel(E-A_n)x\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$ и $\parallel E-A_n\parallel\ge 1$ при всех $n$. Последовательность линейных операторов $A_n$ не сходится сильно к тождественному оператору.
+
+\end{example}
 
 \section{Теорема Банаха-Штейнгауза}
 Рассмотрим последовательность линейных операторов $A_n \subset \mathcal{L}(X,Y)$. Пусть для каждого $x \subset X\ \exists \lim\limits_{n\to \infty}A_n x = y(x) \subset Y$. Тем самым определен аддитивный и непрерывный оператор $A$, $Ax = y(x)$. Пример предыдущего параграфа показывает, что этот оператор может и не являться сильным пределом последовательности операторов $A_n$: хотя $A_n x \to E x$, но $\lim A_n \ne E$.
@@ -602,7 +827,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 Следующая лемма верна для полных нормированных пространств $X$, т.е. для банаховых пространств.
 
 \begin{lemma}[Лемма II]
-Пусть $X$ - пространство Банаха. Пусть $\lbrace A_n\rbrace$ последовательность операторов множества $\mathcal{L}(X,Y)$. Тогда если нормы $\lVert A_n x\rVert$ элементов $A_n x$ ограничены для каждого $x \subset X$, то нормы операторов $A_n \quad \lVert A_n\rVert$ ограничены в совокупности.
+Пусть $X$ --- пространство Банаха. Пусть $\lbrace A_n\rbrace$ последовательность операторов множества $\mathcal{L}(X,Y)$. Тогда если нормы $\lVert A_n x\rVert$ элементов $A_n x$ ограничены для каждого $x \subset X$, то нормы операторов $A_n \quad \lVert A_n\rVert$ ограничены в совокупности.
 \end{lemma}
 
 \begin{proof}
@@ -626,7 +851,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 Теперь можно указать условия, при которых из сходимости последовательности элементов $\lbrace A_n x\rbrace$ при любом $x \subset X$ следует поточечная сходимость последовательности операторов $A_n$ к \textbf{линейному} оператору $A$: $\lim\limits_{n \to \infty}A_n x = y(x) \subset Y$, $Ax=y(x)$.
 
 \begin{theorem}[Банаха-Штейнгауза]
-Пусть $\lbrace A_n\rbrace \subset \mathcal{L}(X,Y)$, где $X$ и $Y$ - пространства Банаха. Для того, чтобы последовательность операторов $\lbrace A_n\rbrace$ сходилась поточечно к линейному оператору на всем пространстве $X$, необходимо и достаточно, чтобы были выполнены два условия:
+Пусть $\lbrace A_n\rbrace \subset \mathcal{L}(X,Y)$, где $X$ и $Y$ --- пространства Банаха. Для того, чтобы последовательность операторов $\lbrace A_n\rbrace$ сходилась поточечно к линейному оператору на всем пространстве $X$, необходимо и достаточно, чтобы были выполнены два условия:
 
 \begin{enumerate}
 \item Нормы $\lVert A_n\rVert$ ограничены в совокупности: $\lVert A_n\rVert \le M$.
@@ -663,7 +888,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \section{Теорема Банаха}
 Основной целью нашего курса является изучение условий разрешимости уравнения $Ax=y$, т. е. условие существования $\underbar {линейного}$ оператора $B\in L(Y, X)$: $By=A^{-1}x$. Если такой оператор существует, то задача решения уравнения $Ax=y$ поставлена корректно по Адамару:
 \begin{enumerate}
-	\item решение существует для любого $y \subset Y$,
+	\item решение существует для любого $y \in Y$,
 	\item решение единственно,
 	\item вариации $\Delta x$ решения непрерывно зависят от вариаций $\Delta y$ элемента $y$: $\lVert \Delta x\rVert_X \leq \lVert B\rVert_{Y\to X}\lVert \Delta y\rVert_X$.
 \end{enumerate}
@@ -697,9 +922,9 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 	
 	Так как $Y$ полное пространство, то среди множеств $Y_k$ найдется хотя бы одно множество, которое не является нигде не плотным в пространстве $Y$ (см. теорему Бэра, глава \uppercase\expandafter{\romannumeral 1}). Обозначим его $Y_n$.
 	
-	\item В пространстве $Y$ существует хотя бы один шар (например $S$), в котором любой шар (например $\overbar{S_{r_0}}(u_0)$) содержит элементы множества $Y_n$.
+	\item В пространстве $Y$ существует хотя бы один шар (например $S$), в котором любой шар (например $\overbar{S}_{r_0}(u_0)$) содержит элементы множества $Y_n$.
 	
-	Таким образом, множество $Y_n$ плотно в $\overbar{S_{r_0}}(u_0)\subset S$. Можно считать, что элемент $u_0 \subset Y_n$. Зафиксируем элемент $u_0$ и число $r_0$.
+	Таким образом, множество $Y_n$ плотно в $\overbar{S}_{r_0}(u_0)\subset S$. Можно считать, что элемент $u_0 \subset Y_n$. Зафиксируем элемент $u_0$ и число $r_0$.
 	
 	\item Пусть $y$ любой элемент $Y$, норма которого равна $r_0:\lVert y\rVert=r_0$. Построим элемент $z_0=u_0+y$, принадлежащий границе шара $S_{r_0}(u_0)$. Далее построим последовательность элементов $u_j \subset S_{r_0}(u_0)$ таких, что
 
@@ -753,11 +978,12 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \end{center}
 \begin{enumerate}
 
-	\item Пусть $y_0$ любой элемент пространства $Y$.\\
+	\item Пусть $y_0$ любой элемент пространства $Y$.
+	
 	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
 	$y_1 \in M$:
 	\begin{center}
-	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $  ,
+	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $,
 	\end{center}
 	\begin{center}
 	$\parallel y_1 \parallel =
@@ -774,7 +1000,7 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 	\frac{1}{4} \parallel y_0 \parallel =
 	\frac{1}{2} \parallel y_0 \parallel$
 	\end{center}
-	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4}			(y_1 - y_0)$. В этом шаре найдём элемент 			$y_2 \in M$:
+	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4} (y_1 - y_0)$. В этом шаре найдём элемент $y_2 \in M$:
 	\begin{center}
 	$\parallel y_2 + y_1 - y_0 \parallel =
 	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
@@ -834,12 +1060,14 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
 
 \begin{center}
-$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$\\
-и\\
+$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$
+
+и
+
 $\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
 \end{center}
 
-Обозначим $s_n= \sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
+Обозначим $s_n= \displaystyle\sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
 
 \begin{center}
 $ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leq $
@@ -849,7 +1077,8 @@ $ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n
 $\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
 \end{center}
 
-Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$. \\
+Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$.
+
 Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \to \infty$, получаем
 
 \begin{center}
@@ -910,12 +1139,12 @@ x(\xi,0)=x(\xi)
 
 \guillemotleft Обобщенное\guillemotright \;решение этой простейшей задачи при условии $x(\xi) \in L_2(0, \pi)$ получаем методом Фурье:
 \begin{center}
-$$x(\xi,t) = \sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
+$$x(\xi,t) = \displaystyle\sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
 \end{center}
 
-Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leq \sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
+Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leq \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
 \begin{center}
-$$x(\xi, t) = \sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
+$$x(\xi, t) = \displaystyle\sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
 \end{center}
 
 В частности $x(\xi,T) = \displaystyle\int\limits_0^\pi K(\xi, \eta, T) x(\eta)d\eta = Ax$. Оператор $A$ линейный интегральный оператор из пространства $L_2(0, \pi)$ в пространство $L_2(0, \pi)$. Норма этого оператора не превосходит $1$, оператор $A$ замкнут.
@@ -927,7 +1156,7 @@ $$x(\xi, t) = \sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\p
 $x(\xi, T) = y(\xi)$
 \end{center}
 
-Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A\in\mathscr{L}(X,Y), \; X = L_{2}(0, \pi), \; Y = L_{2}(0, \pi)$ $\-- $ банаховы пространства.
+Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A\in\mathscr{L}(X,Y), \; X = L_{2}(0, \pi), \; Y = L_{2}(0, \pi)$ --- банаховы пространства.
 
 Будет ли эта задача корректно поставлена по Адамару?
 
@@ -972,29 +1201,38 @@ $$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k
 \end{theorem}
 \begin{proof}Состроит в доказательстве двух пунктов (согласно определению подпространства).
 
-I. Если $A_1, A_2 \subset \sigma(X,Y)$, то их линейная комбинация $A=\lambda_1 A_1+\lambda_2 A_2\in \sigma(X,Y)$.\\
+\begin{enumerate}
+
+	\item Если $A_1, A_2 \subset \sigma(X,Y)$, то их линейная комбинация $A=\lambda_1 A_1+\lambda_2 A_2\in \sigma(X,Y)$.
+
 Рассмотрим множество $AS_1$, где $S_1$ --- единичная сфера в пространстве $X$. Покажем, что множество $AS_1$ компактно в $Y$. Возьмем любую последовательность элементов $x_n \subset S_1$, $\lVert x_n \rVert=1$. Обозначим элементы $Ax_n=y_n$, $y_n=\lambda_1 A_1 x_n+\lambda_2 A_2 x_n$.
 
 Так как множество $A_1S_1$ компактно в $Y$, то из последовательности $\lbrace A_2x_{n_k} \rbrace$ можно выделить фундаментальную последовательность $\lbrace A_2x'_i \rbrace$. Ясно, что последовательность $\lbrace (\lambda_1 A_1+\lambda_2 A_2)x'_i \rbrace$ является фундаментальной последовательностью в $Y$.
 
-II. Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+	\item Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+
+\end{enumerate}
 \end{proof}
 
 \begin{cexample}Тождественный оператор $E$ в сепарабельном гильбертовом пространстве не является вполне непрерывным оператором.
 
 Действительно, пусть $\psi_1,\psi_2,...,\psi_n,..., \lVert\psi_n\rVert =1$ --- ортонормальный базис пространства. Множество $S_1$ ограничено, но множество $ES_1 (=S_1)$ не является компактным: из последовательности $\lbrace \psi_n \rbrace_{n=1}^{\infty}$ нельзя выбрать фундаментальную последовательность, так как $\lVert\psi_n - \psi_m \rVert ^2=(\psi_n - \psi_m, \psi_n - \psi_m)= (\psi_n,\psi_n)+ (\psi_m,\psi_m)=2$ при $n \neq m$
 \end{cexample}
+
 \begin{example}Интегральный оператор $\widetilde{K}$ из $L_2(a,b)$ в $L_2(a,b)$.
+
 \begin{center}
-$y=\widetilde{K}x$, $y(t)=\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau ,$\\
+$y=\widetilde{K}x$, $y(t)=\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau$,
 \end{center}
-где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leq M$.\\
+
+где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leq M$.
 
 В этом случае функции $y(t)$ непрерывны:
 
 \begin{center}
-$|y(t_2)-y(t_1)|^2\leq \int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$,\\
+$|y(t_2)-y(t_1)|^2\leq \int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$
 \end{center}
+
 Величина $|y(t_2)-y(t_1)|\to 0$ при $|t_2-t_1|\to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
 
 Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leq M^2 (b-a)$.
@@ -1023,9 +1261,9 @@ $\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$
 \end{theorem}
 
 \begin{proof}
-В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{lim} A \psi_{n_k}$.\\
+В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{lim} A \psi_{n_k}$.
 
-Рассмотрим вариацию правой части $\Delta y_k=A \psi_{n_k}-y_0 \to \infty$ при $k\to \infty$. Соответствующая вариация решения $\Delta x_k=\psi_{n_k}$ и $\lVert\Delta x_k \rVert=1$, т.е. вариация решения $\Delta x_k$ не стремится к нулю при $\lVert\Delta y_k \rVert \to \infty$.
+Уравнение $Ax = y_0$ не имеет решения: рассмотрим уравнения $Ax = A \psi_{n_k}$. Решения существуют и единственны: $x_* = \psi_{n_k}$. Предел в правой части $\displaystyle\lim_{k \to \infty} A \phi_k = y_0 \in H$ существует. Но предел решения $\displaystyle\lim_{k \to \infty} x_*$ не существует.
 \end{proof}
 
 \end{document}
