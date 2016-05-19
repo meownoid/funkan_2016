@@ -1,0 +1,57 @@
+\documentclass[12pt,a4paper,titlepage]{book}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[normalem]{ulem}
+\ULdepth = 0.16em
+\title{Функциональный анализ}
+
+\newcommand{\overbar}[1]{\mkern1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern1.5mu} \theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Теорема}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Замечание}
+
+\theoremstyle{remark}
+\newtheorem*{example}{Пример}
+
+\theoremstyle{plain}
+\newtheorem*{lemma}{Лемма}
+
+\begin{document}
+\par\section*{Сопряженный оператор}
+Пусть оператор $A \subset L(X,Y)$, функционал $f \in Y^*$ Вычислим значение $\langle Ax, f \rangle$. Эти значения можно трактовать как значения функционала $\phi$, определенного на элементах пространства $X$: $\langle Ax, f \rangle = \phi (x)$
+
+Ясно, то функционал $\phi$ задан на всем пространстве $X$ и зависит от выбора функционала $f$:
+\begin{itemize}
+\item функционал $\phi$ аддитивен и однороден: 
+\begin{flushleft}
+$\phi (\lambda_1 x_1+\lambda_2 x_2) = \langle A(\lambda_1 x_1+\lambda_2 x_2), f \rangle = \lambda_1 \langle Ax_1, f \rangle + \lambda_2 \langle Ax_2, f \rangle = \lambda_1 \phi(x_1) + \lambda_2 \phi(x_2)$
+\end{flushleft}
+\item функционал $\phi$ линейный: $\parallel \phi \parallel \le \sup\limits_{\parallel x \parallel = 1} \lvert \phi (x) \rvert \le \parallel A \parallel \parallel f \parallel $
+
+\end{itemize}
+Таким образом равенство $\langle Ax, f \rangle = \langle x, \phi \rangle$ определяет линейный функционал $\phi \in X^{*}$:
+
+каждому $f\in Y^{*}$ сопоставляется линейный функционал $\phi \in X^{*}$, зависящий от выбора оператора $A$: эту зависимость обозначим $\phi = A^{*}f$.
+Эта зависимость от $A$ однородна и аддитивна:
+если $A=\alpha_1 A_1 + \alpha_2 A_2$, то
+\begin{flushleft}
+ $\phi = \langle \alpha_1 A_1 + \alpha_2 A_2, f \rangle = \alpha_1 \langle A_1, f \rangle + \alpha_2 \langle A_2, f \rangle = \alpha_1 A_1^{*}, f + \alpha_2 A_2^{*}f$
+\end{flushleft}
+Оператор $A^{*}$ определенный на $Y^{*}$ линеен: согласно неравенству:
+\begin{flushleft}
+$\parallel \phi \parallel = \parallel A^{*}f \parallel = \parallel A \parallel \parallel f \parallel$
+\end{flushleft}
+\begin{flushleft}
+$\parallel A^{*} \parallel_{Y^{*} \to X^{*}}\le (\parallel A \parallel)_{X \to Y}$ и $ A^{*} \in L(X,Y)$
+\end{flushleft}
+\end{document}
