@@ -1278,7 +1278,7 @@ $\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$
 \end{theorem}
 
 \begin{proof}
-В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{lim} A \psi_{n_k}$.
+В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{\lim} A \psi_{n_k}$.
 
 Уравнение $Ax = y_0$ не имеет решения: рассмотрим уравнения $Ax = A \psi_{n_k}$. Решения существуют и единственны: $x_k = \psi_{n_k}$. Предел в правой части $\displaystyle\lim_{k \to \infty} A \phi_k = y_0 \in H$ существует. Но предел решения $\displaystyle\lim_{k \to \infty} x_k$ не существует.
 \end{proof}
@@ -1322,7 +1322,7 @@ $$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leq \lVert
 \begin{theorem}(Об элементарном продолжении).
 Пусть $X_0$ подпространство пространства $X$, и на $X_0$ определен функционал $f_0$ с нормой $\lVert f_0 \rVert = \underset{\lVert x \rVert=1, x \in X_0}{sup}|f(x)|$.
 
-Пусть элемент $x_1^0 \in X$, но $x_1^0 \overline{\in} X_0$.
+Пусть элемент $x_1^0 \in X$, но $x_1^0 \overbar{\in} X_0$.
 
 Введем множество $X_1 \subset X$ элементов вида $x_0+\lambda x_1^0$, где $x_0$ любой элемент пространства $X_0$, $-\infty < \lambda < \infty$. Представление элемента $x_1$ в виде $x_0+\lambda x_1^0$ единственно.
 
@@ -1393,7 +1393,7 @@ $$X_1=X_0+\{ \lambda\}x_1 $$
 построим подпространство
 $$X_2=X_1+\{ \lambda\}x_2 $$
 и элементарное расширение $f_2$ функционала $f_1$ на $X_2$, $\lVert f_2 \rVert= \lVert f_1 \rVert$.\\
-Продолжая этот процесс, получим функционал $f$, определенный на $X=X_0+\overline{\overset{\infty}{\underset{k=1}{\bigcup}}X_k}$, $\lVert f \rVert= \lVert f_0 \rVert.$
+Продолжая этот процесс, получим функционал $f$, определенный на $X=X_0+\overbar{\overset{\infty}{\underset{k=1}{\bigcup}}X_k}$, $\lVert f \rVert= \lVert f_0 \rVert.$
 \end{theorem}
 Теорема Хана-Банаха верна и для произвольного нормированного пространства $X$: 
 \begin{theorem}[Хана-Банаха, $\approx 1930$ г]
@@ -1466,7 +1466,7 @@ f_k(x_i) =
 \end{equation*}
 \end{corollary}
 \begin{proof}
-Обозначим линейную оболочку системы элементов $\{ x_2, x_3, ... x_n\}$ через $\Omega_1$, $\Omega_1 \subset X$. Элемент $x_1 \overline{\in} \Omega_1$: $\rho(x_1, \Omega)=d_1>0$. Согласно свойству (2) существует функционал $f_1 \in X^*$, такой, что 
+Обозначим линейную оболочку системы элементов $\{ x_2, x_3, ... x_n\}$ через $\Omega_1$, $\Omega_1 \subset X$. Элемент $x_1 \overbar{\in} \Omega_1$: $\rho(x_1, \Omega)=d_1>0$. Согласно свойству (2) существует функционал $f_1 \in X^*$, такой, что 
 \begin{equation*}
 \lVert f_1 \rVert =d_1, f_1(x_1)=1, f_1(\Omega_1)=0: f_1(x_2)=0, f_1(x_3)=0,..., f_1(x_n)=0.
 \end{equation*}
@@ -1495,7 +1495,7 @@ $\underbar {Теорема об опорной плоскости}$
 \end {definition}
 
 \begin{theorem}
-Для любого замкнутого шара $\overline{V_r}(\circleddash)$, ($\lVert x \rVert \leq r$) и для любой точки $x_0 \in S_r(\circleddash)$ существует опорная плоскость $L$ к шару $\overline{V_r}(\circleddash)$ в точке $x_0$.
+Для любого замкнутого шара $\overbar{V}_r(\circleddash)$, ($\lVert x \rVert \leq r$) и для любой точки $x_0 \in S_r(\circleddash)$ существует опорная плоскость $L$ к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$.
 \end{theorem}
 
 \begin{proof}
@@ -1503,7 +1503,7 @@ $\underbar {Теорема об опорной плоскости}$
 \begin{equation*}
 f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, |f_0(x)|=|\lambda|\lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x \rVert; \lVert f_0 \rVert=1.
 \end{equation*}
-Продолжим функционал $f_0$ на все пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overline{V_r}(\circleddash)$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overline{V_r}(\circleddash)$:
+Продолжим функционал $f_0$ на все пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overbar{V}_r(\circleddash)$:
 \begin{equation*}
 f(x)\leq 1 \lVert x \rVert \leq r,
 \end{equation*}
@@ -1576,7 +1576,7 @@ f(x) =  \langle x, f \rangle
 \begin{lemma}
 Если $x_n \rightarrow x_0$, то $\lVert x_n \rVert \leq \lVert x_0 \rVert$. (Слабо сходящаяся последовательность элементов ограничена по норме).
 \begin{proof}
-Для всех $f \in X*$ значения $f(x_n) \rightarrow f(x_0)$ при $n \rightarrow \infty$. По теореме о достаточном числе функционалов (Глава 3, \textsection 2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \rightarrow f_n(x_0)$. Но $|f_n(x_0)| \leq \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overline{lim}\lVert x_n \rVert \leq \lVert x_0 \rVert$.
+Для всех $f \in X*$ значения $f(x_n) \rightarrow f(x_0)$ при $n \rightarrow \infty$. По теореме о достаточном числе функционалов (Глава 3, \textsection 2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \rightarrow f_n(x_0)$. Но $|f_n(x_0)| \leq \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim}\lVert x_n \rVert \leq \lVert x_0 \rVert$.
 \end{proof}
 \end{lemma}
 Понятие слабой сходимости последовательности элементов порождает также понятие \textbf{слабо фундаментальной последовательности} $\{x_n\}$: последовательность $\{x_n\}$ называется слабо фундаментальной, если для каждого функционала $f \in X^*$ последовательность чисел $\{f(x_n)\}$ фундаментальна.
@@ -1589,7 +1589,7 @@ f(x) =  \langle x, f \rangle
 \begin{theorem}
 В гильбертовом пространстве $H$ любое ограниченное множество слабо компактно.
 \begin{proof}
-Проведем доказательство для сепарабельных гильбертовых пространств. В этих пространства существует не более чем счетный базис элементов $\psi_1, \psi_2, ..., \psi_n, ...$, $(\psi_i, \psi_j)=0, i\neq j$; ${\lVert \psi_i \rVert}_H=1$.
+Проведем доказательство для сепарабельных гильбертовых пространств. В этих пространства существует не более чем счетный базис элементов $\psi_1, \psi_2, \ldots, \psi_n, \ldots$, $(\psi_i, \psi_j)=0, i\neq j$; ${\lVert \psi_i \rVert}_H=1$.
 \end{proof}
 \end{theorem}
 
@@ -1633,7 +1633,7 @@ $\lbrace x_{N(2,K)} \rbrace \subset
 \end{center}
 \end{enumerate}
 Продолжая этот процесс, получим последовательности 
-$\lbrace x_{N(i,K)} \rbrace$, $i=1,2,3...$, такие что 
+$\lbrace x_{N(i,K)} \rbrace$, $i=1,2,3\ldots$, такие что 
  \begin{center}
  $\lbrace x_{N(1,K)} \rbrace \supset
 \lbrace x_{N(2,K)} \rbrace \supset
@@ -1683,11 +1683,11 @@ y=\sum\limits_{k=1}^\infty y_k\Psi_k =
 \sum\limits_{k=1}^n y_k\Psi_k +
 \sum\limits_{k=n+1}^\infty y_k\Psi_k
 \end{equation*}
-Для заданного $\epsilon$ найдём номер $n(\epsilon)$, такой что при $n>n(\epsilon)$
+Для заданного $\varepsilon$ найдём номер $n(\varepsilon)$, такой что при $n>n(\varepsilon)$
 \begin{equation*}
-\sum\limits_{k=n+1}^\infty y_k^2 < {\epsilon}^2 
+\sum\limits_{k=n+1}^\infty y_k^2 < {\varepsilon}^2 
 \end{equation*}
-\textbf{Зафиксируем значение $n$, $n>n(\epsilon)$.}\\
+\textbf{Зафиксируем значение $n$, $n>n(\varepsilon)$.}\\
 
 Значение функционала $f$ на элементе $x_{N(m,m)}-\widetilde{x}$ равно
 \begin{equation*}
@@ -1698,12 +1698,12 @@ y=\sum\limits_{k=1}^\infty y_k\Psi_k =
 Во втором слагаемом значение
 \begin{equation*}
 \vert  \langle x_{N(m,m)},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leq
-C\cdot\epsilon
+C\cdot\varepsilon
 \end{equation*}
 и значение 
 \begin{equation*}
 \vert  \langle \widetilde{x},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leq
-C\cdot\epsilon
+C\cdot\varepsilon
 \end{equation*}
 
 В первом слагаемом значение
@@ -1720,14 +1720,14 @@ C\cdot\epsilon
 \end{equation*}
 то для достаточно больших $m$:
 \begin{equation*}
-\sum\limits_{k=1}^n{[ \langle x_{N(m,m)},\Psi_k \rangle  - \alpha_k]}^2 < \epsilon^2.
+\sum\limits_{k=1}^n{[ \langle x_{N(m,m)},\Psi_k \rangle  - \alpha_k]}^2 < \varepsilon^2.
 \end{equation*}
 Таким образом
 \begin{equation*}
 \vert f(x_{N(m,m)}-\widetilde{x})\vert=
 \vert  \langle x_{N(m,m)}-\widetilde{x},f \rangle  \vert =
 \vert (x_{N(m,m)}-\widetilde{x},y) \vert \leq
-\epsilon [\lVert f\lVert + 2\epsilon]
+\varepsilon [\lVert f\lVert + 2\varepsilon]
 \end{equation*}
 для любого $f \in H^*$, если
  $\lbrace x_n\rbrace \in K$ при достаточно больших $m$, т.е. 
@@ -1835,14 +1835,14 @@ $$\parallel K \parallel = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^
 
 
 \textbf{Пример}.
-Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей ${a_{ij}}_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,...,x_n)$ и $y(y_1,y_2,...,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overline{(y,x)}$
+Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей ${a_{ij}}_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,\ldots,x_n)$ и $y(y_1,y_2,\ldots,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overbar{(y,x)}$
 
 Координаты вектора $y=Ax$ равны $y_i = \sum\limits_{j=1}^n a_{ij} x_j$. Общий вид функционала в $f$ в $V_n$ определяется указанием элемента $y$:
 $f(x) \langle x,f \rangle = (x,y)$
 Тогда
 
 \begin{align*}
-\langle Ax,y \rangle = (Ax,y) = \sum\limits_{i=1}^n (Ax)_i \bar{y}_i = \sum\limits_{i=1}^n (\sum\limits_{j=1}^n a_{ij}x_j)\bar{y}_i = \sum\limits_{j=1}^n x_j \sum\limits_{i=1}^n a_{ij}\bar{y}_i = \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n a_{ji}\bar{y}_j =\\= \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n \overline{(\bar{a}_{ij},y_j)} = \sum\limits_{i=1}^n x_i \overline{\sum\limits_{j=1}^n(\bar{a}_{ij} ,y_j)} = (x,A^{*}y)=\langle x, A^{*}y \rangle
+\langle Ax,y \rangle = (Ax,y) = \sum\limits_{i=1}^n (Ax)_i \bar{y}_i = \sum\limits_{i=1}^n (\sum\limits_{j=1}^n a_{ij}x_j)\bar{y}_i = \sum\limits_{j=1}^n x_j \sum\limits_{i=1}^n a_{ij}\bar{y}_i = \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n a_{ji}\bar{y}_j =\\= \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n \overbar{(\bar{a}_{ij},y_j)} = \sum\limits_{i=1}^n x_i \overbar{\sum\limits_{j=1}^n(\bar{a}_{ij} ,y_j)} = (x,A^{*}y)=\langle x, A^{*}y \rangle
 \end{align*} 
 Сравнивая полученное равенство $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (согласно определению сопряженного оператора) получаем, что
 $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
@@ -1851,11 +1851,11 @@ $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
 \textbf{Пример}.
 Рассмотри комплексно-значные пространства $X=L_p(a,b)$ и $Y=L_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $L_p(a,b) \to C$, где $C$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in L_q(a,b)$:
 
-$$ f(x) = \langle x, f \rangle = (x,y) = \displaystyle\int\limits_a^b x(t)\overline{y(t)}dt $$
+$$ f(x) = \langle x, f \rangle = (x,y) = \displaystyle\int\limits_a^b x(t)\overbar{y(t)}dt $$
 $$ (\frac{1}{p} + \frac{1}{q} = 1) $$
-$$ \langle x, f \rangle  = \bar{(y,x)}  = \displaystyle\int\limits_a^b \overline{(\bar{x}(t)y(t))} dt = \overline{\displaystyle\int\limits_a^{-b} (y(t)\bar{x}(t))dt} $$
+$$ \langle x, f \rangle  = \bar{(y,x)}  = \displaystyle\int\limits_a^b \overbar{(\bar{x}(t)y(t))} dt = \overbar{\displaystyle\int\limits_a^{-b} (y(t)\bar{x}(t))dt} $$
 
-Величины $\int\limits_a^b y(t)\overline{x(t)} dt$ будем рассматривать как значение функционала из $L_q \to C$. Это значение полностью определено заданием элемента $x \in L_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
+Величины $\int\limits_a^b y(t)\overbar{x(t)} dt$ будем рассматривать как значение функционала из $L_q \to C$. Это значение полностью определено заданием элемента $x \in L_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
 $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar{f^{*}}$ и $f^{*}=\bar{f}$,
 
 Таким образом в пространстве $L_q(a,b)$ определен функционал $f^{*}$ и $f^{*}=f$.
