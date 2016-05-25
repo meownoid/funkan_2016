@@ -239,15 +239,15 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 
 \end{theorem}
 \begin{proof} 
-	$\underbar{Достаточность}$ Пусть известно, что для функции $x\in E$ выполнены условия теоремы. Построим в $E$ компактную 	$\varepsilon$-сеть $H_{\varepsilon}$. Для 	$ \varepsilon>0$ найдем значение $\delta>0$ такое, что $|x(t^{''})-x(t^{'})| <\varepsilon$ для всех $t^{'}, t^{''}$ таких, что $|t^{''}-t^{'}| <\delta$. Построим конечное число узлов $\{t_i\}$, $a=t_1<t_2<...<t_n=b, t_{k+1}-t_k< \delta$ и зафиксируем их. Рассмотрим множество ломаных $\overbar{x}(t)$ с вершинами в точках $(t_k, \eta_k )$, где $\eta_k=x(t_k)$. Множество всех таких ломаных, построенных для функций множества $E$, обозначим $H_{\varepsilon}$.
+	$\underbar{Достаточность}$ Пусть известно, что для функции $x\in E$ выполнены условия теоремы. Построим в $E$ компактную 	$\varepsilon$-сеть $H_{\varepsilon}$. Для 	$ \varepsilon>0$ найдем значение $\delta>0$ такое, что $|x(t^{''})-x(t^{'})| <\varepsilon$ для всех $t^{'}, t^{''}$ таких, что $|t^{''}-t^{'}| <\delta$. Построим конечное число узлов $\{t_i\}$, $a=t_1<t_2<\ldots<t_n=b, t_{k+1}-t_k< \delta$ и зафиксируем их. Рассмотрим множество ломаных $\overbar{x}(t)$ с вершинами в точках $(t_k, \eta_k )$, где $\eta_k=x(t_k)$. Множество всех таких ломаных, построенных для функций множества $E$, обозначим $H_{\varepsilon}$.
 	
-	Множество $H_{\varepsilon}$ компактно в $C[a, b]$. Действительно, каждая ломаная определяется $n$ числами $(\eta_1, \eta_2,...,\eta_n )$, где все числа $\eta_k$ ограничены: $|\eta_k|\leqslant const$. Из любой последовательности ломаных из $H_{\varepsilon}$ можно образовать фундаментальную последовательность.
+	Множество $H_{\varepsilon}$ компактно в $C[a, b]$. Действительно, каждая ломаная определяется $n$ числами $(\eta_1, \eta_2,\ldots,\eta_n )$, где все числа $\eta_k$ ограничены: $|\eta_k|\leqslant const$. Из любой последовательности ломаных из $H_{\varepsilon}$ можно образовать фундаментальную последовательность.
 	
 	Покажем, что компактное множество $H_{\varepsilon}$ образует в $E$ $\varepsilon$-сеть. Для любой функции $x\in E$ построим ломаную $\overbar{x}(t)$, $\overbar{x} \in H_{\varepsilon}$. Так как $x(t)$ непрерывна, то на отрезке $[t_k, t_{k+1}]$ она достигает своего максимального значения $M_k$ и своего минимального значения $m_k$: $m_k \leqslant x(t) \leqslant M_k, t \in [t_k, t_{k+1}]$. В этих же пределах лежат и значения линейной функции $\overbar{x}(t)$. Ясно, что $|x(t)-\overbar{x}(t)|\leqslant M_k-m_k, t \in [t_k, t_{k+1}]$.
 	
 	В силу выбора значения $\delta$ величины $M_k-m_k < \varepsilon$. Тогда и $\rho(x, \overbar{x} < \varepsilon$. Согласна следствию теоремы Хаусдорфа, множество $E$ компактно в $C[a, b]$.
 	
-	$\underbar {Необходимость}$ Свойства функций из компактного множества $E$, указанные в теореме, сразу следуют из существования в $E$ $\underbar {конечной}$ $\varepsilon$-сети непрерывных на $[a, b]$ функций $x_1(t), x_2(t),...,x_N(t)$.	
+	$\underbar {Необходимость}$ Свойства функций из компактного множества $E$, указанные в теореме, сразу следуют из существования в $E$ $\underbar {конечной}$ $\varepsilon$-сети непрерывных на $[a, b]$ функций $x_1(t), x_2(t),\ldots,x_N(t)$.	
 
 \end{proof}
 
@@ -331,7 +331,11 @@ $$E=\bigcup\limits_{k=1}^\infty E_k,$$
 
 Множество $E_2$ нигде не плотно: в шаре $\overbar{V}_{r_1}(x_1)$ существует шар $\overbar{V}_{r_2}(x_2)$, в котором нет элементов множества $E_2$ (и элементов множества $E_1$). Можно считать, что $r_2 < \frac{1}{2}r_1 < \frac{1}{2^2}r_0$.
 
-Продолжая этот процесс, получим последовательность вложенных шаров $\overbar{V}_{r_1}(x_1) \supset \overbar{V}_{r_2}(x_2) \supset$ ... $\supset \overbar{V}_{r_n}(x_n) \supset ...; r_n < \frac{1}{2^n}r_0, r_n \to 0$ при $n \to \infty$, и в каждом шаре $\overbar{V}_{r_n}(x_n)$ нет элементов множеств $E_1, E_2, ..., E_n$.
+Продолжая этот процесс, получим последовательность вложенных шаров 
+$$\overbar{V}_{r_1}(x_1) \supset \overbar{V}_{r_2}(x_2) \supset \ldots \supset \overbar{V}_{r_n}(x_n) \supset \ldots$$
+$$r_n < \frac{1}{2^n}r_0, r_n \to 0$$
+при
+$n \to \infty$, и в каждом шаре $\overbar{V}_{r_n}(x_n)$ нет элементов множеств $E_1, E_2, \ldots, E_n$.
 
 По теореме о вложенных шарах существует элемент $x^*\subset X$:
 $x_n \to x^*$ при $n \to \infty$.
@@ -790,19 +794,19 @@ $\parallel A_nx-Ax\parallel_Y = \parallel(A_n-A)x\parallel\le \parallel A_n-A\pa
 Обратное утверждение неверно.
 
 \begin{example}
-Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,...,x_n,...)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\parallel x\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $
+Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,\ldots,x_n,\ldots)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\parallel x\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $
 
 Зададим последовательность аддитивных операторов $A_n$ из $l_1$ в $l_1$:
-$A_nx=(x_1,x_2,x_3,...,x_n)$
+$A_nx=(x_1,x_2,x_3,\ldots,x_n)$
 
 Операторы $A_n$ линейные:
 $\parallel A_n\parallel=\sup \limits_{S_1} \parallel A_nx\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\parallel A_n\parallel=1$, $A_n\in \mathcal{L}(l_1,l_1)$.
 
-Рассмотрим последовательность линейных операторов $E-A_n\in \mathcal{L}(l_1,l_1)$. Ясно, что $\parallel(E-A_n)x\parallel=\parallel(0,0,...,0,x_{n+1},x_{n+2},...)\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
+Рассмотрим последовательность линейных операторов $E-A_n\in \mathcal{L}(l_1,l_1)$. Ясно, что $\parallel(E-A_n)x\parallel=\parallel(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
 
 Таким образом $A_nx\to x$ для любых $x\in l_1$ при $n\to \infty$. Последовательность операторов $A_n$ сходится поточечно к тождественному оператору.
 
-На сфере $S_1$ в $l_1$ рассмотрим множество элементов $S_1^0$, таких что $x=(0,0,...,0,x_{n+1},x_{n+2},...)$, $\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$.
+На сфере $S_1$ в $l_1$ рассмотрим множество элементов $S_1^0$, таких что $x=(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)$, $\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$.
 $\parallel E-A_n\parallel=\sup \limits_{S_1} \parallel(E-A_n)x\parallel\ge \sup \limits_{S_1^0} \parallel(E-A_n)x\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$ и $\parallel E-A_n\parallel\ge 1$ при всех $n$. Последовательность линейных операторов $A_n$ не сходится сильно к тождественному оператору.
 
 \end{example}
@@ -1067,24 +1071,24 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 	 \frac{1}{2^2} \parallel y_0 \parallel$
 	\end{center}
 
-Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
+Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, \ldots, y_3, y_2, y_1 \in M$ такие что 
 
 \begin{center}
 $\lVert y_n \rVert \leqslant \frac{1}{2^{n-1}} \lVert y_0 \rVert$
 
 и
 
-$\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leqslant \frac{1}{2^n} \lVert y_0 \rVert.$
+$\lVert y_n + y_{n-1}+y_{n-2}+\ldots+y_2+y_1+y_0 \rVert \leqslant \frac{1}{2^n} \lVert y_0 \rVert.$
 \end{center}
 
 Обозначим $s_n= \displaystyle\sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
 
 \begin{center}
-$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leqslant $
+$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+\ldots+y_{n+m}) \rVert \leqslant $
 \end{center}
 
 \begin{center}
-$\leqslant C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
+$\leqslant C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+\ldots+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+\ldots+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
 \end{center}
 
 Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$.
@@ -1092,7 +1096,7 @@ $\leqslant C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}
 Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \to \infty$, получаем
 
 \begin{center}
-$ \lVert x^*-B s_n \rVert \leqslant C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...)$.
+$ \lVert x^*-B s_n \rVert \leqslant C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+\ldots)$.
 \end{center}
 
 Так как $s_n \to y_0, B s_n \to x^*$, то в силу замкнутости оператора $B$: 
@@ -1108,7 +1112,7 @@ $\lVert B y_0 \rVert \leqslant \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \
 \end{center}
 
 \begin{center}
-$\leqslant C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+...] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ ...+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
+$\leqslant C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+\ldots] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ \ldots+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
 \end{center}
 
 $\lVert B y_0 \rVert \leqslant 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \to X} \leqslant 2 C_0$.
@@ -1226,7 +1230,7 @@ $$\| \Delta x \|_{\mathcal{L}_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n 
 
 \begin{cexample}Тождественный оператор $E$ в сепарабельном гильбертовом пространстве не является вполне непрерывным оператором.
 
-Действительно, пусть $\psi_1,\psi_2,...,\psi_n,..., \lVert\psi_n\rVert =1$ --- ортонормальный базис пространства. Множество $S_1$ ограничено, но множество $ES_1 (=S_1)$ не является компактным: из последовательности $\lbrace \psi_n \rbrace_{n=1}^{\infty}$ нельзя выбрать фундаментальную последовательность, так как $\lVert\psi_n - \psi_m \rVert ^2=(\psi_n - \psi_m, \psi_n - \psi_m)= (\psi_n,\psi_n)+ (\psi_m,\psi_m)=2$ при $n \neq m$
+Действительно, пусть $\psi_1,\psi_2,\ldots,\psi_n,\ldots, \lVert\psi_n\rVert =1$ --- ортонормальный базис пространства. Множество $S_1$ ограничено, но множество $ES_1 (=S_1)$ не является компактным: из последовательности $\lbrace \psi_n \rbrace_{n=1}^{\infty}$ нельзя выбрать фундаментальную последовательность, так как $\lVert\psi_n - \psi_m \rVert ^2=(\psi_n - \psi_m, \psi_n - \psi_m)= (\psi_n,\psi_n)+ (\psi_m,\psi_m)=2$ при $n \neq m$
 \end{cexample}
 
 \begin{example}Интегральный оператор $\widetilde{K}$ из $\mathcal{L}_2(a,b)$ в $\mathcal{L}_2(a,b)$.
@@ -1385,7 +1389,7 @@ $$ \lVert f_1 \rVert=\underset{x \in X, \lVert x \rVert =1 }{\sup} |f_1(x)| \geq
 
 \begin{theorem}[Хана-Банаха в случае сепарабельного пространства]
 В сепарабельном пространстве $X$ существует всюду плотное счетное множество $D$ линейно независимых элементов.
-В подпространстве $X_0 \subset X$ определен линейный функционал $f_0$ с нормой $\lVert f_0 \rVert$. В множестве $D$ укажем элементы $x_1, x_2, ..., x_n,...$, не принадлежащие $X_0$. Построим подпространство
+В подпространстве $X_0 \subset X$ определен линейный функционал $f_0$ с нормой $\lVert f_0 \rVert$. В множестве $D$ укажем элементы $x_1, x_2, \ldots, x_n,\ldots$, не принадлежащие $X_0$. Построим подпространство
 $$X_1=X_0+\{ \lambda\}x_1 $$
 и элементарное расширение $f_1$ функционала $f_0$ на $X_1$, $\lVert f_1 \rVert= \lVert f_0 \rVert$;\\
 построим подпространство
@@ -1454,7 +1458,7 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 \end{corollary}
 
 \begin{corollary}
-Пусть $\{ x_1, x_2, x_3, ... x_n\}$ система линейно независимых элементов нормированного пространства $X$. Тогда существует система функционалов $\{ f_1, f_2, f_3, ... f_n\}$, $f_n \in X^*$ такая, что 
+Пусть $\{ x_1, x_2, x_3, \ldots x_n\}$ система линейно независимых элементов нормированного пространства $X$. Тогда существует система функционалов $\{ f_1, f_2, f_3, \ldots f_n\}$, $f_n \in X^*$ такая, что 
 \begin{equation*}
 f_k(x_i) = 
 \begin{cases}
@@ -1464,15 +1468,15 @@ f_k(x_i) =
 \end{equation*}
 \end{corollary}
 \begin{proof}
-Обозначим линейную оболочку системы элементов $\{ x_2, x_3, ... x_n\}$ через $\Omega_1$, $\Omega_1 \subset X$. Элемент $x_1 \overbar{\in} \Omega_1$: $\rho(x_1, \Omega)=d_1>0$. Согласно свойству (2) существует функционал $f_1 \in X^*$, такой, что 
+Обозначим линейную оболочку системы элементов $\{ x_2, x_3, \ldots x_n\}$ через $\Omega_1$, $\Omega_1 \subset X$. Элемент $x_1 \overbar{\in} \Omega_1$: $\rho(x_1, \Omega)=d_1>0$. Согласно свойству (2) существует функционал $f_1 \in X^*$, такой, что 
 \begin{equation*}
-\lVert f_1 \rVert =d_1, f_1(x_1)=1, f_1(\Omega_1)=0: f_1(x_2)=0, f_1(x_3)=0,..., f_1(x_n)=0.
+\lVert f_1 \rVert =d_1, f_1(x_1)=1, f_1(\Omega_1)=0: f_1(x_2)=0, f_1(x_3)=0,\ldots, f_1(x_n)=0.
 \end{equation*}
-Обозначим $\Omega_2$ линейную оболочку элементов $\{ x_1, x_3, ... x_n\}$. Элемент $x_2 \in \Omega_2$: $\rho(x_2, \Omega_2)=d_2$. По свойству (2) существует функционал $f_2 \in X^*$ такой, что 
+Обозначим $\Omega_2$ линейную оболочку элементов $\{ x_1, x_3, \ldots x_n\}$. Элемент $x_2 \in \Omega_2$: $\rho(x_2, \Omega_2)=d_2$. По свойству (2) существует функционал $f_2 \in X^*$ такой, что 
 \begin{equation*}
-\lVert f_2 \rVert=d_2 > 0, f_2(x_2)=1, f_2(\Omega_2)=0: f_2(x_1)=0, f_2(x_3)=0,..., f_2(x_n)=0.
+\lVert f_2 \rVert=d_2 > 0, f_2(x_2)=1, f_2(\Omega_2)=0: f_2(x_1)=0, f_2(x_3)=0,\ldots, f_2(x_n)=0.
 \end{equation*}
-Продолжая этот процесс, получим функционалы $f_k \in X^*$, $k=1, 2, ..., n$
+Продолжая этот процесс, получим функционалы $f_k \in X^*$, $k=1, 2, \ldots, n$
 \begin{equation*}
 f_k(x_i) = 
 \begin{cases}
@@ -1578,7 +1582,6 @@ f(x) =  \langle x, f \rangle
 \end{proof}
 \end{lemma}
 Понятие слабой сходимости последовательности элементов порождает также понятие \textbf{слабо фундаментальной последовательности} $\{x_n\}$: последовательность $\{x_n\}$ называется слабо фундаментальной, если для каждого функционала $f \in X^*$ последовательность чисел $\{f(x_n)\}$ фундаментальна.
-%%%%%%(и в силу полноты мн.....)
 
 В соответствии с этим определением говорят, что множество $K$ \textbf{слабо компактно}, если из любой последовательности его элементов можно составить ее подпоследовательность слабо функциональную: для последовательности $\{x_n\}$ существует ее подпоследовательность $\{x_{N(k)}\}$ такая что числовые последовательности $\{f(x_{N(k)})\}$ имеют предел при $k \rightarrow \infty$. Значения $f(x_{N(k)})$ и предельное значение зависят от выбора функционала $f$.
 
