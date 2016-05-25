@@ -134,7 +134,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 	\item подпространство $X_0$ метрического пространства: метрика в $X_0$ определяется метрикой пространства $X$, множество $X_0$ --- замкнуто,
 
-	\item фундаментальная последовательность $\lbrace x_n \rbrace_{n=1}^{\infty}$ --- последовательность, такая что $\forall \varepsilon > 0$ существует номер $n = n(\varepsilon)$ такой что $\rho(x_n, x_{n+m}) < \varepsilon$ при $n > n(\varepsilon)$, $m \geq 1$ (последовательность, сходящаяся в себе).
+	\item фундаментальная последовательность $\lbrace x_n \rbrace_{n=1}^{\infty}$ --- последовательность, такая что $\forall \varepsilon > 0$ существует номер $n = n(\varepsilon)$ такой что $\rho(x_n, x_{n+m}) < \varepsilon$ при $n > n(\varepsilon)$, $m \geqslant 1$ (последовательность, сходящаяся в себе).
 
 \end{itemize}
 
@@ -241,9 +241,9 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 \begin{proof} 
 	$\underbar{Достаточность}$ Пусть известно, что для функции $x\in E$ выполнены условия теоремы. Построим в $E$ компактную 	$\varepsilon$-сеть $H_{\varepsilon}$. Для 	$ \varepsilon>0$ найдем значение $\delta>0$ такое, что $|x(t^{''})-x(t^{'})| <\varepsilon$ для всех $t^{'}, t^{''}$ таких, что $|t^{''}-t^{'}| <\delta$. Построим конечное число узлов $\{t_i\}$, $a=t_1<t_2<...<t_n=b, t_{k+1}-t_k< \delta$ и зафиксируем их. Рассмотрим множество ломаных $\overbar{x}(t)$ с вершинами в точках $(t_k, \eta_k )$, где $\eta_k=x(t_k)$. Множество всех таких ломаных, построенных для функций множества $E$, обозначим $H_{\varepsilon}$.
 	
-	Множество $H_{\varepsilon}$ компактно в $C[a, b]$. Действительно, каждая ломаная определяется $n$ числами $(\eta_1, \eta_2,...,\eta_n )$, где все числа $\eta_k$ ограничены: $|\eta_k|\leq const$. Из любой последовательности ломаных из $H_{\varepsilon}$ можно образовать фундаментальную последовательность.
+	Множество $H_{\varepsilon}$ компактно в $C[a, b]$. Действительно, каждая ломаная определяется $n$ числами $(\eta_1, \eta_2,...,\eta_n )$, где все числа $\eta_k$ ограничены: $|\eta_k|\leqslant const$. Из любой последовательности ломаных из $H_{\varepsilon}$ можно образовать фундаментальную последовательность.
 	
-	Покажем, что компактное множество $H_{\varepsilon}$ образует в $E$ $\varepsilon$-сеть. Для любой функции $x\in E$ построим ломаную $\overbar{x}(t)$, $\overbar{x} \in H_{\varepsilon}$. Так как $x(t)$ непрерывна, то на отрезке $[t_k, t_{k+1}]$ она достигает своего максимального значения $M_k$ и своего минимального значения $m_k$: $m_k \leq x(t) \leq M_k, t \in [t_k, t_{k+1}]$. В этих же пределах лежат и значения линейной функции $\overbar{x}(t)$. Ясно, что $|x(t)-\overbar{x}(t)|\leq M_k-m_k, t \in [t_k, t_{k+1}]$.
+	Покажем, что компактное множество $H_{\varepsilon}$ образует в $E$ $\varepsilon$-сеть. Для любой функции $x\in E$ построим ломаную $\overbar{x}(t)$, $\overbar{x} \in H_{\varepsilon}$. Так как $x(t)$ непрерывна, то на отрезке $[t_k, t_{k+1}]$ она достигает своего максимального значения $M_k$ и своего минимального значения $m_k$: $m_k \leqslant x(t) \leqslant M_k, t \in [t_k, t_{k+1}]$. В этих же пределах лежат и значения линейной функции $\overbar{x}(t)$. Ясно, что $|x(t)-\overbar{x}(t)|\leqslant M_k-m_k, t \in [t_k, t_{k+1}]$.
 	
 	В силу выбора значения $\delta$ величины $M_k-m_k < \varepsilon$. Тогда и $\rho(x, \overbar{x} < \varepsilon$. Согласна следствию теоремы Хаусдорфа, множество $E$ компактно в $C[a, b]$.
 	
@@ -251,14 +251,14 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 
 \end{proof}
 
-	\item Множества, компактные в пространстве суммируемых со степенью $p, (p \geq 1)$ функций.
+	\item Множества, компактные в пространстве суммируемых со степенью $p, (p \geqslant 1)$ функций.
 
 \begin{theorem} [Марсель Рисс, 1935 г.]
 Для того, чтобы множество $E$  пространства $L_p[a, b]$ было компактным, необходимо и достаточно, чтобы
 
 \begin{itemize}
 
-	\item $\int\limits_a^b |x(t)|^p dt \leq const, x \in E$,
+	\item $\int\limits_a^b |x(t)|^p dt \leqslant const, x \in E$,
 
 	\item при $\tau \to 0$ интегралы $\int\limits_a^b |x(t+\tau)-x(t)|^p dt \to 0$ равномерно относительно $x \in E$.
 
@@ -411,7 +411,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{enumerate}
 
-	\item $\lVert x\rVert \geq 0$; если $\lVert x\rVert = 0$, то $x=\circleddash$.
+	\item $\lVert x\rVert \geqslant 0$; если $\lVert x\rVert = 0$, то $x=\circleddash$.
 
 	\item $\lVert \lambda x \rVert = \lvert \lambda \rvert \lVert x \rVert$.
 
@@ -509,9 +509,9 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 Действительно:
 \begin{align*}
-(x + \lambda y, x + \lambda y) &\ge 0,\\
+(x + \lambda y, x + \lambda y) &\geqslant 0,\\
 (x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) &> 0,\\
-(x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) &\ge 0\\
+(x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) &\geqslant 0\\
 \end{align*}
 для любых чисел $\lambda$.
 Если $(y, y) = 0$, $y = \circleddash$, то доказываемое утверждение верно. Если $(y, y) \neq 0$, то положим 
@@ -521,12 +521,12 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \end{align*}
 Тогда
 \begin{align*}
-(x, x) - 2 \frac{ \lvert (x, y) \rvert^2}{(y, y)} + \frac{\lvert (x, y) \rvert^2}{(y, y)} &\ge 0,\\
-(x, x) - \frac{\lvert (x, y) \rvert^2}{(y, y)} &\ge 0
+(x, x) - 2 \frac{ \lvert (x, y) \rvert^2}{(y, y)} + \frac{\lvert (x, y) \rvert^2}{(y, y)} &\geqslant 0,\\
+(x, x) - \frac{\lvert (x, y) \rvert^2}{(y, y)} &\geqslant 0
 \end{align*}
 и
 \begin{align*}
-(x, x) (y, y) &\ge \lvert (x, y) \rvert^2,\\
+(x, x) (y, y) &\geqslant \lvert (x, y) \rvert^2,\\
 \lvert (x, y) \rvert^2 &\le (x, x) (y, y).
 \end{align*}
 
@@ -708,20 +708,20 @@ $C_0\leq
 С другой стороны 
 \begin{center}
 $\parallel Ax \parallel=
-\parallel x \parallel \cdot \parallel A(\frac{x}{\parallel x \parallel}) \parallel \leq C_0$
+\parallel x \parallel \cdot \parallel A(\frac{x}{\parallel x \parallel}) \parallel \leqslant C_0$
 \end{center} 
-при $\parallel x \parallel \leq 1$; 
-$\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel \leq C_0$.
+при $\parallel x \parallel \leqslant 1$; 
+$\underset{\parallel x\parallel \leqslant 1}{\sup}\parallel Ax \parallel \leqslant C_0$.
 
 Тогда 
 \begin{center}
-$ C_0 \geq\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel $, и мы получаем 
-$\underset{\parallel x\parallel \leq 1}{\sup}\parallel Ax \parallel =\parallel A \parallel$.
+$ C_0 \geqslant\underset{\parallel x\parallel \leqslant 1}{\sup}\parallel Ax \parallel $, и мы получаем 
+$\underset{\parallel x\parallel \leqslant 1}{\sup}\parallel Ax \parallel =\parallel A \parallel$.
 \end{center}
 
 Для линейных операторов верна оценка: $\parallel Ax \parallel _{Y} =\parallel A \parallel \cdot \parallel x \parallel_{X} $.
 
-\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leq {C}  \parallel x \parallel$, то $\parallel A \parallel \leq {C} $.
+\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leqslant {C}  \parallel x \parallel$, то $\parallel A \parallel \leqslant {C} $.
 
 \begin{example}
 Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
@@ -737,16 +737,16 @@ ${(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\ve
 
 Согласно неравенству Гёльдера интеграл 
 \begin{center}
-$\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leq (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)^\frac{1}{p}=}$
+$\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leqslant (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)^\frac{1}{p}=}$
 
 $= \parallel x \parallel _{L_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
 
 ${\parallel y \parallel}^q _{L_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert^{q}} dt\leq {\parallel x \parallel}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
 
 ${\parallel y \parallel}_{L_q(a,b)}=
-{\parallel Kx\parallel}_{L_q(a,b)} \leq {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{L_p(a,b)} $ 
+{\parallel Kx\parallel}_{L_q(a,b)} \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{L_p(a,b)} $ 
 \end{center}
-и $\parallel K \parallel \leq {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
+и $\parallel K \parallel \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
 
 Можно показать, что $\parallel K \parallel = 
 {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}.$
@@ -824,11 +824,11 @@ $\parallel E-A_n\parallel=\sup \limits_{S_1} \parallel(E-A_n)x\parallel\ge \sup 
 \begin{center}
 $\lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert \le c$, т.е.
 
-$c \ge \lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert$,
+$c \geqslant \lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert$,
 
-$c \ge \lVert \frac{r}{\lVert x\rVert}A_n x + A_n x_0 \rVert \ge \lVert A_n x\rVert \frac{r}{\lVert x\rVert} - \lVert A_n x_0\rVert \ge \frac{r}{\lVert x\rVert}\lVert A_n x_0\rVert - c$,
+$c \geqslant \lVert \frac{r}{\lVert x\rVert}A_n x + A_n x_0 \rVert \geqslant \lVert A_n x\rVert \frac{r}{\lVert x\rVert} - \lVert A_n x_0\rVert \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x_0\rVert - c$,
 
-$2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert \ge \lVert A_n x\rVert$, $\lVert A_n x\rVert \le \frac{2c}{r}\lVert x\rVert$
+$2c \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert \geqslant \lVert A_n x\rVert$, $\lVert A_n x\rVert \le \frac{2c}{r}\lVert x\rVert$
 \end{center}
 
 Достаточно положить $M=\frac{2c}{r}$ : $\lVert A_n x\rVert \le M\lVert x\rVert$ для всех $x \subset X$, следовательно норма оператора $\lVert A\rVert \le M$.
@@ -886,7 +886,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 
 Значения $\lVert A_n x - A_n x'\rVert < M\varepsilon$, $\lVert A_m x' - A_m x\rVert < M\varepsilon$.
 
-Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \inf} A_n x = y(x) \subset Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \ge \overbar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\overbar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
+Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \inf} A_n x = y(x) \subset Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \geqslant \overbar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\overbar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
 
 Напомним, что последовательность операторов $A_n$ может и не иметь сильного предела.
 \end{proof}
@@ -900,7 +900,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \begin{enumerate}
 	\item решение существует для любого $y \in Y$,
 	\item решение единственно,
-	\item вариации $\Delta x$ решения непрерывно зависят от вариаций $\Delta y$ элемента $y$: $\lVert \Delta x\rVert_X \leq \lVert B\rVert_{Y\to X}\lVert \Delta y\rVert_X$.
+	\item вариации $\Delta x$ решения непрерывно зависят от вариаций $\Delta y$ элемента $y$: $\lVert \Delta x\rVert_X \leqslant \lVert B\rVert_{Y\to X}\lVert \Delta y\rVert_X$.
 \end{enumerate}
 Оператор $A$ предполагается линейным, а оператор $B$ определен на всем банаховом пространстве $Y$. В этом случаем операторы $A$ и $B$ замкнуты. Действительно:
 \begin{enumerate}
@@ -912,7 +912,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \end{enumerate}
 	
 \begin{lemma}
-Пусть оператор $B$ задан на всем $\underbar {банаховом}$ пространстве $Y$. Тогда в $Y$ существует плотное множество элементов $M$, таких, что $\lVert By\rVert_X \leq C_0\lVert y\rVert_Y $, где значение постоянной $C_0$ не зависит от выбора элементов $y \subset M$.
+Пусть оператор $B$ задан на всем $\underbar {банаховом}$ пространстве $Y$. Тогда в $Y$ существует плотное множество элементов $M$, таких, что $\lVert By\rVert_X \leqslant C_0\lVert y\rVert_Y $, где значение постоянной $C_0$ не зависит от выбора элементов $y \subset M$.
 \end{lemma}
 
 \begin{proof}
@@ -920,9 +920,9 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 Построим множество $M$.
 
 \begin{enumerate}
-	\item Для любого выбранного элемента $y \subset Y$ можно найти такое натуральное число $k$, что $\lVert By\rVert \leq k\lVert y\rVert$.
+	\item Для любого выбранного элемента $y \subset Y$ можно найти такое натуральное число $k$, что $\lVert By\rVert \leqslant k\lVert y\rVert$.
 	
-	Множество таких элементов $y$ обозначим $Y_k$. Множество $Y_k$ "однородно": если $y \subset Y_k$, то элементы $\lambda y \subset Y_k$ для всех чисел $\lambda$. Ясно, что при $m \leq k$ $Y_m \subset Y_k$ и что
+	Множество таких элементов $y$ обозначим $Y_k$. Множество $Y_k$ "однородно": если $y \subset Y_k$, то элементы $\lambda y \subset Y_k$ для всех чисел $\lambda$. Ясно, что при $m \leqslant k$ $Y_m \subset Y_k$ и что
 
 \begin{center}	
 
@@ -984,7 +984,7 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \begin{proof}
 Согласно лемме в пространстве $Y$ существует всюду плотное множество $M$, для элементов которого
 \begin{center}
-	$\parallel By \parallel \leq C_0 \parallel y \parallel $
+	$\parallel By \parallel \leqslant C_0 \parallel y \parallel $
 \end{center}
 \begin{enumerate}
 
@@ -993,19 +993,19 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
 	$y_1 \in M$:
 	\begin{center}
-	$\parallel y_1 - \frac{3}{4}y_0\parallel \leq \frac{1}{4}    		\parallel y_0 \parallel $,
+	$\parallel y_1 - \frac{3}{4}y_0\parallel \leqslant \frac{1}{4}    		\parallel y_0 \parallel $,
 	\end{center}
 	\begin{center}
 	$\parallel y_1 \parallel =
 	\parallel y_1 - \frac{3}{4}y_0 +
-	\frac{3}{4}y_0 \parallel \leq \frac{1}{4} 			\parallel y_0 \parallel +
+	\frac{3}{4}y_0 \parallel \leqslant \frac{1}{4} 			\parallel y_0 \parallel +
 	 \frac{3}{4}\parallel y_0\parallel = 				\parallel y_0 \parallel$
 	\end{center}
 	
 	\item Рассмотрим элемент $y_1 - y_0$. Для него
 	\begin{center}
 	$\parallel y_1-y_0 \parallel =\parallel y - \frac{3}{4}y_0 +
-	\frac{1}{4}y_0 \parallel \leq
+	\frac{1}{4}y_0 \parallel \leqslant
 	\frac{1}{4} \parallel y_0 \parallel +
 	\frac{1}{4} \parallel y_0 \parallel =
 	\frac{1}{2} \parallel y_0 \parallel$
@@ -1014,28 +1014,28 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 	\begin{center}
 	$\parallel y_2 + y_1 - y_0 \parallel =
 	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
-	\frac{1}{4}(y_1 - y_0) \parallel \leq
+	\frac{1}{4}(y_1 - y_0) \parallel \leqslant
 	\frac{1}{4} \parallel y_1 - y_0 \parallel +
 	\frac{1}{4} \parallel y_1 - y_0 \parallel = $
 	\end{center}
 	\begin{center}
-	$ = \frac{1}{2} \parallel y_1 - y_0 \parallel 			\leq
+	$ = \frac{1}{2} \parallel y_1 - y_0 \parallel 			\leqslant
 	\frac{1}{2^2} \parallel y_0 \parallel$ ,
 	\end{center}
 	\begin{center}
 	$\parallel y_2 \parallel =
 	\parallel y_2 - \frac{3}{4}(y_1 - y_0) +
-	\frac{3}{4}(y_1 - y_0) \parallel \leq
+	\frac{3}{4}(y_1 - y_0) \parallel \leqslant
 	\frac{1}{4} \parallel y_1 - y_0 \parallel +
 	\frac{3}{4} \parallel y_1 - y_0 \parallel =
-	 \parallel y_1 - y_0 \parallel \leq$
+	 \parallel y_1 - y_0 \parallel \leqslant$
 	 \end{center}
 	\begin{center}
-	 $ \leq \frac{1}{2} \parallel y_0 \parallel$
+	 $ \leqslant \frac{1}{2} \parallel y_0 \parallel$
 	\end{center}
 	
 	\item Рассмотрим элемент $y_2+y_1- y_0$ . Для него 	\begin{center}	
-	$\parallel y_2+y_1- y_0 \parallel \leq
+	$\parallel y_2+y_1- y_0 \parallel \leqslant
 	\frac{1}{2^2} \parallel y_0 \parallel$ .
 	\end{center}
 	Построим шар радиуса
@@ -1044,47 +1044,47 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 	\begin{center}
 	$\parallel y_3 + y_2 + y_1 - y_0 \parallel =
 	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) -
-	\frac{1}{4}(y_0 - y_1 - y_2) \parallel \leq $
+	\frac{1}{4}(y_0 - y_1 - y_2) \parallel \leqslant $
 	\end{center}
 	\begin{center}
-	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel +
-	\frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel 			\leq $
+	$\leqslant \frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel +
+	\frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel 			\leqslant $
 	\end{center}
 	\begin{center}
-	$ \leq\frac{1}{2} \cdot
+	$ \leqslant\frac{1}{2} \cdot
 	\frac{1}{2^2} \parallel y_0 \parallel =
 	\frac{1}{2^3} \parallel y_0 \parallel$ ,
 	\end{center}
 	\begin{center}
 	$\parallel y_3 \parallel =
 	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) +
-	\frac{3}{4}(y_0 - y_1 - y_2) \parallel \leq $
+	\frac{3}{4}(y_0 - y_1 - y_2) \parallel \leqslant $
 	\end{center}
 	\begin{center}
-	$\leq \frac{1}{4} \parallel y_0 - y_1 - y_2 				\parallel +
+	$\leqslant \frac{1}{4} \parallel y_0 - y_1 - y_2 				\parallel +
 	\frac{3}{4} \parallel y_0 - y_1 - y_2 \parallel =
-	 \parallel y_0 - y_1 - y_2 \parallel \leq
+	 \parallel y_0 - y_1 - y_2 \parallel \leqslant
 	 \frac{1}{2^2} \parallel y_0 \parallel$
 	\end{center}
 
 Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, ..., y_3, y_2, y_1 \in M$ такие что 
 
 \begin{center}
-$\lVert y_n \rVert \leq \frac{1}{2^{n-1}} \lVert y_0 \rVert$
+$\lVert y_n \rVert \leqslant \frac{1}{2^{n-1}} \lVert y_0 \rVert$
 
 и
 
-$\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leq \frac{1}{2^n} \lVert y_0 \rVert.$
+$\lVert y_n + y_{n-1}+y_{n-2}+...+y_2+y_1+y_0 \rVert \leqslant \frac{1}{2^n} \lVert y_0 \rVert.$
 \end{center}
 
 Обозначим $s_n= \displaystyle\sum\limits_{k=1}^n y_k$. Тогда $s_n \to y_0$ при $n \to \infty$. Последовательность элементов $B s_n$ сходится в себе:
 
 \begin{center}
-$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leq $
+$ \lVert B s_{n+m}-B s_n \rVert _X = \lVert B(s_{n+m}-s_n) \rVert= \lVert B(y_{n+1}+y_{n+2}+...+y_{n+m}) \rVert \leqslant $
 \end{center}
 
 \begin{center}
-$\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
+$\leqslant C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n+m-1}})=C_0 \frac{1}{2^n} (1 + \frac{1}{2}+...+\frac{1}{2^{m-1}}) \to 0$ при $n \to \infty$.
 \end{center}
 
 Так как пространство $X$ полное, то существует $\lim \limits_{n \to \infty} s_n=x^* \in X$.
@@ -1092,7 +1092,7 @@ $\leq C_0 \lVert y_0 \rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...+\frac{1}{2^{n
 Переходя в оценке $ \lVert B s_{n+m}-B s_n \rVert$ к пределу при $m \to \infty$, получаем
 
 \begin{center}
-$ \lVert x^*-B s_n \rVert \leq C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...)$.
+$ \lVert x^*-B s_n \rVert \leqslant C_0 \lVert y_0\rVert (\frac{1}{2^n} + \frac{1}{2^{n+1}}+...)$.
 \end{center}
 
 Так как $s_n \to y_0, B s_n \to x^*$, то в силу замкнутости оператора $B$: 
@@ -1104,14 +1104,14 @@ $B y_0=x^* $.
 Оценим $\lVert B y_0 \rVert _X$:
 
 \begin{center}
-$\lVert B y_0 \rVert \leq \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \leq$ 
+$\lVert B y_0 \rVert \leqslant \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \leqslant$ 
 \end{center}
 
 \begin{center}
-$\leq C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+...] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ ...+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
+$\leqslant C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+...] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ ...+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
 \end{center}
 
-$\lVert B y_0 \rVert \leq 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \to X} \leq 2 C_0$.
+$\lVert B y_0 \rVert \leqslant 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \to X} \leqslant 2 C_0$.
 
 \end{enumerate}
 
@@ -1124,7 +1124,7 @@ $\lVert B y_0 \rVert \leq 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ �
 
 \item Прямая задача теплопроводности.
 
-Рассматривается бесконечная пластина толщиной $\pi$: $0 \leq \xi \leq\pi$, $-\infty < y < +\infty$. Распределение температуры $x(\xi, y, t)$ в точках этой пластины зависит только от координаты $\xi$ и времени $t$: $x(\xi, y, t) = x(\xi, t)$.На граничных плоскостях при $\xi = 0$ и при $\xi = \pi$ температура равна нулю при всех $t > 0$:
+Рассматривается бесконечная пластина толщиной $\pi$: $0 \leqslant \xi \leqslant\pi$, $-\infty < y < +\infty$. Распределение температуры $x(\xi, y, t)$ в точках этой пластины зависит только от координаты $\xi$ и времени $t$: $x(\xi, y, t) = x(\xi, t)$.На граничных плоскостях при $\xi = 0$ и при $\xi = \pi$ температура равна нулю при всех $t > 0$:
 
 \begin{equation}
 \label{border_conditions}
@@ -1152,7 +1152,7 @@ x(\xi,0)=x(\xi)
 $$x(\xi,t) = \displaystyle\sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
 \end{center}
 
-Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leq \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
+Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leqslant \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
 \begin{center}
 $$x(\xi, t) = \displaystyle\sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
 \end{center}
@@ -1219,7 +1219,7 @@ $$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k
 
 Так как множество $A_1S_1$ компактно в $Y$, то из последовательности $\lbrace A_2x_{n_k} \rbrace$ можно выделить фундаментальную последовательность $\lbrace A_2x'_i \rbrace$. Ясно, что последовательность $\lbrace (\lambda_1 A_1+\lambda_2 A_2)x'_i \rbrace$ является фундаментальной последовательностью в $Y$.
 
-	\item Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leq  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leq  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leq \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leq 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
+	\item Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leqslant  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leqslant  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leqslant \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leqslant 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
 
 \end{enumerate}
 \end{proof}
@@ -1235,17 +1235,17 @@ $$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k
 $y=\widetilde{K}x$, $y(t)=\displaystyle\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau$,
 \end{center}
 
-где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leq M$.
+где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leqslant M$.
 
 В этом случае функции $y(t)$ непрерывны:
 
 \begin{center}
-$|y(t_2)-y(t_1)|^2\leq \displaystyle\int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \displaystyle\int\limits_a^b |x(\tau)|^2 d\tau \leq \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$
+$|y(t_2)-y(t_1)|^2\leq \displaystyle\int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \displaystyle\int\limits_a^b |x(\tau)|^2 d\tau \leqslant \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$
 \end{center}
 
 Величина $|y(t_2)-y(t_1)|\to 0$ при $|t_2-t_1|\to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
 
-Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leq M^2 (b-a)$.
+Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leqslant M^2 (b-a)$.
 
 По теореме Арцела-Асколи множество $\widetilde{K} S_1$ компактно в $C[a,b]$: из любой последовательности элементов $y_n=\widetilde{K} x_n$ можно выделить фундаментальную последовательность в $C[a,b]$, которая является фундаментальной последовательностью и в пространстве $L_2 (a,b))$.
 \end{example}
@@ -1310,7 +1310,7 @@ $\parallel y_1 -A_0x_0 \parallel = \parallel A_1x_1^0 - A_1x_0 \parallel = \para
 $ f\in X^*, f(x)\in R_1$ (пространство $Y=R_1$).
 \end{center}
 Норма функционала $f$ определяется естественным образом:
-$$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leq \lVert f \rVert * \lVert x \rVert_X $$.
+$$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leqslant \lVert f \rVert * \lVert x \rVert_X $$.
 
 \begin{theorem}(Об элементарном продолжении).
 Пусть $X_0$ подпространство пространства $X$, и на $X_0$ определен функционал $f_0$ с нормой $\lVert f_0 \rVert = \underset{\lVert x \rVert=1, x \in X_0}{sup}|f(x)|$.
@@ -1330,36 +1330,36 @@ $$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leq \lVert
 Функционал $f_1$ построим в виде $f_1=f_0+\lambda f_1(x_1^0)$. Число $f_1(x_1^0)$ выберем позднее.
 
 Приступим к оценкам. Пусть $x_0^1$ и $x_0^2$ два любых элемента множества $X_0$.
-$$f_0(x_0^1)-f_0(x_0^2)=f_0(x_0^1-x_0^2) \leq \lVert f_0 \rVert \cdot \lVert x_0^1-x_0^2 \rVert = \lVert f_0 \rVert \cdot \lVert (x_0^1+x_1^0)-(x_0^2+x_1^0) \rVert \leq$$
-$$ \leq \lVert f_0 \rVert \cdot (\lVert x_0^1+x_1^0 \rVert + \lVert x_0^2+x_1^0 \rVert) $$
+$$f_0(x_0^1)-f_0(x_0^2)=f_0(x_0^1-x_0^2) \leqslant \lVert f_0 \rVert \cdot \lVert x_0^1-x_0^2 \rVert = \lVert f_0 \rVert \cdot \lVert (x_0^1+x_1^0)-(x_0^2+x_1^0) \rVert \leqslant$$
+$$ \leqslant \lVert f_0 \rVert \cdot (\lVert x_0^1+x_1^0 \rVert + \lVert x_0^2+x_1^0 \rVert) $$
 или
-$$f_0(x_0^1)-\lVert f_0 \rVert \cdot \lVert x_0^1+x_1^0 \rVert \leq f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert.$$
+$$f_0(x_0^1)-\lVert f_0 \rVert \cdot \lVert x_0^1+x_1^0 \rVert \leqslant f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert.$$
 
 Зафиксируем элемент $x_0^2$. Тогда правая часть неравенства зависит только от выбранного элемента $x_0^2$, поэтому левая часть неравенства ограничена сверху: существует
 $$\underset{x_0^1 \in X_0}{\sup}\left( f_0(x_0^1)-\lVert f_0 \rVert \cdot \lVert x_0^1+x_1^0 \rVert \right)=\alpha,$$
-и при любых элементах $x_0^2$ значение $f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert \geq \alpha$.
+и при любых элементах $x_0^2$ значение $f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert \geqslant \alpha$.
 
-Тогда существует $$\underset{x_0^2 \in X_0}{\inf}\left(f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert \right)=\beta, \beta \geq  \alpha .$$
+Тогда существует $$\underset{x_0^2 \in X_0}{\inf}\left(f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert \right)=\beta, \beta \geqslant  \alpha .$$
 
 В результате получаем
 \begin{center}
-$f_0(x_0^1)-\lVert f_0 \rVert \cdot \lVert x_0^1+x_1^0 \rVert \leq \alpha \leq \beta \leq f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert$, $x_0^1$ и $x_0^2 \in X_0$.
+$f_0(x_0^1)-\lVert f_0 \rVert \cdot \lVert x_0^1+x_1^0 \rVert \leqslant \alpha \leqslant \beta \leqslant f_0(x_0^2)+\lVert f_0 \rVert \cdot \lVert x_0^2+x_1^0 \rVert$, $x_0^1$ и $x_0^2 \in X_0$.
 \end{center}
 
 На отрезке $[\alpha ; \beta]$ выберем любое число $\gamma$. Тогда для любого элемента $x_0 \in X_0$:
-$$f_0(x_0)-\lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert \leq \gamma \leq f_0(x_0)+\lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert$$
+$$f_0(x_0)-\lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert \leqslant \gamma \leqslant f_0(x_0)+\lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert$$
 и
 $$
 \begin{cases}
-    f_0(x_0)-\gamma &\leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert\\
-    \gamma - f_0(x_0) &\leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
+    f_0(x_0)-\gamma &\leqslant \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert\\
+    \gamma - f_0(x_0) &\leqslant \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
 \end{cases}.
 $$
 
 Таким образом, верна оценка
 \begin{equation}
 \label{32_1}
-f_0(x_0)-\gamma \leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
+f_0(x_0)-\gamma \leqslant \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
 \end{equation}
 
 Для построения значения функционала $f_1$ назначим значение $f_1(x_1^0)=-\gamma$. Значение функционала $f_1$ на $X_1$ равно
@@ -1367,15 +1367,15 @@ $$ f_1(x)=f_1(x_0+ \lambda x_1^0)=f_0(x_0)-\lambda \gamma.$$
 
 Ясно, что функционал $f_1$ аддитивен и однороден. Покажем, что $f_1$ --- линейный функционал.
 \begin{align*}
-|f_1(x)| &= |f_0(x_0)-\lambda \gamma| \leq \left|\lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right| \leq
-|\lambda| \left|f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right| \overset{\mbox{(\ref{32_1})}}{\leq} |\lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert =\\
+|f_1(x)| &= |f_0(x_0)-\lambda \gamma| \leqslant \left|\lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right| \leqslant
+|\lambda| \left|f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right| \overset{\mbox{(\ref{32_1})}}{\leqslant} |\lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert =\\
 &= \lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0+\lambda x_1^0}{\lambda} \right \rVert = \lVert f_0 \rVert \cdot  \lVert x_0+\lambda x_1^0 \rVert = \lVert f_0 \rVert \cdot  \lVert x \rVert.
 \end{align*}
 
-Следовательно, $f_1 \leq f_0$ и функционал $f_1$ линеен.
+Следовательно, $f_1 \leqslant f_0$ и функционал $f_1$ линеен.
 
-Обратное неравенство $f_0 \leq f_1$ получаем соответственно из оценки:
-$$ \lVert f_1 \rVert=\underset{x \in X, \lVert x \rVert =1 }{\sup} |f_1(x)| \geq \underset{x \in X_0, \lVert x \rVert =1 }{\sup} |f_1(x)|=\lVert f_0 \rVert.$$
+Обратное неравенство $f_0 \leqslant f_1$ получаем соответственно из оценки:
+$$ \lVert f_1 \rVert=\underset{x \in X, \lVert x \rVert =1 }{\sup} |f_1(x)| \geqslant \underset{x \in X_0, \lVert x \rVert =1 }{\sup} |f_1(x)|=\lVert f_0 \rVert.$$
 
 Итак, $\lVert f_1 \rVert=\lVert f_0 \rVert$.
 
@@ -1433,11 +1433,11 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 \begin{proof}
 Образуем элементарное расшириение $X_0$ множества $\Omega$, т.е. множество элементов вида $x=x'+\{ \lambda \}x_0$, где $x' \in \Omega$. Определим функционал $f_0 \subset X^*_0$: $f_0(x)=\lambda d$ при $x \in X_0$. Ясно, что $f_0(x_0)=d$ и $f_0(x)=0$ при $x \in \Omega$. Оценим норму $\lVert x \rVert$:
 \begin{equation*}
-\lVert x\rVert=\lVert x'+\lambda x_0\rVert=| \lambda | \lVert x_0+\frac{x'}{\lambda}\rVert=|\lambda |\lVert x_0-\frac{x'}{\lambda}\rVert \geq | \lambda | \smash{\displaystyle \inf_{x' \in \Omega}}\lVert x_0-x' \rVert=| \lambda |d=|f_0(x)|.
+\lVert x\rVert=\lVert x'+\lambda x_0\rVert=| \lambda | \lVert x_0+\frac{x'}{\lambda}\rVert=|\lambda |\lVert x_0-\frac{x'}{\lambda}\rVert \geqslant | \lambda | \smash{\displaystyle \inf_{x' \in \Omega}}\lVert x_0-x' \rVert=| \lambda |d=|f_0(x)|.
 \end{equation*}
-Таким образом $|f_0(x)|\leq \lVert x \rVert$ и $\lVert f_0 \rVert \leq 1$.
+Таким образом $|f_0(x)|\leqslant \lVert x \rVert$ и $\lVert f_0 \rVert \leqslant 1$.
 
-Чтобы получить противоположное неравенство $\lVert f_0 \rVert \geq 1$, найдем для заданное $\varepsilon >0$ элемент $x'_{\varepsilon}\in \Omega$, такой, что $\lVert x_0-x'_{\varepsilon} \rVert \leq d+\varepsilon$. Ясно, что $d=f_0(x_0)=f_0(x_0-x'_{\varepsilon})\leq \lVert f_0\rVert\lVert x_0-x'_{\varepsilon} \rVert < \lVert f_0\rVert (d+\varepsilon)$, откуда получаем неравенства $\frac{d}{d+\varepsilon}\leq \lVert f_0\rVert \leq 1$ и стало быть $\lVert f_0\rVert=1$ ($\varepsilon$ любое $>0$).
+Чтобы получить противоположное неравенство $\lVert f_0 \rVert \geqslant 1$, найдем для заданное $\varepsilon >0$ элемент $x'_{\varepsilon}\in \Omega$, такой, что $\lVert x_0-x'_{\varepsilon} \rVert \leqslant d+\varepsilon$. Ясно, что $d=f_0(x_0)=f_0(x_0-x'_{\varepsilon})\leqslant \lVert f_0\rVert\lVert x_0-x'_{\varepsilon} \rVert < \lVert f_0\rVert (d+\varepsilon)$, откуда получаем неравенства $\frac{d}{d+\varepsilon}\leqslant \lVert f_0\rVert \leqslant 1$ и стало быть $\lVert f_0\rVert=1$ ($\varepsilon$ любое $>0$).
 
 По теореме Хана-Банаха существует продолжение $f$ функционала $f_0$ на все пространство $X$:
 \begin{equation*}
@@ -1450,7 +1450,7 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 \end{corollary}
 
 \begin{corollary}
-Если для всех функционалов $f \in X^*$, норма которых равна $1$, выполнено неравенство $f(x_0)\leq C$, то $\lVert x_0 \rVert \leq C$.
+Если для всех функционалов $f \in X^*$, норма которых равна $1$, выполнено неравенство $f(x_0)\leqslant C$, то $\lVert x_0 \rVert \leqslant C$.
 \end{corollary}
 
 \begin{corollary}
@@ -1489,11 +1489,11 @@ $\underbar {Теорема об опорной плоскости}$
 \end{corollary}
 
 \begin {definition}
-Если для всех элементов множества $E$ верно неравенство $f(x)=C$ (или $f(x) \geq C$), то говорят, что $E$ лежит по одну сторону от плоскости $L$. Плоскость $L$ называется опорной для множества $E$ в точке $x_0 \in E$, если $E$ лежит по одну сторону от и $x_0 \in L$.
+Если для всех элементов множества $E$ верно неравенство $f(x)=C$ (или $f(x) \geqslant C$), то говорят, что $E$ лежит по одну сторону от плоскости $L$. Плоскость $L$ называется опорной для множества $E$ в точке $x_0 \in E$, если $E$ лежит по одну сторону от и $x_0 \in L$.
 \end {definition}
 
 \begin{theorem}
-Для любого замкнутого шара $\overbar{V}_r(\circleddash)$, ($\lVert x \rVert \leq r$) и для любой точки $x_0 \in S_r(\circleddash)$ существует опорная плоскость $L$ к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$.
+Для любого замкнутого шара $\overbar{V}_r(\circleddash)$, ($\lVert x \rVert \leqslant r$) и для любой точки $x_0 \in S_r(\circleddash)$ существует опорная плоскость $L$ к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$.
 \end{theorem}
 
 \begin{proof}
@@ -1503,7 +1503,7 @@ f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, |f_0(x)|=|\lambda|\lVert x_0 \rVer
 \end{equation*}
 Продолжим функционал $f_0$ на все пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overbar{V}_r(\circleddash)$:
 \begin{equation*}
-f(x)\leq 1 \lVert x \rVert \leq r,
+f(x)\leqslant 1 \lVert x \rVert \leqslant r,
 \end{equation*}
 при $x_0 \in S_r(\circleddash)$ значение $f(x_0)=r$.
 \end{proof}
@@ -1543,7 +1543,7 @@ f(x) =  \langle x, f \rangle
 
 Тогда $(x, f) = \frac{(x, x_0)}{\lVert x_0\rVert^2}$ и в качестве элемента $y$ можно взять элемент $y=\frac{x}{\lVert x_0\rVert^2}$:$ \langle x, f \rangle  = (x, y)$.
 
-Для нормы функционала $f$: $\lvert  \langle x, f \rangle \rvert \le \lVert y\rVert\lVert x\rVert$. Тогда $\lVert f\rVert \le \lVert y\rVert$. С другой стороны $ \langle y, f \rangle  = (y, y) \le \lVert f\rVert\lVert y\rVert$, $\lVert y\rVert\le\lVert f\rVert$
+Для нормы функционала $f$: $\lvert  \langle x, f \rangle \rvert \le \lVert y\rVert\lVert x\rVert$. Тогда $\lVert f\rVert \leqslant \lVert y\rVert$. С другой стороны $ \langle y, f \rangle  = (y, y) \leqslant \lVert f\rVert\lVert y\rVert$, $\lVert y\rVert\le\lVert f\rVert$
 
 Объединяя эти неравенства, получаем $\lVert f\rVert = \lVert y\rVert$.
 
@@ -1558,7 +1558,7 @@ f(x) =  \langle x, f \rangle
 Для того, чтобы последовательность $f_n$ сходилась поточечно к линейному функционалу, необходимо и достаточно, чтобы:
 
 \begin{enumerate}
-\item Нормы $f_n$ были ограничены в совокупности: $\lVert f_n\rVert \le const$.
+\item Нормы $f_n$ были ограничены в совокупности: $\lVert f_n\rVert \leqslant const$.
 \item Существуют пределы числовых последовательностей $f_n(x)$ при $n\to\infty$ для всех элементов $x$, принадлежащих множеству $D$
     всюду плотному в $X$.
 \end{enumerate}
@@ -1572,9 +1572,9 @@ f(x) =  \langle x, f \rangle
 \end{definition}
 
 \begin{lemma}
-Если $x_n \rightarrow x_0$, то $\lVert x_n \rVert \leq \lVert x_0 \rVert$. (Слабо сходящаяся последовательность элементов ограничена по норме).
+Если $x_n \rightarrow x_0$, то $\lVert x_n \rVert \leqslant \lVert x_0 \rVert$. (Слабо сходящаяся последовательность элементов ограничена по норме).
 \begin{proof}
-Для всех $f \in X*$ значения $f(x_n) \rightarrow f(x_0)$ при $n \rightarrow \infty$. По теореме о достаточном числе функционалов (Глава 3, \textsection 2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \rightarrow f_n(x_0)$. Но $|f_n(x_0)| \leq \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim}\lVert x_n \rVert \leq \lVert x_0 \rVert$.
+Для всех $f \in X*$ значения $f(x_n) \rightarrow f(x_0)$ при $n \rightarrow \infty$. По теореме о достаточном числе функционалов (Глава 3, \textsection 2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \rightarrow f_n(x_0)$. Но $|f_n(x_0)| \leqslant \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim}\lVert x_n \rVert \leqslant \lVert x_0 \rVert$.
 \end{proof}
 \end{lemma}
 Понятие слабой сходимости последовательности элементов порождает также понятие \textbf{слабо фундаментальной последовательности} $\{x_n\}$: последовательность $\{x_n\}$ называется слабо фундаментальной, если для каждого функционала $f \in X^*$ последовательность чисел $\{f(x_n)\}$ фундаментальна.
@@ -1591,7 +1591,7 @@ f(x) =  \langle x, f \rangle
 \end{proof}
 \end{theorem}
 
-Обозначим множество элементов пространства $H$, таких что ${\parallel x \parallel} _H \leq C$ через $K$. Пусть $\lbrace x_n \rbrace$ - произвольная последовательность элементов множества $K$.
+Обозначим множество элементов пространства $H$, таких что ${\parallel x \parallel} _H \leqslant C$ через $K$. Пусть $\lbrace x_n \rbrace$ - произвольная последовательность элементов множества $K$.
 
 \begin{enumerate}
 \item Для всех элементов $x_n$ вычислим значения функционала $f_1$:
@@ -1601,7 +1601,7 @@ $f_1(x)= \langle x,\Psi_1 \rangle =(x,\Psi_1)$.
 \end{center}
 Числовая последовательность $f_1(x_n)$ ограничена:
 \begin{center}
-$\vert f_1(x_n)\vert = \vert \langle x,\Psi_1 \rangle \vert \leq \parallel x_n\parallel \leq C$.
+$\vert f_1(x_n)\vert = \vert \langle x,\Psi_1 \rangle \vert \leqslant \parallel x_n\parallel \leqslant C$.
 \end{center}
 По теореме Больцано-Вейерштрасса в $\lbrace f_1(x_n) \rbrace$ существует сходящаяся подпоследовательность, обозначим её 
 $ \langle x_{N(1,K)},\Psi_1 \rangle $,
@@ -1659,9 +1659,9 @@ $i \to \infty$.\\
 Так как
 \begin{equation*}
  \sum\limits_{k=1}^n 
-{\vert \langle x_{N(i,i)},\Psi_K \rangle  \vert}^2 \leq C^2
+{\vert \langle x_{N(i,i)},\Psi_K \rangle  \vert}^2 \leqslant C^2
 \end{equation*}
-  при любом $i$, то переходя к пределу при $i\to\infty$ получим $\sum\limits_{k=1}^n \alpha_k^2 \leq C^2$. Так как $n$ любое, то $\sum\limits_{k=1}^\infty \alpha_k^2 <+\infty$. Следовательно существует элемент 
+  при любом $i$, то переходя к пределу при $i\to\infty$ получим $\sum\limits_{k=1}^n \alpha_k^2 \leqslant C^2$. Так как $n$ любое, то $\sum\limits_{k=1}^\infty \alpha_k^2 <+\infty$. Следовательно существует элемент 
 \begin{equation*}
 \widetilde{x}= \sum\limits_{k=1}^\infty 
 \alpha_k\Psi_{k} \in K
@@ -1695,19 +1695,19 @@ y=\sum\limits_{k=1}^\infty y_k\Psi_k =
 \end{equation*}
 Во втором слагаемом значение
 \begin{equation*}
-\vert  \langle x_{N(m,m)},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leq
+\vert  \langle x_{N(m,m)},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leqslant
 C\cdot\varepsilon
 \end{equation*}
 и значение 
 \begin{equation*}
-\vert  \langle \widetilde{x},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leq
+\vert  \langle \widetilde{x},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leqslant
 C\cdot\varepsilon
 \end{equation*}
 
 В первом слагаемом значение
 \begin{equation*}
 \vert  \langle x_{N(m,m)}-\widetilde{x},
-\sum\limits_{k=1}^n y_k\Psi_k \rangle  \vert \leq
+\sum\limits_{k=1}^n y_k\Psi_k \rangle  \vert \leqslant
 {(\sum\limits_{k=1}^n{[ \langle x_{N(m,m)},\Psi_k \rangle  - \alpha_k]}^2)}^{\frac{1}{2}}\cdot
  \lVert f\lVert
 \end{equation*}
@@ -1724,7 +1724,7 @@ C\cdot\varepsilon
 \begin{equation*}
 \vert f(x_{N(m,m)}-\widetilde{x})\vert=
 \vert  \langle x_{N(m,m)}-\widetilde{x},f \rangle  \vert =
-\vert (x_{N(m,m)}-\widetilde{x},y) \vert \leq
+\vert (x_{N(m,m)}-\widetilde{x},y) \vert \leqslant
 \varepsilon [\lVert f\lVert + 2\varepsilon]
 \end{equation*}
 для любого $f \in H^*$, если
@@ -1747,11 +1747,11 @@ f(x)= \langle x,y \rangle =\displaystyle\int\limits_T x(t)y(t)dt
 \end{equation*}
 и пространство $L_p(T)$ рефлексивно.
 \begin{theorem}
-Верна общая теорема: условие ${\lVert x \lVert}_X \leq C$ для элементов множества $K \subset X$ является необходимым и достаточным условием слабой компактности множества $K$ в рефлексивных пространствах $X$.
+Верна общая теорема: условие ${\lVert x \lVert}_X \leqslant C$ для элементов множества $K \subset X$ является необходимым и достаточным условием слабой компактности множества $K$ в рефлексивных пространствах $X$.
 \end{theorem}
 В частности множество $K \in L_p(T)$ элементов, таких что 
 \begin{equation*}
-{\lVert x \lVert}_{L_p(T)} \leq C
+{\lVert x \lVert}_{L_p(T)} \leqslant C
 \end{equation*}
 слабо компактно.
 
@@ -1771,8 +1771,8 @@ $\varphi(\lambda_1x_1+\lambda_2x_2) =
 \end{center}
 \item функционал $\varphi$ линейный:
 \begin{center}
-$\lVert \varphi \lVert \leq \underset{\lVert x\lVert =1}{\sup} 
-\vert \varphi(x) \vert \leq  \underset{\lVert x\lVert =1}{\sup} 
+$\lVert \varphi \lVert \leqslant \underset{\lVert x\lVert =1}{\sup} 
+\vert \varphi(x) \vert \leqslant  \underset{\lVert x\lVert =1}{\sup} 
 \lVert Ax \lVert \cdot \lVert f \lVert =
  \lVert A \lVert \cdot \lVert f \lVert $
 \end{center}
@@ -1790,10 +1790,10 @@ $\varphi= \langle \alpha_1A_1+\alpha_2A_2 \rangle  = \alpha_1 \langle A_1,f \ran
 \end{center}
 Оператор $A^*$, определённый на $Y^*$ линеен: согласно неравенству:
 \begin{center}
-$\lVert \varphi \lVert = \lVert A^* \cdot f \lVert \leq \lVert A \lVert \cdot \lVert f \lVert$
+$\lVert \varphi \lVert = \lVert A^* \cdot f \lVert \leqslant \lVert A \lVert \cdot \lVert f \lVert$
 \end{center}
 \begin{center}
-${\lVert A^* \lVert}_{Y^* \to X^*} \leq 
+${\lVert A^* \lVert}_{Y^* \to X^*} \leqslant 
 {\lVert A \lVert}_{X \to Y}$ и $A^* \in L(Y^*,X^*)$
 \end{center}
 Докажем, что $\lVert A^* \lVert = 
@@ -1802,13 +1802,13 @@ $f(y_0)= \lVert y_0 \lVert$, $\lVert f \lVert =1$.\\
 Тогда
 \begin{center}
 $\lVert Ax_0 \lVert = \vert  \langle Ax_0,f \rangle  \vert =
-\vert  \langle x_0,A^*f \rangle  \vert \leq 
+\vert  \langle x_0,A^*f \rangle  \vert \leqslant 
 \lVert x_0 \lVert \cdot \lVert A^* \lVert
 \cdot \lVert f \lVert = \lVert A^* \lVert
 \cdot \lVert x_0 \lVert$
 \end{center}
-Следовательно $\lVert A \lVert \leq
-\lVert A^* \lVert$ и вместе с оценкой $\lVert A^* \lVert \leq 
+Следовательно $\lVert A \lVert \leqslant
+\lVert A^* \lVert$ и вместе с оценкой $\lVert A^* \lVert \leqslant 
 \lVert A \lVert$ получаем $\lVert A^* \lVert = 
 \lVert A \lVert$.
 \begin{definition}
@@ -1904,7 +1904,7 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 \begin{proof}
 Пусть $A\subset\sigma(X, Y)$. Рассмотрим последовательность линейных функционалов $\varphi_n\in Y^*$ с нормами $\lVert \varphi_n\rVert = 1$. Покажем, что в последовательности функционалов $\{A^*\varphi_n\}\in X^*$ существует фундаментальная подпоследовательность, что и будет означать полную непрерывность оператора $A^*$.
 
-Обозначим $\{\varphi_n\} = \{y_n\}\in Y^*$ и последовательность функционалов $A^*\varphi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\varphi_n\rVert \le \lVert A^*\rVert\lVert \varphi_n\rVert = \lVert A\rVert$.
+Обозначим $\{\varphi_n\} = \{y_n\}\in Y^*$ и последовательность функционалов $A^*\varphi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\varphi_n\rVert \leqslant \lVert A^*\rVert\lVert \varphi_n\rVert = \lVert A\rVert$.
 
 Таким образом $\{f_n\}$ ограничена в совокупности. Функционалы $f$ зависят от выбранного $y$: $f_n = f_n(y) = f(y)$.
 
@@ -1944,7 +1944,7 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 	По определению $\inf$ существуют элементы $z_n \in N$ такие, что 
 	
 \begin{equation*}\label{myEq}
-\alpha_n \leq \lVert x_n-z \rVert \leq (1+\frac{1}{n})\alpha_n \tag{*}
+\alpha_n \leqslant \lVert x_n-z \rVert \leqslant (1+\frac{1}{n})\alpha_n \tag{*}
 \end{equation*}	
 Построим элементы $u_n$: 
 $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.$$
@@ -1954,11 +1954,11 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \end{equation*}	
 Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \circleddash$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{myEq}):
 
-$\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geq \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert=\lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\ =\lVert u_n\lVert x_n-z_n \rVert-u_0\lVert x_n-z_n \rVert \rVert=\lVert x_n-z_n-\lVert x_n-z_n \rVert u_0 \rVert =\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert$
+$\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geqslant \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert=\lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\ =\lVert u_n\lVert x_n-z_n \rVert-u_0\lVert x_n-z_n \rVert \rVert=\lVert x_n-z_n-\lVert x_n-z_n \rVert u_0 \rVert =\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert$
 
-Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert \geq \alpha_n$.
+Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert \geqslant \alpha_n$.
 
-Тогда $\lVert u_n-u_0 \rVert \frac{n+1}{n} \geq 1$ и $\lVert u_n-u_0 \rVert \geq\frac{n}{n+1}$, что противоречит $u_0= \smash{\displaystyle\lim_{n \rightarrow \infty}}u_n$
+Тогда $\lVert u_n-u_0 \rVert \frac{n+1}{n} \geqslant 1$ и $\lVert u_n-u_0 \rVert \geqslant\frac{n}{n+1}$, что противоречит $u_0= \smash{\displaystyle\lim_{n \rightarrow \infty}}u_n$
 	\end{enumerate}
 	
 \end{proof}
