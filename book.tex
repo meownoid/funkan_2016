@@ -46,6 +46,9 @@
 \setcounter{tocdepth}{1}
 \def\labelitemi{--}
 \renewcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
+\sloppy
+\binoppenalty=\maxdimen
+\relpenalty=\maxdimen
 
 %%% DOCUMENT
 \begin{document}
@@ -159,7 +162,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 	\item \textbf{Компактное множество метрического пространства $X$}
 
-	Множество $K$ компактно в $X$, если в любой подпоследовательности элементов $\lbrace x_n \rbrace_{n=1}^{\infty} \subset K$ существует фундаментальная подпоследовательность $\lbrace x_{n_k} \rbrace$, $n_{k+1}>n_k$(т.е. последовательность $n_k$ возрастает).
+	Множество $K$ компактно в $X$, если в любой подпоследовательности элементов $\lbrace x_n \rbrace_{n=1}^{\infty} \subset K$ существует фундаментальная подпоследовательность $\lbrace x_{n_k} \rbrace$, $n_{k+1}>n_k$ (то есть последовательность $n_k$ возрастает).
 
 \end{enumerate}
 
@@ -173,9 +176,9 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 \begin{definition}
 Говорят, что в множестве $M \in X$ существует конечная $\varepsilon$-сеть $\lbrace x_1,x_2,\ldots,x_{N(\varepsilon)} \rbrace$, если для любого элемента $x \in M$ можно указать элемент $x_n$ $\varepsilon$-сети, такой что
 
-\begin{equation*}
-\rho(x_n, x) < \varepsilon \mbox{, } n=n(x,\varepsilon)
-\end{equation*}
+$$
+\rho(x_n, x) < \varepsilon \mbox{, } n=n(x,\varepsilon).
+$$
 
 \end{definition}
 
@@ -186,7 +189,7 @@ $x_n\to x^*$, если $\rho(x_n, x^{*})\to 0$ при $n\to\infty$
 
 $\underbar{Необходимость}$ (От противного) Пусть $K$  --- компактное в $X$ множество. Предположим, что для заданного $\varepsilon >0 $ не существует конечной $\varepsilon$-сети. Возьмем любой элемент $x_1 \in K.$ Согласно предположению он не образует конечной $\varepsilon$-сети и существует элемент $x_2 \in K$ такой что $\rho(x_1, x_2) > \varepsilon.$ Два элемента $x_1$ и $x_2$ не образуют $\varepsilon$-сети, и существует третий элемент $x_3 \in K$ такой что значения $\rho(x_3, x_1), \; \rho(x_3, x_2), \; \rho(x_2, x_1) > \varepsilon.$
 
-Продолжая этот процесс, получим последовательность элементов $x_1,x_2,x_3, \ldots, x_n, \ldots \in K$ таких что $\rho(x_i, x_j) > \varepsilon$ при   $i \neq j.$ Из этой последовательности нельзя составить ни одной фундаментальной подпоследовательности, что противоречит компактности множества $K.$
+Продолжая этот процесс, получим последовательность элементов $x_1,x_2,x_3, \ldots, x_n, \ldots \in K$ таких что $\rho(x_i, x_j) > \varepsilon$ при   $i \neq j$. Из этой последовательности нельзя составить ни одной фундаментальной подпоследовательности, что противоречит компактности множества $K.$
 
 $\underbar{Достаточность}$ Пусть $\{x_n\}_{n=1}^{\infty}$ любая последовательность элементов множества $K.$ Образуем последовательность чисел $\varepsilon _k > 0,$ монотонно стремящуюся к $0.$
 
@@ -399,7 +402,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 	\item Множество прямоугольных матриц размерности $(n\times m)$.
 
-	\item Множество $C[t_0,t_1]$ непрерывных на $[t_0,t_1]$ функций $x$. Функции $x_k(t)=t^k,\; k=1,2,3,\ldots$ линейно независимы, а пространство $C[t_0,t_k]$ бесконечномерно.
+	\item Множество $C[t_0,t_1]$ непрерывных на $[t_0,t_1]$ функций $x$. Функции $x_k(t)=t^k$, $k=1,2,\ldots$ линейно независимы, а пространство $C[t_0,t_k]$ бесконечномерно.
 
 	\item Множество решений $x\in C^n[t_0,t_1]$ уравнения
 
@@ -955,7 +958,8 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \begin{enumerate}
 \item Свойство элементов $y_j$.
 
-$\lVert By_j\rVert = \lVert B(u_j - u_0)\rVert$ (аддитивность $B$) $ = \lVert Bu_j - Bu_0\rVert \le \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \le n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1$.
+$$\lVert By_j\rVert = \lVert B(u_j - u_0)\rVert =$$ (аддитивность $B$) 
+$$ = \lVert Bu_j - Bu_0\rVert \le \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \le n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1.$$
 Оценим $\lVert B_j\rVert$ через норму элементов $\lVert y_j\rVert$. Так как $y_j \to y$, то $\lVert y_j\rVert \to \lVert y\rVert=r_0$, и при достаточно больших значениях $j$:
 
 \begin{center}
@@ -1362,7 +1366,7 @@ $$
 Таким образом, верна оценка
 \begin{equation}
 \label{32_1}
-f_0(x_0)-\gamma \leqslant \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
+f_0(x_0)-\gamma \leqslant \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert.
 \end{equation}
 
 Для построения значения функционала $f_1$ назначим значение $f_1(x_1^0)=-\gamma$. Значение функционала $f_1$ на $X_1$ равно
