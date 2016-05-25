@@ -1349,23 +1349,28 @@ $f_0(x_0^1)-\lVert f_0 \rVert \cdot \lVert x_0^1+x_1^0 \rVert \leq \alpha \leq \
 На отрезке $[\alpha ; \beta]$ выберем любое число $\gamma$. Тогда для любого элемента $x_0 \in X_0$:
 $$f_0(x_0)-\lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert \leq \gamma \leq f_0(x_0)+\lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert$$
 и
-$$\left\{
-\begin{aligned}
+$$
+\begin{cases}
     f_0(x_0)-\gamma &\leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert\\
     \gamma - f_0(x_0) &\leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
-\end{aligned}\right.
+\end{cases}.
 $$
 
 Таким образом, верна оценка
-$$ f_0(x_0)-\gamma \leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert \eqno(*)$$
+\begin{equation}
+\label{32_1}
+f_0(x_0)-\gamma \leq \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert
+\end{equation}
 
 Для построения значения функционала $f_1$ назначим значение $f_1(x_1^0)=-\gamma$. Значение функционала $f_1$ на $X_1$ равно
 $$ f_1(x)=f_1(x_0+ \lambda x_1^0)=f_0(x_0)-\lambda \gamma.$$
 
 Ясно, что функционал $f_1$ аддитивен и однороден. Покажем, что $f_1$ --- линейный функционал.
-$$ |f_1(x)|=|f_0(x_0)-\lambda \gamma| \leq \left|\lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right| \leq
-|\lambda| \left|f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right| \overset{\mbox{(*)}}{\leq} |\lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert=$$
-$$= \lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0+\lambda x_1^0}{\lambda} \right \rVert = \lVert f_0 \rVert \cdot  \lVert x_0+\lambda x_1^0 \rVert = \lVert f_0 \rVert \cdot  \lVert x \rVert.$$
+\begin{align*}
+|f_1(x)| &= |f_0(x_0)-\lambda \gamma| \leq \left|\lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right| \leq
+|\lambda| \left|f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right| \overset{\mbox{(\ref{32_1})}}{\leq} |\lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert =\\
+&= \lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0+\lambda x_1^0}{\lambda} \right \rVert = \lVert f_0 \rVert \cdot  \lVert x_0+\lambda x_1^0 \rVert = \lVert f_0 \rVert \cdot  \lVert x \rVert.
+\end{align*}
 
 Следовательно, $f_1 \leq f_0$ и функционал $f_1$ линеен.
 
