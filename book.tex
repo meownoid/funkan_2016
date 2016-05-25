@@ -554,15 +554,15 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \begin{enumerate}
 	\item Пространство $l^2$ числовых последовательностей $x = \lbrace \xi_k \rbrace_{k=1}^{\infty}$ таких, что ряд $\displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$ сходится. Скалярное произведение $(x, y) = \displaystyle\sum_{k=1}^{\infty} \xi_k \overbar{\eta}_k$ и норма $\parallel x \parallel^2 = \displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$.
 	
-	\item Пространство $L_{\phi}^2 (a, b)$.
+	\item Пространство $L_{\varphi}^2 (a, b)$.
 	
-	$$ (x, y) = \displaystyle\int\limits_a^b \phi(t) x(t) \overbar{y}(t) dt$$
+	$$ (x, y) = \displaystyle\int\limits_a^b \varphi(t) x(t) \overbar{y}(t) dt$$
 	
-	$$ \parallel x \parallel^2 = \displaystyle\int\limits_a^b \phi(t) \lvert x(t) \rvert^2 dt$$
+	$$ \parallel x \parallel^2 = \displaystyle\int\limits_a^b \varphi(t) \lvert x(t) \rvert^2 dt$$
 	
-	Функция $\phi(t)$ --- функция, суммируемая на $(a, b)$ такая, что $\phi(t) > 0$ почти везде.
+	Функция $\varphi(t)$ --- функция, суммируемая на $(a, b)$ такая, что $\varphi(t) > 0$ почти везде.
 	
-	Пространство $L_{\phi}^2 (a, b)$ сепарабельно: проведя декомплексификацию этого пространства, получим вещественные пространства, в которых множества полиномов с рациональными коэффициентами являются всюду плотными.
+	Пространство $L_{\varphi}^2 (a, b)$ сепарабельно: проведя декомплексификацию этого пространства, получим вещественные пространства, в которых множества полиномов с рациональными коэффициентами являются всюду плотными.
 \end{enumerate}
 
 Введение скалярного произведения определяет понятия:
@@ -578,9 +578,9 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \end{theorem}
 
 \begin{theorem}
-	Если $H$ --- сепарабельное гильбертово пространство, то в нём существует не более чем счётная ортогональная система элементов $\lbrace \phi_1, \phi_2, \ldots, \phi_n, \ldots \rbrace$ (базис пространства $H$), и любой элемент $x \in H$ представим в виде 
-	$$x = \displaystyle\sum_{k=1}^{\infty} c_k \phi_k$$
-	где $c_k = (x, \phi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \parallel x \parallel^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\phi_k$).
+	Если $H$ --- сепарабельное гильбертово пространство, то в нём существует не более чем счётная ортогональная система элементов $\lbrace \varphi_1, \varphi_2, \ldots, \varphi_n, \ldots \rbrace$ (базис пространства $H$), и любой элемент $x \in H$ представим в виде 
+	$$x = \displaystyle\sum_{k=1}^{\infty} c_k \varphi_k$$
+	где $c_k = (x, \varphi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \parallel x \parallel^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\varphi_k$).
 \end{theorem}
 
 \begin{examples}
@@ -590,7 +590,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	
 	\item Полиномы Лежандра $P_k(t)$ степени $k$ ($k = 0, 1, 2, \ldots$) образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
 	
-	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\phi}^2 (a, b)$, где $\phi(t) = \frac{1}{\sqrt{(1 - t^2)}}$
+	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\varphi}^2 (a, b)$, где $\varphi(t) = \frac{1}{\sqrt{(1 - t^2)}}$
 \end{enumerate}
 \end{examples}
 
@@ -1280,7 +1280,7 @@ $\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$
 \begin{proof}
 В этом случае легко доказать, что нарушено условие непрерывной зависимости решения при вариации первой части. Действительно, так как множество $AS_1$ компактно в $H$, то из последовательности $\lbrace A \psi_n\rbrace_{n=1}^{\infty}$ можно выбрать сходящуюся подпоследовательность элементов $\lbrace A \psi_{n_k}\rbrace_{n=1}^{\infty}$, а так как пространство Гильберта полное, то эта фундаментальная последовательность сходится к элементу $y_0 \subset H$: $y_0=\underset{k \to \infty}{\lim} A \psi_{n_k}$.
 
-Уравнение $Ax = y_0$ не имеет решения: рассмотрим уравнения $Ax = A \psi_{n_k}$. Решения существуют и единственны: $x_k = \psi_{n_k}$. Предел в правой части $\displaystyle\lim_{k \to \infty} A \phi_k = y_0 \in H$ существует. Но предел решения $\displaystyle\lim_{k \to \infty} x_k$ не существует.
+Уравнение $Ax = y_0$ не имеет решения: рассмотрим уравнения $Ax = A \psi_{n_k}$. Решения существуют и единственны: $x_k = \psi_{n_k}$. Предел в правой части $\displaystyle\lim_{k \to \infty} A \varphi_k = y_0 \in H$ существует. Но предел решения $\displaystyle\lim_{k \to \infty} x_k$ не существует.
 \end{proof}
 
 \chapter{Продолжение линейных операторов}
@@ -1758,41 +1758,41 @@ f(x)= \langle x,y \rangle =\displaystyle\int\limits_T x(t)y(t)dt
 слабо компактно.
 
 \section{Сопряженный оператор}
-Пусть оператор $A \subset L(X,Y)$, функционал $f \in Y^*$. Вычислим значения $ \langle Ax,f \rangle $. Эти значения можно трактовать как значения функционала $\phi$, определённого на элементах пространства $X$:
+Пусть оператор $A \subset L(X,Y)$, функционал $f \in Y^*$. Вычислим значения $ \langle Ax,f \rangle $. Эти значения можно трактовать как значения функционала $\varphi$, определённого на элементах пространства $X$:
 \begin{equation}
- \langle Ax,f \rangle =\phi(x)
+ \langle Ax,f \rangle =\varphi(x)
 \end{equation}
-Ясно, что функционал $\phi$ задан на всём пространстве $X$ и зависит от выбора функционала $f$:
+Ясно, что функционал $\varphi$ задан на всём пространстве $X$ и зависит от выбора функционала $f$:
 \begin{enumerate}
-\item функционал $\phi$ аддитивен и однороден:
+\item функционал $\varphi$ аддитивен и однороден:
 \begin{center}
-$\phi(\lambda_1x_1+\lambda_2x_2) = 
+$\varphi(\lambda_1x_1+\lambda_2x_2) = 
  \langle A(\lambda_1x_1+\lambda_2x_2),f \rangle  =
 \lambda_1 \langle Ax_1,f \rangle  + \lambda_2 \langle Ax_2,f \rangle  =$\\$
-= \lambda_1\phi(x_1) + \lambda_2\phi(x_2)$
+= \lambda_1\varphi(x_1) + \lambda_2\varphi(x_2)$
 \end{center}
-\item функционал $\phi$ линейный:
+\item функционал $\varphi$ линейный:
 \begin{center}
-$\lVert \phi \lVert \leq \underset{\lVert x\lVert =1}{\sup} 
-\vert \phi(x) \vert \leq  \underset{\lVert x\lVert =1}{\sup} 
+$\lVert \varphi \lVert \leq \underset{\lVert x\lVert =1}{\sup} 
+\vert \varphi(x) \vert \leq  \underset{\lVert x\lVert =1}{\sup} 
 \lVert Ax \lVert \cdot \lVert f \lVert =
  \lVert A \lVert \cdot \lVert f \lVert $
 \end{center}
 \end{enumerate}
-Таким образом равенство $ \langle Ax,f \rangle  =  \langle x,\phi \rangle $ определяет линейный функционал $\phi \in X^*$:
+Таким образом равенство $ \langle Ax,f \rangle  =  \langle x,\varphi \rangle $ определяет линейный функционал $\varphi \in X^*$:
 \begin{itemize}
 \item каждому $f\in Y^*$ сопоставляется линейный функционал
- $\phi\in X^*$, зависящий от выбора оператора $A$: эту зависимость обозначим $\phi=A^*\cdot f$.
+ $\varphi\in X^*$, зависящий от выбора оператора $A$: эту зависимость обозначим $\varphi=A^*\cdot f$.
 \end{itemize}
 Эта зависимость от $A$ однородна и аддитивна:
 если $A=\alpha_1A_1+\alpha_2A_2$, то 
 \begin{center}
-$\phi= \langle \alpha_1A_1+\alpha_2A_2 \rangle  = \alpha_1 \langle A_1,f \rangle +\alpha_2 \langle A_2,f \rangle  =
+$\varphi= \langle \alpha_1A_1+\alpha_2A_2 \rangle  = \alpha_1 \langle A_1,f \rangle +\alpha_2 \langle A_2,f \rangle  =
 \alpha_1A_1^*f+\alpha_2A_2^*f$
 \end{center}
 Оператор $A^*$, определённый на $Y^*$ линеен: согласно неравенству:
 \begin{center}
-$\lVert \phi \lVert = \lVert A^* \cdot f \lVert \leq \lVert A \lVert \cdot \lVert f \lVert$
+$\lVert \varphi \lVert = \lVert A^* \cdot f \lVert \leq \lVert A \lVert \cdot \lVert f \lVert$
 \end{center}
 \begin{center}
 ${\lVert A^* \lVert}_{Y^* \to X^*} \leq 
