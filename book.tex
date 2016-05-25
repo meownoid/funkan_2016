@@ -848,7 +848,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 \end{lemma}
 
 \begin{proof}
-(от противного)
+(От противного)
 
 Предположим, что в $X$ существует замкнутый шар $\bar{S_0}$, для \textbf{всех} элементов которого $\lVert A_n x\rVert < c$ при всех $n$, но последовательность норм $\lVert A_n\rVert$ неограниченна. Это предположение неверно, так как согласно Лемме I норма каждого оператора $\lVert A_n\rVert \le M$.
 
@@ -862,7 +862,7 @@ $2c \ge \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert
 \end{proof}
 
 \begin{remark}
-Если $\lbrace \lVert A_n x\rVert \rbrace$ не ограничена, то существует элемент $x^n \subset X$, на котором $\sup\limits_{n}\lVert A_n x^*\rVert = \infty$ --- принцип фиксации особенности в полном банаховом пространстве $X$.
+Если $\lbrace \lVert A_n x\rVert \rbrace$ не ограничена, то существует элемент $x^* \subset X$, на котором $\sup\limits\lVert A_n x^*\rVert = \infty$ --- принцип фиксации особенности в полном банаховом пространстве $X$.
 \end{remark}
 
 Теперь можно указать условия, при которых из сходимости последовательности элементов $\lbrace A_n x\rbrace$ при любом $x \subset X$ следует поточечная сходимость последовательности операторов $A_n$ к \textbf{линейному} оператору $A$: $\lim\limits_{n \to \infty}A_n x = y(x) \subset Y$, $Ax=y(x)$.
@@ -985,7 +985,7 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \end{proof}
 
 \begin{theorem}[Банаха]
-Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y$, линеен.
+Замкнутый оператор $B$, действующий из банахова пространства $Y$ в банахово пространство $X$ и определённый на всём пространстве $Y,$ линеен.
 \end{theorem}
 
 \begin{proof}
@@ -1557,7 +1557,7 @@ f(x) =  \langle x, f \rangle
 \end{equation*}
 Тогда $(x, y-y_1) = 0$ и, взяв элемент $x = y-y_1$, получим $\lVert y-y_1\rVert = 0$, т.е. $y_1 = y$.
 \end{proof}
-Сходимости последовательности функционалов $\{f_n\}\in X^*$ к функционалу $f_0\in X^*$: \textbf{сильная сходимость}, если $\lVert f_n - f_0\rVert \to 0$ при $n\to\infty$; \textbf{поточечная сходимость} $f_n(x)\to f_0(x)$ при $n\to\infty$ для любых элементов $x\in X$. Верна теорема (Банаха-Штейнгауза, глава 2, \S 3):
+Сходимость последовательности функционалов $\{f_n\}\in X^*$ к функционалу $f_0\in X^*$: \textbf{сильная сходимость}, если $\lVert f_n - f_0\rVert \to 0$ при $n\to\infty$; \textbf{поточечная сходимость} $f_n(x)\to f_0(x)$ при $n\to\infty$ для любых элементов $x\in X$. Верна теорема (Банаха-Штейнгауза, глава 2, \S 3):
 
 Для того, чтобы последовательность $f_n$ сходилась поточечно к линейному функционалу, необходимо и достаточно, чтобы:
 
@@ -1826,18 +1826,9 @@ $ \langle Ax,f \rangle  =  \langle x,A^*f \rangle $
 \lVert A \lVert$.
 \end{remark}
 
-\textbf{Пример}.
-$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$
-
-Значение функционала $\langle Kx,f \rangle =$ (общий вид го функционала в $L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$ (где $f \in L_p(a,b)$) $= \int\limits_a^b(\int\limits_a^b K(t,\tau)x(\tau)d\tau)f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$ (общий вид функционала в $L_p(a,b)$) $= \langle x,K^{*}f \rangle$ и $K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau$.
-
-Таким образом оператор $K^{*}$ есть интегральный оператор(но из $L_p$ в $L_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
-
-$$\parallel K \parallel = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$ $$\parallel K^{*} \parallel = (\displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau)^{1/q} = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$
-
 
 \textbf{Пример}.
-Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей ${a_{ij}}_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,...,x_n)$ и $y(y_1,y_2,...,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overline{(y,x)}$
+Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей $\{a_{ij}\}_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,...,x_n)$ и $y(y_1,y_2,...,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overline{(y,x)}$
 
 Координаты вектора $y=Ax$ равны $y_i = \sum\limits_{j=1}^n a_{ij} x_j$. Общий вид функционала в $f$ в $V_n$ определяется указанием элемента $y$:
 $f(x) \langle x,f \rangle = (x,y)$
@@ -1849,6 +1840,17 @@ $f(x) \langle x,f \rangle = (x,y)$
 Сравнивая полученное равенство $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (согласно определению сопряженного оператора) получаем, что
 $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
 Элементы матрицы $A^{*}$ получены из комплексно-сопряженной матрицы $\bar{A}$ с последующим транспонированием: $A^{*}=\{\bar{a}_{ji}\}_{j,i=1}^n$
+
+
+\textbf{Пример}.
+$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$
+
+Значение функционала $\langle Kx,f \rangle =$ (общий вид го функционала в $L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$ (где $f \in L_p(a,b)$) $= \int\limits_a^b(\int\limits_a^b K(t,\tau)x(\tau)d\tau)f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$ (общий вид функционала в $L_p(a,b)$) $= \langle x,K^{*}f \rangle$ и $K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau$.
+
+Таким образом оператор $K^{*}$ есть интегральный оператор(но из $L_p$ в $L_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
+
+$$\parallel K \parallel = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$ $$\parallel K^{*} \parallel = (\displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau)^{1/q} = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$
+
 
 \textbf{Пример}.
 Рассмотри комплексно-значные пространства $X=L_p(a,b)$ и $Y=L_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $L_p(a,b) \to C$, где $C$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in L_q(a,b)$:
@@ -1873,11 +1875,11 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 \end{definition}
 
 \begin{lemma}[I]
-Пусть $Y$ --- банахово пространство. Если последовательность элементов $\{y_n\}$ слабо сходится к элементу $y_0 \in Y$ и компактна, то $y_n\to y_0$ сильно, т.е. $\lVert y_n - y_0\rVert_Y\to 0$ при $n\to\infty$.
+Пусть $Y$ --- банахово пространство. Если последовательность элементов $\{y_n\}$ слабо сходится к элементу $y_0 \in Y$ и компактна, то $y_n\to y_0$ сильно, т.е. \mbox{$\lVert y_n - y_0\rVert_Y\to 0$} при $n\to\infty$.
 \end{lemma}
 
 \begin{proof}
-(от противного) Предположим, что $\{y_n\}$ не стремится к $y_0$, т.е. существует подпоследовательность $\{{y_n}_k\}$ такая, что $\lVert {y_n}_k-y_0\rVert > \varepsilon$ при достаточно больших значениях $k$. Тогда (по теореме Хана-Банаха глава 3, \S 2, следствие 4) существует функционал $\phi\in Y^*$, $\lVert\phi\rVert=1$ такой, что $\phi({y_n}_k-y_0)=\lVert {y_n}_k-y_0\rVert > \varepsilon$ при всех $k\to k_0$. Следовательно последовательность $\{y_n\}$ не имеет слабого предела.
+(От противного) Предположим, что $\{y_n\}$ не стремится к $y_0$, т.е. существует подпоследовательность $\{{y_n}_k\}$ такая, что $\lVert {y_n}_k-y_0\rVert > \varepsilon$ при достаточно больших значениях $k$. Тогда (по теореме Хана-Банаха глава 3, \S 2, следствие 4) существует функционал $\varphi\in Y^*$, $\lVert\varphi\rVert=1$ такой, что $\varphi({y_n}_k-y_0)=\lVert {y_n}_k-y_0\rVert > \varepsilon$ при всех $k > k_0$. Следовательно последовательность $\{y_n\}$ не имеет слабого предела.
 \end{proof}
 
 \begin{lemma}[II]
@@ -1889,11 +1891,11 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 
 Покажем, что $Ax_n\to Ax_0$.
 
-Для любого линейного функционала $\phi\in Y^*$ значения $ \langle A(x_n-x_0), \phi \rangle  =  \langle x_n-x_0, A^*\phi \rangle $. Обозначим $A^*\phi = f\in X^*$:
+Для любого линейного функционала $\varphi\in Y^*$ значения $ \langle A(x_n-x_0), \varphi \rangle  =  \langle x_n-x_0, A^*\varphi \rangle $. Обозначим $A^*\varphi = f\in X^*$:
 \begin{equation*}
- \langle A(x_n-x_0), \phi \rangle  =  \langle x_n-x_0, f \rangle 
+ \langle A(x_n-x_0), \varphi \rangle  =  \langle x_n-x_0, f \rangle 
 \end{equation*}
-и так как $x_n\to x_0$, то $ \langle A(x_n-x_0), \phi \rangle \to 0$ при $n\to\infty$. Тогда \underbar{$Ax_n\to Ax_0$}. По лемме I $\lVert Ax_n-Ax_0\rVert_Y\to 0$ при при $n\to\infty$.
+и так как $x_n\to x_0$, то $ \langle A(x_n-x_0), \varphi \rangle \to 0$ при $n\to\infty$. Тогда \underbar{$Ax_n\to Ax_0$}. По лемме I $\lVert Ax_n-Ax_0\rVert_Y\to 0$ при при $n\to\infty$.
 \end{proof}
 
 \begin{theorem}[Шаудер]
@@ -1901,17 +1903,17 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 \end{theorem}
 
 \begin{proof}
-Пусть $A\subset\sigma(X, Y)$. Рассмотрим последовательность линейных функционалов $\phi_n\in Y^*$ с нормами $\lVert \phi_n\rVert = 1$. Покажем, что в последовательности функционалов $\{A^*\phi_n\}\in X^*$ существует фундаментальная подпоследовательность, что и будет означать полную непрерывность оператора $A^*$.
+Пусть $A\subset\sigma(X, Y)$. Рассмотрим последовательность линейных функционалов $\varphi_n\in Y^*$ с нормами $\lVert \varphi_n\rVert = 1$. Покажем, что в последовательности функционалов $\{A^*\varphi_n\}\in X^*$ существует фундаментальная подпоследовательность, что и будет означать полную непрерывность оператора $A^*$.
 
-Обозначим $\{\phi_n\} = \{y_n\}\in Y^*$ и последовательность функционалов $A^*\phi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\phi_n\rVert \le \lVert A^*\rVert\lVert \phi_n\rVert = \lVert A\rVert$.
+Обозначим $\{\varphi_n\} = \{y_n\}\in Y^*$ и последовательность функционалов $A^*\varphi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\varphi_n\rVert \le \lVert A^*\rVert\lVert \varphi_n\rVert = \lVert A\rVert$.
 
 Таким образом $\{f_n\}$ ограничена в совокупности. Функционалы $f$ зависят от выбранного $y$: $f_n = f_n(y) = f(y)$.
 
 Ясно, что если $y''$ и $y'\in Y^*$, то
 \begin{equation*}
-\lVert f(y'')-f(y')\rVert = \lVert A^ky''-A^ky'\rVert\le\lVert A\rVert\lVert y''-y'\rVert\le\varepsilon\mbox{, если} \lVert y''-y'\rVert < \delta\mbox{ и }\lVert A\rVert\delta < \varepsilon
+\lVert f(y'')-f(y')\rVert = \lVert A^*y''-A^*y'\rVert\le\lVert A\rVert\lVert y''-y'\rVert\le\varepsilon\mbox{, если} \lVert y''-y'\rVert < \delta\mbox{ и }\lVert A\rVert\delta < \varepsilon
 \end{equation*}
-Таким образом функции $f(y)$ равностепенно непрерывны. Следуя доказательству теоремы Арцела-Асколи (глава I, \S 1) получаем существование фундаментальной подпоследовательности ${f_n}_k = A^k{\phi_n}_k$ последовательности $A^*\phi_n$, $\phi_n\in S_1\subset Y^*$: $A^*$ --- вполне непрерывный оператор.
+Таким образом функции $f(y)$ равностепенно непрерывны. Следуя доказательству теоремы Арцела-Асколи (глава I, \S 1) получаем существование фундаментальной подпоследовательности ${f_n}_k = A^*{\varphi_n}_k$ последовательности $A^*\varphi_n$, $\varphi_n\in S_1\subset Y^*$: $A^*$ --- вполне непрерывный оператор.
 
 Если же $A^*\in\sigma(X^*,Y^*)$, то так как $(A^*)^* = A$, то получаем, что и оператор $A$ вполне непрерывен.
 \end{proof}
@@ -1938,20 +1940,22 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 	
 	Если в $N$ существует такой элемент $z$, что нормы $\lVert x_n-z \rVert$ ограничены, то согласно пункту $1.$ существует такой элемент $x_0-z \in X$ такой, что $(x_n-z)\rightarrow (x_0-z)$ при $n \rightarrow \infty$ и $y_0=(x_0-z)-A(x_0-z)=x_0-Ax_0 \in R(E-A)$.
 	
-	Если же для всех элементов $z$ нормы $\lVert x_n-z \rVert$ неограничены, то можно считать, что величины $d_n=\smash{\displaystyle\inf_{z \in N}} \lVert x_n-z \rVert$ стремятся к $\infty$ при $n \rightarrow \infty$.
+	Если же для всех элементов $z$ нормы $\lVert x_n-z \rVert$ неограничены, то можно считать, что величины $\alpha_n=\smash{\displaystyle\inf_{z \in N}} \lVert x_n-z \rVert$ стремятся к $\infty$ при $n \rightarrow \infty$.
 	
 	По определению $\inf$ существуют элементы $z_n \in N$ такие, что 
 	
-\begin{equation*}
-\alpha_n \leq \lVert x_n-z \rVert \leq (1+\frac{1}{n})\alpha_n        (*)
+\begin{equation*}\label{myEq}
+\alpha_n \leq \lVert x_n-z \rVert \leq (1+\frac{1}{n})\alpha_n \tag{*}
 \end{equation*}	
+Построим элементы $u_n$: 
+$$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.$$
 Для этих элементов вычислим элементы $(E-A)u_n$:
 \begin{equation*}
 (E-A)u_n=\frac{1}{\lVert x_n-z \rVert}y_n
 \end{equation*}	
-Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \circleddash$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (*):
+Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \circleddash$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{myEq}):
 
-$\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geq \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert=\lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\lVert u_n\lVert x_n-z_n \rVert-u_0\lVert x_n-z_n \rVert \rVert=\lVert x_n-z_n-\lVert x_n-z_n \rVert u_0 \rVert =\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert$
+$\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geq \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert=\lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\ =\lVert u_n\lVert x_n-z_n \rVert-u_0\lVert x_n-z_n \rVert \rVert=\lVert x_n-z_n-\lVert x_n-z_n \rVert u_0 \rVert =\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert$
 
 Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert \geq \alpha_n$.
 
@@ -1964,7 +1968,7 @@ $\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geq \lVert u_n-u_0 \rVert\lVert x_
 	\begin{equation*}
 	x-Ax=y_n, \mbox{ где } y_n \rightarrow y_0 
 	\end{equation*}	
-их "приближенные" решения $x_n$: $x_n-Ax_n=y_n$, то существует сходящаяся подпоследовательность $\{x_{n_k}\}$, предел которой $x_0 \in X$ при $k \rightarrow \infty$, удовлетворяет уравнению $x_0-Ax_0=y_0$. Элемент $x_0$ может быть и не единственен: он зависит от выбора сходящейся подпоследовательности последовательности $\{Ax_n\}$.
+их <<приближенные>> решения $x_n$: $x_n-Ax_n=y_n$, то существует сходящаяся подпоследовательность $\{x_{n_k}\}$, предел которой $x_0 \in X$ при $k \rightarrow \infty$, удовлетворяет уравнению $x_0-Ax_0=y_0$. Элемент $x_0$ может быть и не единственен: он зависит от выбора сходящейся подпоследовательности последовательности $\{Ax_n\}$.
 
 \section{Теоремы Фредгольма}
 Пусть $A$ вполне непрерывный оператор в пространстве Банаха $X$: $A \in \sigma(X,X)$. Рассмотрим уравнения второго рода с вполне непрерывными операторами $A$ и $A^*$:
@@ -1999,13 +2003,13 @@ $\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geq \lVert u_n-u_0 \rVert\lVert x_
 Тогда $(I-A^*)f_0=\circleddash$, т.е. $f_0 \in N(I-A^*)$ и $f_0 \neq \circleddash$, что противоречит 4.
 \end{proof}
 \begin{theorem}[Вторая теорема Фредгольма]
-Уравнения (2) и (4) имеют одинаковое конечное число линейно независимых решений.
+Уравнения (\ref{fred_2}) и (\ref{fred_4}) имеют одинаковое конечное число линейно независимых решений.
 \end{theorem}
 \begin{theorem}[Третья теорема Фредгольма]
-Для того, чтобы уравнение (1) имело решение, необходимо и достаточно, чтобы $ \langle y,\psi \rangle =0$ для любого решения $\psi$ уравнения (4).
+Для того, чтобы уравнение (\ref{fred_1}) имело решение, необходимо и достаточно, чтобы $ \langle y,\psi \rangle =0$ для любого решения $\psi$ уравнения (\ref{fred_4}).
 \end{theorem}
 \begin{proof}
-\underline{Необходимость}. Если $N(E-A)=\circleddash$, то по второй теореме Фредгольма $N(I-A^*)=\circleddash$. Если же $N(E-A)\neq \circleddash$, то уравнение $(E-A)x=y_0$, $y_0 \neq \circleddash$ имеет решение $x_0$. Пусть $\psi \in N(I-A^*)$. Тогда
+\underline{Необходимость}. Если $N(E-A)={\circleddash}$, то по второй теореме Фредгольма $N(I-A^*)={\circleddash}$. Если же $N(E-A)\neq {\circleddash}$, то уравнение $(E-A)x=y_0$, $y_0 \neq \circleddash$ имеет решение $x_0$. Пусть $\psi \in N(I-A^*)$. Тогда
 \begin{center}
 $ \langle y_0,\psi \rangle = \langle (E-A)x_0,\psi \rangle = \langle x_0,(I-A^*)\psi \rangle =0$
 \end{center}
@@ -2017,12 +2021,11 @@ $ \langle y_0,f \rangle =1$ и $ \langle (E-A)x,f \rangle =0$
 \begin{center}
 $ \langle x,(I-A^*)f \rangle =0$ и $(I-A^*)f=\circleddash$, $f \in N(I-A^*)$,
 \end{center}
-т.е. $f$ удовлетворяет уравнению (4). Таким образом,
+т.е. $f$ удовлетворяет уравнению (\ref{fred_4}). Таким образом,
 \begin{center}
  $f \in N(I-A^*)$, $f\neq \circleddash$ и $ \langle y_0,f \rangle =1$.
 \end{center}
 Полученное противоречие показывает, что наше предположение неверно.
->>>>>>> refs/remotes/devpony/master
 \end{proof}
 
 \end{document}
