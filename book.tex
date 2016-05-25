@@ -508,27 +508,27 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \end{equation*}
 
 Действительно:
-\begin{gather*}
-(x + \lambda y, x + \lambda y) \ge 0,\\
-(x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) > 0,\\
-(x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) \ge 0,\\
-\end{gather*}
+\begin{align*}
+(x + \lambda y, x + \lambda y) &\ge 0,\\
+(x, x) + \lambda (y, x) + (x, \lambda y) + \lambda \overbar{\lambda} (y, y) &> 0,\\
+(x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) &\ge 0\\
+\end{align*}
 для любых чисел $\lambda$.
 Если $(y, y) = 0$, $y = \circleddash$, то доказываемое утверждение верно. Если $(y, y) \neq 0$, то положим 
-\begin{gather*}
-\lambda = - \frac{(x, y)}{(y, y)},\\
-(\lambda y, x) = - \frac{ \lvert (x, y)\rvert^2}{(y, y)}.
-\end{gather*}
+\begin{align*}
+\lambda &= - \frac{(x, y)}{(y, y)},\\
+(\lambda y, x) &= - \frac{ \lvert (x, y)\rvert^2}{(y, y)}.
+\end{align*}
 Тогда
-\begin{gather*}
-(x, x) - 2 \frac{ \lvert (x, y) \rvert^2}{(y, y)} + \frac{\lvert (x, y) \rvert^2}{(y, y)} \ge 0,\\
-(x, x) - \frac{\lvert (x, y) \rvert^2}{(y, y)} \ge 0
-\end{gather*}
+\begin{align*}
+(x, x) - 2 \frac{ \lvert (x, y) \rvert^2}{(y, y)} + \frac{\lvert (x, y) \rvert^2}{(y, y)} &\ge 0,\\
+(x, x) - \frac{\lvert (x, y) \rvert^2}{(y, y)} &\ge 0
+\end{align*}
 и
-\begin{gather*}
-(x, x) (y, y) \ge \lvert (x, y) \rvert^2,\\
-\lvert (x, y) \rvert^2 \le (x, x) (y, y).
-\end{gather*}
+\begin{align*}
+(x, x) (y, y) &\ge \lvert (x, y) \rvert^2,\\
+\lvert (x, y) \rvert^2 &\le (x, x) (y, y).
+\end{align*}
 
 Введём норму элементов $\parallel x \parallel = \sqrt{(x, x)}$ и получим нормированное пространство. Действительно
 
@@ -1826,7 +1826,10 @@ $f(x) \langle x,f \rangle = (x,y)$
 Тогда
 
 \begin{align*}
-\langle Ax,y \rangle = (Ax,y) = \sum\limits_{i=1}^n (Ax)_i \bar{y}_i = \sum\limits_{i=1}^n (\sum\limits_{j=1}^n a_{ij}x_j)\bar{y}_i = \sum\limits_{j=1}^n x_j \sum\limits_{i=1}^n a_{ij}\bar{y}_i = \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n a_{ji}\bar{y}_j =\\= \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n \overbar{(\bar{a}_{ij},y_j)} = \sum\limits_{i=1}^n x_i \overbar{\sum\limits_{j=1}^n(\bar{a}_{ij} ,y_j)} = (x,A^{*}y)=\langle x, A^{*}y \rangle
+\langle Ax,y \rangle = (Ax,y) &= \sum\limits_{i=1}^n (Ax)_i \bar{y}_i = \sum\limits_{i=1}^n (\sum\limits_{j=1}^n a_{ij}x_j)\bar{y}_i =\\
+&= \sum\limits_{j=1}^n x_j \sum\limits_{i=1}^n a_{ij}\bar{y}_i = \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n a_{ji}\bar{y}_j =\\
+&= \sum\limits_{i=1}^n x_i \sum\limits_{j=1}^n \overbar{(\bar{a}_{ij},y_j)} = \sum\limits_{i=1}^n x_i \overbar{\sum\limits_{j=1}^n(\bar{a}_{ij} ,y_j)} =\\
+&= (x,A^{*}y)=\langle x, A^{*}y \rangle
 \end{align*} 
 Сравнивая полученное равенство $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (согласно определению сопряженного оператора) получаем, что
 $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
