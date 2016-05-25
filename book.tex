@@ -1943,18 +1943,23 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 	
 	По определению $\inf$ существуют элементы $z_n \in N$ такие, что 
 	
-\begin{equation*}\label{myEq}
-\alpha_n \leqslant \lVert x_n-z \rVert \leqslant (1+\frac{1}{n})\alpha_n \tag{*}
-\end{equation*}	
+\begin{equation}
+\label{52_1}
+\alpha_n \leqslant \lVert x_n-z \rVert \leqslant (1+\frac{1}{n})\alpha_n
+\end{equation}	
 Построим элементы $u_n$: 
 $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.$$
 Для этих элементов вычислим элементы $(E-A)u_n$:
 \begin{equation*}
 (E-A)u_n=\frac{1}{\lVert x_n-z \rVert}y_n
 \end{equation*}	
-Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \circleddash$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{myEq}):
+Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \circleddash$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{52_1}):
 
-$\lVert u_n-u_0 \rVert \frac{n+1}{n}\alpha_n \geqslant \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert=\lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\ =\lVert u_n\lVert x_n-z_n \rVert-u_0\lVert x_n-z_n \rVert \rVert=\lVert x_n-z_n-\lVert x_n-z_n \rVert u_0 \rVert =\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert$
+\begin{align*}
+\lVert u_n-u_0 \rVert \frac{n+1}{n} \alpha_n &\geqslant \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert = \lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\
+&=\lVert u_n\lVert x_n-z_n \rVert-u_0\lVert x_n-z_n \rVert \rVert=\lVert x_n-z_n-\lVert x_n-z_n \rVert u_0 \rVert =\\
+&= \lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert.
+\end{align*}
 
 Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert \geqslant \alpha_n$.
 
