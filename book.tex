@@ -1842,20 +1842,31 @@ $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
 
 
 \textbf{Пример}.
-$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$
+$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ --- интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$.
 
-Значение функционала $\langle Kx,f \rangle =$ (общий вид го функционала в $L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$ (где $f \in L_p(a,b)$) $= \int\limits_a^b(\int\limits_a^b K(t,\tau)x(\tau)d\tau)f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$ (общий вид функционала в $L_p(a,b)$) $= \langle x,K^{*}f \rangle$ и $K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau$.
+Значение функционала
+$$\langle Kx,f \rangle = L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$$ 
+(где $f \in L_p(a,b)$)
+$$= \int\limits_a^b \Big( \int\limits_a^b K(t,\tau)x(\tau)d\tau \Big) f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$$
+(общий вид функционала в $L_p(a,b)$)
+$$= \langle x,K^{*}f \rangle$$
+и
+$$K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau.$$
 
 Таким образом оператор $K^{*}$ есть интегральный оператор(но из $L_p$ в $L_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
 
-$$\parallel K \parallel = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$ $$\parallel K^{*} \parallel = (\displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau)^{1/q} = (\displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt)^{1/q}$$
+$$\parallel K \parallel = \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
+
+$$\parallel K^{*} \parallel =  \Big( \displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau  \Big)^{\frac{1}{q}} =  \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
 
 
 \textbf{Пример}.
 Рассмотри комплексно-значные пространства $X=L_p(a,b)$ и $Y=L_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $L_p(a,b) \to C$, где $C$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in L_q(a,b)$:
 
 $$ f(x) = \langle x, f \rangle = (x,y) = \displaystyle\int\limits_a^b x(t)\overbar{y(t)}dt $$
+
 $$ (\frac{1}{p} + \frac{1}{q} = 1) $$
+
 $$ \langle x, f \rangle  = \bar{(y,x)}  = \displaystyle\int\limits_a^b \overbar{(\bar{x}(t)y(t))} dt = \overbar{\displaystyle\int\limits_a^{-b} (y(t)\bar{x}(t))dt} $$
 
 Величины $\int\limits_a^b y(t)\overbar{x(t)} dt$ будем рассматривать как значение функционала из $L_q \to C$. Это значение полностью определено заданием элемента $x \in L_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
