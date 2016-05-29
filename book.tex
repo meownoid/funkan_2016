@@ -7,6 +7,7 @@
 \usepackage{mathrsfs}
 \usepackage{indentfirst}
 \usepackage{amsfonts}
+\usepackage{bbold}
 \usepackage[hidelinks]{hyperref}
 \usepackage{amssymb}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
@@ -379,9 +380,9 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{enumerate}
 
-	\item Существования нулевого элемента: $\circleddash=x-x=(1-1)x=0x$.
+	\item Существования нулевого элемента: $\mathbb{0}=x-x=(1-1)x=0x$.
 
-	\item Из равенства $\lambda x=0$ при $\lambda\ne0$ следует $x=\circleddash$.
+	\item Из равенства $\lambda x=0$ при $\lambda\ne0$ следует $x=\mathbb{0}$.
 
 	\item Определение линейной независимости элементов $\{x_1,x_2, \ldots, x_n\}$.
 
@@ -414,7 +415,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 \begin{enumerate}
 
-	\item $\lVert x\rVert \geqslant 0$; если $\lVert x\rVert = 0$, то $x=\circleddash$.
+	\item $\lVert x\rVert \geqslant 0$; если $\lVert x\rVert = 0$, то $x=\mathbb{0}$.
 
 	\item $\lVert \lambda x \rVert = \lvert \lambda \rvert \lVert x \rVert$.
 
@@ -500,7 +501,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
     \item $(\lambda x_1 + \mu x_2, y) = \lambda (x_1, y) + \mu (x_2, y)$
 
-    \item $(x, x)$ --- вещественное число, $(x, x) \geqslant 0$ и если $(x, x) = 0$, то $x = \circleddash$
+    \item $(x, x)$ --- вещественное число, $(x, x) \geqslant 0$ и если $(x, x) = 0$, то $x = \mathbb{0}$
 
 \end{enumerate}
 
@@ -517,7 +518,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 (x,x) + 2 Re(\lambda y, x) + \lvert \lambda \rvert^2 (y, y) &\geqslant 0\\
 \end{align*}
 для любых чисел $\lambda$.
-Если $(y, y) = 0$, $y = \circleddash$, то доказываемое утверждение верно. Если $(y, y) \neq 0$, то положим 
+Если $(y, y) = 0$, $y = \mathbb{0}$, то доказываемое утверждение верно. Если $(y, y) \neq 0$, то положим 
 \begin{align*}
 \lambda &= - \frac{(x, y)}{(y, y)},\\
 (\lambda y, x) &= - \frac{ \lvert (x, y)\rvert^2}{(y, y)}.
@@ -652,13 +653,13 @@ F(x) =
 
 \end{definition}
 
-В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\circleddash \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \to x_0$ и 
+В определении оператора требование непрерывности можно заменить непрерывностью на элементе $\mathbb{0} \in D(A)$: для любого элемента $x_0\in D(A)$ рассмотрим $x \to x_0$ и 
 \begin{center}
-$z=(x-x_0)\to \circleddash$.
+$z=(x-x_0)\to \mathbb{0}$.
 \end{center}
 Тогда 
 \begin{center}
-$A(x-x_0)\to \circleddash$ и $Ax \to Ax_0$.
+$A(x-x_0)\to \mathbb{0}$ и $Ax \to Ax_0$.
 \end{center}
  
 Важнейшим классом операторов являются ограниченные операторы.
@@ -1449,7 +1450,7 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 \end{proof}
 
 \begin{corollary}
-Если для всех $f \subset X^*$ значения $f(x)=0$, то $x=\circleddash$
+Если для всех $f \subset X^*$ значения $f(x)=0$, то $x=\mathbb{0}$
 \end{corollary}
 
 \begin{corollary}
@@ -1494,7 +1495,7 @@ f_k(x_i) =
 \end {definition}
 
 \begin{theorem}
-Для любого замкнутого шара $\overbar{V}_r(\circleddash)$, ($\lVert x \rVert \leqslant r$) и для любой точки $x_0 \in S_r(\circleddash)$ существует опорная плоскость $L$ к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$.
+Для любого замкнутого шара $\overbar{V}_r(\mathbb{0})$, ($\lVert x \rVert \leqslant r$) и для любой точки $x_0 \in S_r(\mathbb{0})$ существует опорная плоскость $L$ к шару $\overbar{V}_r(\mathbb{0})$ в точке $x_0$.
 \end{theorem}
 
 \begin{proof}
@@ -1502,11 +1503,11 @@ f_k(x_i) =
 \begin{equation*}
 f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, |f_0(x)|=|\lambda|\lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x \rVert; \lVert f_0 \rVert=1.
 \end{equation*}
-Продолжим функционал $f_0$ на все пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overbar{V}_r(\circleddash)$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overbar{V}_r(\circleddash)$:
+Продолжим функционал $f_0$ на все пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overbar{V}_r(\mathbb{0})$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overbar{V}_r(\mathbb{0})$:
 \begin{equation*}
 f(x)\leqslant 1 \lVert x \rVert \leqslant r,
 \end{equation*}
-при $x_0 \in S_r(\circleddash)$ значение $f(x_0)=r$.
+при $x_0 \in S_r(\mathbb{0})$ значение $f(x_0)=r$.
 \qedhere
 \end{proof}
 
@@ -1530,7 +1531,7 @@ f(x) =  \langle x, f \rangle
 (Фридьёф Рисс, 1880-1956 г., один из основоположников функционального анализа)
 
 \begin{proof}
-Обозначим $L$ подпространство элементов $z$ таких, что значения функционала $f$ равно 0: $ \langle z, f \rangle =0$. Можно считать, что $L\ne H$ в противном случае $f(x)=0$ для любого $x\in H$, $\lVert f\rVert = 0$, $y=\circleddash$.
+Обозначим $L$ подпространство элементов $z$ таких, что значения функционала $f$ равно 0: $ \langle z, f \rangle =0$. Можно считать, что $L\ne H$ в противном случае $f(x)=0$ для любого $x\in H$, $\lVert f\rVert = 0$, $y=\mathbb{0}$.
 
 Ортогональное дополнение подпространства $L$ не пусто. Пусть $x_0\perp L$, тогда и элемент $\lambda x_0\perp L$, и можно считать, что $ \langle x_0, f \rangle =1$.
 
@@ -1940,7 +1941,7 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 	
 	\item Остается рассмотреть случай неограниченной последовательности норм $\lVert x_n \rVert$. В этом случае существует последовательность элементов $x_{n_k}$, нормы которых $\lVert x_n \rVert \rightarrow \infty$ при $k \rightarrow \infty$.
 	
-	Обозначим через $N$ подпространство пространства $X$ элементов $z$, таких, что $(E-A)z=\circleddash$. Ясно, что $(E-A)(x_n-z)=(E-A)x_n=y_n$.
+	Обозначим через $N$ подпространство пространства $X$ элементов $z$, таких, что $(E-A)z=\mathbb{0}$. Ясно, что $(E-A)(x_n-z)=(E-A)x_n=y_n$.
 	
 	Если в $N$ существует такой элемент $z$, что нормы $\lVert x_n-z \rVert$ ограничены, то согласно пункту $1.$ существует такой элемент $x_0-z \in X$ такой, что $(x_n-z)\rightarrow (x_0-z)$ при $n \rightarrow \infty$ и $y_0=(x_0-z)-A(x_0-z)=x_0-Ax_0 \in R(E-A)$.
 	
@@ -1958,7 +1959,7 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \begin{equation*}
 (E-A)u_n=\frac{1}{\lVert x_n-z \rVert}y_n.
 \end{equation*}	
-Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \circleddash$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{52_1}):
+Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \mathbb{0}$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{52_1}):
 
 \begin{align*}
 \lVert u_n-u_0 \rVert \frac{n+1}{n} \alpha_n &\geqslant \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert = \lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\
@@ -1983,9 +1984,9 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 Пусть $A$ вполне непрерывный оператор в пространстве Банаха $X$: $A \in \sigma(X,X)$. Рассмотрим уравнения второго рода с вполне непрерывными операторами $A$ и $A^*$:
 \begin{align}
 (E - A)x &= y , y \in X \label{fred_1}\\
-(E - A)z &= \circleddash, z \in N(E-A) \label{fred_2}\\
+(E - A)z &= \mathbb{0}, z \in N(E-A) \label{fred_2}\\
 (I - A^*)f &= \omega , f \in X^*, \omega \in X^* \label{fred_3}\\
-(I - A^*)\psi &= \circleddash, \psi \in N(I - A^*) \label{fred_4}
+(I - A^*)\psi &= \mathbb{0}, \psi \in N(I - A^*) \label{fred_4}
 \end{align}
 \begin{theorem}[Первая теорема Фредгольма]
 Следующие 4 утверждения эквивалентны:
@@ -1998,8 +1999,8 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \end{theorem}
 \begin{proof}
 Докажем, например, что из 4 следует 1.\\
-Пусть выполнено 4: $(I - A^*)=\circleddash$. Предположим противное : 1 не верно: $R(E - A)\neq X$. Пусть $y_0 \in X$, но $y_0 \not \in R(E - A)$. По теореме Хана-Банаха (следствие 2) существует линейный функционал $f_0 \in X^*$ такой, что $ \langle y_0,f_0 \rangle =1$, $ \langle y,f_0 \rangle =0$ для всех $y \in R(E-A)$. Тогда $ \langle (E-A)x,f_0 \rangle =0$ для всех $x \in X$, $ \langle x,(I-A^*f_0) \rangle =0$ для всех $x \in X$.\\
-Тогда $(I-A^*)f_0=\circleddash$, т.е. $f_0 \in N(I-A^*)$ и $f_0 \neq \circleddash$, что противоречит 4.
+Пусть выполнено 4: $(I - A^*)=\mathbb{0}$. Предположим противное : 1 не верно: $R(E - A)\neq X$. Пусть $y_0 \in X$, но $y_0 \not \in R(E - A)$. По теореме Хана-Банаха (следствие 2) существует линейный функционал $f_0 \in X^*$ такой, что $ \langle y_0,f_0 \rangle =1$, $ \langle y,f_0 \rangle =0$ для всех $y \in R(E-A)$. Тогда $ \langle (E-A)x,f_0 \rangle =0$ для всех $x \in X$, $ \langle x,(I-A^*f_0) \rangle =0$ для всех $x \in X$.\\
+Тогда $(I-A^*)f_0=\mathbb{0}$, т.е. $f_0 \in N(I-A^*)$ и $f_0 \neq \mathbb{0}$, что противоречит 4.
 \end{proof}
 \begin{theorem}[Вторая теорема Фредгольма]
 Уравнения (\ref{fred_2}) и (\ref{fred_4}) имеют одинаковое конечное число линейно независимых решений.
@@ -2008,7 +2009,7 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 Для того, чтобы уравнение (\ref{fred_1}) имело решение, необходимо и достаточно, чтобы $ \langle y,\psi \rangle =0$ для любого решения $\psi$ уравнения (\ref{fred_4}).
 \end{theorem}
 \begin{proof}
-\underline{Необходимость}. Если $N(E-A)={\circleddash}$, то по второй теореме Фредгольма $N(I-A^*)={\circleddash}$. Если же $N(E-A)\neq {\circleddash}$, то уравнение $(E-A)x=y_0$, $y_0 \neq \circleddash$ имеет решение $x_0$. Пусть $\psi \in N(I-A^*)$. Тогда
+\underline{Необходимость}. Если $N(E-A)={\mathbb{0}}$, то по второй теореме Фредгольма $N(I-A^*)={\mathbb{0}}$. Если же $N(E-A)\neq {\mathbb{0}}$, то уравнение $(E-A)x=y_0$, $y_0 \neq \mathbb{0}$ имеет решение $x_0$. Пусть $\psi \in N(I-A^*)$. Тогда
 \begin{center}
 $ \langle y_0,\psi \rangle = \langle (E-A)x_0,\psi \rangle = \langle x_0,(I-A^*)\psi \rangle =0$
 \end{center}
@@ -2018,11 +2019,11 @@ $ \langle y_0,f \rangle =1$ и $ \langle (E-A)x,f \rangle =0$
 \end{center}
 для любых элементов x,
 \begin{center}
-$ \langle x,(I-A^*)f \rangle =0$ и $(I-A^*)f=\circleddash$, $f \in N(I-A^*)$,
+$ \langle x,(I-A^*)f \rangle =0$ и $(I-A^*)f=\mathbb{0}$, $f \in N(I-A^*)$,
 \end{center}
 т.е. $f$ удовлетворяет уравнению (\ref{fred_4}). Таким образом,
 \begin{center}
- $f \in N(I-A^*)$, $f\neq \circleddash$ и $ \langle y_0,f \rangle =1$.
+ $f \in N(I-A^*)$, $f\neq \mathbb{0}$ и $ \langle y_0,f \rangle =1$.
 \end{center}
 Полученное противоречие показывает, что наше предположение неверно.
 \end{proof}
