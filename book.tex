@@ -92,7 +92,7 @@
 При составлении односеместрового курса лекций по функциональному анализу выбраны направления, связанные с постановкой задач прикладной математики. Эти направления представлены в следующих уже классических работах:
 \begin{enumerate}
     \item Л.~В.~Канторович и Г.~П.~Акилов. Функциональный анализ в нормированных пространствах, Физматгиз, 1959.
-    \item В.~А.~Треногин. Функциональный анализ. Москва "Наука"\, главная редакция физ.-мат. литературы, 1980.
+    \item В.~А.~Треногин. Функциональный анализ. Москва <<Наука>>\, главная редакция физ.-мат. литературы, 1980.
     \item В.~А.~Садовничий. Теория операторов. Издательство Московского университета, 1986.
 \end{enumerate}
 \end{small}
@@ -187,11 +187,11 @@ $$
 \end{theorem}
 \begin{proof}
 
-$\underbar{Необходимость}$ (От противного) Пусть $K$  --- компактное в $X$ множество. Предположим, что для заданного $\varepsilon >0 $ не существует конечной $\varepsilon$-сети. Возьмем любой элемент $x_1 \in K.$ Согласно предположению он не образует конечной $\varepsilon$-сети и существует элемент $x_2 \in K$ такой что $\rho(x_1, x_2) > \varepsilon.$ Два элемента $x_1$ и $x_2$ не образуют $\varepsilon$-сети, и существует третий элемент $x_3 \in K$ такой что значения $\rho(x_3, x_1), \; \rho(x_3, x_2), \; \rho(x_2, x_1) > \varepsilon.$
+$\underbar{Необходимость}$ (от противного). Пусть $K$  --- компактное в $X$ множество. Предположим, что для заданного $\varepsilon >0 $ не существует конечной $\varepsilon$-сети. Возьмем любой элемент $x_1 \in K.$ Согласно предположению он не образует конечной $\varepsilon$-сети и существует элемент $x_2 \in K$ такой что $\rho(x_1, x_2) > \varepsilon.$ Два элемента $x_1$ и $x_2$ не образуют $\varepsilon$-сети, и существует третий элемент $x_3 \in K$ такой что значения $\rho(x_3, x_1), \; \rho(x_3, x_2), \; \rho(x_2, x_1) > \varepsilon.$
 
 Продолжая этот процесс, получим последовательность элементов $x_1,x_2,x_3, \ldots, x_n, \ldots \in K$ таких что $\rho(x_i, x_j) > \varepsilon$ при   $i \neq j$. Из этой последовательности нельзя составить ни одной фундаментальной подпоследовательности, что противоречит компактности множества $K.$
 
-$\underbar{Достаточность}$ Пусть $\{x_n\}_{n=1}^{\infty}$ любая последовательность элементов множества $K.$ Образуем последовательность чисел $\varepsilon _k > 0,$ монотонно стремящуюся к $0.$
+$\underbar{Достаточность}$. Пусть $\{x_n\}_{n=1}^{\infty}$ любая последовательность элементов множества $K.$ Образуем последовательность чисел $\varepsilon _k > 0,$ монотонно стремящуюся к $0.$
 
 Для значения $\varepsilon _1$  в множестве $K$ существует конечная $\varepsilon _1$-сеть, т.е. все множество $K$ может быть покрыто конечным числом шаров радиуса $\varepsilon _1 .$ Так как последовательность $\{ x_n \}$ содержит бесконечное число элементов, то среди упомянутых шаров найдется хотя бы один шар $V_{\varepsilon _1} (z_1),$ в котором содержится бесконечное число элементов последовательности $\{x_n\}.$ Обозначим $x_{n_1}$ первый из таких элементов: $x_{n_1} \in V_{\varepsilon _1} (z_1).$
 
@@ -249,8 +249,7 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 	
 	В силу выбора значения $\delta$ величины $M_k-m_k < \varepsilon$. Тогда и $\rho(x, \overbar{x}) < \varepsilon$. Согласно следствию теоремы Хаусдорфа, множество $E$ компактно в $C[a, b]$.
 	
-	$\underbar {Необходимость}$ Свойства функций из компактного множества $E$, указанные в теореме, сразу следуют из существования в $E$ $\underbar {конечной}$ $\varepsilon$-сети непрерывных на $[a, b]$ функций $x_1(t), x_2(t),\ldots,x_N(t)$.	
-
+	$\underbar {Необходимость}$ Свойства функций из компактного множества $E$, указанные в теореме, сразу следуют из существования в $E$ $\underbar {конечной}$ $\varepsilon$-сети непрерывных на $[a, b]$ функций $x_1(t), x_2(t),\ldots,x_N(t)$.
 \end{proof}
 
 	\item Множества, компактные в пространстве суммируемых со степенью $p, (p \geqslant 1)$ функций.
@@ -291,7 +290,6 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 и последовательность $\{x_n\}$ --- фундаментальная последовательность. Так как пространство $X$ полное, то существует $\displaystyle\lim_{n\to \infty} x_n=x^{*} \subset X$ и этот предел единственен.
 
 Ясно, что $x^{*}$ принадлежит всем шарам $\overbar{V}_{r_{n}}(x_n)$.
-	
 \end{proof}
 
 \end{enumerate}
@@ -343,7 +341,6 @@ $n \to \infty$, и в каждом шаре $\overbar{V}_{r_n}(x_n)$ нет эл
 $x_n \to x^*$ при $n \to \infty$.
 
 Ясно, что $x^*\in \bigcup\limits_{n=1}^\infty \overbar{V}_{r_n}(x_n)$ и следовательно $x^*\notin \bigcup\limits_{n=1}^\infty E_n$, что противоречит предположению $X=\bigcup\limits_{n=1}^\infty E_n$. Остается принять, что множество $X$ пространство второй категории.
-
 \end{proof}
 
 \section{Линейные пространства, нормированные пространства, пространства Банаха}
@@ -427,7 +424,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 Норма $\lVert x\rVert$ является непрерывной функцией: $\lvert\lVert x+\triangle x\rVert-\lVert x\rVert\rvert\to0$ при $\lVert\triangle x\rVert\to0$.
 
-Верно неравенство $\lVert x-y\rVert\geq\lvert\lVert x\rVert-\lVert y\rVert\rvert$.
+Верно неравенство $\lVert x-y\rVert \geqslant \lvert\lVert x\rVert-\lVert y\rVert\rvert$.
 
 Определим метрику в линейном пространстве $X$: $\rho(x,y)=\lVert x-y\rVert$. Ясно, что введенная таким образом метрика удовлетворяет всем аксиомам метрического пространства. Линейное множество с метрикой, определяемой нормой элементов, называется \textbf{нормированным пространством}. Если нормированное пространство полное, то оно называется \textbf{пространством Банаха} (Стефан Банах, 1892-1945, польский математик), банаховым пространством, В-пространством.
 
@@ -465,7 +462,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	\lVert x\rVert = \displaystyle\sum_{k=0}^n\max_{i}\lvert\frac{d^kx(t)}{dt^k}\rvert
 	\end{equation*}
 
-	\item Пространство Банаха $\mathcal{L}_p(a,b)$ измеримых и суммируемых со степенью $p,\;p\geq1,$ функций. Норма:
+	\item Пространство Банаха $\mathcal{L}_p(a,b)$ измеримых и суммируемых со степенью $p,\;p \geqslant 1,$ функций. Норма:
 
 	\begin{equation*}
 	\lVert x\rVert^p = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}}
@@ -510,7 +507,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 Верно неравенство Коши-Буняковского:
 
 \begin{equation*}
-\lvert (x, y) \rvert ^2 \le (x, x) \cdot (y, y)
+\lvert (x, y) \rvert ^2 \leqslant (x, x) \cdot (y, y)
 \end{equation*}
 
 Действительно:
@@ -533,7 +530,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 и
 \begin{align*}
 (x, x) (y, y) &\geqslant \lvert (x, y) \rvert^2,\\
-\lvert (x, y) \rvert^2 &\le (x, x) (y, y).
+\lvert (x, y) \rvert^2 &\leqslant (x, x) (y, y).
 \end{align*}
 
 Введём норму элементов $\lVert x \rVert = \sqrt{(x, x)}$ и получим нормированное пространство. Действительно
@@ -542,7 +539,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 	\item $\lVert \lambda x \rVert^2 = (\lambda x, \lambda x) = \lvert \lambda \rvert^2 (x, x) = \lvert \lambda \rvert^2 \lVert x \rVert^2$ и $\lVert \lambda x \rVert = \lvert \lambda \rvert \lVert x \rVert$
 	
-	\item $\Vert x + y \Vert^2 = (x + y, x + y) = (x, x) + 2 \lvert (x, y) \rvert + (y, y) \le$ (по неравенству Коши-Буняковского) $\le \Vert x \Vert^2 + 2 \Vert x \Vert \Vert y \Vert + \Vert y \Vert^2 = (\Vert x \Vert + \Vert y \Vert)^2$ т.е. и третье условие в определении нормы тоже выполнено: $\Vert x + y \Vert \le \Vert x \Vert + \Vert y \Vert$.
+	\item $\Vert x + y \Vert^2 = (x + y, x + y) = (x, x) + 2 \lvert (x, y) \rvert + (y, y) \leqslant$ (по неравенству Коши-Буняковского) $\leqslant \Vert x \Vert^2 + 2 \Vert x \Vert \Vert y \Vert + \Vert y \Vert^2 = (\Vert x \Vert + \Vert y \Vert)^2$ т.е. и третье условие в определении нормы тоже выполнено: $\Vert x + y \Vert \leqslant \Vert x \Vert + \Vert y \Vert$.
 
 \end{itemize}
 
@@ -778,7 +775,7 @@ $$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
 \begin{proof}
 Пусть $\{A_n\}$ - фундаментальная последовательность линейных операторов: $\Vert A_{n+m}-A\Vert\le \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x\in X$, построим последовательность $y_n\in Y$, $y_n=A_nx$. Эта последовательность сходится в себе $\Vert y_{n+m}-y_n\Vert\le \Vert A_{n+m}-A_n\Vert \Vert x\Vert\le \varepsilon \Vert x\Vert$, и в силу полноты пространства $Y$ существует предельный элемент $y\le Y$, такой что $y=\lim_{} A_nx$ при $n \to \infty$. Следовательно определен оператор $A: y=Ax$.
 
-Покажем, что этот оператор ограничен. Так как $\lvert \Vert A_{n+m} \Vert-\Vert A_n\Vert \rvert \le \Vert A_{n+m}-A_n\Vert \le \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\Vert A_n\Vert$ имеет предел $\lim_{n\to \infty} \Vert A_n\Vert=C$. Тогда $\Vert y_n\Vert\le\Vert A_n\Vert \Vert x\Vert$ и переходя к пределу, получим $\Vert y\Vert\le C\Vert x\Vert$, и норма оператора $A$ ограничена, оператор $A$ - линейный оператор, $\Vert A\Vert\le C$, $A\in \mathcal{L}(X,Y)$.
+Покажем, что этот оператор ограничен. Так как $\lvert \Vert A_{n+m} \Vert-\Vert A_n\Vert \rvert \leqslant \Vert A_{n+m}-A_n\Vert \leqslant \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\Vert A_n\Vert$ имеет предел $\lim_{n\to \infty} \Vert A_n\Vert=C$. Тогда $\Vert y_n\Vert\le\Vert A_n\Vert \Vert x\Vert$ и переходя к пределу, получим $\Vert y\Vert\le C\Vert x\Vert$, и норма оператора $A$ ограничена, оператор $A$ - линейный оператор, $\Vert A\Vert\le C$, $A\in \mathcal{L}(X,Y)$.
 \end{proof}
 
 Определим теперь понятие поточечной сходимости последовательности линейных операторов.
@@ -821,23 +818,23 @@ $\Vert E-A_n\Vert=\sup \limits_{S_1} \Vert(E-A_n)x\Vert\ge \sup \limits_{S_1^0} 
 Мы начнем с простой леммы.
 
 \begin{lemma}[Лемма I]
-Пусть оператор $A_n \subset \mathcal{L}(X,Y)$ и известно, что для всех элементов некоторого шара $S_r(x_0)$ нормы $\lVert A_n x\rVert_Y$ ограничены: $\lVert A_n x\rVert \le c$. Тогда существует постоянная $M$, такая что норма оператора $A_n$ ограничена числом $M$: $\lVert A_n \rVert \le M$.
+Пусть оператор $A_n \subset \mathcal{L}(X,Y)$ и известно, что для всех элементов некоторого шара $S_r(x_0)$ нормы $\lVert A_n x\rVert_Y$ ограничены: $\lVert A_n x\rVert \leqslant c$. Тогда существует постоянная $M$, такая что норма оператора $A_n$ ограничена числом $M$: $\lVert A_n \rVert \leqslant M$.
 \end{lemma}
 
 \begin{proof}
 Возьмем любой элемент $x \subset X$ и образуем элемент $x_0+\frac{x}{\lVert x\rVert}r \subset S_r(x_0)$. Тогда:
 
 \begin{center}
-$\lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert \le c$, т.е.
+$\lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert \leqslant c$, т.е.
 
 $c \geqslant \lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert$,
 
 $c \geqslant \lVert \frac{r}{\lVert x\rVert}A_n x + A_n x_0 \rVert \geqslant \lVert A_n x\rVert \frac{r}{\lVert x\rVert} - \lVert A_n x_0\rVert \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x_0\rVert - c$,
 
-$2c \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert \geqslant \lVert A_n x\rVert$, $\lVert A_n x\rVert \le \frac{2c}{r}\lVert x\rVert$
+$2c \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert \geqslant \lVert A_n x\rVert$, $\lVert A_n x\rVert \leqslant \frac{2c}{r}\lVert x\rVert$
 \end{center}
 
-Достаточно положить $M=\frac{2c}{r}$ : $\lVert A_n x\rVert \le M\lVert x\rVert$ для всех $x \subset X$, следовательно норма оператора $\lVert A\rVert \le M$.
+Достаточно положить $M=\frac{2c}{r}$ : $\lVert A_n x\rVert \leqslant M\lVert x\rVert$ для всех $x \subset X$, следовательно норма оператора $\lVert A\rVert \leqslant M$.
 \end{proof}
 
 Следующая лемма верна для полных нормированных пространств $X$, т.е. для банаховых пространств.
@@ -849,7 +846,7 @@ $2c \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x
 \begin{proof}
 (От противного)
 
-Предположим, что в $X$ существует замкнутый шар $\bar{S_0}$, для \textbf{всех} элементов которого $\lVert A_n x\rVert < c$ при всех $n$, но последовательность норм $\lVert A_n\rVert$ неограниченна. Это предположение неверно, так как согласно Лемме I норма каждого оператора $\lVert A_n\rVert \le M$.
+Предположим, что в $X$ существует замкнутый шар $\bar{S_0}$, для \textbf{всех} элементов которого $\lVert A_n x\rVert < c$ при всех $n$, но последовательность норм $\lVert A_n\rVert$ неограниченна. Это предположение неверно, так как согласно Лемме I норма каждого оператора $\lVert A_n\rVert \leqslant M$.
 
 Остаётся предположить, что существует шар $\bar{S_0}$, в котором значения $\lVert A_n x\rVert$ неограниченны, т.е. найдется номер $n_1$ и найдется элемент $x_1 \subset \bar{S_0}$, такие что $\lVert A_{n1} (x_1)\rVert > 1$. Так как оператор $A_{n1}$ (как и все операторы $A_n$) непрерывен, то существует шар $\bar{S_1} \subset \bar{S_0}$, в котором $\lVert A_{n1} (x)\rVert > 1$.
 
@@ -870,13 +867,13 @@ $2c \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x
 Пусть $\lbrace A_n\rbrace \subset \mathcal{L}(X,Y)$, где $X$ и $Y$ --- пространства Банаха. Для того, чтобы последовательность операторов $\lbrace A_n\rbrace$ сходилась поточечно к линейному оператору на всем пространстве $X$, необходимо и достаточно, чтобы были выполнены два условия:
 
 \begin{enumerate}
-\item Нормы $\lVert A_n\rVert$ ограничены в совокупности: $\lVert A_n\rVert \le M$.
+\item Нормы $\lVert A_n\rVert$ ограничены в совокупности: $\lVert A_n\rVert \leqslant M$.
 \item Последовательность элементов $A_n x$ сходится в себе на множестве $D$ плотном в $X$.
 \end{enumerate}
 \end{theorem}
 
 \begin{proof}
-\underbar{Необходимость} Пусть $A_n x \to A x$. Тогда $\lVert A_n x\rVert \to \lVert A x\rVert \le \lVert A\rVert \lVert x\rVert$, и последовательность норм элементов $\lVert A_n x\rVert$ ограничена при каждом $x \subset X$. По Лемме II нормы $\lVert A_n\rVert$ ограничены в совокупности --- условие 1 выполнено.
+\underbar{Необходимость} Пусть $A_n x \to A x$. Тогда $\lVert A_n x\rVert \to \lVert A x\rVert \leqslant \lVert A\rVert \lVert x\rVert$, и последовательность норм элементов $\lVert A_n x\rVert$ ограничена при каждом $x \subset X$. По Лемме II нормы $\lVert A_n\rVert$ ограничены в совокупности --- условие 1 выполнено.
 
 Так как последовательность $A_n x$ сходится на всем пространстве $X$ (и сходится в себе на всем $X$), то она сходится в себе на любом множестве пространства $X$ --- условие 2 выполнено.
 
@@ -892,7 +889,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 
 Значения $\lVert A_n x - A_n x'\rVert < M\varepsilon$, $\lVert A_m x' - A_m x\rVert < M\varepsilon$.
 
-Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \inf} A_n x = y(x) \subset Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \geqslant \overbar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\overbar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
+Итак, $\lVert A_n x - A_m x\rVert < (2M +1)\varepsilon$ при достаточно больших $m$ и $n$, последовательность $A_n x$ сходится в себе на всем $X$, а так как пространство $Y$ полное, то существует $\lim\limits_{n \to \infty} A_n x = y(x) \subset Y$ и тем самым определен оператор: $A x = y(x)$. Для оценки нормы этого оператора из неравенства $\lVert A_n x\rVert < M\lVert x\rVert$ получим $\lVert A\rVert \geqslant \overbar{\lim\limits_{n \to \infty}}\lVert A_n\rVert$ ($\overbar{\lim\limits_{n \to \infty}}a_n = a$, если для любого $\varepsilon > 0$ в интервале $(a-\varepsilon, a+\varepsilon)$ содержится бесконечное число элементов последовательности $\lbrace a_n\rbrace$, а справа от этого интервала существует не более чем конечное число членов последовательности $\lbrace a_n\rbrace$).
 
 Напомним, что последовательность операторов $A_n$ может и не иметь сильного предела.
 \end{proof}
@@ -928,7 +925,7 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \begin{enumerate}
 	\item Для любого выбранного элемента $y \subset Y$ можно найти такое натуральное число $k$, что $\lVert By\rVert \leqslant k\lVert y\rVert$.
 	
-	Множество таких элементов $y$ обозначим $Y_k$. Множество $Y_k$ "однородно": если $y \subset Y_k$, то элементы $\lambda y \subset Y_k$ для всех чисел $\lambda$. Ясно, что при $m \leqslant k$ $Y_m \subset Y_k$ и что
+	Множество таких элементов $y$ обозначим $Y_k$. Множество $Y_k$ <<однородно>>: если $y \subset Y_k$, то элементы $\lambda y \subset Y_k$ для всех чисел $\lambda$. Ясно, что при $m \leqslant k$ $Y_m \subset Y_k$ и что
 
 \begin{center}	
 
@@ -959,29 +956,28 @@ $\lVert A_n x - A_m x\rVert = \lVert A_n x' - A_m x' + A_n x - A_n x' + A_m x' -
 \item Свойство элементов $y_j$.
 
 $$\lVert By_j\rVert = \lVert B(u_j - u_0)\rVert =$$ (аддитивность $B$) 
-$$ = \lVert Bu_j - Bu_0\rVert \le \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \le n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1.$$
+$$ = \lVert Bu_j - Bu_0\rVert \leqslant \lVert Bu_j\rVert + \lVert Bu_0\rVert(u_0, u_j \in Y_n) \leqslant n(\lVert u_j\rVert + \lVert u_0\rVert)\cdot 1.$$
 Оценим $\lVert B_j\rVert$ через норму элементов $\lVert y_j\rVert$. Так как $y_j \to y$, то $\lVert y_j\rVert \to \lVert y\rVert=r_0$, и при достаточно больших значениях $j$:
 
 \begin{center}
 $\lVert y_j\rVert\frac{1}{r_0}>\frac12$ и $1<\frac{2}{r_0}\lVert y_j\rVert$.
 \end{center}
 
-Для таких значений $j$: $\lVert By_j\rVert\le\frac{2}{r_0}n(\lVert u_j\rVert + \lVert u_0\rVert)$ и так как $\lVert u_j\rVert = \lVert u_0 + u_j - u_0\rVert \le \lVert u_0\rVert + \lVert u_j - u_0\rVert \le \lVert u_0\rVert + r_0$, то для достаточно больших значений $j$:
+Для таких значений $j$: $\lVert By_j\rVert\le\frac{2}{r_0}n(\lVert u_j\rVert + \lVert u_0\rVert)$ и так как $\lVert u_j\rVert = \lVert u_0 + u_j - u_0\rVert \leqslant \lVert u_0\rVert + \lVert u_j - u_0\rVert \leqslant \lVert u_0\rVert + r_0$, то для достаточно больших значений $j$:
 
 \begin{center}
-$\lVert By_j\rVert_X \le \frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n\cdot \lVert y_j\rVert_Y$.
+$\lVert By_j\rVert_X \leqslant \frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n\cdot \lVert y_j\rVert_Y$.
 \end{center}
 
 Величину $\frac{2}{r_0}(r_0 + \lVert u_0\rVert)\cdot n$ оценим натуральным числом $N$:
 
 \begin{center}
-$\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
+$\lVert By_j\rVert \leqslant N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \end{center}
 
-Так как $y_j \to y$, то множество $Y_N$ плотно в множестве элементов $y$ с нормой $r_0$. Значение $N$, согласно п.п. 1.2, зависит только от фиксированных значений $r$, $n_0$ и $u_0 \in Y$. Так как множество $Y_N$ ``однородно'', то и для любого $y \in Y$ существует последовательность элементов $y_j \in Y_N$, такая что $y_j \to y$ при $j \to \infty$ и $\lVert By_j\rVert \le N\lvert y_j\rVert$. Обозначив $M = Y_N$ и $C_0 = N$, завершим доказательство леммы.
-
+Так как $y_j \to y$, то множество $Y_N$ плотно в множестве элементов $y$ с нормой $r_0$. Значение $N$, согласно п.п. 1.2, зависит только от фиксированных значений $r$, $n_0$ и $u_0 \in Y$. Так как множество $Y_N$ ``однородно'', то и для любого $y \in Y$ существует последовательность элементов $y_j \in Y_N$, такая что $y_j \to y$ при $j \to \infty$ и $\lVert By_j\rVert \leqslant N\lvert y_j\rVert$. Обозначив $M = Y_N$ и $C_0 = N$, завершим доказательство леммы.
+\qedhere
 \end{enumerate}
-
 \end{proof}
 
 \begin{theorem}[Банаха]
@@ -1119,9 +1115,8 @@ $\leqslant C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+\ldots] + C_0
 \end{center}
 
 $\lVert B y_0 \rVert \leqslant 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \to X} \leqslant 2 C_0$.
-
+\qedhere
 \end{enumerate}
-
 \end{proof}
 
 \begin{example}
@@ -1227,7 +1222,7 @@ $$\| \Delta x \|_{\mathcal{L}_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n 
 Так как множество $A_1S_1$ компактно в $Y$, то из последовательности $\lbrace A_2x_{n_k} \rbrace$ можно выделить фундаментальную последовательность $\lbrace A_2x'_i \rbrace$. Ясно, что последовательность $\lbrace (\lambda_1 A_1+\lambda_2 A_2)x'_i \rbrace$ является фундаментальной последовательностью в $Y$.
 
 	\item Покажем, что множество $\sigma(X,Y)$ замкнуто. Так как $\lVert A_n-A \rVert \to 0$ при $n\to \infty$, то для выбранного $\varepsilon > 0$ рассмотрим операторы $A_n$ такие что $\lVert A_n-A \rVert \leqslant  \varepsilon$ и при $x \subset S_1$ $\lVert A_n x-Ax\rVert \leqslant  \varepsilon$. Зафиксируем $n$. Рассмотрим множество элементов $A_n S_1$. Так как множество $A_n S_1$ компактно в $Y$, то в множестве $A_n S_1$ существует конечная $\varepsilon$-сеть $\lbrace y_k \rbrace$ $y_k=A_n x_k$, $x_k \subset S_1$. Тогда $\lVert y_k - Ax\rVert \leqslant \lVert y_k - A_n x\rVert + \lVert A_n x - Ax\rVert \leqslant 2\varepsilon$. Следовательно, элементы $y_k$ образуют $2\varepsilon$-сеть в множестве $Y$ и, согласно теореме Хаусдорфа, множество $AS_1$ компактно.
-
+\qedhere
 \end{enumerate}
 \end{proof}
 
@@ -1295,14 +1290,14 @@ $\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$
 
 Исследование этого вопроса начинается со случая, когда оператор $A_0$ продолжается с подпространства $X_0$ на подпространство $X_1\subset X$ элементов вида $x+\lambda x_1^0$, где $x\in X_0$, а элемент $x_1^0 \in X_0$ ($A = A_1$, $A_1$ - продолжение оператора $A_0$). Элемент $x_0^1$ назначен, и представление элементов подпространства $X_1$ однозначно: коэффициент $\lambda \in (-\infty , \infty)$ определен однозначно. 
 
-Легко получить необходимое условие этого "элементарного" расширения. Для построения элементарного продолжения достаточно априори задать элемент $y_1 = A_1 x_1^0$:
+Легко получить необходимое условие этого <<элементарного>> расширения. Для построения элементарного продолжения достаточно априори задать элемент $y_1 = A_1 x_1^0$:
 \begin{center}
 $A_1(x) = A_!(x_0+\lambda x_1^0) = A_1x_0+\lambda A_1x_1^0 = A_0 x_0 + \lambda y_1$, $x_0 \in X_0$
 \end{center}
 
 Пусть оператор $A_1$ существует. Тогда для любого элемента $x_0 \in X_0$ значение
 \begin{center}
-$\Vert y_1 -A_0x_0 \Vert = \Vert A_1x_1^0 - A_1x_0 \Vert = \Vert A_1(x_1^0 - x_0) \Vert \le \Vert A_1 \Vert \Vert x_1^0 - x_0 \Vert = \Vert A_0 \Vert \Vert x_1^0 - x_0 \Vert_X.$
+$\Vert y_1 -A_0x_0 \Vert = \Vert A_1x_1^0 - A_1x_0 \Vert = \Vert A_1(x_1^0 - x_0) \Vert \leqslant \Vert A_1 \Vert \Vert x_1^0 - x_0 \Vert = \Vert A_0 \Vert \Vert x_1^0 - x_0 \Vert_X.$
 \end{center}
 
 Рассмотрим шары с центром в точках $A_0x_0$ и радиусами $\Vert A_0 \Vert \Vert x_1^0 - x_0 \Vert$. При любом выборе элемента $x_0 \in X_0$ все сферы $S_{\Vert A_0 \Vert \Vert x_0 - x_1^0 \Vert}(A_0x_0)$ должны содержать заданный общий элемент $y_1$.
@@ -1330,9 +1325,11 @@ $$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leqslant \
 Действительно, если $$x_0+\lambda x_1^0=x_0 '+\lambda_1 x_1^0,$$ то $$(x_0-x_0')+(\lambda-\lambda_1)x_1^0=0.$$
 Так как $(x_0-x_0') \in X_0$, то $(\lambda-\lambda_1)x_1^0 \in X_0$, что возможно только при $\lambda=\lambda_1$. Тогда $x_0=x_0^1$.
 
-Требуется построить линейный функционал $f_1 \in \mathcal{L}(x_1, R_1)$, такой что\\
----$f_1(x)=f_0(x)$, если $x\in X_0$,\\
----$\lVert f_1 \rVert=\lVert f_0 \rVert$.
+Требуется построить линейный функционал $f_1 \in \mathcal{L}(x_1, R_1)$, такой что
+\begin{itemize}
+	\item $f_1(x)=f_0(x)$, если $x\in X_0$,
+	\item $\lVert f_1 \rVert=\lVert f_0 \rVert$.
+\end{itemize}
 
 Функционал $f_1$ построим в виде $f_1=f_0+\lambda f_1(x_1^0)$. Число $f_1(x_1^0)$ выберем позднее.
 
@@ -1376,13 +1373,13 @@ $$ f_1(x)=f_1(x_0+ \lambda x_1^0)=f_0(x_0)-\lambda \gamma.$$
 \begin{align*}
 |f_1(x)| &= |f_0(x_0)-\lambda \gamma| \leqslant \left|\lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right| \leqslant
 |\lambda| \left|f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right| \overset{\mbox{(\ref{32_1})}}{\leqslant} |\lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert =\\
-&= \lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0+\lambda x_1^0}{\lambda} \right \rVert = \lVert f_0 \rVert \cdot  \lVert x_0+\lambda x_1^0 \rVert = \lVert f_0 \rVert \cdot  \lVert x \rVert.
+&= \lvert \lambda \rvert \cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0+\lambda x_1^0}{\lambda} \right \rVert = \lVert f_0 \rVert \cdot  \lVert x_0+\lambda x_1^0 \rVert = \lVert f_0 \rVert \cdot  \lVert x \rVert.
 \end{align*}
 
 Следовательно, $f_1 \leqslant f_0$ и функционал $f_1$ линеен.
 
 Обратное неравенство $f_0 \leqslant f_1$ получаем соответственно из оценки:
-$$ \lVert f_1 \rVert=\underset{x \in X, \lVert x \rVert =1 }{\sup} |f_1(x)| \geqslant \underset{x \in X_0, \lVert x \rVert =1 }{\sup} |f_1(x)|=\lVert f_0 \rVert.$$
+$$ \lVert f_1 \rVert=\underset{x \in X, \; \lVert x \rVert = 1 }{\sup} |f_1(x)| \geqslant \underset{x \in X_0, \; \lVert x \rVert = 1 }{\sup} |f_1(x)|=\lVert f_0 \rVert.$$
 
 Итак, $\lVert f_1 \rVert=\lVert f_0 \rVert$.
 
@@ -1415,11 +1412,8 @@ $$X_2=X_1+\{ \lambda\}x_2 $$
 
 \section{Следствия теоремы Хана-Банаха}
 
-\begin{corollary}
-$\underbar {Теорема о достаточном числе функционалов}$
-
-
-Для любого элемента $x_0 \in X$, $(x_0 \ne0)$ существует функционал $f \in X^*$, такой, что $\lVert f \rVert=1$, $f(x_0)=\lVert x_0\rVert$
+\begin{corollary}[Теорема о достаточном числе функционалов]
+Для любого элемента $x_0 \in X$, $(x_0 \ne0)$ существует функционал $f \in X^*$, такой, что $\lVert f \rVert=1$, $f(x_0)=\lVert x_0\rVert$.
 \end{corollary}
 
 \begin{proof}
@@ -1431,6 +1425,7 @@ $\underbar {Теорема о достаточном числе функцион
 При $x=x_0$  $f_0(x_0)=\lVert x_0 \rVert$. Продолжая этот функционал на всё пространство $X$, получим (по теореме Хана-Банаха) функционал $f$:
 \begin{equation*}
 f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
+\qedhere
 \end{equation*}
 \end{proof}
 
@@ -1449,6 +1444,7 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 По теореме Хана-Банаха существует продолжение $f$ функционала $f_0$ на все пространство $X$:
 \begin{equation*}
 \lVert f \rVert=1;\mbox{ при }  x \in X_0,  f(x)=\lambda d (f(x)=0, x\in \Omega; f(x_0)=d).
+\qedhere
 \end{equation*}
 \end{proof}
 
@@ -1486,12 +1482,10 @@ f_k(x_i) =
    0 \mbox{ при } i\neq k\\
    1 \mbox{ при } i=k
 \end{cases}
+\qedhere
 \end{equation*}
 \end{proof}
- \begin{corollary}
-$\underbar {Теорема об опорной плоскости}$
-
-
+ \begin{corollary}[Теорема об опорной плоскости]
 Пусть $f \in X^*$. Плоскостью (гиперплоскостью) в пространстве $X$ называется множество $L$ элементов, удовлетворяющих условию $f(x)=C$, где $C$ - вещественное число.
 \end{corollary}
 
@@ -1513,6 +1507,7 @@ f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, |f_0(x)|=|\lambda|\lVert x_0 \rVer
 f(x)\leqslant 1 \lVert x \rVert \leqslant r,
 \end{equation*}
 при $x_0 \in S_r(\circleddash)$ значение $f(x_0)=r$.
+\qedhere
 \end{proof}
 
 \chapter{Сопряженное пространство. Сопряженный оператор}
@@ -1528,9 +1523,11 @@ f(x)\leqslant 1 \lVert x \rVert \leqslant r,
 f(x) =  \langle x, f \rangle 
 \end{equation*}
 Такое обозначение имеет своё обоснование.
-\begin{theorem}[Рисса]
-(Фридьёф Рисс, 1880-1956 г., один из основоположников функционального анализа) \underbar{Об общем виде линейного функционала в пространстве Гильберта $H$.} Для любого $f \in H^*$ существует единственный элемент $y \in H$, такой что $ \langle x, f \rangle =(x,y)$ ($f(x)=(x,y)$, $(x,y)$ --- скалярное произведение в $H$).
+\begin{theorem}[Рисса об общем виде линейного функционала в пространстве Гильберта $H$]
+Для любого $f \in H^*$ существует единственный элемент $y \in H$, такой что $ \langle x, f \rangle =(x,y)$ ($f(x)=(x,y)$, $(x,y)$ --- скалярное произведение в $H$).
 \end{theorem}
+
+(Фридьёф Рисс, 1880-1956 г., один из основоположников функционального анализа)
 
 \begin{proof}
 Обозначим $L$ подпространство элементов $z$ таких, что значения функционала $f$ равно 0: $ \langle z, f \rangle =0$. Можно считать, что $L\ne H$ в противном случае $f(x)=0$ для любого $x\in H$, $\lVert f\rVert = 0$, $y=\circleddash$.
@@ -1550,7 +1547,7 @@ f(x) =  \langle x, f \rangle
 
 Тогда $(x, f) = \frac{(x, x_0)}{\lVert x_0\rVert^2}$ и в качестве элемента $y$ можно взять элемент $y=\frac{x}{\lVert x_0\rVert^2}$:$ \langle x, f \rangle  = (x, y)$.
 
-Для нормы функционала $f$: $\lvert  \langle x, f \rangle \rvert \le \lVert y\rVert\lVert x\rVert$. Тогда $\lVert f\rVert \leqslant \lVert y\rVert$. С другой стороны $ \langle y, f \rangle  = (y, y) \leqslant \lVert f\rVert\lVert y\rVert$, $\lVert y\rVert\le\lVert f\rVert$
+Для нормы функционала $f$: $\lvert  \langle x, f \rangle \rvert \leqslant \lVert y\rVert\lVert x\rVert$. Тогда $\lVert f\rVert \leqslant \lVert y\rVert$. С другой стороны $ \langle y, f \rangle  = (y, y) \leqslant \lVert f\rVert\lVert y\rVert$, $\lVert y\rVert\le\lVert f\rVert$
 
 Объединяя эти неравенства, получаем $\lVert f\rVert = \lVert y\rVert$.
 
@@ -1644,21 +1641,12 @@ $\lbrace x_{N(i,K)} \rbrace$, $i=1,2,3\ldots$, такие что
 \lbrace x_{N(3,K)} \rbrace \supset \ldots$
 \end{center}
 и для которых
- \begin{center}
- $ \langle x_{N(i,K)},\Psi_i \rangle  \to \alpha_i$ при
- $K\to\infty$, 
- \end{center}
- \begin{center}
- $ \langle x_{N(i-1,K)},\Psi_{i-1} \rangle  \to \alpha_{i-1}$ при
- $K\to\infty$, 
- \end{center}
- \begin{center}
- $\cdots$
- \end{center}
- \begin{center}
- $ \langle x_{N(1,K)},\Psi_{1} \rangle  \to \alpha_{1}$ при
- $K\to\infty$, 
- \end{center}
+\begin{align*}
+\langle x_{N(i,K)},\Psi_i \rangle &\to \alpha_i \mbox{ при } K\to\infty,\\
+\langle x_{N(i-1,K)},\Psi_{i-1} \rangle &\to \alpha_{i-1} \mbox{ при } K\to\infty,\\
+&\cdots\\
+\langle x_{N(1,K)},\Psi_{1} \rangle &\to \alpha_{1} \mbox{ при } K\to\infty.
+\end{align*}
  Рассмотрим <<диагональные элементы>> $ x_{N(i,i)}$. Для них при любом фиксированном $K$ значения 
  $ \langle x_{N(i,i)},\Psi_K \rangle $ стремятся к $\alpha_K$ при 
 $i \to \infty$.\\
@@ -1981,8 +1969,8 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert \geqslant \alpha_n$.
 
 Тогда $\lVert u_n-u_0 \rVert \frac{n+1}{n} \geqslant 1$ и $\lVert u_n-u_0 \rVert \geqslant\frac{n}{n+1}$, что противоречит $u_0= \smash{\displaystyle\lim_{n \rightarrow \infty}}u_n$
-	\end{enumerate}
-	
+\qedhere
+\end{enumerate}
 \end{proof}
 	
 	Из этой теоремы следует, что если рассмотреть уравнения 
