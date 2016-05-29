@@ -247,7 +247,7 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 	
 	Покажем, что компактное множество $H_{\varepsilon}$ образует в $E$ $\varepsilon$-сеть. Для любой функции $x\in E$ построим ломаную $\overbar{x}(t)$, $\overbar{x} \in H_{\varepsilon}$. Так как $x(t)$ непрерывна, то на отрезке $[t_k, t_{k+1}]$ она достигает своего максимального значения $M_k$ и своего минимального значения $m_k$: $m_k \leqslant x(t) \leqslant M_k, t \in [t_k, t_{k+1}]$. В этих же пределах лежат и значения линейной функции $\overbar{x}(t)$. Ясно, что $|x(t)-\overbar{x}(t)|\leqslant M_k-m_k, t \in [t_k, t_{k+1}]$.
 	
-	В силу выбора значения $\delta$ величины $M_k-m_k < \varepsilon$. Тогда и $\rho(x, \overbar{x} < \varepsilon$. Согласна следствию теоремы Хаусдорфа, множество $E$ компактно в $C[a, b]$.
+	В силу выбора значения $\delta$ величины $M_k-m_k < \varepsilon$. Тогда и $\rho(x, \overbar{x}) < \varepsilon$. Согласно следствию теоремы Хаусдорфа, множество $E$ компактно в $C[a, b]$.
 	
 	$\underbar {Необходимость}$ Свойства функций из компактного множества $E$, указанные в теореме, сразу следуют из существования в $E$ $\underbar {конечной}$ $\varepsilon$-сети непрерывных на $[a, b]$ функций $x_1(t), x_2(t),\ldots,x_N(t)$.	
 
@@ -536,13 +536,13 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \lvert (x, y) \rvert^2 &\le (x, x) (y, y).
 \end{align*}
 
-Введём норму элементов $\parallel x \parallel = \sqrt{(x, x)}$ и получим нормированное пространство. Действительно
+Введём норму элементов $\lVert x \rVert = \sqrt{(x, x)}$ и получим нормированное пространство. Действительно
 
 \begin{itemize}
 
-	\item $\parallel \lambda x \parallel^2 = (\lambda x, \lambda x) = \lvert \lambda \rvert^2 (x, x) = \lvert \lambda \rvert^2 \parallel x \parallel^2$ и $\parallel \lambda x \parallel = \lvert \lambda \rvert \parallel x \parallel$
+	\item $\lVert \lambda x \rVert^2 = (\lambda x, \lambda x) = \lvert \lambda \rvert^2 (x, x) = \lvert \lambda \rvert^2 \lVert x \rVert^2$ и $\lVert \lambda x \rVert = \lvert \lambda \rvert \lVert x \rVert$
 	
-	\item $\parallel x + y \parallel^2 = (x + y, x + y) = (x, x) + 2 \lvert (x, y) \rvert + (y, y) \le$ (по неравенству Коши-Буняковского) $\le \parallel x \parallel^2 + 2 \parallel x \parallel \parallel y \parallel + \parallel y \parallel^2 = (\parallel x \parallel + \parallel y \parallel)^2$ т.е. и третье условие в определении нормы тоже выполнено: $\parallel x + y \parallel \le \parallel x \parallel + \parallel y \parallel$.
+	\item $\Vert x + y \Vert^2 = (x + y, x + y) = (x, x) + 2 \lvert (x, y) \rvert + (y, y) \le$ (по неравенству Коши-Буняковского) $\le \Vert x \Vert^2 + 2 \Vert x \Vert \Vert y \Vert + \Vert y \Vert^2 = (\Vert x \Vert + \Vert y \Vert)^2$ т.е. и третье условие в определении нормы тоже выполнено: $\Vert x + y \Vert \le \Vert x \Vert + \Vert y \Vert$.
 
 \end{itemize}
 
@@ -551,13 +551,13 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \subsection*{Примеры гильбертовых пространств}
 
 \begin{enumerate}
-	\item Пространство $l^2$ числовых последовательностей $x = \lbrace \xi_k \rbrace_{k=1}^{\infty}$ таких, что ряд $\displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$ сходится. Скалярное произведение $(x, y) = \displaystyle\sum_{k=1}^{\infty} \xi_k \overbar{\eta}_k$ и норма $\parallel x \parallel^2 = \displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$.
+	\item Пространство $l^2$ числовых последовательностей $x = \lbrace \xi_k \rbrace_{k=1}^{\infty}$ таких, что ряд $\displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$ сходится. Скалярное произведение $(x, y) = \displaystyle\sum_{k=1}^{\infty} \xi_k \overbar{\eta}_k$ и норма $\Vert x \Vert^2 = \displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$.
 	
 	\item Пространство $\mathcal{L}_{\varphi}^2 (a, b)$.
 	
 	$$ (x, y) = \displaystyle\int\limits_a^b \varphi(t) x(t) \overbar{y}(t) dt$$
 	
-	$$ \parallel x \parallel^2 = \displaystyle\int\limits_a^b \varphi(t) \lvert x(t) \rvert^2 dt$$
+	$$ \Vert x \Vert^2 = \displaystyle\int\limits_a^b \varphi(t) \lvert x(t) \rvert^2 dt$$
 	
 	Функция $\varphi(t)$ --- функция, суммируемая на $(a, b)$ такая, что $\varphi(t) > 0$ почти везде.
 	
@@ -573,13 +573,13 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \end{itemize}
 
 \begin{theorem}
-	Если $H_1$ подпространство пространства $H$, а $H_2$ --- ортогональное дополнение $H_1$, то любой элемент $x \in H$ можно представить единственным образом в виде $x = x_1 + x_2$, где $x_1 \in H_1$, а $x_2 \in H_2$ и $\rho(x, H_1) = \parallel x - x_1 \parallel$
+	Если $H_1$ подпространство пространства $H$, а $H_2$ --- ортогональное дополнение $H_1$, то любой элемент $x \in H$ можно представить единственным образом в виде $x = x_1 + x_2$, где $x_1 \in H_1$, а $x_2 \in H_2$ и $\rho(x, H_1) = \Vert x - x_1 \Vert$
 \end{theorem}
 
 \begin{theorem}
 	Если $H$ --- сепарабельное гильбертово пространство, то в нём существует не более чем счётная ортогональная система элементов $\lbrace \varphi_1, \varphi_2, \ldots, \varphi_n, \ldots \rbrace$ (базис пространства $H$), и любой элемент $x \in H$ представим в виде 
 	$$x = \displaystyle\sum_{k=1}^{\infty} c_k \varphi_k$$
-	где $c_k = (x, \varphi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \parallel x \parallel^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\varphi_k$).
+	где $c_k = (x, \varphi_k)$ и $\displaystyle\sum_{k} \lvert c_k \rvert^2 = \Vert x \Vert^2$ ($c_k$ - коэффициенты Фурье элемента $x$ в базисе $\varphi_k$).
 \end{theorem}
 
 \begin{examples}
@@ -673,61 +673,61 @@ $A(x-x_0)\to \circleddash$ и $Ax \to Ax_0$.
 
 Для ограниченного оператора $A$  обозначим величину 
 \begin{center}
-$\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel =\underset{S_1}{\sup}\parallel Ax \parallel =C_0<+\infty$
+$\underset{\Vert x\Vert=1}{\sup}\Vert Ax \Vert =\underset{S_1}{\sup}\Vert Ax \Vert =C_0<+\infty$
 \end{center}
 
 Тогда
 \begin{center}
-$\underset{S_R}{\sup}\parallel Ax \parallel=R\cdot C_0$ 
+$\underset{S_R}{\sup}\Vert Ax \Vert=R\cdot C_0$ 
 и величина 
-$\underset{S_R}{\sup}\parallel Ax \parallel\to\infty $ 
+$\underset{S_R}{\sup}\Vert Ax \Vert\to\infty $ 
 при $R\to\infty$.
 \end{center}
 Линейная зависимость
 \begin{center}
-$\underset{S_R}{\sup}\parallel Ax \parallel$ 
+$\underset{S_R}{\sup}\Vert Ax \Vert$ 
 \end{center}
 от величины $R$ для ограниченных операторов даёт более практичное определение ограниченного оператора.
 
 \begin{definition} Оператор $A$ называется линейным оператором из $X$ в $Y$, если величина 
 \begin{center}
-$ C_0=\underset{S_1}{\sup}\parallel Ax \parallel<+\infty $.
+$ C_0=\underset{S_1}{\sup}\Vert Ax \Vert<+\infty $.
 \end{center}
 \end{definition}
 
 Эта величина называется \textbf{нормой} линейного оператора, она обозначается
 \begin{center}
-$\parallel A \parallel,$ \quad
-( $\parallel A \parallel _{X \to Y}$).
+$\Vert A \Vert,$ \quad
+( $\Vert A \Vert _{X \to Y}$).
 \end{center}
 
-Величина $\underset{\parallel x\parallel \leq1}{\sup}\parallel Ax \parallel =
-\parallel A \parallel =
-\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel$.
+Величина $\underset{\Vert x\Vert \leq1}{\sup}\Vert Ax \Vert =
+\Vert A \Vert =
+\underset{\Vert x\Vert=1}{\sup}\Vert Ax \Vert$.
 
 Действительно,
 \begin{center}
 $C_0\leq 
-\underset{\parallel x\parallel=1}{\sup}\parallel Ax \parallel$.
+\underset{\Vert x\Vert=1}{\sup}\Vert Ax \Vert$.
 \end{center}
 
 С другой стороны 
 \begin{center}
-$\parallel Ax \parallel=
-\parallel x \parallel \cdot \parallel A(\frac{x}{\parallel x \parallel}) \parallel \leqslant C_0$
+$\Vert Ax \Vert=
+\Vert x \Vert \cdot \Vert A(\frac{x}{\Vert x \Vert}) \Vert \leqslant C_0$
 \end{center} 
-при $\parallel x \parallel \leqslant 1$; 
-$\underset{\parallel x\parallel \leqslant 1}{\sup}\parallel Ax \parallel \leqslant C_0$.
+при $\Vert x \Vert \leqslant 1$; 
+$\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert \leqslant C_0$.
 
 Тогда 
 \begin{center}
-$ C_0 \geqslant\underset{\parallel x\parallel \leqslant 1}{\sup}\parallel Ax \parallel $, и мы получаем 
-$\underset{\parallel x\parallel \leqslant 1}{\sup}\parallel Ax \parallel =\parallel A \parallel$.
+$ C_0 \geqslant\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert $, и мы получаем 
+$\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert =\Vert A \Vert$.
 \end{center}
 
-Для линейных операторов верна оценка: $\parallel Ax \parallel _{Y} =\parallel A \parallel \cdot \parallel x \parallel_{X} $.
+Для линейных операторов верна оценка: $\Vert Ax \Vert _{Y} =\Vert A \Vert \cdot \Vert x \Vert_{X} $.
 
-\textbf{Замечание.} Если получена оценка  $\parallel Ax \parallel \leqslant {C}  \parallel x \parallel$, то $\parallel A \parallel \leqslant {C} $.
+\textbf{Замечание.} Если получена оценка  $\Vert Ax \Vert \leqslant {C}  \Vert x \Vert$, то $\Vert A \Vert \leqslant {C} $.
 
 \begin{example}
 Интегральный оператор $K$ из $X=\mathcal{L}_p(a,b)$ в $Y=\mathcal{L}_q(a,b)$, $
@@ -745,16 +745,16 @@ ${(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\ve
 \begin{center}
 $\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leqslant (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)^\frac{1}{p}=}$
 
-$= \parallel x \parallel _{\mathcal{L}_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
+$= \Vert x \Vert _{\mathcal{L}_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
 
-${\parallel y \parallel}^q _{\mathcal{L}_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert^{q}} dt\leq {\parallel x \parallel}^q _{\mathcal{L}_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
+${\Vert y \Vert}^q _{\mathcal{L}_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert^{q}} dt\leq {\Vert x \Vert}^q _{\mathcal{L}_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
 
-${\parallel y \parallel}_{\mathcal{L}_q(a,b)}=
-{\parallel Kx\parallel}_{\mathcal{L}_q(a,b)} \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \parallel x \parallel _{\mathcal{L}_p(a,b)} $ 
+${\Vert y \Vert}_{\mathcal{L}_q(a,b)}=
+{\Vert Kx\Vert}_{\mathcal{L}_q(a,b)} \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \Vert x \Vert _{\mathcal{L}_p(a,b)} $ 
 \end{center}
-и $\parallel K \parallel \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
+и $\Vert K \Vert \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
 
-Можно показать, что $\parallel K \parallel = 
+Можно показать, что $\Vert K \Vert = 
 {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}.$
 \end{example}
 
@@ -763,7 +763,7 @@ ${\parallel y \parallel}_{\mathcal{L}_q(a,b)}=
 
 $$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
 
-Ясно, что выполнены все аксиомы линейного множества, множество $\mathcal{L}(X,Y)$ - линейное множество. Введем метрику в этом множестве $\rho(A, B) = \parallel A-B\parallel$ и получим нормированное пространство $\mathcal{L}(X,Y)$. Проверим, например, выполнение неравенства треугольника. Согласно определению $(A+B)x = Ax+Bx$ и $\parallel(A+B)x\parallel\le(\parallel A\parallel+\parallel B\parallel)\parallel x\parallel$. Следовательно $\parallel A+B\parallel\le\parallel A\parallel+\parallel B\parallel$.
+Ясно, что выполнены все аксиомы линейного множества, множество $\mathcal{L}(X,Y)$ - линейное множество. Введем метрику в этом множестве $\rho(A, B) = \Vert A-B\Vert$ и получим нормированное пространство $\mathcal{L}(X,Y)$. Проверим, например, выполнение неравенства треугольника. Согласно определению $(A+B)x = Ax+Bx$ и $\Vert(A+B)x\Vert\le(\Vert A\Vert+\Vert B\Vert)\Vert x\Vert$. Следовательно $\Vert A+B\Vert\le\Vert A\Vert+\Vert B\Vert$.
 
 Определим теперь понятие сильной сходимости последовательности линейных операторов.
 
@@ -776,9 +776,9 @@ $$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
 \end{theorem}
 
 \begin{proof}
-Пусть $\{A_n\}$ - фундаментальная последовательность линейных операторов: $\parallel A_{n+m}-A\parallel\le \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x\in X$, построим последовательность $y_n\in Y$, $y_n=A_nx$. Эта последовательность сходится в себе $\parallel y_{n+m}-y_n\parallel\le \parallel A_{n+m}-A_n\parallel \parallel x\parallel\le \varepsilon \parallel x\parallel$, и в силу полноты пространства $Y$ существует предельный элемент $y\le Y$, такой что $y=\lim_{} A_nx$ при $n \to \infty$. Следовательно определен оператор $A: y=Ax$.
+Пусть $\{A_n\}$ - фундаментальная последовательность линейных операторов: $\Vert A_{n+m}-A\Vert\le \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x\in X$, построим последовательность $y_n\in Y$, $y_n=A_nx$. Эта последовательность сходится в себе $\Vert y_{n+m}-y_n\Vert\le \Vert A_{n+m}-A_n\Vert \Vert x\Vert\le \varepsilon \Vert x\Vert$, и в силу полноты пространства $Y$ существует предельный элемент $y\le Y$, такой что $y=\lim_{} A_nx$ при $n \to \infty$. Следовательно определен оператор $A: y=Ax$.
 
-Покажем, что этот оператор ограничен. Так как $\lvert \parallel A_{n+m} \parallel-\parallel A_n\parallel \rvert \le \parallel A_{n+m}-A_n\parallel \le \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\parallel A_n\parallel$ имеет предел $\lim_{n\to \infty} \parallel A_n\parallel=C$. Тогда $\parallel y_n\parallel\le\parallel A_n\parallel \parallel x\parallel$ и переходя к пределу, получим $\parallel y\parallel\le C\parallel x\parallel$, и норма оператора $A$ ограничена, оператор $A$ - линейный оператор, $\parallel A\parallel\le C$, $A\in \mathcal{L}(X,Y)$.
+Покажем, что этот оператор ограничен. Так как $\lvert \Vert A_{n+m} \Vert-\Vert A_n\Vert \rvert \le \Vert A_{n+m}-A_n\Vert \le \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\Vert A_n\Vert$ имеет предел $\lim_{n\to \infty} \Vert A_n\Vert=C$. Тогда $\Vert y_n\Vert\le\Vert A_n\Vert \Vert x\Vert$ и переходя к пределу, получим $\Vert y\Vert\le C\Vert x\Vert$, и норма оператора $A$ ограничена, оператор $A$ - линейный оператор, $\Vert A\Vert\le C$, $A\in \mathcal{L}(X,Y)$.
 \end{proof}
 
 Определим теперь понятие поточечной сходимости последовательности линейных операторов.
@@ -790,26 +790,26 @@ $$A+B: (A+B)x = Ax+Bx, \lambda A: (\lambda A) = \lambda Ax$$
 Из сильной сходимости $A_n\to A$ следует и поточечная сходимость последовательности $\{A_n\}$.
 
 \begin{center}
-$\parallel A_nx-Ax\parallel_Y = \parallel(A_n-A)x\parallel\le \parallel A_n-A\parallel \parallel x\parallel\to 0$ при $n\to \infty$
+$\Vert A_nx-Ax\Vert_Y = \Vert(A_n-A)x\Vert\le \Vert A_n-A\Vert \Vert x\Vert\to 0$ при $n\to \infty$
 \end{center}
 
 Обратное утверждение неверно.
 
 \begin{example}
-Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,\ldots,x_n,\ldots)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\parallel x\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $
+Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,\ldots,x_n,\ldots)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\Vert x\Vert=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $
 
 Зададим последовательность аддитивных операторов $A_n$ из $l_1$ в $l_1$:
 $A_nx=(x_1,x_2,x_3,\ldots,x_n)$
 
 Операторы $A_n$ линейные:
-$\parallel A_n\parallel=\sup \limits_{S_1} \parallel A_nx\parallel=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\parallel A_n\parallel=1$, $A_n\in \mathcal{L}(l_1,l_1)$.
+$\Vert A_n\Vert=\sup \limits_{S_1} \Vert A_nx\Vert=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\Vert A_n\Vert=1$, $A_n\in \mathcal{L}(l_1,l_1)$.
 
-Рассмотрим последовательность линейных операторов $E-A_n\in \mathcal{L}(l_1,l_1)$. Ясно, что $\parallel(E-A_n)x\parallel=\parallel(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
+Рассмотрим последовательность линейных операторов $E-A_n\in \mathcal{L}(l_1,l_1)$. Ясно, что $\Vert(E-A_n)x\Vert=\Vert(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)\Vert=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
 
 Таким образом $A_nx\to x$ для любых $x\in l_1$ при $n\to \infty$. Последовательность операторов $A_n$ сходится поточечно к тождественному оператору.
 
 На сфере $S_1$ в $l_1$ рассмотрим множество элементов $S_1^0$, таких что $x=(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)$, $\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$.
-$\parallel E-A_n\parallel=\sup \limits_{S_1} \parallel(E-A_n)x\parallel\ge \sup \limits_{S_1^0} \parallel(E-A_n)x\parallel=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$ и $\parallel E-A_n\parallel\ge 1$ при всех $n$. Последовательность линейных операторов $A_n$ не сходится сильно к тождественному оператору.
+$\Vert E-A_n\Vert=\sup \limits_{S_1} \Vert(E-A_n)x\Vert\ge \sup \limits_{S_1^0} \Vert(E-A_n)x\Vert=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$ и $\Vert E-A_n\Vert\ge 1$ при всех $n$. Последовательность линейных операторов $A_n$ не сходится сильно к тождественному оператору.
 
 \end{example}
 
@@ -991,87 +991,87 @@ $\lVert By_j\rVert \le N\lVert y_j\rVert$ и $y_j \in Y_N$.
 \begin{proof}
 Согласно лемме в пространстве $Y$ существует всюду плотное множество $M$, для элементов которого
 \begin{center}
-	$\parallel By \parallel \leqslant C_0 \parallel y \parallel $
+	$\Vert By \Vert \leqslant C_0 \Vert y \Vert $
 \end{center}
 \begin{enumerate}
 
 	\item Пусть $y_0$ любой элемент пространства $Y$.
 	
-	Построим шар радиуса $\frac{1}{4}\parallel y_0 \parallel$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
+	Построим шар радиуса $\frac{1}{4}\Vert y_0 \Vert$ с 		центром $\frac{3}{4}y_0$. В этом шаре найдём элемент
 	$y_1 \in M$:
 	\begin{center}
-	$\parallel y_1 - \frac{3}{4}y_0\parallel \leqslant \frac{1}{4}    		\parallel y_0 \parallel $,
+	$\Vert y_1 - \frac{3}{4}y_0\Vert \leqslant \frac{1}{4}    		\Vert y_0 \Vert $,
 	\end{center}
 	\begin{center}
-	$\parallel y_1 \parallel =
-	\parallel y_1 - \frac{3}{4}y_0 +
-	\frac{3}{4}y_0 \parallel \leqslant \frac{1}{4} 			\parallel y_0 \parallel +
-	 \frac{3}{4}\parallel y_0\parallel = 				\parallel y_0 \parallel$
+	$\Vert y_1 \Vert =
+	\Vert y_1 - \frac{3}{4}y_0 +
+	\frac{3}{4}y_0 \Vert \leqslant \frac{1}{4} 			\Vert y_0 \Vert +
+	 \frac{3}{4}\Vert y_0\Vert = 				\Vert y_0 \Vert$
 	\end{center}
 	
 	\item Рассмотрим элемент $y_1 - y_0$. Для него
 	\begin{center}
-	$\parallel y_1-y_0 \parallel =\parallel y - \frac{3}{4}y_0 +
-	\frac{1}{4}y_0 \parallel \leqslant
-	\frac{1}{4} \parallel y_0 \parallel +
-	\frac{1}{4} \parallel y_0 \parallel =
-	\frac{1}{2} \parallel y_0 \parallel$
+	$\Vert y_1-y_0 \Vert =\Vert y - \frac{3}{4}y_0 +
+	\frac{1}{4}y_0 \Vert \leqslant
+	\frac{1}{4} \Vert y_0 \Vert +
+	\frac{1}{4} \Vert y_0 \Vert =
+	\frac{1}{2} \Vert y_0 \Vert$
 	\end{center}
-	Построим шар радиуса $\frac{1}{4} \parallel 		y_1 - y_0 \parallel$ с центром $\frac{3}{4} (y_1 - y_0)$. В этом шаре найдём элемент $y_2 \in M$:
+	Построим шар радиуса $\frac{1}{4} \Vert 		y_1 - y_0 \Vert$ с центром $\frac{3}{4} (y_1 - y_0)$. В этом шаре найдём элемент $y_2 \in M$:
 	\begin{center}
-	$\parallel y_2 + y_1 - y_0 \parallel =
-	\parallel y_2 - \frac{3}{4}(y_1 - y_0) -
-	\frac{1}{4}(y_1 - y_0) \parallel \leqslant
-	\frac{1}{4} \parallel y_1 - y_0 \parallel +
-	\frac{1}{4} \parallel y_1 - y_0 \parallel = $
-	\end{center}
-	\begin{center}
-	$ = \frac{1}{2} \parallel y_1 - y_0 \parallel 			\leqslant
-	\frac{1}{2^2} \parallel y_0 \parallel$ ,
+	$\Vert y_2 + y_1 - y_0 \Vert =
+	\Vert y_2 - \frac{3}{4}(y_1 - y_0) -
+	\frac{1}{4}(y_1 - y_0) \Vert \leqslant
+	\frac{1}{4} \Vert y_1 - y_0 \Vert +
+	\frac{1}{4} \Vert y_1 - y_0 \Vert = $
 	\end{center}
 	\begin{center}
-	$\parallel y_2 \parallel =
-	\parallel y_2 - \frac{3}{4}(y_1 - y_0) +
-	\frac{3}{4}(y_1 - y_0) \parallel \leqslant
-	\frac{1}{4} \parallel y_1 - y_0 \parallel +
-	\frac{3}{4} \parallel y_1 - y_0 \parallel =
-	 \parallel y_1 - y_0 \parallel \leqslant$
+	$ = \frac{1}{2} \Vert y_1 - y_0 \Vert 			\leqslant
+	\frac{1}{2^2} \Vert y_0 \Vert$ ,
+	\end{center}
+	\begin{center}
+	$\Vert y_2 \Vert =
+	\Vert y_2 - \frac{3}{4}(y_1 - y_0) +
+	\frac{3}{4}(y_1 - y_0) \Vert \leqslant
+	\frac{1}{4} \Vert y_1 - y_0 \Vert +
+	\frac{3}{4} \Vert y_1 - y_0 \Vert =
+	 \Vert y_1 - y_0 \Vert \leqslant$
 	 \end{center}
 	\begin{center}
-	 $ \leqslant \frac{1}{2} \parallel y_0 \parallel$
+	 $ \leqslant \frac{1}{2} \Vert y_0 \Vert$
 	\end{center}
 	
 	\item Рассмотрим элемент $y_2+y_1- y_0$ . Для него 	\begin{center}	
-	$\parallel y_2+y_1- y_0 \parallel \leqslant
-	\frac{1}{2^2} \parallel y_0 \parallel$ .
+	$\Vert y_2+y_1- y_0 \Vert \leqslant
+	\frac{1}{2^2} \Vert y_0 \Vert$ .
 	\end{center}
 	Построим шар радиуса
-	$\frac{1}{4} \parallel y_2 + y_1 - y_0 \parallel$      	с центром $\frac{3}{4}(y_2 + y_1 - y_0)$.
+	$\frac{1}{4} \Vert y_2 + y_1 - y_0 \Vert$      	с центром $\frac{3}{4}(y_2 + y_1 - y_0)$.
 	В этом шаре найдём элемент 	$y_3 \in M$:
 	\begin{center}
-	$\parallel y_3 + y_2 + y_1 - y_0 \parallel =
-	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) -
-	\frac{1}{4}(y_0 - y_1 - y_2) \parallel \leqslant $
+	$\Vert y_3 + y_2 + y_1 - y_0 \Vert =
+	\Vert y_3 - \frac{3}{4}(y_0 - y_1 - y_2) -
+	\frac{1}{4}(y_0 - y_1 - y_2) \Vert \leqslant $
 	\end{center}
 	\begin{center}
-	$\leqslant \frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel +
-	\frac{1}{4} \parallel y_0 - y_1 - y_2 \parallel 			\leqslant $
+	$\leqslant \frac{1}{4} \Vert y_0 - y_1 - y_2 \Vert +
+	\frac{1}{4} \Vert y_0 - y_1 - y_2 \Vert 			\leqslant $
 	\end{center}
 	\begin{center}
 	$ \leqslant\frac{1}{2} \cdot
-	\frac{1}{2^2} \parallel y_0 \parallel =
-	\frac{1}{2^3} \parallel y_0 \parallel$ ,
+	\frac{1}{2^2} \Vert y_0 \Vert =
+	\frac{1}{2^3} \Vert y_0 \Vert$ ,
 	\end{center}
 	\begin{center}
-	$\parallel y_3 \parallel =
-	\parallel y_3 - \frac{3}{4}(y_0 - y_1 - y_2) +
-	\frac{3}{4}(y_0 - y_1 - y_2) \parallel \leqslant $
+	$\Vert y_3 \Vert =
+	\Vert y_3 - \frac{3}{4}(y_0 - y_1 - y_2) +
+	\frac{3}{4}(y_0 - y_1 - y_2) \Vert \leqslant $
 	\end{center}
 	\begin{center}
-	$\leqslant \frac{1}{4} \parallel y_0 - y_1 - y_2 				\parallel +
-	\frac{3}{4} \parallel y_0 - y_1 - y_2 \parallel =
-	 \parallel y_0 - y_1 - y_2 \parallel \leqslant
-	 \frac{1}{2^2} \parallel y_0 \parallel$
+	$\leqslant \frac{1}{4} \Vert y_0 - y_1 - y_2 				\Vert +
+	\frac{3}{4} \Vert y_0 - y_1 - y_2 \Vert =
+	 \Vert y_0 - y_1 - y_2 \Vert \leqslant
+	 \frac{1}{2^2} \Vert y_0 \Vert$
 	\end{center}
 
 Продолжая этот процесс, получим элементы $y_n, y_{n-1}, y_{n-2}, \ldots, y_3, y_2, y_1 \in M$ такие что 
@@ -1209,12 +1209,12 @@ $$\| \Delta x \|_{\mathcal{L}_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n 
 \end{example}
 
 \section{Вполне непрерывные операторы}
-\begin{definition}Линейный оператор $A \subset Z(X, Y)$ называется \textbf{вполне непрерывным}, если любое ограниченное в $X$ множество он отображает в множество, компактное в $Y$.
+\begin{definition}Линейный оператор $A \subset \mathcal{L}(X, Y)$ называется \textbf{вполне непрерывным}, если любое ограниченное в $X$ множество он отображает в множество, компактное в $Y$.
 \end{definition}
 Напомню, что в компактном множестве в любой последовательности $\lbrace y_n \rbrace_{n=1}^{\infty}$ содержится фундаментальная последовательность. Если же пространство $Y$ полно, то согласно определению эта фундаментальная последовательность имеет предел в $Y$.
 
 Множество всех вполне непрерывных операторов обозначим $\sigma(X,Y)$.
-\begin{theorem}Множество $\sigma(X,Y)$ является подпространством пространства $Z(X, Y)$.
+\begin{theorem}Множество $\sigma(X,Y)$ является подпространством пространства $\mathcal{L}(X, Y)$.
 \end{theorem}
 \begin{proof}Состроит в доказательстве двух пунктов (согласно определению подпространства).
 
@@ -1289,7 +1289,7 @@ $\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$
 Пусть линейный оператор $A_0\in \mathcal{L}(X_0,Y)$, где $X_0$ есть подпространство пространства $X$. Можно ли продолжить оператор $A_0$ на все пространство $X$ с сохранением величины нормы, т.е. можно ли построить линейных оператор $A$ такой что:
 \begin{itemize}
  \item $Ax = A_0x$, если $x\in X_0$
- \item $\parallel A \parallel = \parallel A_0 \parallel$ ?
+ \item $\Vert A \Vert = \Vert A_0 \Vert$ ?
 \end{itemize}
 
 
@@ -1302,17 +1302,17 @@ $A_1(x) = A_!(x_0+\lambda x_1^0) = A_1x_0+\lambda A_1x_1^0 = A_0 x_0 + \lambda y
 
 Пусть оператор $A_1$ существует. Тогда для любого элемента $x_0 \in X_0$ значение
 \begin{center}
-$\parallel y_1 -A_0x_0 \parallel = \parallel A_1x_1^0 - A_1x_0 \parallel = \parallel A_1(x_1^0 - x_0) \parallel \le \parallel A_1 \parallel \parallel x_1^0 - x_0 \parallel = \parallel A_0 \parallel \parallel x_1^0 - x_0 \parallel_X.$
+$\Vert y_1 -A_0x_0 \Vert = \Vert A_1x_1^0 - A_1x_0 \Vert = \Vert A_1(x_1^0 - x_0) \Vert \le \Vert A_1 \Vert \Vert x_1^0 - x_0 \Vert = \Vert A_0 \Vert \Vert x_1^0 - x_0 \Vert_X.$
 \end{center}
 
-Рассмотрим шары с центром в точках $A_0x_0$ и радиусами $\parallel A_0 \parallel \parallel x_1^0 - x_0 \parallel$. При любом выборе элемента $x_0 \in X_0$ все сферы $S_{\parallel A_0 \parallel \parallel x_0 - x_1^0 \parallel}(A_0x_0)$ должны содержать заданный общий элемент $y_1$.
+Рассмотрим шары с центром в точках $A_0x_0$ и радиусами $\Vert A_0 \Vert \Vert x_1^0 - x_0 \Vert$. При любом выборе элемента $x_0 \in X_0$ все сферы $S_{\Vert A_0 \Vert \Vert x_0 - x_1^0 \Vert}(A_0x_0)$ должны содержать заданный общий элемент $y_1$.
 
-Можно доказать, что это свойство пространства $Y$ является достаточным условием продолжения линейных операторов. Такие пространства $Y$ уникальны. Из числа практически интересных пространств такого типа отметим только пространство $M(\mathit{D})$ вещественных ограниченных в конечной области $D$ функций $y(t)$ с нормой $\parallel y\parallel_{M(D)} = \sup \limits_D\lvert y(t) \rvert$ и пространство $R_1$ вещественных чисел.
+Можно доказать, что это свойство пространства $Y$ является достаточным условием продолжения линейных операторов. Такие пространства $Y$ уникальны. Из числа практически интересных пространств такого типа отметим только пространство $M(\mathit{D})$ вещественных ограниченных в конечной области $D$ функций $y(t)$ с нормой $\Vert y\Vert_{M(D)} = \sup \limits_D\lvert y(t) \rvert$ и пространство $R_1$ вещественных чисел.
 
 В общем случае даже элементарные продолжения линейных операторов невозможны.
 
 \section{Продолжение линейных функционалов. Теорема Хана-Банаха.}
-В нормированном пространстве $X$ рассмотрим множество $X^*$ линейных функционалов $X^*=Z(X, R_1):$
+В нормированном пространстве $X$ рассмотрим множество $X^*$ линейных функционалов $X^*=\mathcal{L}(X, R_1):$
 \begin{center}
 $ f\in X^*, f(x)\in R_1$ (пространство $Y=R_1$).
 \end{center}
@@ -1330,7 +1330,7 @@ $$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leqslant \
 Действительно, если $$x_0+\lambda x_1^0=x_0 '+\lambda_1 x_1^0,$$ то $$(x_0-x_0')+(\lambda-\lambda_1)x_1^0=0.$$
 Так как $(x_0-x_0') \in X_0$, то $(\lambda-\lambda_1)x_1^0 \in X_0$, что возможно только при $\lambda=\lambda_1$. Тогда $x_0=x_0^1$.
 
-Требуется построить линейный функционал $f_1 \in Z(x_1, R_1)$, такой что\\
+Требуется построить линейный функционал $f_1 \in \mathcal{L}(x_1, R_1)$, такой что\\
 ---$f_1(x)=f_0(x)$, если $x\in X_0$,\\
 ---$\lVert f_1 \rVert=\lVert f_0 \rVert$.
 
@@ -1402,7 +1402,7 @@ $$X_2=X_1+\{ \lambda\}x_2 $$
 \end{theorem}
 Теорема Хана-Банаха верна и для произвольного нормированного пространства $X$: 
 \begin{theorem}[Хана-Банаха, $\approx 1930$ г]
-Пусть $X$ вещественное нормированное пространство и функционал $f_0 \in Z(X_0, R_1)$, где $X_0$ --- подпространство пространства $X$. Существует продолжение функционала $f_0$ на все пространство $X$ с сохранением нормы. 
+Пусть $X$ вещественное нормированное пространство и функционал $f_0 \in \mathcal{L}(X_0, R_1)$, где $X_0$ --- подпространство пространства $X$. Существует продолжение функционала $f_0$ на все пространство $X$ с сохранением нормы. 
 \end{theorem}
 \begin{remark}
 \hfill \break
@@ -1597,7 +1597,7 @@ f(x) =  \langle x, f \rangle
 \end{proof}
 \end{theorem}
 
-Обозначим множество элементов пространства $H$, таких что ${\parallel x \parallel} _H \leqslant C$ через $K$. Пусть $\lbrace x_n \rbrace$ - произвольная последовательность элементов множества $K$.
+Обозначим множество элементов пространства $H$, таких что ${\Vert x \Vert} _H \leqslant C$ через $K$. Пусть $\lbrace x_n \rbrace$ - произвольная последовательность элементов множества $K$.
 
 \begin{enumerate}
 \item Для всех элементов $x_n$ вычислим значения функционала $f_1$:
@@ -1607,7 +1607,7 @@ $f_1(x)= \langle x,\Psi_1 \rangle =(x,\Psi_1)$.
 \end{center}
 Числовая последовательность $f_1(x_n)$ ограничена:
 \begin{center}
-$\vert f_1(x_n)\vert = \vert \langle x,\Psi_1 \rangle \vert \leqslant \parallel x_n\parallel \leqslant C$.
+$\vert f_1(x_n)\vert = \vert \langle x,\Psi_1 \rangle \vert \leqslant \Vert x_n\Vert \leqslant C$.
 \end{center}
 По теореме Больцано-Вейерштрасса в $\lbrace f_1(x_n) \rbrace$ существует сходящаяся подпоследовательность, обозначим её 
 $ \langle x_{N(1,K)},\Psi_1 \rangle $,
@@ -1861,9 +1861,9 @@ $$K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau.$$
 
 Таким образом оператор $K^{*}$ есть интегральный оператор(но из $\mathcal{L}_p$ в $\mathcal{L}_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
 
-$$\parallel K \parallel = \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
+$$\Vert K \Vert = \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
 
-$$\parallel K^{*} \parallel =  \Big( \displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau  \Big)^{\frac{1}{q}} =  \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
+$$\Vert K^{*} \Vert =  \Big( \displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau  \Big)^{\frac{1}{q}} =  \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
 
 
 \textbf{Пример}.
