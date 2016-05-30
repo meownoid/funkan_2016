@@ -19,11 +19,16 @@
 \newcommand{\argmin}{\operatornamewithlimits{argmin}}
 
 %%% THEOREMS
+\newtheoremstyle{break}{3pt}{3pt}{\itshape}{}{\bfseries}{.}{\newline}{}
+
 \theoremstyle{definition}
 \newtheorem*{definition}{Определение}
 
 \theoremstyle{plain}
 \newtheorem*{theorem}{Теорема}
+
+\theoremstyle{break}
+\newtheorem*{theorem-break}{Теорема}
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Замечание}
@@ -256,7 +261,7 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 	\item Множества, компактные в пространстве суммируемых со степенью $p, (p \geqslant 1)$ функций.
 
 \begin{theorem} [Марсель Рисс, 1935 г.]
-Для того, чтобы множество $E$  пространства $\mathcal{L}_p[a, b]$ было компактным, необходимо и достаточно, чтобы
+Для того, чтобы множество $E$  пространства $L_p[a, b]$ было компактным, необходимо и достаточно, чтобы
 
 \begin{itemize}
 
@@ -268,7 +273,7 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 
 \end{theorem}
 
-Условия теоремы М. Рисса аналогичны условиям теоремы Арцела-Асколи для пространства непрерывных функций. Доказательство теоремы основано на плотности множества непрерывных на $[a, b]$ функций в пространстве $\mathcal{L}_p [a, b]$.
+Условия теоремы М. Рисса аналогичны условиям теоремы Арцела-Асколи для пространства непрерывных функций. Доказательство теоремы основано на плотности множества непрерывных на $[a, b]$ функций в пространстве $L_p [a, b]$.
 
 	\item Принцип вложенных шаров (В математическом анализе --- лемма о вложенных отрезках).
 
@@ -445,7 +450,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 
 		\item $\lVert \bar{x}\rVert_1 = \displaystyle\sum_{i}\lvert x_i\rvert$,
 
-		\item $\lVert \bar{x}\rVert_2 = (\displaystyle\sum_{i}\lvert x_i\rvert^2)^{\frac{1}{2}}$
+		\item $\lVert \bar{x}\rVert_2 = \Big( \displaystyle\sum_{i}\lvert x_i\rvert^2 \Big)^{\frac{1}{2}}$
 
 	\end{itemize}
 
@@ -463,10 +468,10 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	\lVert x\rVert = \displaystyle\sum_{k=0}^n\max_{i}\lvert\frac{d^kx(t)}{dt^k}\rvert
 	\end{equation*}
 
-	\item Пространство Банаха $\mathcal{L}_p(a,b)$ измеримых и суммируемых со степенью $p,\;p \geqslant 1,$ функций. Норма:
+	\item Пространство Банаха $L_p(a,b)$ измеримых и суммируемых со степенью $p,\;p \geqslant 1,$ функций. Норма:
 
 	\begin{equation*}
-	\lVert x\rVert^p = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}}
+	\lVert x\rVert^p = \Big(\int\limits_a^b\lvert x(t)\rvert^p dt \Big)^{\frac{1}{p}}
 	\end{equation*}
 
 	Множество полиномов с рациональными коэффициентами плотно в этих пространствах.
@@ -476,7 +481,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	В линейном множестве $C[0,1]$ непрерывных функций введем норму (и метрику):
 
 	\begin{equation*}
-	\lVert x\rVert = (\int\limits_a^b\lvert x(t)\rvert^pdt)^{\frac{1}{p}},\quad\rho(x,y) = (\int\limits_0^1\lvert x(t)-y(t)\rvert^pdt)^{\frac{1}{p}}
+	\lVert x\rVert = \Big(\int\limits_a^b\lvert x(t)\rvert^pdt \Big)^{\frac{1}{p}},\quad\rho(x,y) = \Big(\int\limits_0^1\lvert x(t)-y(t)\rvert^pdt \Big)^{\frac{1}{p}}
 	\end{equation*}
 
 	Получаемое пространство не является полным. Действительно, последовательность функций $x_k(t)=t^k$ является фундаментальной последовательностью:
@@ -551,7 +556,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \begin{enumerate}
 	\item Пространство $l^2$ числовых последовательностей $x = \lbrace \xi_k \rbrace_{k=1}^{\infty}$ таких, что ряд $\displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$ сходится. Скалярное произведение $(x, y) = \displaystyle\sum_{k=1}^{\infty} \xi_k \overbar{\eta}_k$ и норма $\Vert x \Vert^2 = \displaystyle\sum_{k=1}^{\infty} \lvert \xi_k \rvert^2$.
 	
-	\item Пространство $\mathcal{L}_{\varphi}^2 (a, b)$.
+	\item Пространство $L_{\varphi}^2 (a, b)$.
 	
 	$$ (x, y) = \displaystyle\int\limits_a^b \varphi(t) x(t) \overbar{y}(t) dt$$
 	
@@ -559,7 +564,7 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 	
 	Функция $\varphi(t)$ --- функция, суммируемая на $(a, b)$ такая, что $\varphi(t) > 0$ почти везде.
 	
-	Пространство $\mathcal{L}_{\varphi}^2 (a, b)$ сепарабельно: проведя декомплексификацию этого пространства, получим вещественные пространства, в которых множества полиномов с рациональными коэффициентами являются всюду плотными.
+	Пространство $L_{\varphi}^2 (a, b)$ сепарабельно: проведя декомплексификацию этого пространства, получим вещественные пространства, в которых множества полиномов с рациональными коэффициентами являются всюду плотными.
 \end{enumerate}
 
 Введение скалярного произведения определяет понятия:
@@ -583,11 +588,11 @@ z_1+z_2=(x_1+x_2)+i(y_1+y_2)
 \begin{examples}
 \leavevmode
 \begin{enumerate}
-	\item Функции $1, \cos \frac{2 \pi (t - a)}{b - a}, \sin \frac{2 \pi (t - a)}{b - a}, \ldots, \cos \frac{2 \pi k (t - a)}{b - a}, \sin \frac{2 \pi k (t - a)}{b - a}$ образуют базис вещественного сепарабельного гильбертова пространства $\mathcal{L}_2(a, b)$
+	\item Функции $1, \cos \frac{2 \pi (t - a)}{b - a}, \sin \frac{2 \pi (t - a)}{b - a}, \ldots, \cos \frac{2 \pi k (t - a)}{b - a}, \sin \frac{2 \pi k (t - a)}{b - a}$ образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
 	
-	\item Полиномы Лежандра $P_k(t)$ степени $k$ ($k = 0, 1, 2, \ldots$) образуют базис вещественного сепарабельного гильбертова пространства $\mathcal{L}_2(a, b)$
+	\item Полиномы Лежандра $P_k(t)$ степени $k$ ($k = 0, 1, 2, \ldots$) образуют базис вещественного сепарабельного гильбертова пространства $L_2(a, b)$
 	
-	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $\mathcal{L}_{\varphi}^2 (a, b)$, где $\varphi(t) = \frac{1}{\sqrt{(1 - t^2)}}$
+	\item Полиномы Чебышева $T_k(t)$ образуют базис пространства $L_{\varphi}^2 (a, b)$, где $\varphi(t) = \frac{1}{\sqrt{(1 - t^2)}}$
 \end{enumerate}
 \end{examples}
 
@@ -626,7 +631,7 @@ F(x) =
 
 \begin{enumerate}
 
- \item при $x_n \to 0$ --- существует $\lim x_n= x^*=0 \in D$,
+ \item при $x_n \to -0$ существует $\lim x_n= x^*=0 \in D$,
  
  \item предел $F(x_n)$ существует и равен $y^*=1 \in Y$
  
@@ -695,18 +700,15 @@ $ C_0=\underset{S_1}{\sup}\Vert Ax \Vert<+\infty $.
 
 Эта величина называется \textbf{нормой} линейного оператора, она обозначается
 \begin{center}
-$\Vert A \Vert,$ \quad
-( $\Vert A \Vert _{X \to Y}$).
+$\lVert A \rVert,$ \quad
+( $\lVert A \rVert_{X \to Y}$).
 \end{center}
 
-Величина $\underset{\Vert x\Vert \leq1}{\sup}\Vert Ax \Vert =
-\Vert A \Vert =
-\underset{\Vert x\Vert=1}{\sup}\Vert Ax \Vert$.
+Величина $\underset{\lVert x \rVert \leqslant 1}{\sup}\lVert Ax \rVert = \lVert A \rVert = \underset{\lVert x \rVert = 1}{\sup}\lVert Ax \rVert$.
 
 Действительно,
 \begin{center}
-$C_0\leq 
-\underset{\Vert x\Vert=1}{\sup}\Vert Ax \Vert$.
+$C_0 \leqslant \underset{\lVert x \rVert \leqslant  1}{\sup}\lVert Ax \rVert$.
 \end{center}
 
 С другой стороны 
@@ -728,7 +730,7 @@ $\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert =\Vert A \Vert$.
 \textbf{Замечание.} Если получена оценка  $\Vert Ax \Vert \leqslant {C}  \Vert x \Vert$, то $\Vert A \Vert \leqslant {C} $.
 
 \begin{example}
-Интегральный оператор $K$ из $X=\mathcal{L}_p(a,b)$ в $Y=\mathcal{L}_q(a,b)$, $
+Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
 \frac{1}{p}+\frac{1}{q}=1$,
 \begin{center}
 $y=K\cdot x$ , $ y(t)=\displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau$.
@@ -743,12 +745,12 @@ ${(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\ve
 \begin{center}
 $\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert \leqslant (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q} \cdot {(\displaystyle\int\limits_a^b {\vert x(\tau)\vert} ^p d\tau)^\frac{1}{p}=}$
 
-$= \Vert x \Vert _{\mathcal{L}_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
+$= \Vert x \Vert _{L_p(a,b)}\cdot (\displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau)^\frac{1}{q}$.
 
-${\Vert y \Vert}^q _{\mathcal{L}_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert^{q}} dt\leq {\Vert x \Vert}^q _{\mathcal{L}_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
+${\Vert y \Vert}^q _{L_q(a,b)}=\displaystyle\int\limits_a^b {\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau \vert^{q}} dt\leq {\Vert x \Vert}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau$.
 
-${\Vert y \Vert}_{\mathcal{L}_q(a,b)}=
-{\Vert Kx\Vert}_{\mathcal{L}_q(a,b)} \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \Vert x \Vert _{\mathcal{L}_p(a,b)} $ 
+${\Vert y \Vert}_{L_q(a,b)}=
+{\Vert Kx\Vert}_{L_q(a,b)} \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}\cdot \Vert x \Vert _{L_p(a,b)} $ 
 \end{center}
 и $\Vert K \Vert \leqslant {(\displaystyle\int\limits_a^b \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau dt)^\frac{1}{q}}$.
 
@@ -818,29 +820,29 @@ $\Vert E-A_n\Vert=\sup \limits_{S_1} \Vert(E-A_n)x\Vert\ge \sup \limits_{S_1^0} 
 
 Мы начнем с простой леммы.
 
-\begin{lemma}[Лемма I]
+\begin{lemma}[I]
 Пусть оператор $A_n \subset \mathcal{L}(X,Y)$ и известно, что для всех элементов некоторого шара $S_r(x_0)$ нормы $\lVert A_n x\rVert_Y$ ограничены: $\lVert A_n x\rVert \leqslant c$. Тогда существует постоянная $M$, такая что норма оператора $A_n$ ограничена числом $M$: $\lVert A_n \rVert \leqslant M$.
 \end{lemma}
 
 \begin{proof}
 Возьмем любой элемент $x \subset X$ и образуем элемент $x_0+\frac{x}{\lVert x\rVert}r \subset S_r(x_0)$. Тогда:
 
-\begin{center}
-$\lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert \leqslant c$, т.е.
+$$\lVert A_n(x_0+\frac{r}{\lVert x \rVert}x) \rVert \leqslant c \mbox{, т.е.}$$
 
-$c \geqslant \lVert A_n(x_0+\frac{r}{\lVert x\rVert}x)\rVert$,
-
-$c \geqslant \lVert \frac{r}{\lVert x\rVert}A_n x + A_n x_0 \rVert \geqslant \lVert A_n x\rVert \frac{r}{\lVert x\rVert} - \lVert A_n x_0\rVert \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x_0\rVert - c$,
-
-$2c \geqslant \frac{r}{\lVert x\rVert}\lVert A_n x\rVert$, $\frac{2c}{r}\lVert x\rVert \geqslant \lVert A_n x\rVert$, $\lVert A_n x\rVert \leqslant \frac{2c}{r}\lVert x\rVert$
-\end{center}
+\begin{align*}
+c &\geqslant \lVert A_n(x_0+\frac{r}{\lVert x \rVert}x) \rVert,\\
+c &\geqslant \lVert \frac{r}{\lVert x \rVert}A_n x + A_n x_0 \rVert \geqslant \lVert A_n x \rVert \frac{r}{\lVert x\rVert} - \lVert A_n x_0 \rVert \geqslant \frac{r}{\lVert x \rVert}\lVert A_n x_0 \rVert - c,\\
+2c &\geqslant \frac{r}{\lVert x \rVert}\lVert A_n x\rVert,\\
+\frac{2c}{r}\lVert x \rVert &\geqslant \lVert A_n x\rVert,\\
+\lVert A_n x \rVert &\leqslant \frac{2c}{r}\lVert x \rVert.
+\end{align*}
 
 Достаточно положить $M=\frac{2c}{r}$ : $\lVert A_n x\rVert \leqslant M\lVert x\rVert$ для всех $x \subset X$, следовательно норма оператора $\lVert A\rVert \leqslant M$.
 \end{proof}
 
 Следующая лемма верна для полных нормированных пространств $X$, т.е. для банаховых пространств.
 
-\begin{lemma}[Лемма II]
+\begin{lemma}[II]
 Пусть $X$ --- пространство Банаха. Пусть $\lbrace A_n\rbrace$ последовательность операторов множества $\mathcal{L}(X,Y)$. Тогда если нормы $\lVert A_n x\rVert$ элементов $A_n x$ ограничены для каждого $x \subset X$, то нормы операторов $A_n \quad \lVert A_n\rVert$ ограничены в совокупности.
 \end{lemma}
 
@@ -1112,7 +1114,7 @@ $\lVert B y_0 \rVert \leqslant \lVert x^* - B s_n \rVert + \lVert B s_n \rVert \
 \end{center}
 
 \begin{center}
-$\leqslant C_0 \lVert y_0\rVert [\frac{1}{2^n} + \frac{1}{2^{n+1}}+\ldots] + C_0 \lVert y_0\rVert [1+\frac{1}{2} +\frac{1}{2^2}+ \ldots+\frac{1}{2^{n-1}}]= 2 C_0 \lVert y_0\rVert$
+$\leqslant C_0 \lVert y_0\rVert \Big[ \frac{1}{2^n} + \frac{1}{2^{n+1}}+\ldots \Big] + C_0 \lVert y_0\rVert \Big[ 1+\frac{1}{2} +\frac{1}{2^2}+ \ldots+\frac{1}{2^{n-1}} \Big]= 2 C_0 \lVert y_0\rVert$
 \end{center}
 
 $\lVert B y_0 \rVert \leqslant 2 C_0 \lVert y_0\rVert$, т.е. оператор $B$ линеен, $ \lVert B y_0 \rVert _{Y \to X} \leqslant 2 C_0$.
@@ -1150,17 +1152,17 @@ x(\xi,0)=x(\xi)
 
 Прямая задача теплопроводности состоит в нахождении функции $x(\xi,t)$ при всех $t >0$, т.е. в решении уравнения (\ref{heat_equation}) при граничных условиях (\ref{border_conditions}) и при начальном условии (\ref{initial_conditions}).
 
-\guillemotleft Обобщенное\guillemotright \;решение этой простейшей задачи при условии $x(\xi) \in \mathcal{L}_2(0, \pi)$ получаем методом Фурье:
+\guillemotleft Обобщенное\guillemotright \;решение этой простейшей задачи при условии $x(\xi) \in L_2(0, \pi)$ получаем методом Фурье:
 \begin{center}
 $$x(\xi,t) = \displaystyle\sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$ где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
 \end{center}
 
-Ясно, что $\|x(\cdot, t)\|_{\mathcal{L}_2 (0, \pi)}^{2} \leqslant \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $\mathcal{L}_2 (0, \pi)$.
+Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leqslant \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
 \begin{center}
 $$x(\xi, t) = \displaystyle\sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
 \end{center}
 
-В частности $x(\xi,T) = \displaystyle\int\limits_0^\pi K(\xi, \eta, T) x(\eta)d\eta = Ax$. Оператор $A$ линейный интегральный оператор из пространства $\mathcal{L}_2(0, \pi)$ в пространство $\mathcal{L}_2(0, \pi)$. Норма этого оператора не превосходит $1$, оператор $A$ замкнут.
+В частности $x(\xi,T) = \displaystyle\int\limits_0^\pi K(\xi, \eta, T) x(\eta)d\eta = Ax$. Оператор $A$ линейный интегральный оператор из пространства $L_2(0, \pi)$ в пространство $L_2(0, \pi)$. Норма этого оператора не превосходит $1$, оператор $A$ замкнут.
 
 	\item Обратная задача теплопроводности.
 
@@ -1169,25 +1171,24 @@ $$x(\xi, t) = \displaystyle\sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\l
 $x(\xi, T) = y(\xi)$
 \end{center}
 
-Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A \in \mathcal{L}(X,Y), \; X = \mathcal{L}_{2}(0, \pi), \; Y = \mathcal{L}_{2}(0, \pi)$ --- банаховы пространства.
+Требуется \guillemotleft восстановить\guillemotright \;неизвестное начальное распределение $x(\xi)$, т.е. требуется решить уравнение $Ax = y$, где $A \in \mathcal{L}(X,Y), \; X = L_{2}(0, \pi), \; Y = L_{2}(0, \pi)$ --- банаховы пространства.
 
 Будет ли эта задача корректно поставлена по Адамару?
 
-Довольно просто доказать, что если решение задачи существует, то это решение единственно. Для того, чтобы задача была поставлена корректно по Адамару, остается доказать (согласно теореме Банаха), что задача разрешима при любой функции $y \in Y$, т.е. доказать, что обратный оператор $B = A^{-1}$ заданы на всем пространстве $Y = \mathcal{L}_{2}(0, \pi)$.
+Довольно просто доказать, что если решение задачи существует, то это решение единственно. Для того, чтобы задача была поставлена корректно по Адамару, остается доказать (согласно теореме Банаха), что задача разрешима при любой функции $y \in Y$, т.е. доказать, что обратный оператор $B = A^{-1}$ заданы на всем пространстве $Y = L_{2}(0, \pi)$.
 
 Это утверждение неверно.
 
 Действительно, рассмотрим функцию
 \begin{center}
-$y(\xi)=\displaystyle\sum\limits_{k=1}^{\infty} \frac{1}{k} X_k(\xi) ,  \; y\in \mathcal{L}_{2}(0, \pi), \; \|y\|^2 = \sum\limits_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} ,  \; \|y\| = \frac{1}{\sqrt{6}}\pi \mbox{.}$
+$y(\xi)=\displaystyle\sum\limits_{k=1}^{\infty} \frac{1}{k} X_k(\xi) ,  \; y\in L_{2}(0, \pi), \; \|y\|^2 = \sum\limits_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} ,  \; \|y\| = \frac{1}{\sqrt{6}}\pi \mbox{.}$
 \end{center}
 
 Предположим, что решение $x(\xi)$ такой обратной задачи существует. Тогда коэффициенты Фурье $x_k$ этого решения должны быть равными
-\begin{center}
-$x_k=e^{k^2 T} \frac{1}{k} \; \mbox{ и } \; x(\xi) = \displaystyle\sum\limits_{k=1}^{\infty} x_k X_k(\xi)$
-\end{center}
 
-Но ряд $\displaystyle\sum\limits_{k=1}^{\infty} x_k^2 = \sum\limits_{k=1}^{\infty} e^{2k^2 T} \frac{1}{k^2}$ при $T > 0$ расходится, следовательно функция $x$ не принадлежит пространству $\mathcal{L}_2(0,\pi)$. Наше предположение неверно.
+$$x_k=e^{k^2 T} \frac{1}{k} \; \mbox{ и } \; x(\xi) = \displaystyle\sum\limits_{k=1}^{\infty} x_k X_k(\xi)$$
+
+Но ряд $\displaystyle\sum\limits_{k=1}^{\infty} x_k^2 = \sum\limits_{k=1}^{\infty} e^{2k^2 T} \frac{1}{k^2}$ при $T > 0$ расходится, следовательно функция $x$ не принадлежит пространству $L_2(0,\pi)$. Наше предположение неверно.
 
 Ясно, что отсутствует и непрерывная зависимость решения от вариации правых частей. Действительно, пусть $x^{*}$ есть точное решение уравнения $Ax^*=y^*$. Рассмотрим вариацию правой части  $\Delta y$:
 \begin{center}
@@ -1196,7 +1197,7 @@ $$\Delta y = \varepsilon \int\limits_{k=1}^{n} \frac{1}{k} X_k(\xi) , \; \; \| \
 
 Для соответствующей вариации решения $\Delta x$ получаем
 \begin{center}
-$$\| \Delta x \|_{\mathcal{L}_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k^2} e^{2 k^2 T},$$
+$$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k^2} e^{2 k^2 T},$$
 \end{center}
 и величина $\| \Delta x \|$ сколь угодно велика при $n \longrightarrow \infty.$
 
@@ -1232,7 +1233,8 @@ $$\| \Delta x \|_{\mathcal{L}_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n 
 Действительно, пусть $\psi_1,\psi_2,\ldots,\psi_n,\ldots, \lVert\psi_n\rVert =1$ --- ортонормальный базис пространства. Множество $S_1$ ограничено, но множество $ES_1 (=S_1)$ не является компактным: из последовательности $\lbrace \psi_n \rbrace_{n=1}^{\infty}$ нельзя выбрать фундаментальную последовательность, так как $\lVert\psi_n - \psi_m \rVert ^2=(\psi_n - \psi_m, \psi_n - \psi_m)= (\psi_n,\psi_n)+ (\psi_m,\psi_m)=2$ при $n \neq m$
 \end{cexample}
 
-\begin{example}Интегральный оператор $\widetilde{K}$ из $\mathcal{L}_2(a,b)$ в $\mathcal{L}_2(a,b)$.
+\begin{example}[1]
+Интегральный оператор $\widetilde{K}$ из $L_2(a,b)$ в $L_2(a,b)$.
 
 \begin{center}
 $y=\widetilde{K}x$, $y(t)=\displaystyle\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau$,
@@ -1243,28 +1245,28 @@ $y=\widetilde{K}x$, $y(t)=\displaystyle\int\limits_a^b \widetilde{K}(t, \tau)x(\
 В этом случае функции $y(t)$ непрерывны:
 
 \begin{center}
-$|y(t_2)-y(t_1)|^2\leq \displaystyle\int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \displaystyle\int\limits_a^b |x(\tau)|^2 d\tau \leqslant \varepsilon^2 (b-a){\lVert x\rVert^2}_{\mathcal{L}_2(a,b)}$
+$|y(t_2)-y(t_1)|^2\leq \displaystyle\int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \displaystyle\int\limits_a^b |x(\tau)|^2 d\tau \leqslant \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}$
 \end{center}
 
 Величина $|y(t_2)-y(t_1)|\to 0$ при $|t_2-t_1|\to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
 
 Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leqslant M^2 (b-a)$.
 
-По теореме Арцела-Асколи множество $\widetilde{K} S_1$ компактно в $C[a,b]$: из любой последовательности элементов $y_n=\widetilde{K} x_n$ можно выделить фундаментальную последовательность в $C[a,b]$, которая является фундаментальной последовательностью и в пространстве $\mathcal{L}_2 (a,b))$.
+По теореме Арцела-Асколи множество $\widetilde{K} S_1$ компактно в $C[a,b]$: из любой последовательности элементов $y_n=\widetilde{K} x_n$ можно выделить фундаментальную последовательность в $C[a,b]$, которая является фундаментальной последовательностью и в пространстве $L_2 (a,b))$.
 \end{example}
-\begin{example}Интегральный оператор $K$ из $\mathcal{L}_2(a,b)$ в $\mathcal{L}_2(a,b)$.
-\begin{center}
-$y=Kx$, $y(t)=\int\limits_a^b K(t, \tau)x(\tau)d\tau $,
-\end{center}
-где $K(t, \tau)\subset \mathcal{L}_2(D)$ (интегральный оператор Гильберта-Шмидта).
+
+\begin{example}[2]
+Интегральный оператор $K$ из $L_2(a,b)$ в $L_2(a,b)$.
+
+$$y=Kx, \; y(t) = \displaystyle\int\limits_a^b K(t, \tau)x(\tau)d\tau,$$
+
+где $K(t, \tau)\subset L_2(D)$ (интегральный оператор Гильберта-Шмидта).
 
 По теореме Лебега для функции $K(t, \tau)$ существует последовательность непрерывных в $D$ функций $\widetilde{K}_n (t, \tau)$, таких что
-\begin{center}
-$\int\limits_a^b |K(t, \tau)-K_n(t, \tau)|^2d\tau dt \to 0$ при $n\to \infty$,
-\end{center}
-\begin{center}
-т.е. $\lVert K-\widetilde{K}_n \rVert \to 0$ при $n\to \infty$.
-\end{center}
+
+$$\displaystyle\int\limits_a^b |K(t, \tau) - K_n(t, \tau)|^2d\tau dt \to 0 \mbox{ при } n\to \infty,$$
+
+$$\mbox{т.е. } \lVert K-\widetilde{K}_n \rVert \to 0 \mbox{ при } n\to \infty.$$
 
 Так как интегральные операторы $\widetilde{K}_n$ вполне непрерывны, то и интегральный оператор Гильберта-Шмидта вполне непрерывен.
 \end{example}
@@ -1313,17 +1315,17 @@ $\Vert y_1 -A_0x_0 \Vert = \Vert A_1x_1^0 - A_1x_0 \Vert = \Vert A_1(x_1^0 - x_0
 $ f\in X^*, f(x)\in R_1$ (пространство $Y=R_1$).
 \end{center}
 Норма функционала $f$ определяется естественным образом:
-$$\lVert f \rVert = \underset{\lVert x \rVert=1}{sup} |f(x)|, |f(x)| \leqslant \lVert f \rVert * \lVert x \rVert_X $$.
+$$\lVert f \rVert = \underset{\lVert x \rVert=1}{\sup} \lvert f(x) \rvert,$$
+$$\lvert f(x) \rvert \leqslant \lVert f \rVert \cdot \lVert x \rVert_X.$$
 
-\begin{theorem}(Об элементарном продолжении).
-Пусть $X_0$ подпространство пространства $X$, и на $X_0$ определен функционал $f_0$ с нормой $\lVert f_0 \rVert = \underset{\lVert x \rVert=1, x \in X_0}{sup}|f(x)|$.
-
-Пусть элемент $x_1^0 \in X$, но $x_1^0 \overbar{\in} X_0$.
+\begin{theorem-break}[Об элементарном продолжении]
+Пусть $X_0$ подпространство пространства $X$, и на $X_0$ определен функционал $f_0$ с нормой $\lVert f_0 \rVert = \underset{\lVert x \rVert=1, x \in X_0}{sup}|f(x)|$. Пусть элемент $x_1^0 \in X$, но $x_1^0 \notin X_0$.
 
 Введем множество $X_1 \subset X$ элементов вида $x_0+\lambda x_1^0$, где $x_0$ любой элемент пространства $X_0$, $-\infty < \lambda < \infty$. Представление элемента $x_1$ в виде $x_0+\lambda x_1^0$ единственно.
+\end{theorem-break}
 
 \begin{proof}
-Действительно, если $$x_0+\lambda x_1^0=x_0 '+\lambda_1 x_1^0,$$ то $$(x_0-x_0')+(\lambda-\lambda_1)x_1^0=0.$$
+Действительно, если $$x_0+\lambda x_1^0=x_0'+\lambda_1 x_1^0,$$ то $$(x_0-x_0')+(\lambda-\lambda_1)x_1^0=0.$$
 Так как $(x_0-x_0') \in X_0$, то $(\lambda-\lambda_1)x_1^0 \in X_0$, что возможно только при $\lambda=\lambda_1$. Тогда $x_0=x_0^1$.
 
 Требуется построить линейный функционал $f_1 \in \mathcal{L}(x_1, R_1)$, такой что
@@ -1386,34 +1388,35 @@ $$ \lVert f_1 \rVert=\underset{x \in X, \; \lVert x \rVert = 1 }{\sup} |f_1(x)| 
 
 Элементарное продолжение функционала определяется выбором значения $f_1(x)$ на элементе $x_1^0$.
 \end{proof}
-\end{theorem}
 
 \begin{theorem}[Хана-Банаха в случае сепарабельного пространства]
-В сепарабельном пространстве $X$ существует всюду плотное счетное множество $D$ линейно независимых элементов.
-В подпространстве $X_0 \subset X$ определен линейный функционал $f_0$ с нормой $\lVert f_0 \rVert$. В множестве $D$ укажем элементы $x_1, x_2, \ldots, x_n,\ldots$, не принадлежащие $X_0$. Построим подпространство
+В сепарабельном пространстве $X$ существует всюду плотное счетное множество $D$ линейно независимых элементов. В подпространстве $X_0 \subset X$ определен линейный функционал $f_0$ с нормой $\lVert f_0 \rVert$. В множестве $D$ укажем элементы $x_1, x_2, \ldots, x_n,\ldots$, не принадлежащие $X_0$.
+
+Построим подпространство
 $$X_1=X_0+\{ \lambda\}x_1 $$
-и элементарное расширение $f_1$ функционала $f_0$ на $X_1$, $\lVert f_1 \rVert= \lVert f_0 \rVert$;\\
-построим подпространство
+и элементарное расширение $f_1$ функционала $f_0$ на $X_1$, $\lVert f_1 \rVert= \lVert f_0 \rVert$.
+
+Построим подпространство
 $$X_2=X_1+\{ \lambda\}x_2 $$
-и элементарное расширение $f_2$ функционала $f_1$ на $X_2$, $\lVert f_2 \rVert= \lVert f_1 \rVert$.\\
+и элементарное расширение $f_2$ функционала $f_1$ на $X_2$, $\lVert f_2 \rVert= \lVert f_1 \rVert$.
+
 Продолжая этот процесс, получим функционал $f$, определенный на $X=X_0+\overbar{\overset{\infty}{\underset{k=1}{\bigcup}}X_k}$, $\lVert f \rVert= \lVert f_0 \rVert.$
 \end{theorem}
 Теорема Хана-Банаха верна и для произвольного нормированного пространства $X$: 
-\begin{theorem}[Хана-Банаха, $\approx 1930$ г]
+\begin{theorem}[Хана-Банаха, $\sim$ 1930 г.]
 Пусть $X$ вещественное нормированное пространство и функционал $f_0 \in \mathcal{L}(X_0, R_1)$, где $X_0$ --- подпространство пространства $X$. Существует продолжение функционала $f_0$ на все пространство $X$ с сохранением нормы. 
 \end{theorem}
 \begin{remark}
-\hfill \break
-\vspace{-1.5em}
+\hfill \newline
 \begin{enumerate}
-\item[1)] Продолжение функционала $f_0$ не единственно.
-\item[2)] Если $X$ - комплексное нормированное пространство, то теорема Хана-Банаха верна (значения функционалов $f_0$ и $f_1$ --- комплексные числа).
+\item Продолжение функционала $f_0$ не единственно.
+\item Если $X$ - комплексное нормированное пространство, то теорема Хана-Банаха верна (значения функционалов $f_0$ и $f_1$ --- комплексные числа).
 \end{enumerate}
 \end{remark}
 
 \section{Следствия теоремы Хана-Банаха}
 
-\begin{corollary}[Теорема о достаточном числе функционалов]
+\begin{corollary}[1. Теорема о достаточном числе функционалов]
 Для любого элемента $x_0 \in X$, $(x_0 \ne0)$ существует функционал $f \in X^*$, такой, что $\lVert f \rVert=1$, $f(x_0)=\lVert x_0\rVert$.
 \end{corollary}
 
@@ -1430,7 +1433,7 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 \end{equation*}
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}[2]
 Пусть $\Omega$ линейное множество в пространстве $X$ и элемент $x_0 \subset X$ не принадлежит $\Omega$: $\smash{\displaystyle \inf_{x' \in \Omega}} \lVert x_0-x' \rVert = d>0$. Тогда существует функционал $f \in X^*$, такой, что $f(x')=0$, если $x' \in \Omega$ и $\lVert f \rVert = 1$,$f(x_0)=d$
 \end{corollary}
 \begin{proof}
@@ -1444,20 +1447,20 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert ; \lVert f\rVert=1.
 
 По теореме Хана-Банаха существует продолжение $f$ функционала $f_0$ на все пространство $X$:
 \begin{equation*}
-\lVert f \rVert=1;\mbox{ при }  x \in X_0,  f(x)=\lambda d (f(x)=0, x\in \Omega; f(x_0)=d).
+\lVert f \rVert=1; \mbox{ при }  x \in X_0, \;  f(x)=\lambda d \; (f(x)=0, \; x\in \Omega; \; f(x_0)=d).
 \qedhere
 \end{equation*}
 \end{proof}
 
-\begin{corollary}
-Если для всех $f \subset X^*$ значения $f(x)=0$, то $x=\mathbb{0}$
+\begin{corollary}[3]
+Если для всех $f \subset X^*$ значения $f(x)=0$, то $x=\mathbb{0}$.
 \end{corollary}
 
-\begin{corollary}
+\begin{corollary}[4]
 Если для всех функционалов $f \in X^*$, норма которых равна $1$, выполнено неравенство $f(x_0)\leqslant C$, то $\lVert x_0 \rVert \leqslant C$.
 \end{corollary}
 
-\begin{corollary}
+\begin{corollary}[5]
 Пусть $\{ x_1, x_2, x_3, \ldots x_n\}$ система линейно независимых элементов нормированного пространства $X$. Тогда существует система функционалов $\{ f_1, f_2, f_3, \ldots f_n\}$, $f_n \in X^*$ такая, что 
 \begin{equation*}
 f_k(x_i) = 
@@ -1468,13 +1471,13 @@ f_k(x_i) =
 \end{equation*}
 \end{corollary}
 \begin{proof}
-Обозначим линейную оболочку системы элементов $\{ x_2, x_3, \ldots x_n\}$ через $\Omega_1$, $\Omega_1 \subset X$. Элемент $x_1 \overbar{\in} \Omega_1$: $\rho(x_1, \Omega)=d_1>0$. Согласно свойству (2) существует функционал $f_1 \in X^*$, такой, что 
+Обозначим линейную оболочку системы элементов $\{ x_2, x_3, \ldots x_n\}$ через $\Omega_1$, $\Omega_1 \subset X$. Элемент $x_1 \notin \Omega_1$: $\rho(x_1, \Omega)=d_1>0$. Согласно следствию (2) существует функционал $f_1 \in X^*$, такой, что 
 \begin{equation*}
-\lVert f_1 \rVert =d_1, f_1(x_1)=1, f_1(\Omega_1)=0: f_1(x_2)=0, f_1(x_3)=0,\ldots, f_1(x_n)=0.
+\lVert f_1 \rVert =d_1, \; f_1(x_1)=1, \; f_1(\Omega_1)=0: \; f_1(x_2)=0, \; f_1(x_3)=0, \;\ldots, \; f_1(x_n)=0.
 \end{equation*}
-Обозначим $\Omega_2$ линейную оболочку элементов $\{ x_1, x_3, \ldots x_n\}$. Элемент $x_2 \in \Omega_2$: $\rho(x_2, \Omega_2)=d_2$. По свойству (2) существует функционал $f_2 \in X^*$ такой, что 
+Обозначим $\Omega_2$ линейную оболочку элементов $\{ x_1, x_3, \ldots x_n\}$. Элемент $x_2 \in \Omega_2$: $\rho(x_2, \Omega_2)=d_2$. По следствию (2) существует функционал $f_2 \in X^*$ такой, что 
 \begin{equation*}
-\lVert f_2 \rVert=d_2 > 0, f_2(x_2)=1, f_2(\Omega_2)=0: f_2(x_1)=0, f_2(x_3)=0,\ldots, f_2(x_n)=0.
+\lVert f_2 \rVert=d_2 > 0, \; f_2(x_2)=1, \; f_2(\Omega_2)=0: \; f_2(x_1)=0, \; f_2(x_3)=0, \;\ldots, \; f_2(x_n)=0.
 \end{equation*}
 Продолжая этот процесс, получим функционалы $f_k \in X^*$, $k=1, 2, \ldots, n$
 \begin{equation*}
@@ -1486,7 +1489,7 @@ f_k(x_i) =
 \qedhere
 \end{equation*}
 \end{proof}
- \begin{corollary}[Теорема об опорной плоскости]
+\begin{corollary}[6. Теорема об опорной плоскости]
 Пусть $f \in X^*$. Плоскостью (гиперплоскостью) в пространстве $X$ называется множество $L$ элементов, удовлетворяющих условию $f(x)=C$, где $C$ - вещественное число.
 \end{corollary}
 
@@ -1501,7 +1504,7 @@ f_k(x_i) =
 \begin{proof}
 Построим подпространство $X_0$ элементов вида $\{ \lambda \}x_0$. На $X_0$ определим функционал $f_0$:
 \begin{equation*}
-f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, |f_0(x)|=|\lambda|\lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x \rVert; \lVert f_0 \rVert=1.
+f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, \; |f_0(x)|=|\lambda|\lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x \rVert; \; \lVert f_0 \rVert=1.
 \end{equation*}
 Продолжим функционал $f_0$ на все пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overbar{V}_r(\mathbb{0})$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overbar{V}_r(\mathbb{0})$:
 \begin{equation*}
@@ -1571,29 +1574,30 @@ f(x) =  \langle x, f \rangle
 Введение сопряженного пространства приводит к новому типу сходимости последовательности $\{x_n\}$ элементов $x_n$ пространства $X$.
 
 \begin{definition}
-Последовательность $x_n$ сходится к элементу $x^* \in X$ \textbf{слабо}, если числовые последовательности $f(x_n) \rightarrow f(x^*)$ для любого функционала $f \in X^*$. В этом случае пишут $x_n \rightarrow x^*$. ($ \langle x_n,f \rangle  \ \rightarrow \  \langle x^*, f \rangle ,\ f \in X^*$, при этом сами значения $f(x_n)$ и $f(x^*)$ зависят от выбора функционалов $f$).
+Последовательность $x_n$ сходится к элементу $x^* \in X$ \textbf{слабо}, если числовые последовательности $f(x_n) \rightarrow f(x^*)$ для любого функционала $f \in X^*$. В этом случае пишут $x_n \rightarrow x^*$ \big($ \langle x_n,f \rangle  \ \rightarrow \  \langle x^*, f \rangle ,\ f \in X^*$\big), при этом сами значения $f(x_n)$ и $f(x^*)$ зависят от выбора функционалов $f$.
 
-Как сильный предел последовательности, так и слабый предел единственны: если $x_n\rightarrow~x^*$ и $x_n \rightarrow \widetilde{x}$, то для любого функционала $f$: $f(x^*-\widetilde{x})=0$. По теореме Хана-Банаха (следствие 3): $x^*=\widetilde{x}$.
+Как сильный предел последовательности, так и слабый предел единственны: если $x_n\rightarrow~x^*$ и $x_n \rightarrow \widetilde{x}$, то для любого функционала $f$: $f(x^*-\widetilde{x})=0$. По теореме Хана-Банаха (следствие (3)): $x^*=\widetilde{x}$.
 \end{definition}
 
 \begin{lemma}
 Если $x_n \rightarrow x_0$, то $\lVert x_n \rVert \leqslant \lVert x_0 \rVert$. (Слабо сходящаяся последовательность элементов ограничена по норме).
+\end{lemma}
 \begin{proof}
 Для всех $f \in X*$ значения $f(x_n) \rightarrow f(x_0)$ при $n \rightarrow \infty$. По теореме о достаточном числе функционалов (Глава 3, \textsection 2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \rightarrow f_n(x_0)$. Но $|f_n(x_0)| \leqslant \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim}\lVert x_n \rVert \leqslant \lVert x_0 \rVert$.
 \end{proof}
-\end{lemma}
+
 Понятие слабой сходимости последовательности элементов порождает также понятие \textbf{слабо фундаментальной последовательности} $\{x_n\}$: последовательность $\{x_n\}$ называется слабо фундаментальной, если для каждого функционала $f \in X^*$ последовательность чисел $\{f(x_n)\}$ фундаментальна.
 
-В соответствии с этим определением говорят, что множество $K$ \textbf{слабо компактно}, если из любой последовательности его элементов можно составить ее подпоследовательность слабо функциональную: для последовательности $\{x_n\}$ существует ее подпоследовательность $\{x_{N(k)}\}$ такая что числовые последовательности $\{f(x_{N(k)})\}$ имеют предел при $k \rightarrow \infty$. Значения $f(x_{N(k)})$ и предельное значение зависят от выбора функционала $f$.
+В соответствии с этим определением говорят, что множество $K$ \textbf{слабо компактно}, если из любой последовательности его элементов можно составить ее подпоследовательность слабо фундаментальную: для последовательности $\{x_n\}$ существует ее подпоследовательность $\{x_{N(k)}\}$ такая что числовые последовательности $\{f(x_{N(k)})\}$ имеют предел при $k \rightarrow \infty$. Значения $f(x_{N(k)})$ и предельное значение зависят от выбора функционала $f$.
 
 В конечномерном пространстве любое ограниченное множество компактно. Естественно ожидать, что в бесконечномерных пространствах условия слабой компактности не будут сложными.
 
 \begin{theorem}
 В гильбертовом пространстве $H$ любое ограниченное множество слабо компактно.
+\end{theorem}
+
 \begin{proof}
 Проведем доказательство для сепарабельных гильбертовых пространств. В этих пространства существует не более чем счетный базис элементов $\psi_1, \psi_2, \ldots, \psi_n, \ldots$, $(\psi_i, \psi_j)=0, i\neq j$; ${\lVert \psi_i \rVert}_H=1$.
-\end{proof}
-\end{theorem}
 
 Обозначим множество элементов пространства $H$, таких что ${\Vert x \Vert} _H \leqslant C$ через $K$. Пусть $\lbrace x_n \rbrace$ - произвольная последовательность элементов множества $K$.
 
@@ -1634,6 +1638,7 @@ $\lbrace x_{N(2,K)} \rbrace \subset
  $K\to\infty$. 
 \end{center}
 \end{enumerate}
+
 Продолжая этот процесс, получим последовательности 
 $\lbrace x_{N(i,K)} \rbrace$, $i=1,2,3\ldots$, такие что 
  \begin{center}
@@ -1648,10 +1653,8 @@ $\lbrace x_{N(i,K)} \rbrace$, $i=1,2,3\ldots$, такие что
 &\cdots\\
 \langle x_{N(1,K)},\Psi_{1} \rangle &\to \alpha_{1} \mbox{ при } K\to\infty.
 \end{align*}
- Рассмотрим <<диагональные элементы>> $ x_{N(i,i)}$. Для них при любом фиксированном $K$ значения 
- $ \langle x_{N(i,i)},\Psi_K \rangle $ стремятся к $\alpha_K$ при 
-$i \to \infty$.\\
-Так как
+
+Рассмотрим <<диагональные элементы>> $ x_{N(i,i)}$. Для них при любом фиксированном $K$ значения $\langle x_{N(i,i)},\Psi_K \rangle $ стремятся к $\alpha_K$ при  $i \to \infty$. Так как
 \begin{equation*}
  \sum\limits_{k=1}^n 
 {\vert \langle x_{N(i,i)},\Psi_K \rangle  \vert}^2 \leqslant C^2
@@ -1659,13 +1662,10 @@ $i \to \infty$.\\
   при любом $i$, то переходя к пределу при $i\to\infty$ получим $\sum\limits_{k=1}^n \alpha_k^2 \leqslant C^2$. Так как $n$ любое, то $\sum\limits_{k=1}^\infty \alpha_k^2 <+\infty$. Следовательно существует элемент 
 \begin{equation*}
 \widetilde{x}= \sum\limits_{k=1}^\infty 
-\alpha_k\Psi_{k} \in K
+\alpha_k\Psi_{k} \in K.
 \end{equation*}
-Покажем, что последовательность
- $\lbrace x_{N(m,m)} \rbrace$
- слабо сходится к элементу $\widetilde{x}$.\\
- Рассмотрим произвольный элемент $y$ пространства 
- $H$. Он определяет функционал $f$:
+
+Покажем, что последовательность $\lbrace x_{N(m,m)} \rbrace$ слабо сходится к элементу $\widetilde{x}$. Рассмотрим произвольный элемент $y$ пространства $H$. Он определяет функционал $f$:
  
 \begin{equation*}
 f(x)=(x,y)
@@ -1680,8 +1680,7 @@ y=\sum\limits_{k=1}^\infty y_k\Psi_k =
 \begin{equation*}
 \sum\limits_{k=n+1}^\infty y_k^2 < {\varepsilon}^2 
 \end{equation*}
-\textbf{Зафиксируем значение $n$, $n>n(\varepsilon)$.}\\
-
+Зафиксируем значение $n$, $n>n(\varepsilon)$.
 Значение функционала $f$ на элементе $x_{N(m,m)}-\widetilde{x}$ равно
 \begin{equation*}
  \langle x_{N(m,m)}-\widetilde{x},y \rangle = 
@@ -1698,19 +1697,17 @@ C\cdot\varepsilon
 \vert  \langle \widetilde{x},\sum\limits_{k=n+1}^\infty y_k\Psi_k \rangle  \vert \leqslant
 C\cdot\varepsilon
 \end{equation*}
-
 В первом слагаемом значение
 \begin{equation*}
 \vert  \langle x_{N(m,m)}-\widetilde{x},
 \sum\limits_{k=1}^n y_k\Psi_k \rangle  \vert \leqslant
-{(\sum\limits_{k=1}^n{[ \langle x_{N(m,m)},\Psi_k \rangle  - \alpha_k]}^2)}^{\frac{1}{2}}\cdot
+{ \Big( \sum\limits_{k=1}^n{[ \langle x_{N(m,m)},\Psi_k \rangle  - \alpha_k]}^2 \Big) }^{\frac{1}{2}}\cdot
  \lVert f\lVert
 \end{equation*}
 Так как значение $n$ фиксировано, а значения
-\begin{equation*}
- \langle x_{N(m,m)},\Psi_K \rangle  \to \alpha_K$$ при
- $$m\to\infty 
-\end{equation*}
+$$\langle x_{N(m,m)},\Psi_K \rangle  \to \alpha_K$$
+при
+$$m\to\infty,$$
 то для достаточно больших $m$:
 \begin{equation*}
 \sum\limits_{k=1}^n{[ \langle x_{N(m,m)},\Psi_k \rangle  - \alpha_k]}^2 < \varepsilon^2.
@@ -1727,26 +1724,27 @@ C\cdot\varepsilon
 \begin{equation*}
 x_{N(m,m)} \to \widetilde{x}
 \end{equation*}
-на множестве $K$, и множество $K$ слабо компактно в сепарабельном гильбертовом пространстве.\\
+на множестве $K$, и множество $K$ слабо компактно в сепарабельном гильбертовом пространстве.
+\end{proof}
 
-В доказательстве существенную роль играет теорема Рисса: $H=H^*$ и далее $(H^*)^*=H$. Банахово пространство $X$, для которого ${(X^*)}^*=X$ называется рефлексивным. В случае $X=\mathcal{L}_p(T)$ можно показать, что общий вид линейного функционала определяется элементами $y \in \mathcal{L}_q(T)$, 
+В доказательстве существенную роль играет теорема Рисса: $H=H^*$ и далее $(H^*)^*=H$. Банахово пространство $X$, для которого ${(X^*)}^*=X$ называется рефлексивным. В случае $X=L_p(T)$ можно показать, что общий вид линейного функционала определяется элементами $y \in L_q(T)$, 
 $\frac{1}{p}+ \frac{1}{q}=1$:
 
 \begin{equation*}
 f(x)= \langle x,y \rangle =\displaystyle\int\limits_T x(t)y(t)dt
 \end{equation*}
-(при $p=1$ пространство $\mathcal{L}_\infty(T)$ - пространство измеримых и почти везде конечных\\ функций).\\\\
+(при $p=1$ пространство $L_\infty(T)$ - пространство измеримых и почти везде конечных\\ функций).\\\\
 Ясно, что 
 \begin{equation*}
-{(\mathcal{L}_p^*(T))}^*=\mathcal{L}_p(T)
+{(L_p^*(T))}^*=L_p(T)
 \end{equation*}
-и пространство $\mathcal{L}_p(T)$ рефлексивно.
+и пространство $L_p(T)$ рефлексивно.
 \begin{theorem}
 Верна общая теорема: условие ${\lVert x \lVert}_X \leqslant C$ для элементов множества $K \subset X$ является необходимым и достаточным условием слабой компактности множества $K$ в рефлексивных пространствах $X$.
 \end{theorem}
-В частности множество $K \in \mathcal{L}_p(T)$ элементов, таких что 
+В частности множество $K \in L_p(T)$ элементов, таких что 
 \begin{equation*}
-{\lVert x \lVert}_{\mathcal{L}_p(T)} \leqslant C
+{\lVert x \lVert}_{L_p(T)} \leqslant C
 \end{equation*}
 слабо компактно.
 
@@ -1758,67 +1756,50 @@ f(x)= \langle x,y \rangle =\displaystyle\int\limits_T x(t)y(t)dt
 Ясно, что функционал $\varphi$ задан на всём пространстве $X$ и зависит от выбора функционала $f$:
 \begin{enumerate}
 \item функционал $\varphi$ аддитивен и однороден:
-\begin{center}
-$\varphi(\lambda_1x_1+\lambda_2x_2) = 
- \langle A(\lambda_1x_1+\lambda_2x_2),f \rangle  =
-\lambda_1 \langle Ax_1,f \rangle  + \lambda_2 \langle Ax_2,f \rangle  =$\\$
-= \lambda_1\varphi(x_1) + \lambda_2\varphi(x_2)$
-\end{center}
+\begin{align*}
+\varphi(\lambda_1x_1+\lambda_2x_2) &= 
+ \langle A(\lambda_1x_1+\lambda_2x_2),f \rangle =
+\lambda_1 \langle Ax_1,f \rangle  + \lambda_2 \langle Ax_2,f \rangle  =\\
+&= \lambda_1\varphi(x_1) + \lambda_2\varphi(x_2)
+\end{align*}
 \item функционал $\varphi$ линейный:
-\begin{center}
-$\lVert \varphi \lVert \leqslant \underset{\lVert x\lVert =1}{\sup} 
+$$\lVert \varphi \lVert \leqslant \underset{\lVert x\lVert =1}{\sup} 
 \vert \varphi(x) \vert \leqslant  \underset{\lVert x\lVert =1}{\sup} 
 \lVert Ax \lVert \cdot \lVert f \lVert =
- \lVert A \lVert \cdot \lVert f \lVert $
-\end{center}
+ \lVert A \lVert \cdot \lVert f \lVert.$$
 \end{enumerate}
-Таким образом равенство $ \langle Ax,f \rangle  =  \langle x,\varphi \rangle $ определяет линейный функционал $\varphi \in X^*$:
-\begin{itemize}
-\item каждому $f\in Y^*$ сопоставляется линейный функционал
- $\varphi\in X^*$, зависящий от выбора оператора $A$: эту зависимость обозначим $\varphi=A^*\cdot f$.
-\end{itemize}
+
+Таким образом равенство $ \langle Ax,f \rangle  =  \langle x,\varphi \rangle $ определяет линейный функционал $\varphi \in X^*$: каждому $f\in Y^*$ сопоставляется линейный функционал $\varphi\in X^*$, зависящий от выбора оператора $A$: эту зависимость обозначим $\varphi=A^* f$.
 Эта зависимость от $A$ однородна и аддитивна:
 если $A=\alpha_1A_1+\alpha_2A_2$, то 
-\begin{center}
-$\varphi= \langle \alpha_1A_1+\alpha_2A_2 \rangle  = \alpha_1 \langle A_1,f \rangle +\alpha_2 \langle A_2,f \rangle  =
-\alpha_1A_1^*f+\alpha_2A_2^*f$
-\end{center}
-Оператор $A^*$, определённый на $Y^*$ линеен: согласно неравенству:
-\begin{center}
-$\lVert \varphi \lVert = \lVert A^* \cdot f \lVert \leqslant \lVert A \lVert \cdot \lVert f \lVert$
-\end{center}
-\begin{center}
-${\lVert A^* \lVert}_{Y^* \to X^*} \leqslant 
-{\lVert A \lVert}_{X \to Y}$ и $A^* \in \mathcal{L}(Y^*,X^*)$
-\end{center}
+
+$$\varphi = \langle \alpha_1A_1 + \alpha_2A_2 \rangle  = \alpha_1 \langle A_1,f \rangle + \alpha_2 \langle A_2,f \rangle  = \alpha_1A_1^*f + \alpha_2A_2^* f.$$
+Оператор $A^*$, определённый на $Y^*$, линеен: согласно неравенству
+
+$$\lVert \varphi \lVert = \lVert A^* f \lVert \leqslant \lVert A \lVert \cdot \lVert f \lVert,$$
+
+$${\lVert A^* \lVert}_{Y^* \to X^*} \leqslant 
+{\lVert A \lVert}_{X \to Y} \mbox{ и } A^* \in \mathcal{L}(Y^*,X^*).$$
 Докажем, что $\lVert A^* \lVert = 
-\lVert A \lVert$. Возьмём произвольный элемент $x_0 \in X$ и вычислим $y_0=Ax_0$. Для элемента $y_0$ по теореме Хана-Банаха существует линейный функционал $f$, такой что
-$f(y_0)= \lVert y_0 \lVert$, $\lVert f \lVert =1$.\\
-Тогда
-\begin{center}
-$\lVert Ax_0 \lVert = \vert  \langle Ax_0,f \rangle  \vert =
+\lVert A \lVert$. Возьмём произвольный элемент $x_0 \in X$ и вычислим $y_0=Ax_0$. Для элемента $y_0$ по теореме Хана-Банаха существует линейный функционал $f$, такой что $f(y_0)= \lVert y_0 \lVert$, $\lVert f \lVert =1$. Тогда
+$$\lVert Ax_0 \lVert = \vert  \langle Ax_0,f \rangle  \vert =
 \vert  \langle x_0,A^*f \rangle  \vert \leqslant 
 \lVert x_0 \lVert \cdot \lVert A^* \lVert
 \cdot \lVert f \lVert = \lVert A^* \lVert
-\cdot \lVert x_0 \lVert$
-\end{center}
+\cdot \lVert x_0 \lVert.$$
 Следовательно $\lVert A \lVert \leqslant
 \lVert A^* \lVert$ и вместе с оценкой $\lVert A^* \lVert \leqslant 
 \lVert A \lVert$ получаем $\lVert A^* \lVert = 
 \lVert A \lVert$.
 \begin{definition}
 Линейный оператор $A^* \in \mathcal{L}(Y^*,X^*)$ называется оператором, сопряжённым с оператором $A \in \mathcal{L}(X,Y)$, если для любого $f \in Y^*$ выполнено:
-\begin{center}
-$ \langle Ax,f \rangle  =  \langle x,A^*f \rangle $
-\end{center}
+$$\langle Ax,f \rangle  =  \langle x,A^*f \rangle.$$
 \end{definition}
 \begin{remark}
-Ясно, что $\lVert A^* \lVert = 
-\lVert A \lVert$.
+Ясно, что $\lVert A^* \lVert = \lVert A \lVert$.
 \end{remark}
 
-
-\textbf{Пример}.
+\begin{example}
 Рассмотрим комплексно-значные векторные пространства $X=V_n$, $Y=V_n$. Линейный оператор $A$ задаётся матрицей $\lbrace a_{ij} \rbrace_{i,j=1}^n$ с комплексными элементами $a_{ij}$. Скалярное произведение векторов $x(x_1,x_2,\ldots,x_n)$ и $y(y_1,y_2,\ldots,y_n)$ равно $(x,y) = \sum\limits_{i=1}^n x_i \bar{y}_i = \overbar{(y,x)}$
 
 Координаты вектора $y=Ax$ равны $y_i = \sum\limits_{j=1}^n a_{ij} x_j$. Общий вид функционала в $f$ в $V_n$ определяется указанием элемента $y$:
@@ -1834,29 +1815,29 @@ $f(x) \langle x,f \rangle = (x,y)$
 Сравнивая полученное равенство $\langle Ax,y \rangle = \langle x, A^{*}y \rangle$ (согласно определению сопряженного оператора) получаем, что
 $(A^{*}y)_i = \sum\limits_{j=1}^n \bar{a_{ji}} y_j$.
 Элементы матрицы $A^{*}$ получены из комплексно-сопряженной матрицы $\bar{A}$ с последующим транспонированием: $A^{*}=\{\bar{a}_{ji}\}_{j,i=1}^n$
+\end{example}
 
-
-\textbf{Пример}.
-$X=\mathcal{L}_p(a,b)$, $Y=\mathcal{L}_q(a,b)$. Оператор $K$ --- интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in \mathcal{L}_q(a,b)$.
+\begin{example}
+$X=L_p(a,b)$, $Y=L_q(a,b)$. Оператор $K$ --- интегральный оператор: $y=Kx$, $y(t)=\int\limits_a^b K(t,\tau)x(\tau)d\tau \in L_q(a,b)$.
 
 Значение функционала
-$$\langle Kx,f \rangle = \mathcal{L}_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$$ 
-(где $f \in \mathcal{L}_p(a,b)$)
+$$\langle Kx,f \rangle = L_q(a,b)=\int\limits_a^b (Kx)(t)f(t)dt=$$ 
+(где $f \in L_p(a,b)$)
 $$= \int\limits_a^b \Big( \int\limits_a^b K(t,\tau)x(\tau)d\tau \Big) f(t)dt = \int\limits_a^b x(\tau) \int\limits_a^b K(t,\tau)f(t)dt d\tau =\\= \int\limits_a^b x(t) \int\limits_a^b K(\tau,t)f(\tau)d\tau dt =$$
-(общий вид функционала в $\mathcal{L}_p(a,b)$)
+(общий вид функционала в $L_p(a,b)$)
 $$= \langle x,K^{*}f \rangle$$
 и
 $$K^{*}f=\int\limits_a^b K(\tau, t)f(\tau)d\tau.$$
 
-Таким образом оператор $K^{*}$ есть интегральный оператор(но из $\mathcal{L}_p$ в $\mathcal{L}_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
+Таким образом оператор $K^{*}$ есть интегральный оператор(но из $L_p$ в $L_q$), ядро которого $K^{*}(t,\tau)=K(\tau,t)$.
 
 $$\Vert K \Vert = \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
 
 $$\Vert K^{*} \Vert =  \Big( \displaystyle\int\limits_a^b \lvert K(\tau, t) \rvert^q dt d\tau  \Big)^{\frac{1}{q}} =  \Big( \displaystyle\int\limits_a^b \lvert K(t,\tau) \rvert^q d\tau dt  \Big)^{\frac{1}{q}}$$
+\end{example}
 
-
-\textbf{Пример}.
-Рассмотри комплексно-значные пространства $X=\mathcal{L}_p(a,b)$ и $Y=\mathcal{L}_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $\mathcal{L}_p(a,b) \to \mathbb{C}$, где $\mathbb{C}$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in \mathcal{L}_q(a,b)$:
+\begin{example}
+Рассмотри комплексно-значные пространства $X=L_p(a,b)$ и $Y=L_q(a,b)$. Пусть $f$ функционал(комплексно-значный) $f$: $L_p(a,b) \to \mathbb{C}$, где $\mathbb{C}$ - множество комплексных чисел. Общий вид линейного функционала в этом случае определяется заданием элемента $y \in L_q(a,b)$:
 
 $$ f(x) = \langle x, f \rangle = (x,y) = \displaystyle\int\limits_a^b x(t)\overbar{y(t)}dt $$
 
@@ -1864,10 +1845,11 @@ $$ (\frac{1}{p} + \frac{1}{q} = 1) $$
 
 $$ \langle x, f \rangle  = \bar{(y,x)}  = \displaystyle\int\limits_a^b \overbar{(\bar{x}(t)y(t))} dt = \overbar{\displaystyle\int\limits_a^{-b} (y(t)\bar{x}(t))dt} $$
 
-Величины $\int\limits_a^b y(t)\overbar{x(t)} dt$ будем рассматривать как значение функционала из $\mathcal{L}_q \to \mathbb{C}$. Это значение полностью определено заданием элемента $x \in \mathcal{L}_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
+Величины $\int\limits_a^b y(t)\overbar{x(t)} dt$ будем рассматривать как значение функционала из $L_q \to \mathbb{C}$. Это значение полностью определено заданием элемента $x \in L_p(a,b)$. Этот функционал обозначим $f^{*}(y)$:
 $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar{f^{*}}$ и $f^{*}=\bar{f}$,
 
-Таким образом в пространстве $\mathcal{L}_q(a,b)$ определен функционал $f^{*}$ и $f^{*}=f$.
+Таким образом в пространстве $L_q(a,b)$ определен функционал $f^{*}$ и $f^{*}=f$.
+\end{example}
 
 \chapter{Теория Рисса линейных уравнений второго рода}
 
@@ -1957,7 +1939,7 @@ $\langle x,f, \rangle = \langle y,\bar{f^{*}} \rangle = \bar{f^{*}}(y)$, $f=\bar
 $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.$$
 Для этих элементов вычислим элементы $(E-A)u_n$:
 \begin{equation*}
-(E-A)u_n=\frac{1}{\lVert x_n-z \rVert}y_n.
+(E-A)u_n=\frac{1}{\lVert x_n-z_n \rVert}y_n.
 \end{equation*}	
 Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \mathbb{0}$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{52_1}):
 
@@ -1983,23 +1965,26 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \section{Теоремы Фредгольма}
 Пусть $A$ вполне непрерывный оператор в пространстве Банаха $X$: $A \in \sigma(X,X)$. Рассмотрим уравнения второго рода с вполне непрерывными операторами $A$ и $A^*$:
 \begin{align}
-(E - A)x &= y , y \in X \label{fred_1}\\
-(E - A)z &= \mathbb{0}, z \in N(E-A) \label{fred_2}\\
-(I - A^*)f &= \omega , f \in X^*, \omega \in X^* \label{fred_3}\\
-(I - A^*)\psi &= \mathbb{0}, \psi \in N(I - A^*) \label{fred_4}
+(E - A)x &= y , \; y \in X \label{fred_1}\\
+(E - A)z &= \mathbb{0}, \; z \in N(E-A) \label{fred_2}\\
+(I - A^*)f &= \omega , \; f \in X^*, \; \omega \in X^* \label{fred_3}\\
+(I - A^*)\psi &= \mathbb{0}, \; \psi \in N(I - A^*) \label{fred_4}
 \end{align}
 \begin{theorem}[Первая теорема Фредгольма]
 Следующие 4 утверждения эквивалентны:
-\begin{enumerate}
-\item Уравнение (\ref{fred_1}) имеет решение при любой правой части
-\item Уравнение (\ref{fred_2}) имеет только тривиальное решение
-\item Уравнение (\ref{fred_3}) имеет решение при любой правой части
-\item Уравнение (\ref{fred_4}) имеет только тривиальное решение
-\end{enumerate}
+\begin{equation*}
+\begin{cases}
+\mbox{ 1. Уравнение (\ref{fred_1}) имеет решение при любой правой части } y\\
+\mbox{ 2. Уравнение (\ref{fred_2}) имеет только тривиальное решение } z = \mathbb{0}, \; N(E - A) = \lbrace \mathbb{0} \rbrace\\
+\mbox{ 3. Уравнение (\ref{fred_3}) имеет решение при любой правой части } \omega \\
+\mbox{ 4. Уравнение (\ref{fred_4}) имеет только тривиальное решение } \psi = \mathbb{0}, \; N(I - A^*) = \lbrace \mathbb{0} \rbrace
+\end{cases}
+\end{equation*}
+
 \end{theorem}
 \begin{proof}
 Докажем, например, что из 4 следует 1.\\
-Пусть выполнено 4: $(I - A^*)=\mathbb{0}$. Предположим противное : 1 не верно: $R(E - A)\neq X$. Пусть $y_0 \in X$, но $y_0 \not \in R(E - A)$. По теореме Хана-Банаха (следствие 2) существует линейный функционал $f_0 \in X^*$ такой, что $ \langle y_0,f_0 \rangle =1$, $ \langle y,f_0 \rangle =0$ для всех $y \in R(E-A)$. Тогда $ \langle (E-A)x,f_0 \rangle =0$ для всех $x \in X$, $ \langle x,(I-A^*f_0) \rangle =0$ для всех $x \in X$.\\
+Пусть выполнено 4: $(I - A^*)=\mathbb{0}$. Предположим противное : 1 не верно: $R(E - A)\neq X$. Пусть $y_0 \in X$, но $y_0 \not \in R(E - A)$. По теореме Хана-Банаха (следствие (2)) существует линейный функционал $f_0 \in X^*$ такой, что $ \langle y_0,f_0 \rangle =1$, $ \langle y,f_0 \rangle =0$ для всех $y \in R(E-A)$. Тогда $ \langle (E-A)x,f_0 \rangle =0$ для всех $x \in X$, $ \langle x,(I-A^*f_0) \rangle =0$ для всех $x \in X$.\\
 Тогда $(I-A^*)f_0=\mathbb{0}$, т.е. $f_0 \in N(I-A^*)$ и $f_0 \neq \mathbb{0}$, что противоречит 4.
 \end{proof}
 \begin{theorem}[Вторая теорема Фредгольма]
@@ -2013,7 +1998,7 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \begin{center}
 $ \langle y_0,\psi \rangle = \langle (E-A)x_0,\psi \rangle = \langle x_0,(I-A^*)\psi \rangle =0$
 \end{center}
-\underline{Достаточность}. Пусть $ \langle y_0,\psi \rangle =0$ для всех $\psi \in N(I-A^*)$. \underline{Предположим}, что \\$y_0 \not \in R(E-A)$, т.е. решение уравнения $(E-A)x=y_0$ не существует. Так как по теореме Шаундера $R(E-A)$ есть подпространство, то существует линейный функционал $f\in X^*$, такой что 
+\underline{Достаточность}. Пусть $ \langle y_0,\psi \rangle =0$ для всех $\psi \in N(I-A^*)$. Предположим, что \\$y_0 \not \in R(E-A)$, т.е. решение уравнения $(E-A)x=y_0$ не существует. Так как по теореме Шаундера $R(E-A)$ есть подпространство, то существует линейный функционал $f\in X^*$, такой что 
 \begin{center}
 $ \langle y_0,f \rangle =1$ и $ \langle (E-A)x,f \rangle =0$
 \end{center}
