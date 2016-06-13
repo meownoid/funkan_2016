@@ -344,7 +344,7 @@ $$r_n < \frac{1}{2^n}r_0 \mbox{, } r_n \to 0 \mbox{ при } n \to \infty,$$
 и в каждом шаре $\overbar{V}_{r_n}(x_n)$ нет элементов множеств $E_1, E_2, \ldots, E_n$.
 По теореме о вложенных шарах существует элемент $x^* \in X: \; x_n \to x^*$ при $n \to \infty$.
 
-Ясно, что $x^*\in \bigcup\limits_{n=1}^\infty \overbar{V}_{r_n}(x_n)$ и следовательно $x^*\notin \bigcup\limits_{n=1}^\infty E_n$, что противоречит предположению $X=\bigcup\limits_{n=1}^\infty E_n$. Остается принять, что множество $X$ --- пространство второй категории.
+Ясно, что $x^*\in \bigcup\limits_{n=1}^\infty \overbar{V}_{r_n}(x_n)$ и следовательно $x^*\notin \bigcup\limits_{n=1}^\infty E_n$, что противоречит предположению $X=\bigcup\limits_{n=1}^\infty E_n$. Остаётся принять, что множество $X$ --- пространство второй категории.
 \end{proof}
 
 \section{Линейные пространства, нормированные пространства, пространства Банаха}
@@ -1463,20 +1463,20 @@ f(x) =  \langle x, f \rangle.
 Введение сопряженного пространства приводит к новому типу сходимости последовательности $\{x_n\}$ элементов $x_n$ пространства $X$.
 
 \begin{definition}
-Последовательность $x_n$ сходится к элементу $x^* \in X$ \textit{слабо}, если числовые последовательности $f(x_n) \rightarrow f(x^*)$ для любого функционала $f \in X^*$. В этом случае пишут $x_n \rightarrow x^*$ \big($ \langle x_n,f \rangle  \ \rightarrow \  \langle x^*, f \rangle ,\ f \in X^*$\big), при этом сами значения $f(x_n)$ и $f(x^*)$ зависят от выбора функционалов $f$.
+Последовательность $x_n$ сходится к элементу $x^* \in X$ \textit{слабо}, если числовые последовательности $f(x_n) \to f(x^*)$ для любого функционала $f \in X^*$. В этом случае пишут $x_n \to x^*$ \big($ \langle x_n,f \rangle  \ \to \  \langle x^*, f \rangle ,\ f \in X^*$\big), при этом сами значения $f(x_n)$ и $f(x^*)$ зависят от выбора функционалов $f$.
 \end{definition}
-Как сильный предел последовательности, так и слабый предел единственны: если $x_n\rightarrow~x^*$ и $x_n \rightarrow \widetilde{x}$, то для любого функционала $f$: $f(x^*-\widetilde{x})=0$. По теореме Хана-Банаха (следствие (3)): $x^*=\widetilde{x}$.
+Как сильный предел последовательности, так и слабый предел единственны: если $x_n\to~x^*$ и $x_n \to \widetilde{x}$, то для любого функционала $f$: $f(x^*-\widetilde{x})=0$. По теореме Хана-Банаха (следствие (3)): $x^*=\widetilde{x}$.
 
 \begin{lemma}
-Если $x_n \rightarrow x_0$, то $\lVert x_n \rVert \leqslant \lVert x_0 \rVert$ (слабо сходящаяся последовательность элементов ограничена по норме).
+Если $x_n \to x_0$, то $\lVert x_n \rVert \leqslant \lVert x_0 \rVert$ (слабо сходящаяся последовательность элементов ограничена по норме).
 \end{lemma}
 \begin{proof}
-Для всех $f \in X^*$ значения $f(x_n) \rightarrow f(x_0)$ при $n \rightarrow \infty$. По теореме о достаточном числе функционалов (параграф 3.2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \rightarrow f_n(x_0)$. Но $|f_n(x_0)| \leqslant \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim \limits_{n \to \infty}}\lVert x_n \rVert \leqslant \lVert x_0 \rVert$.
+Для всех $f \in X^*$ значения $f(x_n) \to f(x_0)$ при $n \to \infty$. По теореме о достаточном числе функционалов (параграф 3.2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \to f_n(x_0)$. Но $|f_n(x_0)| \leqslant \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim \limits_{n \to \infty}}\lVert x_n \rVert \leqslant \lVert x_0 \rVert$.
 \end{proof}
 
 Понятие слабой сходимости последовательности элементов порождает также понятие \textit{слабо фундаментальной последовательности} $\{x_n\}$: последовательность $\{x_n\}$ называется \textit{слабо фундаментальной}, если для каждого функционала $f \in X^*$ последовательность чисел $\{f(x_n)\}$ фундаментальна.
 
-В соответствии с этим определением говорят, что множество $K$ \textit{слабо компактно}, если из любой последовательности его элементов можно составить слабо фундаментальную подпоследовательность: для последовательности $\{x_n\}$ существует ее подпоследовательность $\{x_{N(k)}\}$ такая, что числовые последовательности $\{f(x_{N(k)})\}$ имеют предел при $k \rightarrow \infty$. Значения $f(x_{N(k)})$ и предельное значение зависят от выбора функционала $f$.
+В соответствии с этим определением говорят, что множество $K$ \textit{слабо компактно}, если из любой последовательности его элементов можно составить слабо фундаментальную подпоследовательность: для последовательности $\{x_n\}$ существует ее подпоследовательность $\{x_{N(k)}\}$ такая, что числовые последовательности $\{f(x_{N(k)})\}$ имеют предел при $k \to \infty$. Значения $f(x_{N(k)})$ и предельное значение зависят от выбора функционала $f$.
 
 В конечномерном пространстве любое ограниченное множество компактно. Естественно ожидать, что в бесконечномерных пространствах условия слабой компактности не будут сложными.
 
@@ -1720,7 +1720,7 @@ $\langle x,f \rangle = \langle y,\overbar{f}^{*} \rangle = \overbar{f}^{*}(y)$, 
 \section{Теорема Шаудера}
 
 \begin{definition}
-Последовательность $\{y_n\}$ элементов пространства $Y$ называется \textbf{компактной}, если в ней существует фундаментальная подпоследовательность.
+Последовательность $\{y_n\}$ элементов пространства $Y$ называется \textit{компактной}, если в ней существует фундаментальная подпоследовательность.
 \end{definition}
 
 \begin{lemma}[I]
@@ -1728,74 +1728,72 @@ $\langle x,f \rangle = \langle y,\overbar{f}^{*} \rangle = \overbar{f}^{*}(y)$, 
 \end{lemma}
 
 \begin{proof}
-(От противного) Предположим, что $\{y_n\}$ не стремится к $y_0$, т.е. существует подпоследовательность $\{{y_n}_k\}$ такая, что $\lVert {y_n}_k-y_0\rVert > \varepsilon$ при достаточно больших значениях $k$. Тогда (по теореме Хана-Банаха глава 3, \S 2, следствие 4) существует функционал $\varphi\in Y^*$, $\lVert\varphi\rVert=1$ такой, что $\varphi({y_n}_k-y_0)=\lVert {y_n}_k-y_0\rVert > \varepsilon$ при всех $k > k_0$. Следовательно последовательность $\{y_n\}$ не имеет слабого предела.
+(От противного.) Предположим, что $\{y_n\}$ не стремится к $y_0$, т.е. существует подпоследовательность $\{y_{n_k}\}$ такая, что $\lVert  y_{n_k} - y_0 \rVert > \varepsilon$ при достаточно больших значениях $k$. Тогда (по теореме Хана-Банаха, параграф 3.2, следствие (4)) существует функционал $\varphi\in Y^*$, $\lVert\varphi\rVert=1$ такой, что $\varphi(y_{n_k} - y_0) = \lVert y_{n_k} - y_0 \rVert > \varepsilon$ при всех $k > k_0$. Следовательно, последовательность $\{y_n\}$ не имеет слабого предела.
 \end{proof}
 
 \begin{lemma}[II]
-Пусть $A\subset\sigma(X,Y)$. Если $\{x_n\}\to x_0$, то $Ax_n\to Ax_0$ сильно.
+Пусть $A \in \sigma(X,Y)$. Если $\{x_n\}\to x_0$, то $Ax_n\to Ax_0$ сильно.
 \end{lemma}
 
 \begin{proof}
-Так как $\{x_n\}\to x_0$, то $\{\lVert x_n\rVert\}$ ограничена (глава 4, \S 1). Из полной непрерывности оператора $A$ следует, что последовательность элементов $y_n = Ax_n$ \underbar{компактна}.
+Так как $\{x_n\}\to x_0$, то $\{\lVert x_n\rVert\}$ ограничена (параграф 4.1). Из полной непрерывности оператора $A$ следует, что последовательность элементов $y_n = Ax_n$ \underbar{компактна}.
 
 Покажем, что $Ax_n\to Ax_0$.
-
 Для любого линейного функционала $\varphi\in Y^*$ значения $ \langle A(x_n-x_0), \varphi \rangle  =  \langle x_n-x_0, A^*\varphi \rangle $. Обозначим $A^*\varphi = f\in X^*$:
 \begin{equation*}
- \langle A(x_n-x_0), \varphi \rangle  =  \langle x_n-x_0, f \rangle 
+\langle A(x_n-x_0), \varphi \rangle  =  \langle x_n-x_0, f \rangle 
 \end{equation*}
-и так как $x_n\to x_0$, то $ \langle A(x_n-x_0), \varphi \rangle \to 0$ при $n\to\infty$. Тогда \underbar{$Ax_n\to Ax_0$}. По лемме I $\lVert Ax_n-Ax_0\rVert_Y\to 0$ при при $n\to\infty$.
+и так как $x_n\to x_0$, то $ \langle A(x_n-x_0), \varphi \rangle \to 0$ при $n\to\infty$. Тогда $Ax_n\to Ax_0$. По лемме (I) $\lVert Ax_n-Ax_0\rVert_Y\to 0$ при при $n\to\infty$.
 \end{proof}
 
 \begin{theorem}[Шаудер]
-Пусть $A\subset\mathcal{\mathcal{L}}(X, Y)$, где $Y$ --- банахово пространство. Тогда операторы $A$ и $A^*$ вполне непрерывны одновременно.
+Пусть $A \in \mathcal{L}(X, Y)$, где $Y$ --- банахово пространство. Тогда операторы $A$ и $A^*$ вполне непрерывны одновременно.
 \end{theorem}
 
 \begin{proof}
-Пусть $A\subset\sigma(X, Y)$. Рассмотрим последовательность линейных функционалов $\varphi_n\in Y^*$ с нормами $\lVert \varphi_n\rVert = 1$. Покажем, что в последовательности функционалов $\{A^*\varphi_n\}\in X^*$ существует фундаментальная подпоследовательность, что и будет означать полную непрерывность оператора $A^*$.
+Пусть $A \in \sigma(X, Y)$. Рассмотрим последовательность линейных функционалов $\varphi_n \in Y^*$ с нормами $\lVert  \varphi_n \rVert = 1$. Покажем, что в последовательности функционалов $\{ A^* \varphi_n \} \subset X^*$ существует фундаментальная подпоследовательность, что и будет означать полную непрерывность оператора $A^*$.
 
-Обозначим $\{\varphi_n\} = \{y_n\}\in Y^*$ и последовательность функционалов $A^*\varphi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\varphi_n\rVert \leqslant \lVert A^*\rVert\lVert \varphi_n\rVert = \lVert A\rVert$.
+Обозначим $\{\varphi_n\} = \{y_n\}\subset Y^*$ и последовательность функционалов $A^*\varphi_n = A^*y_n = f_n\in X^*$. Ясно, что $\lVert f_n\rVert = \lVert A^*y_n\rVert = \lVert A^*\varphi_n\rVert \leqslant \lVert A^*\rVert\lVert \varphi_n\rVert = \lVert A\rVert$.
 
 Таким образом $\{f_n\}$ ограничена в совокупности. Функционалы $f$ зависят от выбранного $y$: $f_n = f_n(y) = f(y)$.
 
 Ясно, что если $y''$ и $y'\in Y^*$, то
 \begin{equation*}
-\lVert f(y'')-f(y')\rVert = \lVert A^*y''-A^*y'\rVert\le\lVert A\rVert\lVert y''-y'\rVert\le\varepsilon\mbox{, если} \lVert y''-y'\rVert < \delta\mbox{ и }\lVert A\rVert\delta < \varepsilon
+\lVert f(y'')-f(y')\rVert = \lVert A^*y''-A^*y'\rVert\le\lVert A\rVert\lVert y''-y'\rVert\le\varepsilon,
 \end{equation*}
-Таким образом функции $f(y)$ равностепенно непрерывны. Следуя доказательству теоремы Арцела-Асколи (глава I, \S 1) получаем существование фундаментальной подпоследовательности ${f_n}_k = A^*{\varphi_n}_k$ последовательности $A^*\varphi_n$, $\varphi_n\in S_1\subset Y^*$: $A^*$ --- вполне непрерывный оператор.
+если $\lVert y''-y'\rVert < \delta$ и $\lVert A\rVert\delta < \varepsilon$.
+Таким образом, функции $f(y)$ равностепенно непрерывны. Следуя доказательству теоремы Арцела-Асколи (параграф 1.1) получаем существование фундаментальной подпоследовательности $f_{n_k} = A^* \varphi_{n_k}$ последовательности $A^*\varphi_n$, $\varphi_n\in S_1\subset Y^*$: $A^*$ --- вполне непрерывный оператор.
 
 Если же $A^*\in\sigma(X^*,Y^*)$, то так как $(A^*)^* = A$, то получаем, что и оператор $A$ вполне непрерывен.
 \end{proof}
 
 \section{Уравнения второго рода с вполне непрерывными операторами.}
-Уравнения второго рода относительно элемента $x \in X$ имеют вид $x-Ax=y$, $A \in \sigma(X,X)$, $X$ -банахово пространство
-
-Уравнения первого рода: $Ax=y$.
+Уравнения второго рода относительно элемента $x \in X$ имеют вид $x-Ax=y$, $A \in \sigma(X,X)$, $X$ ---банахово пространство. Уравнения первого рода: $Ax=y$.
 
 \begin{theorem}
-Если $A$ вполне непрерывный оператор, то множества $R(E-A)=(E-A)X$ и $R(I-A^*)=(I-A^*)X^*$ замкнуты.
+Если $A$ --- вполне непрерывный оператор, то множества $R(E-A)=(E-A)X$ и $R(I-A^*)=(I-A^*)X^*$ замкнуты.
 \end{theorem}
 \begin{proof}
-Пусть послдеовательность $y_n \rightarrow y_0$, $y_n \in R(E-A)$, т.е. $y_n=x_n-Ax_n$, $x_n \in X$. Следует доказать, что существует элемент $x_0 \in X$ такой, что $y_0=(E-A)x_0$.
+Пусть послдеовательность $y_n \to y_0$, $y_n \in R(E-A)$, т.е. $y_n=x_n-Ax_n$, $x_n \in X$. Следует доказать, что существует элемент $x_0 \in X$ такой, что $y_0=(E-A)x_0$.
 \begin{enumerate}
 
-	\item Предположим, что нормы элементов $x_n$ ограничены:
+	\item Предположим, что нормы элементов $x_n$ ограничены.
 
-Тогда $y_n=x_n-Ax_n$ и $x_n=y_n+Ax_n$. Так как последовательность $Ax_n$ принадлежит компактному множеству, то существует фундаментальная подпоследовательность $Ax_{n_k}$, и мы получаем, что $x_{n_k}=y_{n_k}+Ax_{n_k}$. Так как $y_{n_k} \rightarrow y_0$, то $\{y_{n_k}\}$ - фундаментальная последовательность. Следовательно, существует $\smash{\displaystyle\lim_{k \rightarrow \infty}} x_{n_k} \in X$, который мы обозначим $x_0$. Тогда $Ax_{n_k} \rightarrow Ax_0$. Переходя к пределу в равенствах $x_{n_k}=y_{n_k}+Ax_{n_k}$ при $k \rightarrow \infty$, получим $y_0=x_0-Ax_0$.
+Тогда $y_n=x_n-Ax_n$ и $x_n=y_n+Ax_n$. Так как последовательность $\lbrace Ax_n \rbrace$ принадлежит компактному множеству, то существует фундаментальная подпоследовательность $Ax_{n_k}$, и мы получаем, что $x_{n_k}=y_{n_k}+Ax_{n_k}$. Так как $y_{n_k} \to y_0$, то $\{y_{n_k}\}$ --- фундаментальная последовательность. Следовательно, существует $\smash{\displaystyle\lim_{k \to \infty}} x_{n_k} \in X$, который мы обозначим $x_0$. Тогда $Ax_{n_k} \to Ax_0$. Переходя к пределу в равенствах $x_{n_k}=y_{n_k}+Ax_{n_k}$ при $k \to \infty$, получим $y_0=x_0-Ax_0$.
 	
-	\item Остается рассмотреть случай неограниченной последовательности норм $\lVert x_n \rVert$. В этом случае существует последовательность элементов $x_{n_k}$, нормы которых $\lVert x_n \rVert \rightarrow \infty$ при $k \rightarrow \infty$.
+	\item Остаётся рассмотреть случай неограниченной последовательности норм $\lVert x_n \rVert$. В этом случае существует последовательность элементов $x_{n_k}$, нормы которых $\lVert x_{n_k} \rVert \to \infty$ при $k \to \infty$.
 	
 	Обозначим через $N$ подпространство пространства $X$ элементов $z$, таких, что $(E-A)z=\mathbb{0}$. Ясно, что $(E-A)(x_n-z)=(E-A)x_n=y_n$.
 	
-	Если в $N$ существует такой элемент $z$, что нормы $\lVert x_n-z \rVert$ ограничены, то согласно пункту $1.$ существует такой элемент $x_0-z \in X$ такой, что $(x_n-z)\rightarrow (x_0-z)$ при $n \rightarrow \infty$ и $y_0=(x_0-z)-A(x_0-z)=x_0-Ax_0 \in R(E-A)$.
+	Если в $N$ существует такой элемент $z$, что нормы $\lVert x_n-z \rVert$ ограничены, то, согласно пункту 1, существует такой элемент $x_0-z \in X$, что $(x_n-z)\to (x_0-z)$ при $n \to \infty$ и $y_0=(x_0-z)-A(x_0-z)=x_0-Ax_0 \in R(E-A)$.
 	
-	Если же для всех элементов $z$ нормы $\lVert x_n-z \rVert$ неограничены, то можно считать, что величины $\alpha_n=\smash{\displaystyle\inf_{z \in N}} \lVert x_n-z \rVert$ стремятся к $\infty$ при $n \rightarrow \infty$.
+	Если же для всех элементов $z$ нормы $\lVert x_n-z \rVert$ неограничены, то можно считать, что величины $\alpha_n=\smash{\displaystyle\inf_{z \in N}} \lVert x_n-z \rVert$ стремятся к $\infty$ при $n \to \infty$.
 	
 	По определению $\inf$ существуют элементы $z_n \in N$ такие, что 
 	
 \begin{equation}
 \label{52_1}
-\alpha_n \leqslant \lVert x_n-z \rVert \leqslant (1+\frac{1}{n})\alpha_n
+\alpha_n \leqslant \lVert x_n-z \rVert \leqslant (1+\frac{1}{n})\alpha_n.
 \end{equation}	
 Построим элементы $u_n$: 
 $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.$$
@@ -1803,7 +1801,7 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \begin{equation*}
 (E-A)u_n=\frac{1}{\lVert x_n-z_n \rVert}y_n.
 \end{equation*}	
-Так как $y_n \rightarrow y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \rightarrow \mathbb{0}$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту $1.$ существует подпоследовательность последовательности $\{u_n\}$, такая, что $u_n \rightarrow u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{52_1}):
+Так как $y_n \to y_0$, то нормы $\lVert y_n \rVert$ ограничены, поэтому последовательность $(E-A)u_n \to \mathbb{0}$. Сами же нормы $\lVert u_n \rVert=1$. Согласно пункту 1, существует подпоследовательность последовательности $\{u_n\}$ такая, что $u_n \to u_0 \in X$. В нашем случае $u_0 \in N$, $\lVert u_0 \rVert=1$. Этот случай невозможен. Действительно, рассмотрим величины $\lVert u_n-u_0 \rVert(1+ \frac{1}{n})\alpha_n$. Согласно (\ref{52_1}):
 
 \begin{align*}
 \lVert u_n-u_0 \rVert \frac{n+1}{n} \alpha_n &\geqslant \lVert u_n-u_0 \rVert\lVert x_n-z_n \rVert = \lVert \lVert x_n-z_n \rVert(u_n-u_0) \rVert=\\
@@ -1811,21 +1809,19 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 &= \lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert.
 \end{align*}
 
-Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \rVert \geqslant \alpha_n$.
-
-Тогда $\lVert u_n-u_0 \rVert \frac{n+1}{n} \geqslant 1$ и $\lVert u_n-u_0 \rVert \geqslant\frac{n}{n+1}$, что противоречит $u_0= \smash{\displaystyle\lim_{n \rightarrow \infty}}u_n$
+Элемент $z_n+\lVert x_n-z_n \rVert u_0 \in N$ как линейная комбинация элементов $z_n \in N$ и $u_0 \in N$. Поэтому $\big\lVert x_n-(z_n+\lVert x_n-z_n \rVert u_0) \big\rVert \geqslant \alpha_n$. Тогда $\lVert u_n-u_0 \rVert \frac{n+1}{n} \geqslant 1$ и $\lVert u_n-u_0 \rVert \geqslant\frac{n}{n+1}$, что противоречит $u_0= \smash{\displaystyle\lim_{n \to \infty}}u_n$.
 \qedhere
 \end{enumerate}
 \end{proof}
 	
 	Из этой теоремы следует, что если рассмотреть уравнения 
 	\begin{equation*}
-	x-Ax=y_n, \mbox{ где } y_n \rightarrow y_0 
+	x-Ax=y_n, \mbox{ где } y_n \to y_0,
 	\end{equation*}	
-их <<приближенные>> решения $x_n$: $x_n-Ax_n=y_n$, то существует сходящаяся подпоследовательность $\{x_{n_k}\}$, предел которой $x_0 \in X$ при $k \rightarrow \infty$, удовлетворяет уравнению $x_0-Ax_0=y_0$. Элемент $x_0$ может быть и не единственен: он зависит от выбора сходящейся подпоследовательности последовательности $\{Ax_n\}$.
+и их <<приближенные>> решения $x_n$: $x_n-Ax_n=y_n$, то существует сходящаяся подпоследовательность $\{x_{n_k}\}$, предел которой $x_0 \in X$ при $k \to \infty$ удовлетворяет уравнению $x_0-Ax_0=y_0$. Элемент $x_0$ может быть и не единственен: он зависит от выбора сходящейся подпоследовательности последовательности $\{Ax_n\}$.
 
 \section{Теоремы Фредгольма}
-Пусть $A$ вполне непрерывный оператор в пространстве Банаха $X$: $A \in \sigma(X,X)$. Рассмотрим уравнения второго рода с вполне непрерывными операторами $A$ и $A^*$:
+Пусть $A$ --- вполне непрерывный оператор в пространстве Банаха $X$: $A \in \sigma(X,X)$. Рассмотрим уравнения второго рода с вполне непрерывными операторами $A$ и $A^*$:
 \begin{align}
 (E - A)x &= y , \; y \in X \label{fred_1}\\
 (E - A)z &= \mathbb{0}, \; z \in N(E-A) \label{fred_2}\\
@@ -1845,7 +1841,8 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 
 \end{theorem}
 \begin{proof}
-Докажем, например, что из 4 следует 1.\\
+Докажем, например, что из 4 следует 1.
+
 Пусть выполнено 4: $(I - A^*)=\mathbb{0}$. Предположим противное : 1 не верно: $R(E - A)\neq X$. Пусть $y_0 \in X$, но $y_0 \not \in R(E - A)$. По теореме Хана-Банаха (следствие (2)) существует линейный функционал $f_0 \in X^*$ такой, что $ \langle y_0,f_0 \rangle =1$, $ \langle y,f_0 \rangle =0$ для всех $y \in R(E-A)$. Тогда $ \langle (E-A)x,f_0 \rangle =0$ для всех $x \in X$, $ \langle x,(I-A^*f_0) \rangle =0$ для всех $x \in X$.\\
 Тогда $(I-A^*)f_0=\mathbb{0}$, т.е. $f_0 \in N(I-A^*)$ и $f_0 \neq \mathbb{0}$, что противоречит 4.
 \end{proof}
@@ -1857,9 +1854,8 @@ $$ u_n = \frac{x_n - z_n}{\lVert x_n - z_n \rVert}, \quad \lVert u_n \rVert = 1.
 \end{theorem}
 \begin{proof}
 \underbar{Необходимость}. Если $N(E-A)={\mathbb{0}}$, то по второй теореме Фредгольма $N(I-A^*)={\mathbb{0}}$. Если же $N(E-A)\neq {\mathbb{0}}$, то уравнение $(E-A)x=y_0$, $y_0 \neq \mathbb{0}$ имеет решение $x_0$. Пусть $\psi \in N(I-A^*)$. Тогда
-\begin{center}
-$ \langle y_0,\psi \rangle = \langle (E-A)x_0,\psi \rangle = \langle x_0,(I-A^*)\psi \rangle =0$
-\end{center}
+$$\langle y_0,\psi \rangle = \langle (E-A)x_0,\psi \rangle = \langle x_0,(I-A^*)\psi \rangle =0.$$
+
 \underbar{Достаточность}. Пусть $ \langle y_0,\psi \rangle =0$ для всех $\psi \in N(I-A^*)$. Предположим, что \\$y_0 \not \in R(E-A)$, т.е. решение уравнения $(E-A)x=y_0$ не существует. Так как по теореме Шаундера $R(E-A)$ есть подпространство, то существует линейный функционал $f\in X^*$, такой что 
 \begin{center}
 $ \langle y_0,f \rangle =1$ и $ \langle (E-A)x,f \rangle =0$
