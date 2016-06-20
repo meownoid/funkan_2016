@@ -680,11 +680,10 @@ $$\underset{S_R}{\sup}\Vert Ax \Vert\to\infty$$
 $\underset{S_R}{\sup}\Vert Ax \Vert$
 от величины $R$ для ограниченных операторов даёт более практичное определение ограниченного оператора.
 
-\begin{definition} Оператор $A$ называется линейным оператором из $X$ в $Y$, если величина 
+\begin{definition} Оператор $A$ называется \textit{линейным оператором} из $X$ в $Y$, если величина 
 $$C_0=\underset{S_1}{\sup}\Vert Ax \Vert<+\infty.$$
 \end{definition}
 Эта величина называется \textit{нормой} линейного оператора и обозначается $\lVert A \rVert$ ($\lVert A \rVert_{X \to Y}$).
-
 Величина 
 $$\underset{\lVert x \rVert \leqslant 1}{\sup}\lVert Ax \rVert = \lVert A \rVert = \underset{\lVert x \rVert = 1}{\sup}\lVert Ax \rVert.$$
 Действительно,
@@ -708,7 +707,7 @@ $$\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert =\Vert A \Vert.$$
 Интегральный оператор $K$ из $X=L_p(a,b)$ в $Y=L_q(a,b)$, $
 \frac{1}{p}+\frac{1}{q}=1$,
 
-$$y=K\cdot x \mbox{, } y(t)=\displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau.$$
+$$y=K x \mbox{, } y(t)=\displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau)d\tau.$$
 Относительно ядра $K(t,\tau)$ будем предполагать, что 
 $${ \Big( \displaystyle\int\limits_a^b \displaystyle\int\limits_a^b { \big\vert K(t,\tau) \big\vert} ^q dtd\tau \Big) ^\frac{1}{q}} < +\infty.$$
 Согласно неравенству Гёльдера интеграл
@@ -720,7 +719,7 @@ $${ \Big( \displaystyle\int\limits_a^b \displaystyle\int\limits_a^b { \big\vert 
 \end{align*}
 
 \begin{align*}
-{\Vert y \Vert}^q _{L_q(a,b)} &=\displaystyle\int\limits_a^b { \Big\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau) d\tau \Big\vert^{q}} dt \leqslant {\Vert x \Vert}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\vert K(t,\tau)\vert} ^q d\tau,\\
+{\Vert y \Vert}^q _{L_q(a,b)} &=\displaystyle\int\limits_a^b { \Big\vert \displaystyle\int\limits_a^b K(t,\tau)\cdot x(\tau) d\tau \Big\vert^{q}} dt \leqslant {\Vert x \Vert}^q _{L_p(a,b)} \cdot \displaystyle\int\limits_a^b dt \displaystyle\int\limits_a^b {\big\vert K(t,\tau) \big\vert} ^q d\tau,\\
 {\Vert y \Vert}_{L_q(a,b)} &=
 {\Vert Kx\Vert}_{L_q(a,b)} \leqslant { \Big( \displaystyle\int\limits_a^b \displaystyle\int\limits_a^b { \big\vert K(t,\tau) \big\vert} ^q d\tau dt \Big)^\frac{1}{q}}\cdot \Vert x \Vert _{L_p(a,b)}
 \end{align*}
@@ -749,7 +748,7 @@ $${ \Big( \displaystyle\int\limits_a^b \displaystyle\int\limits_a^b { \big\vert 
 \end{theorem}
 
 \begin{proof}
-Пусть $\{A_n\}$ --- фундаментальная последовательность линейных операторов: $\Vert A_{n+m} - A_n \Vert\le \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x\in X$, построим последовательность $y_n\in Y$, $y_n=A_nx$. Эта последовательность сходится в себе $\Vert y_{n+m}-y_n\Vert\le \Vert A_{n+m}-A_n\Vert \Vert x\Vert\le \varepsilon \Vert x\Vert$, и в силу полноты пространства $Y$ существует предельный элемент $y \leqslant Y$, такой что $y=\lim \limits_{n \to \infty} A_n x$. Следовательно, определён оператор $A$: $y = Ax$.
+Пусть $\{A_n\}$ --- фундаментальная последовательность линейных операторов: $\Vert A_{n+m} - A_n \Vert \leqslant \varepsilon$ при достаточно больших $n$. Взяв произвольный элемент $x \in X$, построим последовательность $y_n \in Y$, $y_n = A_nx$. Эта последовательность сходится в себе $\Vert y_{n+m} - y_n\Vert \leqslant \Vert A_{n+m} - A_n\Vert \Vert x\Vert \leqslant \varepsilon \Vert x\Vert$, и в силу полноты пространства $Y$ существует предельный элемент $y \in Y$, такой что $y=\lim \limits_{n \to \infty} A_n x$. Следовательно, определён оператор $A$: $y = Ax$.
 
 Покажем, что этот оператор ограничен. Так как $ \big\lvert \Vert A_{n+m} \Vert - \Vert A_n\Vert \big\rvert \leqslant \Vert A_{n+m} - A_n \Vert \leqslant \varepsilon$ при достаточно больших $n$, то числовая последовательность норм $\Vert A_n\Vert$ имеет предел $\lim \limits_{n\to \infty} \Vert A_n\Vert=C$. Тогда $\Vert y_n \Vert \leqslant \Vert A_n\Vert \Vert x\Vert$ и, переходя к пределу, получим $\Vert y \Vert \leqslant C \Vert x \Vert$ и норма оператора $A$ ограничена, оператор $A$ --- линейный оператор, $\Vert A\Vert \leqslant C$, $A \in \mathcal{L}(X,Y)$.
 \end{proof}
@@ -761,23 +760,23 @@ $${ \Big( \displaystyle\int\limits_a^b \displaystyle\int\limits_a^b { \big\vert 
 \end{definition}
 
 Из сильной сходимости $A_n\to A$ следует и поточечная сходимость последовательности $\{A_n\}$:
-$$\Vert A_nx-Ax\Vert_Y = \Vert(A_n-A)x\Vert\le \Vert A_n-A\Vert \Vert x\Vert\to 0$$ 
+$$\Vert A_nx-Ax\Vert_Y = \Vert(A_n-A)x\Vert \leqslant \Vert A_n-A\Vert \Vert x\Vert\to 0$$ 
 при $n\to \infty$.
 Обратное утверждение неверно.
 
 \begin{example}
-Рассмотрим банахово пространство $l_1$ числовых последовательностей $x=(x_1,x_2,\ldots,x_n,\ldots)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\Vert x\Vert=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert$.
+Рассмотрим банахово пространство $l^1$ числовых последовательностей $x=(x_1,x_2,\ldots,x_n,\ldots)$ таких что числовой ряд $\displaystyle\sum_{k=0}^\infty \lvert x_k\rvert $ сходится и норма $\Vert x\Vert=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert$.
 
-Зададим последовательность аддитивных операторов $A_n$ из $l_1$ в $l_1$: 
-$A_nx=(x_1,x_2,\ldots,x_n)$.
+Зададим последовательность аддитивных операторов $A_n$ из $l^1$ в $l^1$: 
+$A_nx=(x_1,x_2,\ldots,x_n,0,\ldots)$.
 Операторы $A_n$ линейные:
-$\Vert A_n\Vert=\sup \limits_{S_1} \Vert A_nx\Vert=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\Vert A_n\Vert=1$, $A_n\in \mathcal{L}(l_1,l_1)$.
+$\Vert A_n\Vert=\sup \limits_{S_1} \Vert A_nx\Vert=\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert =1$, $\Vert A_n\Vert=1$, $A_n\in \mathcal{L}(l^1,l^1)$.
 
-Рассмотрим последовательность линейных операторов $E-A_n\in \mathcal{L}(l_1,l_1)$. Ясно, что $\Vert(E-A_n)x\Vert=\Vert(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)\Vert=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
+Рассмотрим последовательность линейных операторов $E-A_n\in \mathcal{L}(l^1,l^1)$. Ясно, что $\Vert(E-A_n)x\Vert=\Vert(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots)\Vert=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert  \to 0$ при $n\to \infty$, так как числовой ряд $\displaystyle\sum_{k=1}^\infty \lvert x_k\rvert $ сходится.
 
-Таким образом $A_nx\to x$ для любых $x\in l_1$ при $n\to \infty$. Последовательность операторов $A_n$ сходится поточечно к тождественному оператору.
+Таким образом $A_nx\to x$ для любых $x\in l^1$ при $n\to \infty$. Последовательность операторов $A_n$ сходится поточечно к тождественному оператору.
 
-На сфере $S_1$ в $l_1$ рассмотрим множество элементов $S_1^0$, таких что 
+На сфере $S_1$ в $l^1$ рассмотрим множество элементов $S_1^0$, таких что 
 $$x=(0,0,\ldots,0,x_{n+1},x_{n+2},\ldots) \mbox{, } \displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1.$$
 
 $$\Vert E-A_n\Vert=\sup \limits_{S_1} \Vert(E-A_n)x\Vert \geqslant \sup \limits_{S_1^0} \Vert(E-A_n)x\Vert=\displaystyle\sum_{k=n+1}^\infty \lvert x_k\rvert=1$$
@@ -786,7 +785,7 @@ $$\Vert E-A_n\Vert=\sup \limits_{S_1} \Vert(E-A_n)x\Vert \geqslant \sup \limits_
 \end{example}
 
 \section{Теорема Банаха-Штейнгауза}
-Рассмотрим последовательность линейных операторов $\lbrace A_n \rbrace \subset \mathcal{L}(X,Y)$. Пусть для каждого $x \in X\ \exists \lim\limits_{n\to \infty}A_n x = y(x) \in Y$. Тем самым определён аддитивный и непрерывный оператор $A$, $Ax = y(x)$. Пример предыдущего \Sа показывает, что этот оператор может и не являться сильным пределом последовательности операторов $A_n$: хотя $A_n x \to E x$, но $\lim \limits_{n \to \infty} A_n \ne E$.
+Рассмотрим последовательность линейных операторов $\lbrace A_n \rbrace \subset \mathcal{L}(X,Y)$. Пусть для каждого $x \in X\ \exists \lim\limits_{n\to \infty}A_n x = y(x) \in Y$. Тем самым определён аддитивный и непрерывный оператор $A$, $Ax = y(x)$. Пример предыдущего параграфа показывает, что этот оператор может и не являться сильным пределом последовательности операторов $A_n$: хотя $A_n x \to E x$, но $\lim \limits_{n \to \infty} A_n \ne E$.
 
 Вопрос: при каких условия существует \textit{линейный} оператор $A$ и можно ли оценить его норму? Мы начнем с простой леммы.
 
