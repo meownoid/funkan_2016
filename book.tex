@@ -176,7 +176,7 @@ x_n \to x^* \mbox{, если }\rho(x_n, x^{*})\to 0 \mbox{ при } n\to\infty.
 	Пространство $C[a,b]$ непрерывных на $[a,b]$ функций сепарабельно. В математическом анализе это теорема Вейерштрасса: для каждой непрерывной функции $x_0(t)$ существует полином $P_n$ с рациональными коэффициентами такой что
 	
 	\begin{equation*}
-	\rho(x_0, P_n)=\smash{\displaystyle\max_{t \in [a,b]}} |x_0(t)-P_n(t)| < \varepsilon
+	\rho(x_0, P_n)=\smash{\displaystyle\max_{t \in [a,b]}}  \vert x_0(t)-P_n(t) \vert  < \varepsilon
 	\end{equation*}
 
 	Множество таких полиномов счётно.
@@ -248,19 +248,19 @@ x_{n_k} \in \bigcap\limits_{i=1}^{k} V_{\varepsilon _i} (z_i),
 
 \begin{itemize}
 
-	\item  Все функции $x\in E$ ограничены в совокупности: $\smash{\displaystyle\max_{ [a,b]}} |x| < const$.
+	\item  Все функции $x\in E$ ограничены в совокупности: $\smash{\displaystyle\max_{ [a,b]}}  \vert x \vert  < const$.
 
-	\item  Все функции $x\in E$ равностепенно непрерывны: $\forall \varepsilon>0$ существует такое число $\delta>0$, что для любых значений $t^{'}, t^{''} \in [a, b]$ таких, что $|t^{''}-t^{'}| <\delta$ верно неравенство $|x(t^{''})-x(t^{'})| <\varepsilon$, где $\delta$ не зависит от выбора функции $x$ из $E$.
+	\item  Все функции $x\in E$ равностепенно непрерывны: $\forall \varepsilon>0$ существует такое число $\delta>0$, что для любых значений $t^{'}, t^{''} \in [a, b]$ таких, что $ \vert t^{''}-t^{'} \vert  <\delta$ верно неравенство $ \vert x(t^{''})-x(t^{'}) \vert  <\varepsilon$, где $\delta$ не зависит от выбора функции $x$ из $E$.
 	
 \end{itemize}
 
 \end{theorem}
 \begin{proof} 
-	\underbar{Достаточность}. Пусть известно, что для функции $x\in E$ выполнены условия теоремы. Построим в $E$ компактную 	$\varepsilon$-сеть $H_{\varepsilon}$. Для 	$ \varepsilon>0$ найдем значение $\delta>0$ такое, что $|x(t^{''})-x(t^{'})| <\varepsilon$ для всех $t^{'}, t^{''}$ таких, что $|t^{''}-t^{'}| <\delta$. Построим конечное число узлов $\{t_i\}$, $a=t_1<t_2<\ldots<t_n=b$, $t_{k+1}-t_k< \delta$ и зафиксируем их. Рассмотрим множество ломаных $\overbar{x}(t)$ с вершинами в точках $(t_k, \eta_k )$, где $\eta_k=x(t_k)$. Множество всех таких ломаных, построенных для функций множества $E$, обозначим $H_{\varepsilon}$.
+	\underbar{Достаточность}. Пусть известно, что для функции $x\in E$ выполнены условия теоремы. Построим в $E$ компактную 	$\varepsilon$-сеть $H_{\varepsilon}$. Для 	$ \varepsilon>0$ найдем значение $\delta>0$ такое, что $ \vert x(t^{''})-x(t^{'}) \vert  <\varepsilon$ для всех $t^{'}, t^{''}$ таких, что $ \vert t^{''}-t^{'} \vert  <\delta$. Построим конечное число узлов $\{t_i\}$, $a=t_1<t_2<\ldots<t_n=b$, $t_{k+1}-t_k< \delta$ и зафиксируем их. Рассмотрим множество ломаных $\overbar{x}(t)$ с вершинами в точках $(t_k, \eta_k )$, где $\eta_k=x(t_k)$. Множество всех таких ломаных, построенных для функций множества $E$, обозначим $H_{\varepsilon}$.
 	
-	Множество $H_{\varepsilon}$ компактно в $C[a, b]$. Действительно, каждая ломаная определяется $n$ числами $(\eta_1, \eta_2,\ldots,\eta_n )$, где все числа $\eta_k$ ограничены: $|\eta_k|\leqslant const$. Из любой последовательности ломаных из $H_{\varepsilon}$ можно образовать фундаментальную подпоследовательность.
+	Множество $H_{\varepsilon}$ компактно в $C[a, b]$. Действительно, каждая ломаная определяется $n$ числами $(\eta_1, \eta_2,\ldots,\eta_n )$, где все числа $\eta_k$ ограничены: $ \vert \eta_k \vert \leqslant const$. Из любой последовательности ломаных из $H_{\varepsilon}$ можно образовать фундаментальную подпоследовательность.
 	
-	Покажем, что компактное множество $H_{\varepsilon}$ образует в $E$ $\varepsilon$-сеть. Для любой функции $x\in E$ построим ломаную $\overbar{x}(t)$, $\overbar{x} \in H_{\varepsilon}$. Так как $x(t)$ непрерывна, то на отрезке $[t_k, t_{k+1}]$ она достигает своего максимального значения $M_k$ и своего минимального значения $m_k$: $m_k \leqslant x(t) \leqslant M_k$, $t \in [t_k, t_{k+1}]$. В этих же пределах лежат и значения линейной функции $\overbar{x}(t)$. Ясно, что $|x(t)-\overbar{x}(t)|\leqslant M_k-m_k$, $t \in [t_k, t_{k+1}]$.
+	Покажем, что компактное множество $H_{\varepsilon}$ образует в $E$ $\varepsilon$-сеть. Для любой функции $x\in E$ построим ломаную $\overbar{x}(t)$, $\overbar{x} \in H_{\varepsilon}$. Так как $x(t)$ непрерывна, то на отрезке $[t_k, t_{k+1}]$ она достигает своего максимального значения $M_k$ и своего минимального значения $m_k$: $m_k \leqslant x(t) \leqslant M_k$, $t \in [t_k, t_{k+1}]$. В этих же пределах лежат и значения линейной функции $\overbar{x}(t)$. Ясно, что $ \vert x(t)-\overbar{x}(t) \vert \leqslant M_k-m_k$, $t \in [t_k, t_{k+1}]$.
 	
 	В силу выбора значения $\delta$ величины $M_k-m_k < \varepsilon$. Тогда и $\rho(x, \overbar{x}) < \varepsilon$. Согласно следствию теоремы Хаусдорфа, множество $E$ компактно в $C[a, b]$.
 	
@@ -742,7 +742,7 @@ $${ \Big( \displaystyle\int\limits_a^b \displaystyle\int\limits_a^b { \big\vert 
 Определим теперь понятие сильной сходимости последовательности линейных операторов.
 
 \begin{definition}
-Последовательность $\{A_n\} \subset \mathcal{L}(X,Y)$ \textit{сильно сходится} к линейному оператору $A\in \mathcal{L}(X,Y)$, если $||A_n-A||\to 0$ при $n\to {\infty}$.
+Последовательность $\{A_n\} \subset \mathcal{L}(X,Y)$ \textit{сильно сходится} к линейному оператору $A\in \mathcal{L}(X,Y)$, если $\Vert A_n-A \Vert \to 0$ при $n\to {\infty}$.
 \end{definition}
 
 \begin{theorem}
@@ -1065,7 +1065,7 @@ x(\xi,0)=x(\xi).
 $$x(\xi,t) = \displaystyle\sum\limits_{k=1}^n x_k e^{-k^2t} X_k(\xi),$$
 где $X_k(\xi) = \sqrt{\frac{2}{\pi}} \sin (k\xi)$, а числа $x_k = (x,X_k) = \displaystyle\int\limits_0^\pi x(\xi) X_k(\xi) d\xi\mbox{.}$
 
-Ясно, что $\|x(\cdot, t)\|_{L_2 (0, \pi)}^{2} \leqslant \displaystyle\sum\limits_{k=1}^{\infty}x_k^2=\|x\|^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
+Ясно, что $\Vert x(\cdot, t) \Vert_{L_2 (0, \pi)}^{2} \leqslant \displaystyle\sum\limits_{k=1}^{\infty}x_k^2= \Vert x \Vert^2$, т.е. функция $x(\xi,t)$ как функция переменной $\xi$ принадлежит пространству $L_2 (0, \pi)$.
 \begin{center}
 $$x(\xi, t) = \displaystyle\sum\limits_{k=1}^{\infty} e^{-k^2 t} X_k(\xi) \int\limits_{0}^{\pi} x(\eta) X_k(\eta) d\eta = \int\limits_{0}^{\pi} K(\xi, \eta, t) x(\eta) d \eta \mbox{.}$$
 \end{center}
@@ -1089,7 +1089,7 @@ $x(\xi, T) = y(\xi)$
 
 Действительно, рассмотрим функцию
 \begin{center}
-$y(\xi)=\displaystyle\sum\limits_{k=1}^{\infty} \frac{1}{k} X_k(\xi) ,  \; y\in L_{2}(0, \pi), \; \|y\|^2 = \sum\limits_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} ,  \; \|y\| = \frac{1}{\sqrt{6}}\pi \mbox{.}$
+$y(\xi)=\displaystyle\sum\limits_{k=1}^{\infty} \frac{1}{k} X_k(\xi) ,  \; y\in L_{2}(0, \pi), \; \Vert y \Vert^2 = \sum\limits_{k=1}^{\infty} \frac{1}{k^2} = \frac{\pi^2}{6} ,  \; \Vert y \Vert  = \frac{1}{\sqrt{6}}\pi \mbox{.}$
 \end{center}
 
 Предположим, что решение $x(\xi)$ такой обратной задачи существует. Тогда коэффициенты Фурье $x_k$ этого решения должны быть равными 
@@ -1101,12 +1101,12 @@ $$x(\xi) = \displaystyle\sum\limits_{k=1}^{\infty} x_k X_k(\xi).$$
 
 Ясно, что отсутствует и непрерывная зависимость решения от вариации правых частей. Действительно, пусть $x^{*}$ есть точное решение уравнения $Ax^*=y^*$. Рассмотрим вариацию правой части  $\Delta y$:
 \begin{center}
-$$\Delta y = \varepsilon \sum \limits_{k=1}^{n} \frac{1}{k} X_k(\xi) , \; \; \| \Delta y\|^2 = \varepsilon ^2 \sum\limits_{k=1}^{n} \frac{1}{k^2} < \varepsilon^2 \frac{\pi ^2}{6} \; \; \mbox{и} \; \; \| \Delta y \| < \frac{\varepsilon}{\sqrt{6}}\pi.$$
+$$\Delta y = \varepsilon \sum \limits_{k=1}^{n} \frac{1}{k} X_k(\xi) , \; \;  \Vert  \Delta y \Vert ^2 = \varepsilon ^2 \sum\limits_{k=1}^{n} \frac{1}{k^2} < \varepsilon^2 \frac{\pi ^2}{6} \; \; \mbox{и} \;  \Vert  \Delta y  \Vert < \frac{\varepsilon}{\sqrt{6}}\pi.$$
 \end{center}
 
 Для соответствующей вариации решения $\Delta x$ получаем
-$$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k^2} e^{2 k^2 T},$$
-и величина $\| \Delta x \|$ сколь угодно велика при $n \longrightarrow \infty.$
+$$ \Vert  \Delta x  \Vert_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k^2} e^{2 k^2 T},$$
+и величина $ \Vert  \Delta x  \Vert $ сколь угодно велика при $n \longrightarrow \infty.$
 
 \end{enumerate}
 
@@ -1148,15 +1148,15 @@ $$\| \Delta x \|_{L_2(0, \pi)}^2 = \varepsilon ^2 \sum\limits_{k=1}^n \frac{1}{k
 $y=\widetilde{K}x$, $y(t)=\displaystyle\int\limits_a^b \widetilde{K}(t, \tau)x(\tau)d\tau$,
 \end{center}
 
-где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $|\widetilde{K}(t, \tau)|\leqslant M$.
+где ядро $\widetilde{K}(t, \tau)$ непрерывно в области $D=[a,b]\times[a,b]$, $\vert \widetilde{K}(t, \tau) \vert \leqslant M$.
 
 В этом случае функции $y(t)$ непрерывны:
 
-$$|y(t_2)-y(t_1)|^2 \leqslant \displaystyle\int\limits_a^b |\widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau)|^2d\tau \cdot \displaystyle\int\limits_a^b |x(\tau)|^2 d\tau \leqslant \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}.$$
+$$\vert y(t_2)-y(t_1) \vert^2 \leqslant \displaystyle\int\limits_a^b \vert \widetilde{K}(t_2, \tau)-\widetilde{K}(t_1, \tau) \vert^2d\tau \cdot \displaystyle\int\limits_a^b \vert x(\tau) \vert^2 d\tau \leqslant \varepsilon^2 (b-a){\lVert x\rVert^2}_{L_2(a,b)}.$$
 
-Величина $|y(t_2)-y(t_1)|\to 0$ при $|t_2-t_1|\to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
+Величина $\vert y(t_2)-y(t_1) \vert \to 0$ при $\vert t_2-t_1 \vert \to 0$ в силу непрерывности функции $\widetilde{K}(t, \tau)$ как функции двух переменных. Таким образом, множество функций $\widetilde{K} S_1$ равностепенно непрерывно.
 
-Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $|y(t)|^2 \leqslant M^2 (b-a)$.
+Ясно, что функции множества $\widetilde{K} S_1$ ограничены в совокупности: $\vert y(t) \vert^2 \leqslant M^2 (b-a)$.
 
 По теореме Арцела-Асколи множество $\widetilde{K} S_1$ компактно в $C[a,b]$: из любой последовательности элементов $y_n=\widetilde{K} x_n$ можно выделить фундаментальную последовательность в $C[a,b]$, которая является фундаментальной последовательностью и в пространстве $L_2 (a,b)$.
 \end{example}
@@ -1195,8 +1195,7 @@ $$\displaystyle\int\limits_a^b \big\vert K(t, \tau) - K_n(t, \tau)\big\vert^2d\t
  \item $\Vert A \Vert = \Vert A_0 \Vert$ ?
 \end{itemize}
 
-
-Исследование этого вопроса начинается со случая, когда оператор $A_0$ продолжается с подпространства $X_0$ на подпространство $X_1\subset X$ элементов вида $x+\lambda x_1^0$, где $x\in X_0$, а элемент $x_1^0 \in X_0$ ($A = A_1$, $A_1$ --- продолжение оператора $A_0$). Элемент $x_0^1$ назначен, и представление элементов подпространства $X_1$ однозначно: коэффициент $\lambda \in (-\infty , \infty)$ определён однозначно. 
+Исследование этого вопроса начинается со случая, когда оператор $A_0$ продолжается с подпространства $X_0$ на подпространство $X_1\subset X$ элементов вида $x+\lambda x_1^0$, где $x\in X_0$, а элемент $x_1^0 \in X$ ($A = A_1$, $A_1$ --- продолжение оператора $A_0$). Элемент $x_0^1$ назначен, и представление элементов подпространства $X_1$ однозначно: коэффициент $\lambda \in (-\infty , \infty)$ определён однозначно. 
 
 Легко получить необходимое условие этого <<элементарного>> расширения. Для построения элементарного продолжения достаточно априори задать элемент $y_1 = A_1 x_1^0$:
 $$A_1(x) = A_1(x_0+\lambda x_1^0) = A_1x_0+\lambda A_1x_1^0 = A_0 x_0 + \lambda y_1 \mbox{, } x_0 \in X_0.$$
@@ -1217,7 +1216,7 @@ $$\lVert f \rVert = \underset{\lVert x \rVert=1}{\sup} \lvert f(x) \rvert,$$
 $$\lvert f(x) \rvert \leqslant \lVert f \rVert \cdot \lVert x \rVert_X.$$
 
 \begin{theorem-break}[Об элементарном продолжении]
-Пусть $X_0$ --- подпространство пространства $X$, и на $X_0$ определён функционал $f_0$ с нормой $\lVert f_0 \rVert = \underset{\lVert x \rVert=1, x \in X_0}{sup}|f(x)|$. Пусть элемент $x_1^0 \in X$, но $x_1^0 \notin X_0$.
+Пусть $X_0$ --- подпространство пространства $X$, и на $X_0$ определён функционал $f_0$ с нормой $\lVert f_0 \rVert = \sup \limits_{\lVert x \rVert=1, x \in X_0} \lvert f(x) \rvert$. Пусть элемент $x_1^0 \in X$, но $x_1^0 \notin X_0$.
 Введем множество $X_1 \subset X$ элементов вида $x_0+\lambda x_1^0$, где $x_0$ --- любой элемент пространства $X_0$, $-\infty < \lambda < \infty$. Представление элемента $x_1$ в виде $x_0+\lambda x_1^0$ единственно.
 \end{theorem-break}
 
@@ -1264,13 +1263,13 @@ f_0(x_0)-\gamma \leqslant \lVert f_0 \rVert \cdot \lVert x_0+x_1^0 \rVert.
 $$ f_1(x)=f_1(x_0+ \lambda x_1^0)=f_0(x_0)-\lambda \gamma.$$
 Ясно, что функционал $f_1$ аддитивен и однороден. Покажем, что $f_1$ --- линейный функционал.
 \begin{align*}
-|f_1(x)| &= |f_0(x_0)-\lambda \gamma| \leqslant \left|\lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right| \leqslant
-|\lambda| \left|f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right| \overset{\mbox{(\ref{32_1})}}{\leqslant} |\lambda|\cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert =\\
+\vert f_1(x) \vert &= \vert f_0(x_0)-\lambda \gamma \vert  \leqslant \left \vert \lambda f_0\left(\frac{x_0}{\lambda}\right)-\lambda \gamma\right \vert  \leqslant
+ \vert \lambda \vert  \left \vert f_0\left(\frac{x_0}{\lambda}\right)- \gamma\right \vert  \overset{\mbox{(\ref{32_1})}}{\leqslant}  \vert \lambda \vert \cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0}{\lambda} + x_1^0 \right \rVert =\\
 &= \lvert \lambda \rvert \cdot \lVert f_0 \rVert \cdot \left \lVert \frac{x_0+\lambda x_1^0}{\lambda} \right \rVert = \lVert f_0 \rVert \cdot  \lVert x_0+\lambda x_1^0 \rVert = \lVert f_0 \rVert \cdot  \lVert x \rVert.
 \end{align*}
 Следовательно, $f_1 \leqslant f_0$ и функционал $f_1$ линеен.
 Обратное неравенство $f_0 \leqslant f_1$ получаем соответственно из оценки:
-$$ \lVert f_1 \rVert=\underset{x \in X, \; \lVert x \rVert = 1 }{\sup} |f_1(x)| \geqslant \underset{x \in X_0, \; \lVert x \rVert = 1 }{\sup} |f_1(x)|=\lVert f_0 \rVert.$$
+$$ \lVert f_1 \rVert=\underset{x \in X, \; \lVert x \rVert = 1 }{\sup}  \vert f_1(x) \vert  \geqslant \underset{x \in X_0, \; \lVert x \rVert = 1 }{\sup}  \vert f_1(x) \vert =\lVert f_0 \rVert.$$
 Итак, $\lVert f_1 \rVert=\lVert f_0 \rVert$.
 
 Элементарное продолжение функционала определяется выбором значения $f_1(x)$ на элементе $x_1^0$.
@@ -1310,7 +1309,7 @@ $$X_2=X_1+\{ \lambda\}x_2 $$
 \begin{proof}
 Обозначим $X_0 \subset X$ множество элементов пространства $X$ вида $\{\lambda\}x_0$. Определим функционал $f_0$ на множестве $X_0$: $f_0(x_0)=\lambda\lVert x_0 \rVert$. Ясно, что на $X_0$ функционал $f_0$ линеен:
 \begin{equation*}
-| f_0(x)|=| \lambda | \lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x\rVert; \; \lVert f_0\rVert=1.
+\vert f_0(x) \vert = \vert \lambda  \vert \lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x\rVert; \; \lVert f_0\rVert=1.
 \end{equation*}
 При $x=x_0$:  $f_0(x_0)=\lVert x_0 \rVert$. Продолжая этот функционал на всё пространство $X$, получим (по теореме Хана-Банаха) функционал $f$:
 \begin{equation*}
@@ -1325,9 +1324,9 @@ f(x_0)=f_0(x_0)=\lVert x_0 \rVert; \; \lVert f\rVert=1.
 \begin{proof}
 Образуем элементарное расшириение $X_0$ множества $\Omega$, т.е. множество элементов вида $x=x'+\{ \lambda \}x_0$, где $x' \in \Omega$. Определим функционал $f_0 \in X^*_0$: $f_0(x)=\lambda d$ при $x \in X_0$. Ясно, что $f_0(x_0)=d$ и $f_0(x)=0$ при $x \in \Omega$. Оценим норму $\lVert x \rVert$:
 \begin{equation*}
-\lVert x\rVert=\lVert x'+\lambda x_0\rVert=| \lambda | \lVert x_0+\frac{x'}{\lambda}\rVert=|\lambda |\lVert x_0-\frac{x'}{\lambda}\rVert \geqslant | \lambda | \smash{\displaystyle \inf_{x' \in \Omega}}\lVert x_0-x' \rVert=| \lambda |d=|f_0(x)|.
+\lVert x\rVert=\lVert x'+\lambda x_0\rVert= \vert \lambda \vert \lVert x_0+\frac{x'}{\lambda}\rVert= \vert \lambda  \vert \lVert x_0-\frac{x'}{\lambda}\rVert \geqslant  \vert  \lambda  \vert  \smash{\displaystyle \inf_{x' \in \Omega}}\lVert x_0-x' \rVert= \vert  \lambda  \vert d= \vert f_0(x) \vert .
 \end{equation*}
-Таким образом $|f_0(x)|\leqslant \lVert x \rVert$ и $\lVert f_0 \rVert \leqslant 1$.
+Таким образом $ \vert f_0(x) \vert \leqslant \lVert x \rVert$ и $\lVert f_0 \rVert \leqslant 1$.
 Чтобы получить противоположное неравенство $\lVert f_0 \rVert \geqslant 1$, найдем для заданного $\varepsilon > 0$ элемент $x'_{\varepsilon}\in \Omega$, такой что $\lVert x_0-x'_{\varepsilon} \rVert \leqslant d+\varepsilon$. Ясно, что $d=f_0(x_0)=f_0(x_0-x'_{\varepsilon})\leqslant \lVert f_0\rVert\lVert x_0-x'_{\varepsilon} \rVert < \lVert f_0\rVert (d+\varepsilon)$, откуда получаем неравенства $\frac{d}{d+\varepsilon}\leqslant \lVert f_0\rVert \leqslant 1$ и стало быть $\lVert f_0\rVert=1$ ($\forall \varepsilon > 0$).
 
 По теореме Хана-Банаха существует продолжение $f$ функционала $f_0$ на всё пространство $X$:
@@ -1397,7 +1396,7 @@ f_k(x_i) =
 \begin{proof}
 Построим подпространство $X_0$ элементов вида $\{ \lambda \}x_0$. На $X_0$ определим функционал $f_0$:
 \begin{equation*}
-f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, \; |f_0(x)|=|\lambda|\lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x \rVert; \; \lVert f_0 \rVert=1.
+f_0(x)=\lambda \lVert x_0 \rVert = \lambda r, \;  \vert f_0(x) \vert = \vert \lambda \vert \lVert x_0 \rVert=\lVert \lambda x_0 \rVert=\lVert x \rVert; \; \lVert f_0 \rVert=1.
 \end{equation*}
 Продолжим функционал $f_0$ на всё пространство $X$ с сохранением нормы. Опорная плоскость к шару $\overbar{V}_r(\mathbb{0})$ в точке $x_0$ определяется уравнением $f(x)=r$. Действительно, для $x \in \overbar{V}_r(\mathbb{0})$:
 \begin{equation*}
@@ -1470,7 +1469,7 @@ f(x) =  \langle x, f \rangle.
 Если $x_n \to x_0$, то $\lVert x_n \rVert \leqslant \lVert x_0 \rVert$ (слабо сходящаяся последовательность элементов ограничена по норме).
 \end{lemma}
 \begin{proof}
-Для всех $f \in X^*$ значения $f(x_n) \to f(x_0)$ при $n \to \infty$. По теореме о достаточном числе функционалов (\S 3.2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \to f_n(x_0)$. Но $|f_n(x_0)| \leqslant \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim \limits_{n \to \infty}}\lVert x_n \rVert \leqslant \lVert x_0 \rVert$.
+Для всех $f \in X^*$ значения $f(x_n) \to f(x_0)$ при $n \to \infty$. По теореме о достаточном числе функционалов (\S 3.2) для каждого элемента $x_n$ существует функционал $f_n$, такой что $\lVert f_n \rVert =1$ и $f_n(x_n)=\lVert x_n \rVert$. Тогда $f_n(x_n) \to f_n(x_0)$. Но $ \vert f_n(x_0) \vert  \leqslant \lVert f_n \rVert \cdot \lVert x_0 \rVert = \lVert x_0 \rVert$. Следовательно, предел $\{ \lVert x_n \rVert \}$ может и не существовать, $\overbar{\lim \limits_{n \to \infty}}\lVert x_n \rVert \leqslant \lVert x_0 \rVert$.
 \end{proof}
 
 Понятие слабой сходимости последовательности элементов порождает также понятие \textit{слабо фундаментальной последовательности} $\{x_n\}$: последовательность $\{x_n\}$ называется \textit{слабо фундаментальной}, если для каждого функционала $f \in X^*$ последовательность чисел $\{f(x_n)\}$ фундаментальна.
