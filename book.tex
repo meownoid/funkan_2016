@@ -217,7 +217,7 @@ $$
 
 Далее, шар $ V_{\varepsilon _1} (z_1) $ может быть покрыт конечным числом шаров радиуса $\varepsilon _2 < \varepsilon _1.$ Тогда в одном из таких шаров $V_{\varepsilon _2} (z_2)$ содержится бесконечное число элементов последовательности $\{x_n\},$ и первый после $x_{n_1}$ такой элемент обозначим $x_{n_2}:$
 \begin{equation*}
-x_{n_1} \in V_{\varepsilon _1} (z_1) \cap V_{\varepsilon _2} (z_2),
+x_{n_2} \in V_{\varepsilon _1} (z_1) \cap V_{\varepsilon _2} (z_2),
 \end{equation*}
 Продолжая этот процесс, получим последовательность элементов $\{x_{n_k}\} \subset \{x_n\}$ таких что $x_{n_k} \in V_{\varepsilon _k} (z_k),$
 \begin{equation*}
@@ -702,7 +702,7 @@ $\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert \leqslant C_0$.
 $$C_0 \geqslant\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert$$
 и мы получаем 
 $$\underset{\Vert x\Vert \leqslant 1}{\sup}\Vert Ax \Vert =\Vert A \Vert.$$
-Для линейных операторов верна оценка: $\Vert Ax \Vert _{Y} =\Vert A \Vert \cdot \Vert x \Vert_{X} $.
+Для линейных операторов верна оценка: $\Vert Ax \Vert _{Y} \leqslant \Vert A \Vert \cdot \Vert x \Vert_{X} $.
 
 \begin{remark}
 Если получена оценка  $\Vert Ax \Vert \leqslant {C}  \Vert x \Vert$, то $\Vert A \Vert \leqslant {C} $.
@@ -1200,7 +1200,7 @@ $$\displaystyle\int\limits_a^b \big\vert K(t, \tau) - K_n(t, \tau)\big\vert^2d\t
 
 Исследование этого вопроса начинается со случая, когда оператор $A_0$ продолжается с подпространства $X_0$ на подпространство $X_1\subset X$ элементов вида $x+\lambda x_1^0$, где $x\in X_0$, а элемент $x_1^0 \in X$ ($A = A_1$, $A_1$ --- продолжение оператора $A_0$). Элемент $x_0^1$ назначен, и представление элементов подпространства $X_1$ однозначно: коэффициент $\lambda \in (-\infty , \infty)$ определён однозначно. 
 
-Легко получить необходимое условие этого <<элементарного>> расширения. Для построения элементарного продолжения достаточно априори задать элемент $y_1 = A_1 x_1^0$:
+Легко получить необходимое условие этого <<элементарного>> расширения. Для построения элементарного продолжения необходимо априори задать элемент $y_1 = A_1 x_1^0$:
 $$A_1(x) = A_1(x_0+\lambda x_1^0) = A_1x_0+\lambda A_1x_1^0 = A_0 x_0 + \lambda y_1 \mbox{, } x_0 \in X_0.$$
 
 Пусть оператор $A_1$ существует. Тогда для любого элемента $x_0 \in X_0$ значение
@@ -1219,7 +1219,7 @@ $$\lVert f \rVert = \underset{\lVert x \rVert=1}{\sup} \lvert f(x) \rvert,$$
 $$\lvert f(x) \rvert \leqslant \lVert f \rVert \cdot \lVert x \rVert_X.$$
 
 \begin{theorem-break}[Об элементарном продолжении]
-Пусть $X_0$ --- подпространство пространства $X$, и на $X_0$ определён функционал $f_0$ с нормой $\lVert f_0 \rVert = \sup \limits_{\lVert x \rVert=1, x \in X_0} \lvert f(x) \rvert$. Пусть элемент $x_1^0 \in X$, но $x_1^0 \notin X_0$.
+Пусть $X_0$ --- подпространство пространства $X$, и на $X_0$ определён функционал $f_0$ с нормой $\lVert f_0 \rVert = \sup \limits_{\lVert x \rVert=1, x \in X_0} \lvert f_0(x) \rvert$. Пусть элемент $x_1^0 \in X$, но $x_1^0 \notin X_0$.
 Введем множество $X_1 \subset X$ элементов вида $x_0+\lambda x_1^0$, где $x_0$ --- любой элемент пространства $X_0$, $-\infty < \lambda < \infty$. Представление элемента $x_1$ в виде $x_0+\lambda x_1^0$ единственно.
 \end{theorem-break}
 
